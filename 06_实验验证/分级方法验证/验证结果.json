@@ -1,0 +1,386 @@
+{
+  "evidence_type": "SYNTHETIC; not observed Hongqiao data",
+  "assumptions": {
+    "K_people": 1000.0,
+    "H_hours": 1.0,
+    "base_rate": 500,
+    "tier_increments": [
+      [],
+      [
+        [
+          500.0,
+          1.0
+        ]
+      ],
+      [
+        [
+          500.0,
+          1.0
+        ],
+        [
+          1000.0,
+          1.0
+        ]
+      ]
+    ],
+    "no_shared_bottleneck": true
+  },
+  "scenarios": [
+    {
+      "id": "SY01",
+      "purpose": "小需求",
+      "input": {
+        "q": 500,
+        "d": 2
+      },
+      "grade": "F0",
+      "tiers": [
+        {
+          "level": 0,
+          "pass": true,
+          "peak": 0.0,
+          "clear": 2
+        },
+        {
+          "level": 1,
+          "pass": true,
+          "peak": 0.0,
+          "clear": 2
+        },
+        {
+          "level": 2,
+          "pass": true,
+          "peak": 0.0,
+          "clear": 2
+        }
+      ]
+    },
+    {
+      "id": "SY02",
+      "purpose": "基准",
+      "input": {
+        "q": 2000,
+        "d": 2
+      },
+      "grade": "F1",
+      "tiers": [
+        {
+          "level": 0,
+          "pass": false,
+          "peak": 1000.0,
+          "clear": 4.0
+        },
+        {
+          "level": 1,
+          "pass": true,
+          "peak": 0.0,
+          "clear": 2
+        },
+        {
+          "level": 2,
+          "pass": true,
+          "peak": 0.0,
+          "clear": 2
+        }
+      ]
+    },
+    {
+      "id": "SY03",
+      "purpose": "需求增大",
+      "input": {
+        "q": 3500,
+        "d": 2
+      },
+      "grade": "F2",
+      "tiers": [
+        {
+          "level": 0,
+          "pass": false,
+          "peak": 2500.0,
+          "clear": 7.0
+        },
+        {
+          "level": 1,
+          "pass": false,
+          "peak": 1500.0,
+          "clear": 3.5
+        },
+        {
+          "level": 2,
+          "pass": true,
+          "peak": 0.0,
+          "clear": 2
+        }
+      ]
+    },
+    {
+      "id": "SY04",
+      "purpose": "本地参考资源不足",
+      "input": {
+        "q": 7000,
+        "d": 2
+      },
+      "grade": "F3",
+      "tiers": [
+        {
+          "level": 0,
+          "pass": false,
+          "peak": 6000.0,
+          "clear": 14.0
+        },
+        {
+          "level": 1,
+          "pass": false,
+          "peak": 5000.0,
+          "clear": 7.0
+        },
+        {
+          "level": 2,
+          "pass": false,
+          "peak": 3000.0,
+          "clear": 3.5
+        }
+      ]
+    },
+    {
+      "id": "SY05",
+      "purpose": "SY03无提前量",
+      "input": {
+        "q": 3500,
+        "d": 2,
+        "p": 0
+      },
+      "grade": "F3",
+      "tiers": [
+        {
+          "level": 0,
+          "pass": false,
+          "peak": 2500.0,
+          "clear": 7.0
+        },
+        {
+          "level": 1,
+          "pass": false,
+          "peak": 2000.0,
+          "clear": 4.0
+        },
+        {
+          "level": 2,
+          "pass": false,
+          "peak": 1250.0,
+          "clear": 2.5
+        }
+      ]
+    },
+    {
+      "id": "SY06",
+      "purpose": "SY02到达集中",
+      "input": {
+        "q": 2000,
+        "d": 0.5
+      },
+      "grade": "F2",
+      "tiers": [
+        {
+          "level": 0,
+          "pass": false,
+          "peak": 1750.0,
+          "clear": 4.0
+        },
+        {
+          "level": 1,
+          "pass": false,
+          "peak": 1500.0,
+          "clear": 2.0
+        },
+        {
+          "level": 2,
+          "pass": true,
+          "peak": 1000.0,
+          "clear": 1.0
+        }
+      ]
+    },
+    {
+      "id": "SY07",
+      "purpose": "SY02预测集合扩大",
+      "input": {
+        "q": 2000,
+        "d": 2,
+        "shapes": [
+          "uniform",
+          "front"
+        ]
+      },
+      "grade": "F2",
+      "tiers": [
+        {
+          "level": 0,
+          "pass": false,
+          "peak": 1350.0,
+          "clear": 4.0
+        },
+        {
+          "level": 1,
+          "pass": false,
+          "peak": 1100.0,
+          "clear": 2
+        },
+        {
+          "level": 2,
+          "pass": true,
+          "peak": 600.0,
+          "clear": 2
+        }
+      ]
+    },
+    {
+      "id": "SY08",
+      "purpose": "SY02有效供给减半",
+      "input": {
+        "q": 2000,
+        "d": 2,
+        "loss": 0.5
+      },
+      "grade": "F2",
+      "tiers": [
+        {
+          "level": 0,
+          "pass": false,
+          "peak": 1500.0,
+          "clear": 8.0
+        },
+        {
+          "level": 1,
+          "pass": false,
+          "peak": 1000.0,
+          "clear": 4.0
+        },
+        {
+          "level": 2,
+          "pass": true,
+          "peak": 0.0,
+          "clear": 2
+        }
+      ]
+    },
+    {
+      "id": "SY09",
+      "purpose": "安全前提不满足",
+      "input": {
+        "q": 2000,
+        "d": 2,
+        "safe": false
+      },
+      "grade": "X-SAFE",
+      "tiers": []
+    },
+    {
+      "id": "SY10",
+      "purpose": "关键数据未知",
+      "input": {
+        "q": 2000,
+        "d": 2,
+        "known": false
+      },
+      "grade": "X-DATA",
+      "tiers": []
+    }
+  ],
+  "grid_rows": 120,
+  "checks": [
+    {
+      "name": "single_batch_closed_form",
+      "comparisons": 1,
+      "pass": true
+    },
+    {
+      "name": "uniform_closed_form",
+      "comparisons": 1,
+      "pass": true
+    },
+    {
+      "name": "people_unit_invariance",
+      "comparisons": 3,
+      "pass": true
+    },
+    {
+      "name": "time_unit_invariance",
+      "comparisons": 1,
+      "pass": true
+    },
+    {
+      "name": "zero_demand",
+      "comparisons": 1,
+      "pass": true
+    },
+    {
+      "name": "demand_scaling_monotonicity",
+      "comparisons": 120,
+      "pass": true
+    },
+    {
+      "name": "earlier_supply_monotonicity",
+      "comparisons": 120,
+      "pass": true
+    },
+    {
+      "name": "more_supply_monotonicity",
+      "comparisons": 120,
+      "pass": true
+    },
+    {
+      "name": "nested_reference_tiers",
+      "comparisons": 240,
+      "pass": true
+    },
+    {
+      "name": "uncertainty_set_inclusion",
+      "comparisons": 1,
+      "pass": true
+    },
+    {
+      "name": "zero_supply_finite_output",
+      "comparisons": 1,
+      "pass": true
+    },
+    {
+      "name": "safety_and_missing_gates",
+      "comparisons": 2,
+      "pass": true
+    },
+    {
+      "name": "four_internal_levels_reachable",
+      "comparisons": 4,
+      "pass": true
+    },
+    {
+      "name": "average_lag_loses_information",
+      "comparisons": 1,
+      "pass": true
+    }
+  ],
+  "mean_lag_peak_counterexample": [
+    1000,
+    1500
+  ],
+  "original_lambda_counterexample": {
+    "backlog": 1000,
+    "capacity": 1000,
+    "tau_hours": [
+      0.5,
+      1,
+      2
+    ],
+    "lambda": [
+      2,
+      1,
+      0.5
+    ],
+    "true_batch_clear_hours": [
+      1.5,
+      2,
+      3
+    ]
+  }
+}
