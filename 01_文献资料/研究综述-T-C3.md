@@ -2,13 +2,15 @@
 
 任务主责：张子凡。整理日期：2026年10月8日。状态：代表文献综述稿；2026年10月10日经梅玉坤交叉技术复核有条件通过。本文与[研究背景](研究背景-T-C1.md)、[联动现状](多方式联动现状-T-C2.md)衔接，重点是梳理研究问题及对本课题的启示；不替代梅玉坤T-A3逐篇方法审查。
 
+2026年10月10日收尾补充：助手结合工作区已有PDF新增R8、R9，形成9篇代表研究比较；原有梅玉坤复核记录对应此前7篇稿件，不自动覆盖本次新增内容。版本及章节核查见[新增关键文献核查](新增关键文献核查-2026-10-10.md)。
+
 ## 一 检索范围与证据强度
 
-本轮通过网络检索定位期刊官网、出版社论文页及期刊PDF，检索组合包括“multimodal transportation hubs emergency evacuation”“railway passenger station digital twin emergency”“bus bridging routes timetables”“passenger transfer reneging”“rolling horizon railway disruption”。选取与枢纽离站、多方式接续、时变客流、应急流程及旅客行为直接相关的7篇代表研究，年份覆盖2018—2025年。检索日期不代表文献完整覆盖至2026年。
+本轮通过网络检索定位期刊官网、出版社论文页及期刊PDF，检索组合包括“multimodal transportation hubs emergency evacuation”“railway passenger station digital twin emergency”“bus bridging routes timetables”“passenger transfer reneging”“rolling horizon railway disruption”。原稿选取7篇代表研究，本次结合本地材料增加2篇，现为9篇，年份覆盖2018—2025年。检索日期不代表文献完整覆盖至2026年。
 
 本次为定向代表文献检索，未执行CNKI、Web of Science或Scopus的完整数据库检索，未按系统综述规范报告筛选数量，也未复现算法。2026年研究已出现检索线索，但尚未纳入本轮逐篇比较。因此，本稿不作“最新研究全覆盖”或“已有研究均未考虑某因素”的结论。
 
-证据分为：**F：可读取全文并核对研究框架；P：出版社摘要或部分正文可核；M：只有书目信息。**网页直接打开遇403、429或超时时，利用搜索工具返回的出版社页面摘要与正文片段核对，并如实标P，不将搜索返回片段称为全文精读。本轮R1—R3、R5—R7为P，R4为F（未逐式检查或复现）。下面“数据要求”为根据模型任务提出的迁移需求，除明确注明外，不等同于论文完整输入表。
+证据分为：**F：可读取全文并核对指定研究框架；P：出版社摘要或部分正文可核；M：只有书目信息。**网页直接打开遇403、429或超时时，利用搜索工具返回的出版社页面摘要与正文片段核对，并如实标P，不将搜索返回片段称为全文精读。R1—R3、R5—R7为P，R4为F；R8接受稿为F，R9正式期刊版为P、较早报告稿可读，均未逐式检查或复现。下面“数据要求”为根据模型任务提出的迁移需求，除明确注明外，不等同于论文完整输入表。
 
 ## 二 代表文献与比较表
 
@@ -21,6 +23,8 @@
 | R5 Chen与An，2021 | 时变需求下接驳路线、车辆配置及发车时刻联合优化；混合整数线性规划与禁忌搜索 | 到达节奏与发车安排应共同考虑，候选动作和情景生成分开 | 需分时需求、路线、车队及服务条件；墨尔本线路背景与虹桥晚点抵沪不同 | P：出版社摘要及研究片段 |
 | R6 Zhang等，2024 | 换乘站受扰下路线和车辆优化，考虑旅客放弃等待；遗传算法结合仿真 | 区分等待、转移与离开行为，检查车辆与泊位约束 | 需行为参数、需求和车辆条件；本稿未核行为参数标定细节 | P：出版社摘要及贡献片段 |
 | R7 Tang等，2025 | 枢纽旅客流分配与多方式车辆调度联合优化；元胞传输、混合整数线性规划及变邻域搜索 | 是本课题最直接的方法对照；兼顾步行到上客点与车辆服务 | 预览假设枢纽可协调各方式；虹桥权限和资源兑现条件需另核 | P：出版社摘要、假设及实验片段 |
+| R8 Liu等，2025 | 出租、公交、地铁在线疏运；数据驱动环境与异质多智能体强化学习 | 与本课题直接相关；比较需求更新、方式转换及常态服务影响 | 需多源分时数据；西安北站案例的分配完成、上车与单程假设不能直接移植 | F：本地接受稿第3.1.4、7.1、7.3节及机构库书目 |
+| R9 Diab等，2018 | TTC铁路接驳响应及从常态服务调出公交的实证分析 | 区分响应阶段、请求/分配/实际到位和常态服务损失 | 多伦多2015年记录不能给虹桥τ赋值；本地报告与最终期刊正文分版本 | P：正式书目/摘要；较早报告稿过程及表2可读 |
 
 各编号的准确题名、作者、刊物、DOI和原文链接见第六节。表内不以“未在摘要出现”判断论文一定未考虑某因素。
 
@@ -32,6 +36,8 @@ Xu等梳理了多方式枢纽的旅客行为、疏散模型与仿真，并在当
 
 Tang等2025年的工作已经联合考虑枢纽旅客流与车辆调度。这一研究说明，多方式枢纽协同优化已有直接先例。本课题需要比较其场景、假设与数据条件，并检验本项目补充的信息是否改善动作解释，不能重复使用“现有研究只关注建筑内疏散”作为总体判断。[R7原文](https://www.sciencedirect.com/science/article/pii/S0968090X25001214)
 
+Liu等2025年进一步研究出租、公交、地铁的在线协同，其西安北站案例输入包括分时需求和多源运营数据。该接受稿将分配到适合方式作为解除拥挤，并不考虑公交/出租往返循环，上车时间也有简化。本课题须核实际离站、上客和周转边界；不能直接沿用其结果或地方阈值。[R8机构库及接受稿](https://eprints.whiterose.ac.uk/id/eprint/231261/)。核查位置及推论见[补充记录](新增关键文献核查-2026-10-10.md)。
+
 ### 3.2 从名义运力到可执行服务
 
 Deng等在轨交接驳研究中考虑路径选择、站点容量和资源限制，表明将旅客转到其他方式还需满足网络和接驳条件。对虹桥的迁移要求是按方向与可上客位置检查服务能力；车辆容量不能跨线路、时段和目的地无条件相加。这是本课题对文献的应用推论，不是已经测得的虹桥约束。[R3原文](https://www.mdpi.com/2071-1050/10/12/4427)
@@ -41,6 +47,8 @@ Deng等在轨交接驳研究中考虑路径选择、站点容量和资源限制�
 Chen与An联合优化接驳路线及发车时刻，体现了到达需求随时间变化时，班次配置也需匹配。Zhang等进一步考虑换乘需求及放弃等待行为。虹桥情景应因此区分到达、等待与实际离开，避免将全部受影响旅客固定分配给一种方式；行为规则需要本地证据或明确假设。[R5原文](https://www.sciencedirect.com/science/article/pii/S0377221721002046)、[R6原文](https://www.mdpi.com/2071-1050/16/23/10710)
 
 这些研究支持把时间与旅客行为纳入比较，但不能据此认定已经解决决策时点预测误差、跨单位接令和资源到位问题。后续全文审查应分别核需求是否已知、服务是否即时可用，以及动态更新如何实现。
+
+Diab等关于TTC的研究提示，资源响应及调出常态服务的代价应分阶段记录。本地报告表中的不同事件类别平均响应时间不是通用时间区间，更不能替代虹桥日志；正式2018期刊正文与较早报告稿的数值仍需逐项对照。[R9正式论文](https://doi.org/10.1139/cjce-2017-0294)。
 
 ### 3.4 情景与处置过程相互衔接
 
@@ -69,6 +77,8 @@ T-A6先形成“真实案例归纳—字段统一—约束筛查—代表情景�
 
 后续应优先取得R7全文，核其协调权限、时变需求、模式切换及实验场景；再与R4流程情景、R5时变服务和R6行为响应逐项比较。T-A3已补齐8篇逐篇验收记录，但其中3篇仍为摘要/预览核验。
 
+R8全文框架已经可核，应列为直接对照，先比较完成口径、资源循环和多源输入，不因使用强化学习便预设为本课题主算法。R9最终正文待补。当前用户确认描述性情景库＋方法框架，数据获取条件及决定层级见[阶段记录](../项目管理/阶段收尾与决策记录-2026-10-10.md)。
+
 ## 六 参考文献与核查位置
 
 1. Xu, Z.; Bai, Q.; Shao, Y.; Hu, A.; Dong, Z. (2022). *A review on passenger emergency evacuation from multimodal transportation hubs*. Journal of Traffic and Transportation Engineering (English Edition), 9(4), 591–607. DOI: 10.1016/j.jtte.2022.02.001。[期刊原文](https://jtte.chd.edu.cn/article/doi/10.1016/j.jtte.2022.02.001)。核：期刊书目、摘要；PDF首页。
@@ -79,8 +89,13 @@ T-A6先形成“真实案例归纳—字段统一—约束筛查—代表情景�
 6. Zhang, Z.; Li, X.; Zhang, J.; Shi, Y. (2024). *Optimizing Bus Bridging Service Considering Passenger Transfer and Reneging Behavior*. Sustainability, 16(23), 10710. DOI: 10.3390/su162310710。[出版社原文](https://www.mdpi.com/2071-1050/16/23/10710)。核：书目、摘要及贡献片段；输入标定与行为参数待核。
 7. Tang, Q.; Qu, Y.; Yin, H.; Zhang, W.; Wu, J. (2025). *Joint optimization for crowd evacuation and vehicle scheduling at multimodal transportation hubs*. Transportation Research Part C: Emerging Technologies, 174, 105117. DOI: 10.1016/j.trc.2025.105117。[出版社原文](https://www.sciencedirect.com/science/article/pii/S0968090X25001214)。核：作者、摘要、Problem statement and assumptions及实验片段；全文待取得。仅使用本论文内容，不把页面下方推荐论文摘要计入本研究。
 
-补充检索线索：Feng等2024年金山铁路接驳研究采用滚动优化并同时考虑原有公交乘客，可继续核查应急资源对常态服务的影响。[出版社页面](https://www.sciencedirect.com/science/article/pii/S0957417423033274)。未纳入上表7篇统计。
+8. Liu, E.; Zhan, S.; Zhu, Y.; Lin, Z.; Wang, D. (2025). *Online multi-modal evacuation during passenger flow outburst in urban transit system: A heterogeneous multi-agent reinforcement learning framework*. Transportation Research Part E: Logistics and Transportation Review, 204, 104411. DOI:10.1016/j.tre.2025.104411。[机构库接受稿](https://eprints.whiterose.ac.uk/id/eprint/231261/)。核：第3.1.4节假设、第7.1节输入及第7.3节结果定位；未复现。
+9. Diab, E.; Feng, G.; Shalaby, A. (2018). *Breaking into emergency shuttle service: Aspects and impacts of retracting buses from existing scheduled bus services*. Canadian Journal of Civil Engineering, 45(8), 647–658. DOI:10.1139/cjce-2017-0294。[正式论文页](https://doi.org/10.1139/cjce-2017-0294)。核：正式书目/摘要与本地较早报告稿；最终版全文直接访问受限，版本和数值限制见补充记录。
+
+补充检索线索：Feng等2024年金山铁路接驳研究采用滚动优化并同时考虑原有公交乘客，可继续核查应急资源对常态服务的影响。[出版社页面](https://www.sciencedirect.com/science/article/pii/S0957417423033274)。未纳入上表9篇统计。
 
 ## 七 验收状态
 
 已完成按问题组织的综述正文、7篇代表文献比较、原文链接和核查范围说明。待补中文数据库检索、2026年研究覆盖、部分全文与正式书目导出。复核人：梅玉坤；日期：2026年10月10日；结论：有条件通过，不作为系统综述，不宣称全领域研究空白。详见[交叉复核记录](../项目管理/梅玉坤任务补强与交叉复核记录.md)。
+
+本次补充后代表清单增至9篇，新增内容由助手完成技术整理，尚未由原复核人重新签署。上述限制继续保留；不同任务的文献清单有重叠，不相加当作互不重复的已读篇数。
