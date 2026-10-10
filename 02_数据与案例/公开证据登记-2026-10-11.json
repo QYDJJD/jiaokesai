@@ -1,0 +1,884 @@
+{
+  "version": "PUBLIC-AUDIT-01",
+  "checked_date": "2026-10-11",
+  "timezone": "Asia/Shanghai",
+  "workflow": "public evidence only; no user/mentor data dependency",
+  "not_an_operational_calibration": true,
+  "sources": [
+    {
+      "id": "PUB-01",
+      "issuer": "上海市交通委",
+      "body_date": "2023-12-19",
+      "role": "official_event",
+      "url": "https://jtw.sh.gov.cn/xydt/20231226/6f4ed792491949fb871c7237e4d636ff.html",
+      "location": "首段与交通保障段",
+      "checked_date": "2026-10-11"
+    },
+    {
+      "id": "PUB-02",
+      "issuer": "文汇网记者报道",
+      "body_date": "2023-08-07",
+      "role": "original_reporting_not_operator_log",
+      "url": "https://www.whb.cn/zhuzhan/cs/20230807/533824.html",
+      "location": "报文、动员、末段统计",
+      "checked_date": "2026-10-11"
+    },
+    {
+      "id": "PUB-03",
+      "issuer": "上海市国资委",
+      "body_date": "2024-09-18",
+      "role": "official_aggregate_and_preparation",
+      "url": "https://www.gzw.sh.gov.cn/shgzw_zxzx_gqdt/20240918/87a233dab9064ff684b354195059008d.html",
+      "location": "上海地产集团节",
+      "checked_date": "2026-10-11"
+    },
+    {
+      "id": "PUB-04",
+      "issuer": "上海机场集团",
+      "body_date": "2014-02-08",
+      "role": "operator_event",
+      "url": "https://www.shairport.com/xwg/info_itemid_19250.html",
+      "location": "疏散旅客保畅通及虹桥转場段",
+      "checked_date": "2026-10-11"
+    },
+    {
+      "id": "PUB-05",
+      "issuer": "上海市交通委",
+      "body_date": "2026-09-30",
+      "role": "planned_service",
+      "url": "https://jtw.sh.gov.cn/xwfb2/20260930/36d705ec1a0e4d109638bbbec7ee21bf.html",
+      "location": "正文与线路详情图",
+      "checked_date": "2026-10-11"
+    },
+    {
+      "id": "PUB-06",
+      "issuer": "上海市交通委官方图表",
+      "body_date": "2026-09-30",
+      "role": "planned_service_image",
+      "url": "https://jtw.sh.gov.cn/cmsres/91/9175b17aba1541b8b42e1c835f2c3a52/c6955c7515f616291e0a92feb585057e.jpg",
+      "location": "全图三张表；已视觉核读",
+      "checked_date": "2026-10-11"
+    },
+    {
+      "id": "PUB-07",
+      "issuer": "上海市交通委",
+      "body_date": "2025-05-29",
+      "role": "facility_upper_limit",
+      "url": "https://jtw.sh.gov.cn/jyjabljg/20251211/f948d3c9c58f4fc6a0c59f58ad707a91.html",
+      "location": "出租设施段；正文日期与URL日期分列",
+      "checked_date": "2026-10-11"
+    },
+    {
+      "id": "PUB-08",
+      "issuer": "上海市道路运输管理局",
+      "body_date": "2022-07-18",
+      "role": "public_plan_attachment",
+      "url": "https://www.shanghai.gov.cn/cmsres/0e/0e715dde26ed457ca1ef9b57c91649f2/1a46ee743be770f6405a5b299439523a.pdf",
+      "location": "PDF顺序第2、6、16、42、43、140页已视觉核读；全文172页，不声称全页视觉审阅",
+      "checked_date": "2026-10-11"
+    },
+    {
+      "id": "PUB-09",
+      "issuer": "上海市政府公文库",
+      "body_date": "2022-07-15",
+      "role": "notice_date_variant",
+      "url": "https://www.shanghai.gov.cn/gwk/search/content/00d60e51ed6742e596e9eb0410868c11",
+      "location": "网页印发、发布及落款；与附件7月18日不一致，保留差异",
+      "checked_date": "2026-10-11"
+    },
+    {
+      "id": "PUB-10",
+      "issuer": "申通地铁介绍、政府转载",
+      "body_date": "2026-04-30",
+      "role": "operator_plan_republished",
+      "url": "https://www.shanghai.gov.cn/nw17239/20260430/95e18d877dd6423cbba1f42d25c692ca.html",
+      "location": "定点加班停靠、上下客及暂停换乘段",
+      "checked_date": "2026-10-11"
+    },
+    {
+      "id": "PUB-11",
+      "issuer": "上海市交通委",
+      "body_date": "2025-04-08",
+      "role": "period_aggregate",
+      "url": "https://www.shanghai.gov.cn/nw18454/20250410/78fec666ed1d4c0c8260a6912d85c052.html",
+      "location": "4月3—6日清明实绩、分方式累计及高峰日",
+      "checked_date": "2026-10-11"
+    },
+    {
+      "id": "PUB-12",
+      "issuer": "上海市交通委",
+      "body_date": "2025-10-16",
+      "role": "multi_hub_aggregate",
+      "url": "https://www.shanghai.gov.cn/nw18454/20251017/68531e844ea842538e95d5c34cc31292.html",
+      "location": "虹桥、松江、浦东的综合保障统计",
+      "checked_date": "2026-10-11"
+    },
+    {
+      "id": "PUB-13",
+      "issuer": "虹桥商务区管委会",
+      "body_date": "2026-09-24",
+      "role": "platform_summary_not_open_microdata",
+      "url": "https://www.shhqcbd.gov.cn/ywdt/mtjj/852283171172421.html",
+      "location": "累计存储及完单率段；未给本研究所需可下载事件明细",
+      "checked_date": "2026-10-11"
+    },
+    {
+      "id": "PUB-14",
+      "issuer": "上海市政府英文门户，来源上海发布",
+      "body_date": "2024-09-16",
+      "role": "official_service_state_republished",
+      "url": "https://english.shanghai.gov.cn/en-Latest-WhatsNew/20240916/baf03f1e469640bd8f0fc115b858cb3e.html",
+      "location": "暂停线路与地面/高架区段",
+      "checked_date": "2026-10-11"
+    },
+    {
+      "id": "PUB-15",
+      "issuer": "北京市应急管理局",
+      "body_date": "2024-06-05",
+      "role": "capacity_method_other_jurisdiction",
+      "url": "https://yjglj.beijing.gov.cn/art/2024/6/5/art_2522_676704.html",
+      "location": "明确安全容量和预警等级；仅方法对照，不提供虹桥K",
+      "checked_date": "2026-10-11"
+    }
+  ],
+  "planned_bus_services": [
+    {
+      "id": "BUS-R5",
+      "name": "虹桥枢纽5路",
+      "origin": "虹桥西交通中心",
+      "destination": "南桥汽车站",
+      "network_version": 2026,
+      "role": "HONGQIAO_FIRST_LEG_CANDIDATE",
+      "evidence": "PLAN",
+      "source_ids": [
+        "PUB-05",
+        "PUB-06"
+      ],
+      "operating_dates": [
+        "2026-10-05",
+        "2026-10-06",
+        "2026-10-07"
+      ],
+      "start_clock": null,
+      "end_rule": {
+        "kind": "next_day_fixed",
+        "clock": "04:30",
+        "extension_from_regular_last_departure_unknown": true
+      },
+      "effective_people_per_hour": null,
+      "executed_trips": null,
+      "passengers": null,
+      "safe_and_committed": null
+    },
+    {
+      "id": "BUS-R7",
+      "name": "虹桥枢纽7路",
+      "origin": "虹桥西交通中心",
+      "destination": "石化汽车站",
+      "network_version": 2026,
+      "role": "HONGQIAO_FIRST_LEG_CANDIDATE",
+      "evidence": "PLAN",
+      "source_ids": [
+        "PUB-05",
+        "PUB-06"
+      ],
+      "operating_dates": [
+        "2026-10-05",
+        "2026-10-06",
+        "2026-10-07"
+      ],
+      "start_clock": null,
+      "end_rule": {
+        "kind": "next_day_fixed",
+        "clock": "04:30",
+        "extension_from_regular_last_departure_unknown": true
+      },
+      "effective_people_per_hour": null,
+      "executed_trips": null,
+      "passengers": null,
+      "safe_and_committed": null
+    },
+    {
+      "id": "BUS-R10",
+      "name": "虹桥枢纽10路",
+      "origin": "虹桥西交通中心",
+      "destination": "松江汽车东站",
+      "network_version": 2026,
+      "role": "HONGQIAO_FIRST_LEG_CANDIDATE",
+      "evidence": "PLAN",
+      "source_ids": [
+        "PUB-05",
+        "PUB-06"
+      ],
+      "operating_dates": [
+        "2026-10-05",
+        "2026-10-06",
+        "2026-10-07"
+      ],
+      "start_clock": null,
+      "end_rule": {
+        "kind": "next_day_fixed",
+        "clock": "04:30",
+        "extension_from_regular_last_departure_unknown": true
+      },
+      "effective_people_per_hour": null,
+      "executed_trips": null,
+      "passengers": null,
+      "safe_and_committed": null
+    },
+    {
+      "id": "BUS-DZ1",
+      "name": "虹桥DZ1线",
+      "origin": "虹桥西交通中心（同闵行23路站台）",
+      "destination": "九亭",
+      "network_version": 2026,
+      "role": "HONGQIAO_FIRST_LEG_CANDIDATE",
+      "evidence": "PLAN",
+      "source_ids": [
+        "PUB-05",
+        "PUB-06"
+      ],
+      "operating_dates": [
+        "2026-10-06",
+        "2026-10-07",
+        "2026-10-08"
+      ],
+      "start_clock": "00:00",
+      "end_rule": {
+        "kind": "same_day_fixed",
+        "clock": "04:30"
+      },
+      "effective_people_per_hour": null,
+      "executed_trips": null,
+      "passengers": null,
+      "safe_and_committed": null,
+      "stop_policy": "直达",
+      "dispatch_policy": "客满即发；不是已知固定间隔"
+    },
+    {
+      "id": "BUS-DZ2",
+      "name": "虹桥DZ2线",
+      "origin": "虹桥西交通中心（同闵行23路站台）",
+      "destination": "莘庄",
+      "network_version": 2026,
+      "role": "HONGQIAO_FIRST_LEG_CANDIDATE",
+      "evidence": "PLAN",
+      "source_ids": [
+        "PUB-05",
+        "PUB-06"
+      ],
+      "operating_dates": [
+        "2026-10-06",
+        "2026-10-07",
+        "2026-10-08"
+      ],
+      "start_clock": "00:00",
+      "end_rule": {
+        "kind": "same_day_fixed",
+        "clock": "04:30"
+      },
+      "effective_people_per_hour": null,
+      "executed_trips": null,
+      "passengers": null,
+      "safe_and_committed": null,
+      "stop_policy": "七宝沿途停靠",
+      "dispatch_policy": "客满即发；不是已知固定间隔"
+    },
+    {
+      "id": "BUS-DZ3",
+      "name": "虹桥DZ3线",
+      "origin": "虹桥西交通中心（同闵行23路站台）",
+      "destination": "虹桥商务区",
+      "network_version": 2026,
+      "role": "HONGQIAO_FIRST_LEG_CANDIDATE",
+      "evidence": "PLAN",
+      "source_ids": [
+        "PUB-05",
+        "PUB-06"
+      ],
+      "operating_dates": [
+        "2026-10-06",
+        "2026-10-07",
+        "2026-10-08"
+      ],
+      "start_clock": "00:00",
+      "end_rule": {
+        "kind": "same_day_fixed",
+        "clock": "04:30"
+      },
+      "effective_people_per_hour": null,
+      "executed_trips": null,
+      "passengers": null,
+      "safe_and_committed": null,
+      "stop_policy": "按需停靠",
+      "dispatch_policy": "客满即发；不是已知固定间隔"
+    },
+    {
+      "id": "BUS-DZ4",
+      "name": "虹桥DZ4线",
+      "origin": "虹桥西交通中心（同320路站台）",
+      "destination": "上海火车站",
+      "network_version": 2026,
+      "role": "HONGQIAO_FIRST_LEG_CANDIDATE",
+      "evidence": "PLAN",
+      "source_ids": [
+        "PUB-05",
+        "PUB-06"
+      ],
+      "operating_dates": [
+        "2026-10-06",
+        "2026-10-07",
+        "2026-10-08"
+      ],
+      "start_clock": "00:00",
+      "end_rule": {
+        "kind": "same_day_fixed",
+        "clock": "04:30"
+      },
+      "effective_people_per_hour": null,
+      "executed_trips": null,
+      "passengers": null,
+      "safe_and_committed": null,
+      "stop_policy": "按需停靠",
+      "dispatch_policy": "客满即发；不是已知固定间隔"
+    },
+    {
+      "id": "BUS-DZ5",
+      "name": "虹桥DZ5线",
+      "origin": "虹桥西交通中心（同虹桥枢纽1路站台）",
+      "destination": "顾戴路七莘路",
+      "network_version": 2026,
+      "role": "HONGQIAO_FIRST_LEG_CANDIDATE",
+      "evidence": "PLAN",
+      "source_ids": [
+        "PUB-05",
+        "PUB-06"
+      ],
+      "operating_dates": [
+        "2026-10-06",
+        "2026-10-07",
+        "2026-10-08"
+      ],
+      "start_clock": "00:00",
+      "end_rule": {
+        "kind": "same_day_fixed",
+        "clock": "04:30"
+      },
+      "effective_people_per_hour": null,
+      "executed_trips": null,
+      "passengers": null,
+      "safe_and_committed": null,
+      "stop_policy": "按需停靠",
+      "dispatch_policy": "客满即发；不是已知固定间隔"
+    },
+    {
+      "id": "BUS-DZ321",
+      "name": "DZ321线",
+      "origin": "福泉路天山西路",
+      "destination": "鹤旋路金运路",
+      "network_version": 2026,
+      "role": "DOWNSTREAM_FEEDER",
+      "evidence": "PLAN",
+      "source_ids": [
+        "PUB-05",
+        "PUB-06"
+      ],
+      "operating_dates": [
+        "2026-10-05",
+        "2026-10-06",
+        "2026-10-07"
+      ],
+      "start_clock": "22:30",
+      "end_rule": {
+        "kind": "last_train_arrival_plus_minutes",
+        "minutes": 15,
+        "last_train_arrival": null
+      },
+      "effective_people_per_hour": null,
+      "executed_trips": null,
+      "passengers": null,
+      "safe_and_committed": null,
+      "transfer_node": "淞虹路站",
+      "metro_exit": "5号口",
+      "hongqiao_origin_capacity_eligible": false,
+      "stop_policy": "按需停靠"
+    },
+    {
+      "id": "BUS-DZ322",
+      "name": "DZ322线",
+      "origin": "上海动物园枢纽",
+      "destination": "九亭",
+      "network_version": 2026,
+      "role": "DOWNSTREAM_FEEDER",
+      "evidence": "PLAN",
+      "source_ids": [
+        "PUB-05",
+        "PUB-06"
+      ],
+      "operating_dates": [
+        "2026-10-05",
+        "2026-10-06",
+        "2026-10-07"
+      ],
+      "start_clock": "22:30",
+      "end_rule": {
+        "kind": "last_train_arrival_plus_minutes",
+        "minutes": 15,
+        "last_train_arrival": null
+      },
+      "effective_people_per_hour": null,
+      "executed_trips": null,
+      "passengers": null,
+      "safe_and_committed": null,
+      "transfer_node": "上海动物园站",
+      "metro_exit": "2号口",
+      "hongqiao_origin_capacity_eligible": false,
+      "stop_policy": "按需停靠"
+    },
+    {
+      "id": "BUS-PDZ39",
+      "name": "浦东DZ39线",
+      "origin": "龙阳路辅路",
+      "destination": "盛夏路益江路",
+      "network_version": 2026,
+      "role": "DOWNSTREAM_FEEDER",
+      "evidence": "PLAN",
+      "source_ids": [
+        "PUB-05",
+        "PUB-06"
+      ],
+      "operating_dates": [
+        "2026-10-05",
+        "2026-10-06",
+        "2026-10-07"
+      ],
+      "start_clock": "22:30",
+      "end_rule": {
+        "kind": "last_train_arrival_plus_minutes",
+        "minutes": 15,
+        "last_train_arrival": null
+      },
+      "effective_people_per_hour": null,
+      "executed_trips": null,
+      "passengers": null,
+      "safe_and_committed": null,
+      "transfer_node": "龙阳路站",
+      "metro_exit": "7号口",
+      "hongqiao_origin_capacity_eligible": false,
+      "stop_policy": "按需停靠"
+    },
+    {
+      "id": "BUS-PDZ40",
+      "name": "浦东DZ40线",
+      "origin": "龙汇路白杨路",
+      "destination": "莲安东路莲中路",
+      "network_version": 2026,
+      "role": "DOWNSTREAM_FEEDER",
+      "evidence": "PLAN",
+      "source_ids": [
+        "PUB-05",
+        "PUB-06"
+      ],
+      "operating_dates": [
+        "2026-10-05",
+        "2026-10-06",
+        "2026-10-07"
+      ],
+      "start_clock": "22:30",
+      "end_rule": {
+        "kind": "last_train_arrival_plus_minutes",
+        "minutes": 15,
+        "last_train_arrival": null
+      },
+      "effective_people_per_hour": null,
+      "executed_trips": null,
+      "passengers": null,
+      "safe_and_committed": null,
+      "transfer_node": "龙阳路站",
+      "metro_exit": "12号口",
+      "hongqiao_origin_capacity_eligible": false,
+      "stop_policy": "按需停靠"
+    }
+  ],
+  "legacy_shared_service_reference": {
+    "network_version": 2022,
+    "source_id": "PUB-08",
+    "shared_node": "虹桥东交通中心01号停车位",
+    "routes": [
+      {
+        "id": "LEG-L2-XUJING",
+        "endpoints": [
+          "徐泾东站",
+          "虹桥东交通中心"
+        ],
+        "vehicle_allocation_raw": "5辆+2，双向",
+        "page_1_based": 16
+      },
+      {
+        "id": "LEG-L2-SONGHONG",
+        "endpoints": [
+          "淞虹路站",
+          "虹桥东交通中心"
+        ],
+        "vehicle_allocation_raw": "5辆+5，双向",
+        "page_1_based": 16
+      },
+      {
+        "id": "LEG-L10-LONGXI",
+        "endpoints": [
+          "虹桥东交通中心",
+          "龙溪路站"
+        ],
+        "vehicle_allocation_raw": "5辆+2，双向",
+        "page_1_based": [
+          42,
+          43
+        ]
+      }
+    ],
+    "shared_capacity_people_per_hour": null,
+    "current_2026_committed_inventory": null,
+    "caution": "配车原文不解释为每方向固定承诺数；共用站位说明需核共享能力，不证明上述方案同时启动"
+  },
+  "measurements": [
+    {
+      "id": "M-E01-Q",
+      "event_id": "HQ-E01",
+      "quantity": "affected_rail_passengers",
+      "value": 10008,
+      "unit": "people",
+      "window": [
+        "2023-12-14T23:00:00+08:00",
+        "2023-12-15T05:00:00+08:00"
+      ],
+      "source_id": "PUB-01",
+      "admissible_as": "scale_descriptor",
+      "not_as": [
+        "actual_queue_arrivals",
+        "peak_queue"
+      ]
+    },
+    {
+      "id": "M-E01-BUS",
+      "event_id": "HQ-E01",
+      "quantity": "reported_bus_transports",
+      "value": 32,
+      "unit": "person_trips",
+      "trips": 20,
+      "routes": [
+        "316",
+        "320"
+      ],
+      "source_id": "PUB-01",
+      "not_as": [
+        "capacity_people_per_hour"
+      ]
+    },
+    {
+      "id": "M-E01-METRO",
+      "event_id": "HQ-E01",
+      "quantity": "reported_added_metro_transports",
+      "value": 273,
+      "unit": "person_trips",
+      "trips": 3,
+      "source_id": "PUB-01",
+      "not_as": [
+        "capacity_people_per_hour"
+      ]
+    },
+    {
+      "id": "M-E01-CLEAR",
+      "event_id": "HQ-E01",
+      "quantity": "reported_evacuation_end_time_scope_not_fully_defined",
+      "value": "2023-12-15T05:10:00+08:00",
+      "source_id": "PUB-01",
+      "not_as": [
+        "normative_H",
+        "individual_max_wait"
+      ]
+    },
+    {
+      "id": "M-E02-TAXI",
+      "event_id": "HQ-E02",
+      "quantity": "provider_daily_station_service",
+      "value": 7858,
+      "unit": "vehicle_trips",
+      "window": [
+        "2023-08-06T00:00:00+08:00",
+        "2023-08-07T00:00:00+08:00"
+      ],
+      "source_id": "PUB-02",
+      "not_as": [
+        "emergency_only_demand",
+        "capacity_people_per_hour"
+      ]
+    },
+    {
+      "id": "M-E02-END",
+      "event_id": "HQ-E02",
+      "quantity": "G161_completion_message_time",
+      "value": "2023-08-07T02:18:00+08:00",
+      "source_id": "PUB-02",
+      "not_as": [
+        "whole_hub_clear_time"
+      ]
+    },
+    {
+      "id": "M-E03-SHELTER",
+      "event_id": "HQ-E03",
+      "quantity": "shelter_preparation",
+      "value": "磁浮3F南隔离区准备",
+      "unit": "action",
+      "source_id": "PUB-03",
+      "not_as": [
+        "actual_sheltered_people",
+        "holding_limit_K"
+      ]
+    },
+    {
+      "id": "M-E04-BUS",
+      "event_id": "HQ-E04",
+      "quantity": "Pudong_ground_transfer_multi_destinations",
+      "vehicles": 16,
+      "vehicle_trips": 31,
+      "people": null,
+      "source_id": "PUB-04",
+      "not_as": [
+        "Hongqiao_arrival_demand",
+        "capacity_people_per_hour"
+      ]
+    },
+    {
+      "id": "M-TAXI-UPPER",
+      "quantity": "peak_facility_dispatch_upper_reference",
+      "value": 1800,
+      "approximate": true,
+      "unit": "vehicles_per_hour",
+      "network_version": 2025,
+      "source_id": "PUB-07",
+      "not_as": [
+        "actual_available_people_per_hour",
+        "2023_inventory"
+      ]
+    },
+    {
+      "id": "M-FIRST-BUS",
+      "quantity": "normative_first_vehicle_arrival_after_receipt",
+      "value": 15,
+      "unit": "minutes",
+      "source_id": "PUB-08",
+      "not_as": [
+        "normative_H",
+        "all_resources_active_lag",
+        "measured_response"
+      ]
+    },
+    {
+      "id": "M-JINSHAN",
+      "quantity": "other_station_warning_thresholds",
+      "location": "金山卫站",
+      "values": [
+        300,
+        600,
+        1000
+      ],
+      "delay_minutes": [
+        30,
+        60,
+        120
+      ],
+      "source_id": "PUB-08",
+      "page_1_based": 140,
+      "not_as": [
+        "Hongqiao_holding_K",
+        "Hongqiao_F_thresholds"
+      ]
+    },
+    {
+      "id": "M-MULTIHUB",
+      "quantity": "multi_hub_holiday_added_metro_service",
+      "vehicle_trips": 56,
+      "people_lower_reported": 33000,
+      "approximate": true,
+      "locations": [
+        "虹桥火车站",
+        "铁路上海松江站",
+        "浦东机场"
+      ],
+      "source_id": "PUB-12",
+      "not_as": [
+        "Hongqiao_only_supply",
+        "fixed_per_train_capacity"
+      ]
+    },
+    {
+      "id": "M-QINGMING",
+      "quantity": "rail_arrivals_period_and_peak_day",
+      "period_total_person_trips": 1017000,
+      "period_dates": [
+        "2025-04-03",
+        "2025-04-06"
+      ],
+      "peak_day": "2025-04-06",
+      "peak_day_person_trips": 364000,
+      "source_id": "PUB-11",
+      "not_as": [
+        "night_queue_demand",
+        "hourly_arrival_curve"
+      ]
+    }
+  ],
+  "event_gap_audit": [
+    {
+      "event_id": "HQ-E01",
+      "source_ids": [
+        "PUB-01"
+      ],
+      "fields": {
+        "cohort_entry": "partial",
+        "decision_snapshot": "missing",
+        "initial_backlog_B0": "missing",
+        "direction_arrivals": "missing",
+        "joint_forecast": "missing",
+        "effective_service": "missing",
+        "activation_end": "partial",
+        "shared_service": "missing",
+        "holding_goal_K": "missing",
+        "completion_goal_H": "missing",
+        "same_cohort_departures": "partial",
+        "same_cohort_completion": "partial",
+        "network_and_safety": "partial"
+      },
+      "actual_grade": "X-DATA",
+      "calculation_ready": false,
+      "other_possible_blockers": [],
+      "reason": "缺同群体分时需求、有效资源及目标；未用其他年份或事件数字回填"
+    },
+    {
+      "event_id": "HQ-E02",
+      "source_ids": [
+        "PUB-02"
+      ],
+      "fields": {
+        "cohort_entry": "partial",
+        "decision_snapshot": "missing",
+        "initial_backlog_B0": "missing",
+        "direction_arrivals": "missing",
+        "joint_forecast": "missing",
+        "effective_service": "missing",
+        "activation_end": "partial",
+        "shared_service": "missing",
+        "holding_goal_K": "missing",
+        "completion_goal_H": "missing",
+        "same_cohort_departures": "incompatible_daily_vehicle_total",
+        "same_cohort_completion": "partial_one_train",
+        "network_and_safety": "partial"
+      },
+      "actual_grade": "X-DATA",
+      "calculation_ready": false,
+      "other_possible_blockers": [],
+      "reason": "缺同群体分时需求、有效资源及目标；未用其他年份或事件数字回填"
+    },
+    {
+      "event_id": "HQ-E03",
+      "source_ids": [
+        "PUB-03",
+        "PUB-14"
+      ],
+      "fields": {
+        "cohort_entry": "partial",
+        "decision_snapshot": "missing",
+        "initial_backlog_B0": "missing",
+        "direction_arrivals": "missing",
+        "joint_forecast": "missing",
+        "effective_service": "missing",
+        "activation_end": "partial",
+        "shared_service": "missing",
+        "holding_goal_K": "missing",
+        "completion_goal_H": "missing",
+        "same_cohort_departures": "missing",
+        "same_cohort_completion": "missing",
+        "network_and_safety": "partial_requires_safety_screen"
+      },
+      "actual_grade": "X-DATA",
+      "calculation_ready": false,
+      "other_possible_blockers": [
+        "X-STRUCTURE"
+      ],
+      "reason": "缺同群体分时需求、有效资源及目标；未用其他年份或事件数字回填"
+    },
+    {
+      "event_id": "HQ-E04",
+      "source_ids": [
+        "PUB-04"
+      ],
+      "fields": {
+        "cohort_entry": "partial_multiple_cohorts",
+        "decision_snapshot": "missing",
+        "initial_backlog_B0": "missing",
+        "direction_arrivals": "partial_destinations_not_counts",
+        "joint_forecast": "missing",
+        "effective_service": "missing",
+        "activation_end": "partial",
+        "shared_service": "missing",
+        "holding_goal_K": "missing",
+        "completion_goal_H": "missing",
+        "same_cohort_departures": "partial_pudong_multi_destination",
+        "same_cohort_completion": "partial_not_ground_queue",
+        "network_and_safety": "partial_historical"
+      },
+      "actual_grade": "X-DATA",
+      "calculation_ready": false,
+      "other_possible_blockers": [
+        "X-STRUCTURE"
+      ],
+      "reason": "缺同群体分时需求、有效资源及目标；未用其他年份或事件数字回填"
+    }
+  ],
+  "goal_policy": {
+    "K_actual": null,
+    "H_actual": null,
+    "actual_tiers": null,
+    "research_use": "parameterized_goal_regions_and_resource_conditions",
+    "must_keep_same_goals_for_scenario_comparison": true,
+    "no_user_or_mentor_data_request": true
+  },
+  "search_scope": {
+    "date": "2026-10-11",
+    "topics": [
+      "4个既有事件原页与补充报道",
+      "虹桥分级预案和候客容量",
+      "分时客流及公开下载",
+      "运营方与主管机关服务目标",
+      "2026国庆线路附件",
+      "2022公交临时专线及历史阈值"
+    ],
+    "direct_domains": [
+      "jtw.sh.gov.cn",
+      "www.shanghai.gov.cn",
+      "www.shhqcbd.gov.cn",
+      "www.shairport.com",
+      "www.gzw.sh.gov.cn",
+      "www.whb.cn"
+    ],
+    "negative_result_scope": "本轮所核来源未取得完整同群体日志或虹桥K/H；不声称互联网不存在",
+    "excluded_lead": {
+      "url": "https://www.chinatla.com/?a=index&aid=460&c=View&m=home",
+      "reason": "搜索缓存见企业国庆保障数字；正文抓取未成功且未取得运营方原记录，不进入判级输入"
+    }
+  },
+  "source_attachment_checks": {
+    "public-bus-plan-20260930.jpg": {
+      "url": "https://jtw.sh.gov.cn/cmsres/91/9175b17aba1541b8b42e1c835f2c3a52/c6955c7515f616291e0a92feb585057e.jpg",
+      "sha256": "65dafbf595d543a3c979cfc23f229fc3ac2859b2a0630ff73ddc3cc7150bfca8",
+      "bytes": 5505884,
+      "stored_as": "ignored_reading_copy; official URL retained"
+    },
+    "public-transport-plan-2022.pdf": {
+      "url": "https://www.shanghai.gov.cn/cmsres/0e/0e715dde26ed457ca1ef9b57c91649f2/1a46ee743be770f6405a5b299439523a.pdf",
+      "sha256": "26a67484c71bab3871677b6586d2cdae5bbddcb06b51614f056ef4c0a1994e6e",
+      "bytes": 1626286,
+      "stored_as": "ignored_reading_copy; official URL retained"
+    }
+  }
+}

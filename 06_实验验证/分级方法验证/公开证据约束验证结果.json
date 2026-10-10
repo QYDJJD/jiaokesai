@@ -1,0 +1,285 @@
+{
+  "version": "CHECK-PUBLIC-01",
+  "date": "2026-10-11",
+  "checks": 20,
+  "passed": 20,
+  "source_records": 15,
+  "source_records_are_not_independent_events": true,
+  "real_event_gap_audits": 4,
+  "numeric_actual_grades": 0,
+  "independent_resource_completions": 4,
+  "normalized_boundary_comparisons": 3,
+  "validation_scope": "audited transcription, public constraints, missing-data gate and analytic identifiability; not real classification accuracy",
+  "results": [
+    {
+      "name": "12线路的拓扑分工",
+      "pass": true,
+      "details": {
+        "first_leg_planned_lines": 8,
+        "downstream_planned_lines": 4,
+        "note": "线路数不是运力率；纠正把4条下游接驳算作虹桥直发"
+      }
+    },
+    {
+      "name": "4条下游线路不能直接给虹桥队列服务",
+      "pass": true,
+      "details": {
+        "origins": [
+          "福泉路天山西路",
+          "上海动物园枢纽",
+          "龙阳路辅路",
+          "龙汇路白杨路"
+        ]
+      }
+    },
+    {
+      "name": "12条计划均未被补成有效能力或实绩",
+      "pass": true,
+      "details": {
+        "source_role": "PLAN",
+        "availability_guarantee": false
+      }
+    },
+    {
+      "name": "定制窗口归凌晨自然日",
+      "pass": true,
+      "details": {
+        "start": "2026-10-06T00:00:00",
+        "end": "2026-10-06T04:30:00",
+        "not_oct_5_morning": true
+      }
+    },
+    {
+      "name": "末日窗口不能续到次日凌晨",
+      "pass": true,
+      "details": {
+        "last_custom_window_end": "2026-10-08T04:30:00"
+      }
+    },
+    {
+      "name": "常规延时跨日及未知起点",
+      "pass": true,
+      "details": {
+        "start": null,
+        "last_end": "2026-10-08T04:30:00",
+        "note": "原末班时刻未取得；不虚构完整连续供给"
+      }
+    },
+    {
+      "name": "接驳终点未知不解释为永久可用",
+      "pass": true,
+      "details": {
+        "end": null,
+        "meaning": "UNKNOWN_LAST_TRAIN_ARRIVAL; NOT_UNLIMITED_SERVICE"
+      }
+    },
+    {
+      "name": "接驳15分钟跟随本地轨交到达时点",
+      "pass": true,
+      "details": {
+        "hypothetical_last_train_arrival": "2026-10-05T23:50:00",
+        "derived_end": "2026-10-06T00:05:00",
+        "actual_observation": false
+      }
+    },
+    {
+      "name": "历史多线共用01号站位不设三份独立容量",
+      "pass": true,
+      "details": {
+        "routes": [
+          "LEG-L2-XUJING",
+          "LEG-L2-SONGHONG",
+          "LEG-L10-LONGXI"
+        ],
+        "unknown_joint_capacity": true,
+        "not_actual_simultaneous_activation": true
+      }
+    },
+    {
+      "name": "2022配车与2025设施不回填2023或2026资源",
+      "pass": true,
+      "details": {
+        "year_specific_only": true
+      }
+    },
+    {
+      "name": "辆每小时和车次不能直接作人每小时",
+      "pass": true,
+      "details": {
+        "missing_conversion": [
+          "actual passengers per vehicle",
+          "existing occupation",
+          "directions",
+          "available vehicles and windows"
+        ]
+      }
+    },
+    {
+      "name": "首车规定到位不代替H或全部生效",
+      "pass": true,
+      "details": {
+        "normative_first_vehicle_minutes": 15,
+        "measured_all_vehicle_activation": null
+      }
+    },
+    {
+      "name": "金山卫阈值不作为虹桥上限",
+      "pass": true,
+      "details": {
+        "other_station_values": [
+          300,
+          600,
+          1000
+        ],
+        "Hongqiao_K": null
+      }
+    },
+    {
+      "name": "多枢纽实绩不归给虹桥单独",
+      "pass": true,
+      "details": {
+        "multi_hub_added_trains": 56,
+        "reported_passenger_scale": "33000余",
+        "Hongqiao_allocation": null
+      }
+    },
+    {
+      "name": "E01报道时刻差不是服务目标",
+      "pass": true,
+      "details": {
+        "reported_timestamp_gap_minutes": 10.0,
+        "cohort_last_arrival_confirmed": false,
+        "normative_H": null
+      }
+    },
+    {
+      "name": "机场多目的转送和准备安置不补需求或K",
+      "pass": true,
+      "details": {
+        "pudong_transfer_vehicles": 16,
+        "pudong_multi_destination_trips": 31,
+        "Hongqiao_demand": null,
+        "shelter_actual_occupants": null
+      }
+    },
+    {
+      "name": "4个真实卡缺参时拒绝数值分级",
+      "pass": true,
+      "details": [
+        {
+          "event": "HQ-E01",
+          "grade": "X-DATA"
+        },
+        {
+          "event": "HQ-E02",
+          "grade": "X-DATA"
+        },
+        {
+          "event": "HQ-E03",
+          "grade": "X-DATA"
+        },
+        {
+          "event": "HQ-E04",
+          "grade": "X-DATA"
+        }
+      ]
+    },
+    {
+      "name": "相同人数历时和目标仍不能识别资源层",
+      "pass": true,
+      "details": {
+        "known_hypothetical_q": 2000,
+        "d": 2,
+        "k": 1000,
+        "h": 1,
+        "rate_requirement": 666.6666666666666,
+        "resource_completions": [
+          {
+            "hypothesis_only": true,
+            "resource_rates": [
+              700.0,
+              1400.0,
+              2800.0
+            ],
+            "grade": "F0",
+            "analytic_grade": "F0"
+          },
+          {
+            "hypothesis_only": true,
+            "resource_rates": [
+              400.0,
+              800.0,
+              1600.0
+            ],
+            "grade": "F1",
+            "analytic_grade": "F1"
+          },
+          {
+            "hypothesis_only": true,
+            "resource_rates": [
+              200.0,
+              400.0,
+              800.0
+            ],
+            "grade": "F2",
+            "analytic_grade": "F2"
+          },
+          {
+            "hypothesis_only": true,
+            "resource_rates": [
+              100.0,
+              200.0,
+              400.0
+            ],
+            "grade": "F3",
+            "analytic_grade": "F3"
+          }
+        ],
+        "note": "不是4个真实事件的可行等级集合，证明缺资源数据无法唯一判级"
+      }
+    },
+    {
+      "name": "串联后续接驳不能与上游运力相加",
+      "pass": true,
+      "details": {
+        "hypothesis_only": true,
+        "throughput_upper_bound": 400,
+        "incorrect_sum": 1000,
+        "timing_travel_and_space_would_add_constraints": true
+      }
+    },
+    {
+      "name": "不指定实际K/H也能检验参数化门槛",
+      "pass": true,
+      "details": {
+        "hypothesis_only": true,
+        "beta": 0.1,
+        "kappa": 0.2,
+        "eta": 0.5,
+        "gamma_min": 0.9000000000000001,
+        "people_per_hour": 450.00000000000006,
+        "boundary_runs": [
+          {
+            "rate": 449.00000000000006,
+            "peak": 201.9999999999999,
+            "clear_h": 2.4498886414253893,
+            "pass": false
+          },
+          {
+            "rate": 450.00000000000006,
+            "peak": 199.9999999999999,
+            "clear_h": 2.444444444444444,
+            "pass": true
+          },
+          {
+            "rate": 451.00000000000006,
+            "peak": 197.9999999999999,
+            "clear_h": 2.439024390243902,
+            "pass": true
+          }
+        ],
+        "prerequisites": "Q>0,D>0,B0<=K, uniform inflow, constant eligible continuous supply"
+      }
+    }
+  ]
+}
