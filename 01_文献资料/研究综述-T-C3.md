@@ -2,11 +2,11 @@
 
 任务主责：张子凡。整理日期：2026年10月8日。状态：代表文献综述稿；2026年10月10日经梅玉坤交叉技术复核有条件通过。本文与[研究背景](研究背景-T-C1.md)、[联动现状](多方式联动现状-T-C2.md)衔接，重点是梳理研究问题及对本课题的启示；不替代梅玉坤T-A3逐篇方法审查。
 
-2026年10月10日收尾补充：助手结合工作区已有PDF新增R8、R9，形成9篇代表研究比较；原有梅玉坤复核记录对应此前7篇稿件，不自动覆盖本次新增内容。版本及章节核查见[新增关键文献核查](新增关键文献核查-2026-10-10.md)。
+2026年10月10日收尾补充：助手结合工作区已有PDF新增R8、R9，再补R10/R11，形成11篇代表研究比较；原有梅玉坤复核记录对应此前7篇稿件，不自动覆盖本次新增内容。版本及章节核查见[新增关键文献核查](新增关键文献核查-2026-10-10.md)。
 
 ## 一 检索范围与证据强度
 
-本轮通过网络检索定位期刊官网、出版社论文页及期刊PDF，检索组合包括“multimodal transportation hubs emergency evacuation”“railway passenger station digital twin emergency”“bus bridging routes timetables”“passenger transfer reneging”“rolling horizon railway disruption”。原稿选取7篇代表研究，本次结合本地材料增加2篇，现为9篇，年份覆盖2018—2025年。检索日期不代表文献完整覆盖至2026年。
+本轮通过网络检索定位期刊官网、出版社论文页及期刊PDF，检索组合包括“multimodal transportation hubs emergency evacuation”“railway passenger station digital twin emergency”“bus bridging routes timetables”“passenger transfer reneging”“rolling horizon railway disruption”。原稿选取7篇代表研究，本次结合本地材料及网络补证增加4篇，现为11篇，年份覆盖2018—2025年。检索日期不代表文献完整覆盖至2026年。
 
 本次为定向代表文献检索，未执行CNKI、Web of Science或Scopus的完整数据库检索，未按系统综述规范报告筛选数量，也未复现算法。2026年研究已出现检索线索，但尚未纳入本轮逐篇比较。因此，本稿不作“最新研究全覆盖”或“已有研究均未考虑某因素”的结论。
 
@@ -25,8 +25,10 @@
 | R7 Tang等，2025 | 枢纽旅客流分配与多方式车辆调度联合优化；元胞传输、混合整数线性规划及变邻域搜索 | 是本课题最直接的方法对照；兼顾步行到上客点与车辆服务 | 预览假设枢纽可协调各方式；虹桥权限和资源兑现条件需另核 | P：出版社摘要、假设及实验片段 |
 | R8 Liu等，2025 | 出租、公交、地铁在线疏运；数据驱动环境与异质多智能体强化学习 | 与本课题直接相关；比较需求更新、方式转换及常态服务影响 | 需多源分时数据；西安北站案例的分配完成、上车与单程假设不能直接移植 | F：本地接受稿第3.1.4、7.1、7.3节及机构库书目 |
 | R9 Diab等，2018 | TTC铁路接驳响应及从常态服务调出公交的实证分析 | 区分响应阶段、请求/分配/实际到位和常态服务损失 | 多伦多2015年记录不能给虹桥τ赋值；本地报告与最终期刊正文分版本 | P：正式书目/摘要；较早报告稿过程及表2可读 |
+| R10 Feng等，2024 | 兼顾原公交与铁路中断需求的滚动线路调整 | 核应急调用对常态服务的影响 | 需时变OD、车队、道路、运行和线路调整条件；金山案例非虹桥 | P：出版方摘要与正文索引 |
+| R11 Chen等，2024 | 引导、延伸接驳与不确定公交运行时间；MILP及稳健处理 | 分开到达误差和道路运行误差，核下游接续 | 需OD、节点、车队及运行时间依据；作者数据未公开 | P：出版方摘要、机构稿指定片段 |
 
-各编号的准确题名、作者、刊物、DOI和原文链接见第六节。表内不以“未在摘要出现”判断论文一定未考虑某因素。
+各编号的准确题名、作者、刊物、DOI和原文链接见第六节。R10、R11核查为P，指定片段与迁移条件见[方法补核](运行中断与不确定性方法补充-2026-10-10.md)。表内不以“未在摘要出现”判断论文一定未考虑某因素。
 
 ## 三 按问题组织的研究进展
 
@@ -53,6 +55,10 @@ Diab等关于TTC的研究提示，资源响应及调出常态服务的代价应�
 ### 3.4 情景与处置过程相互衔接
 
 Wang等以数字孪生与应急流程建模组织多类灾害演练，并在清河站开展验证。其对本项目的启示是，运营指标之外仍需记录危害与处置过程，不能仅以人数替代全部事件信息。其发表日期为2024年1月4日，期刊卷为11（2023），引用年份采用2024，保留原DOI。[R4原文](https://www.frontiersin.org/journals/physics/articles/10.3389/fphy.2023.1291785/full)
+
+### 3.5 运行中断、常态代价与不确定性
+
+Feng等2024年研究金山铁路接驳与原公交需求，支持在应急动作中同时记录原线路服务代价；Chen等2024年研究引导和延伸接驳、公交运行时间不确定性，提示与到达预测U分别处理。两篇本轮均P，假设与迁移条件见[补核](运行中断与不确定性方法补充-2026-10-10.md)，不称已复现、不移植效果数值。
 
 目前这组文献可以支持情景需保留需求、约束和行动接口，尚不能证明本项目五个候选主轴最小且完备，也不能证明LHS、K-Means是最适合的生成方法。
 
@@ -92,10 +98,11 @@ R8全文框架已经可核，应列为直接对照，先比较完成口径、资
 8. Liu, E.; Zhan, S.; Zhu, Y.; Lin, Z.; Wang, D. (2025). *Online multi-modal evacuation during passenger flow outburst in urban transit system: A heterogeneous multi-agent reinforcement learning framework*. Transportation Research Part E: Logistics and Transportation Review, 204, 104411. DOI:10.1016/j.tre.2025.104411。[机构库接受稿](https://eprints.whiterose.ac.uk/id/eprint/231261/)。核：第3.1.4节假设、第7.1节输入及第7.3节结果定位；未复现。
 9. Diab, E.; Feng, G.; Shalaby, A. (2018). *Breaking into emergency shuttle service: Aspects and impacts of retracting buses from existing scheduled bus services*. Canadian Journal of Civil Engineering, 45(8), 647–658. DOI:10.1139/cjce-2017-0294。[正式论文页](https://doi.org/10.1139/cjce-2017-0294)。核：正式书目/摘要与本地较早报告稿；最终版全文直接访问受限，版本和数值限制见补充记录。
 
-补充检索线索：Feng等2024年金山铁路接驳研究采用滚动优化并同时考虑原有公交乘客，可继续核查应急资源对常态服务的影响。[出版社页面](https://www.sciencedirect.com/science/article/pii/S0957417423033274)。未纳入上表9篇统计。
+10. Feng, Y.; Ceder, A.; Zhang, S.; Cao, Z. (2024). *Bus routing fine-tuning for integrated network-based demand and bus bridging for a disrupted railway system*. Expert Systems with Applications, 242, 122825. [DOI:10.1016/j.eswa.2023.122825](https://doi.org/10.1016/j.eswa.2023.122825)。核：摘要、滚动优化与案例索引，P。
+11. Chen, J.; Du, B.; Hu, H.; Yin, Y.; Peng, Q. (2024). *Urban rail transit disruption management based on passenger guidance and extended bus bridging service considering uncertain bus running time*. Expert Systems with Applications, 249, 123659. [DOI:10.1016/j.eswa.2024.123659](https://doi.org/10.1016/j.eswa.2024.123659)。核：摘要、需求与路径假设和数据说明片段，P。
 
 ## 七 验收状态
 
 已完成按问题组织的综述正文、7篇代表文献比较、原文链接和核查范围说明。待补中文数据库检索、2026年研究覆盖、部分全文与正式书目导出。复核人：梅玉坤；日期：2026年10月10日；结论：有条件通过，不作为系统综述，不宣称全领域研究空白。详见[交叉复核记录](../项目管理/梅玉坤任务补强与交叉复核记录.md)。
 
-本次补充后代表清单增至9篇，新增内容由助手完成技术整理，尚未由原复核人重新签署。上述限制继续保留；不同任务的文献清单有重叠，不相加当作互不重复的已读篇数。
+本次补充后代表清单增至11篇，新增内容由助手完成技术整理，尚未由原复核人重新签署。上述限制继续保留；不同任务的文献清单有重叠，不相加当作互不重复的已读篇数。
