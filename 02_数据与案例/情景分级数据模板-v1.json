@@ -1,0 +1,62 @@
+{
+  "template_version": "DATA-FORM-01",
+  "is_calculation_ready": false,
+  "evidence_type": "TO_BE_FILLED; null means unknown, not zero",
+  "event_id": null,
+  "event_date": null,
+  "cohort_and_entry_boundary": null,
+  "decision_snapshot_time": null,
+  "time_zero_definition": null,
+  "completion_boundary_departed_queue_or_arrived_at_receiving_node": null,
+  "network_version": null,
+  "safe_for_continued_transport": null,
+  "paths_and_constraints_fully_represented": null,
+  "directions": [
+    {
+      "direction_id": null,
+      "destination_or_acceptable_transfer_nodes": null,
+      "initial_backlog_people": null,
+      "arrival_counts_by_interval": null,
+      "forecast_information_snapshot": null,
+      "allowed_joint_profile_ids": null,
+      "input_duration_hours_D": null,
+      "holding_limit_people_K": null,
+      "holding_limit_basis": null,
+      "post_input_completion_allowance_hours_H": null,
+      "completion_goal_basis": null,
+      "individual_wait_observations": null,
+      "actual_same_cohort_departures_by_interval": null,
+      "actual_same_cohort_last_completion_time": null,
+      "evidence_records": null
+    }
+  ],
+  "resource_inventory": [
+    {
+      "resource_id": null,
+      "physical_pool_id": null,
+      "mode": null,
+      "eligible_tier": null,
+      "compatible_directions": null,
+      "effective_available_people_per_hour_by_interval": null,
+      "original_source_value_and_unit": null,
+      "conversion_and_existing_occupation_basis": null,
+      "request_commitment_arrival_activation_end_times": null,
+      "path_travel_turnaround_constraints": null,
+      "shared_service_group_ids": null,
+      "permission_and_commitment_basis": null,
+      "evidence_records": null
+    }
+  ],
+  "shared_service_groups": null,
+  "shared_waiting_space_groups": null,
+  "reference_tiers": [
+    {"tier": "V0", "definition_and_commitment_basis": null, "candidate_plan_ids": null},
+    {"tier": "V1", "definition_and_commitment_basis": null, "candidate_plan_ids": null},
+    {"tier": "V2", "definition_and_commitment_basis": null, "candidate_plan_ids": null}
+  ],
+  "predeclared_candidate_plans": null,
+  "forecast_vs_actual_separation_checked": null,
+  "cohort_unit_space_and_window_consistency_checked": null,
+  "reviewer_and_actual_review_date": null,
+  "missing_data_and_followup": null
+}

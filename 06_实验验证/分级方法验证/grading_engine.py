@@ -47,7 +47,7 @@ def _inverse_linear(segments, rank):
     raise ValueError("rank not served")
 
 
-def evaluate(arrivals, supplies, initial=0, deadline=1):
+def evaluate(arrivals, supplies, initial=0, deadline=1, include_trace=False):
     validate_segments(arrivals)
     validate_segments(supplies, supply=True)
     if not nonnegative(initial) or not nonnegative(deadline):
@@ -69,6 +69,7 @@ def evaluate(arrivals, supplies, initial=0, deadline=1):
     area_deadline = 0.0 if deadline == 0 else None
     atrace = [(0,0,0,float(initial))] if initial else []
     strace = []
+    queue_trace = [[0.0,float(initial)]]
     for a,b in zip(times,times[1:]):
         mid = (a+b)/2
         rate = sum(r for x,y,r in arrivals if x <= mid < y)
@@ -88,6 +89,7 @@ def evaluate(arrivals, supplies, initial=0, deadline=1):
             arrived += rate*duration
             served += delivered
             backlog = nxt
+            queue_trace.append([right,backlog])
             peak = max(peak,backlog)
         if abs(b-deadline) < EPS:
             residual, area_deadline = backlog, area
@@ -111,10 +113,13 @@ def evaluate(arrivals, supplies, initial=0, deadline=1):
             ai,aslope = (0,0) if rank < initial else _inverse_linear(atrace,rank)
             si,sslope = _inverse_linear(strace,rank)
             wait_max = max(wait_max,si-ai+(sslope-aslope)*low,si-ai+(sslope-aslope)*high)
-    return {"peak_people":peak,"clear_h":clear,"residual_at_deadline_people":residual,
+    result = {"peak_people":peak,"clear_h":clear,"residual_at_deadline_people":residual,
             "max_wait_h":wait_max,"waiting_people_h_to_deadline":area_deadline,
             "total_waiting_people_h":area if complete else None,
             "arrived_people":total,"served_people":served,"unserved_people":max(0,total-served)}
+    if include_trace:
+        result['queue_trace'] = queue_trace
+    return result
 
 
 def supply_tiers(p=1, factor=1, ends=None):

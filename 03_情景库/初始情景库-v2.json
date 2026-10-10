@@ -1,0 +1,6041 @@
+{
+  "version": "LIB-INIT-02",
+  "rule_version": "RULE-02",
+  "date": "2026-10-11",
+  "grade_meaning": "minimum tier among predeclared fixed feasible service plans",
+  "actual_operating_standard": false,
+  "reference_note": "reference_version identifies a synthetic schema family; inventories, plans and goals can differ. Compare stored inputs and fingerprints; F labels are not unconditional cross-case risk ranks.",
+  "single_pool_synthetic": [
+    {
+      "id": "SC-H01",
+      "title": "基准需求",
+      "type": "synthetic",
+      "axis_or_boundary": "Q_aff",
+      "reference_version": "REF-SYN-01",
+      "goal_version": "GOAL-SYN-01",
+      "input": {
+        "q": 2000,
+        "d": 2
+      },
+      "grade": "F1",
+      "blockers": [],
+      "goals": {
+        "K_people": 1000,
+        "H_hours": 1,
+        "deadline_h": 3
+      },
+      "tiers": [
+        {
+          "tier": "V0",
+          "supply_segments": [
+            [
+              0,
+              null,
+              500
+            ]
+          ],
+          "pass": false,
+          "runs": [
+            {
+              "shape": "uniform",
+              "peak_people": 1000.0,
+              "clear_h": 4.0,
+              "residual_at_deadline_people": 500.0,
+              "max_wait_h": 2.0,
+              "waiting_people_h_to_deadline": 1750.0,
+              "total_waiting_people_h": 2000.0,
+              "arrived_people": 2000.0,
+              "served_people": 2000.0,
+              "unserved_people": 0,
+              "pass": false,
+              "failures": [
+                "clear_after_D_plus_H"
+              ]
+            }
+          ]
+        },
+        {
+          "tier": "V1",
+          "supply_segments": [
+            [
+              0,
+              null,
+              500
+            ],
+            [
+              0,
+              null,
+              500
+            ]
+          ],
+          "pass": true,
+          "runs": [
+            {
+              "shape": "uniform",
+              "peak_people": 0.0,
+              "clear_h": 2.0,
+              "residual_at_deadline_people": 0.0,
+              "max_wait_h": 0.0,
+              "waiting_people_h_to_deadline": 0.0,
+              "total_waiting_people_h": 0.0,
+              "arrived_people": 2000.0,
+              "served_people": 2000.0,
+              "unserved_people": 0,
+              "pass": true,
+              "failures": []
+            }
+          ]
+        },
+        {
+          "tier": "V2",
+          "supply_segments": [
+            [
+              0,
+              null,
+              500
+            ],
+            [
+              0,
+              null,
+              500
+            ],
+            [
+              0,
+              null,
+              1000
+            ]
+          ],
+          "pass": true,
+          "runs": [
+            {
+              "shape": "uniform",
+              "peak_people": 0.0,
+              "clear_h": 2.0,
+              "residual_at_deadline_people": 0.0,
+              "max_wait_h": 0.0,
+              "waiting_people_h_to_deadline": 0.0,
+              "total_waiting_people_h": 0.0,
+              "arrived_people": 2000.0,
+              "served_people": 2000.0,
+              "unserved_people": 0,
+              "pass": true,
+              "failures": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SC-H02",
+      "title": "较小需求",
+      "type": "synthetic",
+      "axis_or_boundary": "Q_aff",
+      "reference_version": "REF-SYN-01",
+      "goal_version": "GOAL-SYN-01",
+      "input": {
+        "q": 500,
+        "d": 2
+      },
+      "grade": "F0",
+      "blockers": [],
+      "goals": {
+        "K_people": 1000,
+        "H_hours": 1,
+        "deadline_h": 3
+      },
+      "tiers": [
+        {
+          "tier": "V0",
+          "supply_segments": [
+            [
+              0,
+              null,
+              500
+            ]
+          ],
+          "pass": true,
+          "runs": [
+            {
+              "shape": "uniform",
+              "peak_people": 0.0,
+              "clear_h": 2.0,
+              "residual_at_deadline_people": 0.0,
+              "max_wait_h": 0.0,
+              "waiting_people_h_to_deadline": 0.0,
+              "total_waiting_people_h": 0.0,
+              "arrived_people": 500.0,
+              "served_people": 500.0,
+              "unserved_people": 0,
+              "pass": true,
+              "failures": []
+            }
+          ]
+        },
+        {
+          "tier": "V1",
+          "supply_segments": [
+            [
+              0,
+              null,
+              500
+            ],
+            [
+              0,
+              null,
+              500
+            ]
+          ],
+          "pass": true,
+          "runs": [
+            {
+              "shape": "uniform",
+              "peak_people": 0.0,
+              "clear_h": 2.0,
+              "residual_at_deadline_people": 0.0,
+              "max_wait_h": 0.0,
+              "waiting_people_h_to_deadline": 0.0,
+              "total_waiting_people_h": 0.0,
+              "arrived_people": 500.0,
+              "served_people": 500.0,
+              "unserved_people": 0,
+              "pass": true,
+              "failures": []
+            }
+          ]
+        },
+        {
+          "tier": "V2",
+          "supply_segments": [
+            [
+              0,
+              null,
+              500
+            ],
+            [
+              0,
+              null,
+              500
+            ],
+            [
+              0,
+              null,
+              1000
+            ]
+          ],
+          "pass": true,
+          "runs": [
+            {
+              "shape": "uniform",
+              "peak_people": 0.0,
+              "clear_h": 2.0,
+              "residual_at_deadline_people": 0.0,
+              "max_wait_h": 0.0,
+              "waiting_people_h_to_deadline": 0.0,
+              "total_waiting_people_h": 0.0,
+              "arrived_people": 500.0,
+              "served_people": 500.0,
+              "unserved_people": 0,
+              "pass": true,
+              "failures": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SC-H03",
+      "title": "较大需求",
+      "type": "synthetic",
+      "axis_or_boundary": "Q_aff",
+      "reference_version": "REF-SYN-01",
+      "goal_version": "GOAL-SYN-01",
+      "input": {
+        "q": 3500,
+        "d": 2
+      },
+      "grade": "F2",
+      "blockers": [],
+      "goals": {
+        "K_people": 1000,
+        "H_hours": 1,
+        "deadline_h": 3
+      },
+      "tiers": [
+        {
+          "tier": "V0",
+          "supply_segments": [
+            [
+              0,
+              null,
+              500
+            ]
+          ],
+          "pass": false,
+          "runs": [
+            {
+              "shape": "uniform",
+              "peak_people": 2500.0,
+              "clear_h": 7.0,
+              "residual_at_deadline_people": 2000.0,
+              "max_wait_h": 5.0,
+              "waiting_people_h_to_deadline": 4750.0,
+              "total_waiting_people_h": 8750.0,
+              "arrived_people": 3500.0,
+              "served_people": 3500.0,
+              "unserved_people": 0,
+              "pass": false,
+              "failures": [
+                "peak_over_K",
+                "clear_after_D_plus_H"
+              ]
+            }
+          ]
+        },
+        {
+          "tier": "V1",
+          "supply_segments": [
+            [
+              0,
+              null,
+              500
+            ],
+            [
+              0,
+              null,
+              500
+            ]
+          ],
+          "pass": false,
+          "runs": [
+            {
+              "shape": "uniform",
+              "peak_people": 1500.0,
+              "clear_h": 3.5,
+              "residual_at_deadline_people": 500.0,
+              "max_wait_h": 1.5,
+              "waiting_people_h_to_deadline": 2500.0,
+              "total_waiting_people_h": 2625.0,
+              "arrived_people": 3500.0,
+              "served_people": 3500.0,
+              "unserved_people": 0,
+              "pass": false,
+              "failures": [
+                "peak_over_K",
+                "clear_after_D_plus_H"
+              ]
+            }
+          ]
+        },
+        {
+          "tier": "V2",
+          "supply_segments": [
+            [
+              0,
+              null,
+              500
+            ],
+            [
+              0,
+              null,
+              500
+            ],
+            [
+              0,
+              null,
+              1000
+            ]
+          ],
+          "pass": true,
+          "runs": [
+            {
+              "shape": "uniform",
+              "peak_people": 0.0,
+              "clear_h": 2.0,
+              "residual_at_deadline_people": 0.0,
+              "max_wait_h": 0.0,
+              "waiting_people_h_to_deadline": 0.0,
+              "total_waiting_people_h": 0.0,
+              "arrived_people": 3500.0,
+              "served_people": 3500.0,
+              "unserved_people": 0,
+              "pass": true,
+              "failures": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SC-H04",
+      "title": "三个参考包均不足",
+      "type": "synthetic",
+      "axis_or_boundary": "Q_aff",
+      "reference_version": "REF-SYN-01",
+      "goal_version": "GOAL-SYN-01",
+      "input": {
+        "q": 7000,
+        "d": 2
+      },
+      "grade": "F3",
+      "blockers": [],
+      "goals": {
+        "K_people": 1000,
+        "H_hours": 1,
+        "deadline_h": 3
+      },
+      "tiers": [
+        {
+          "tier": "V0",
+          "supply_segments": [
+            [
+              0,
+              null,
+              500
+            ]
+          ],
+          "pass": false,
+          "runs": [
+            {
+              "shape": "uniform",
+              "peak_people": 6000.0,
+              "clear_h": 14.0,
+              "residual_at_deadline_people": 5500.0,
+              "max_wait_h": 12.0,
+              "waiting_people_h_to_deadline": 11750.0,
+              "total_waiting_people_h": 42000.0,
+              "arrived_people": 7000.0,
+              "served_people": 7000.0,
+              "unserved_people": 0,
+              "pass": false,
+              "failures": [
+                "peak_over_K",
+                "clear_after_D_plus_H"
+              ]
+            }
+          ]
+        },
+        {
+          "tier": "V1",
+          "supply_segments": [
+            [
+              0,
+              null,
+              500
+            ],
+            [
+              0,
+              null,
+              500
+            ]
+          ],
+          "pass": false,
+          "runs": [
+            {
+              "shape": "uniform",
+              "peak_people": 5000.0,
+              "clear_h": 7.0,
+              "residual_at_deadline_people": 4000.0,
+              "max_wait_h": 5.0,
+              "waiting_people_h_to_deadline": 9500.0,
+              "total_waiting_people_h": 17500.0,
+              "arrived_people": 7000.0,
+              "served_people": 7000.0,
+              "unserved_people": 0,
+              "pass": false,
+              "failures": [
+                "peak_over_K",
+                "clear_after_D_plus_H"
+              ]
+            }
+          ]
+        },
+        {
+          "tier": "V2",
+          "supply_segments": [
+            [
+              0,
+              null,
+              500
+            ],
+            [
+              0,
+              null,
+              500
+            ],
+            [
+              0,
+              null,
+              1000
+            ]
+          ],
+          "pass": false,
+          "runs": [
+            {
+              "shape": "uniform",
+              "peak_people": 3000.0,
+              "clear_h": 3.5,
+              "residual_at_deadline_people": 1000.0,
+              "max_wait_h": 1.5,
+              "waiting_people_h_to_deadline": 5000.0,
+              "total_waiting_people_h": 5250.0,
+              "arrived_people": 7000.0,
+              "served_people": 7000.0,
+              "unserved_people": 0,
+              "pass": false,
+              "failures": [
+                "peak_over_K",
+                "clear_after_D_plus_H"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SC-H05",
+      "title": "H03失去提前量",
+      "type": "synthetic",
+      "axis_or_boundary": "P1",
+      "reference_version": "REF-SYN-01",
+      "goal_version": "GOAL-SYN-01",
+      "input": {
+        "q": 3500,
+        "d": 2,
+        "p": 0
+      },
+      "grade": "F3",
+      "blockers": [],
+      "goals": {
+        "K_people": 1000,
+        "H_hours": 1,
+        "deadline_h": 3
+      },
+      "tiers": [
+        {
+          "tier": "V0",
+          "supply_segments": [
+            [
+              0,
+              null,
+              500
+            ]
+          ],
+          "pass": false,
+          "runs": [
+            {
+              "shape": "uniform",
+              "peak_people": 2500.0,
+              "clear_h": 7.0,
+              "residual_at_deadline_people": 2000.0,
+              "max_wait_h": 5.0,
+              "waiting_people_h_to_deadline": 4750.0,
+              "total_waiting_people_h": 8750.0,
+              "arrived_people": 3500.0,
+              "served_people": 3500.0,
+              "unserved_people": 0,
+              "pass": false,
+              "failures": [
+                "peak_over_K",
+                "clear_after_D_plus_H"
+              ]
+            }
+          ]
+        },
+        {
+          "tier": "V1",
+          "supply_segments": [
+            [
+              0,
+              null,
+              500
+            ],
+            [
+              1,
+              null,
+              500
+            ]
+          ],
+          "pass": false,
+          "runs": [
+            {
+              "shape": "uniform",
+              "peak_people": 2000.0,
+              "clear_h": 4.0,
+              "residual_at_deadline_people": 1000.0,
+              "max_wait_h": 2.0,
+              "waiting_people_h_to_deadline": 3750.0,
+              "total_waiting_people_h": 4250.0,
+              "arrived_people": 3500.0,
+              "served_people": 3500.0,
+              "unserved_people": 0,
+              "pass": false,
+              "failures": [
+                "peak_over_K",
+                "clear_after_D_plus_H"
+              ]
+            }
+          ]
+        },
+        {
+          "tier": "V2",
+          "supply_segments": [
+            [
+              0,
+              null,
+              500
+            ],
+            [
+              1,
+              null,
+              500
+            ],
+            [
+              1,
+              null,
+              1000
+            ]
+          ],
+          "pass": false,
+          "runs": [
+            {
+              "shape": "uniform",
+              "peak_people": 1250.0,
+              "clear_h": 2.5,
+              "residual_at_deadline_people": 0.0,
+              "max_wait_h": 0.7142857142857143,
+              "waiting_people_h_to_deadline": 2000.0,
+              "total_waiting_people_h": 2000.0,
+              "arrived_people": 3500.0,
+              "served_people": 3500.0,
+              "unserved_people": 0,
+              "pass": false,
+              "failures": [
+                "peak_over_K"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SC-H06",
+      "title": "H01输入集中",
+      "type": "synthetic",
+      "axis_or_boundary": "D",
+      "reference_version": "REF-SYN-01",
+      "goal_version": "GOAL-SYN-01",
+      "input": {
+        "q": 2000,
+        "d": 0.5
+      },
+      "grade": "F2",
+      "blockers": [],
+      "goals": {
+        "K_people": 1000,
+        "H_hours": 1,
+        "deadline_h": 1.5
+      },
+      "tiers": [
+        {
+          "tier": "V0",
+          "supply_segments": [
+            [
+              0,
+              null,
+              500
+            ]
+          ],
+          "pass": false,
+          "runs": [
+            {
+              "shape": "uniform",
+              "peak_people": 1750.0,
+              "clear_h": 4.0,
+              "residual_at_deadline_people": 1250.0,
+              "max_wait_h": 3.5,
+              "waiting_people_h_to_deadline": 1937.5,
+              "total_waiting_people_h": 3500.0,
+              "arrived_people": 2000.0,
+              "served_people": 2000.0,
+              "unserved_people": 0,
+              "pass": false,
+              "failures": [
+                "peak_over_K",
+                "clear_after_D_plus_H"
+              ]
+            }
+          ]
+        },
+        {
+          "tier": "V1",
+          "supply_segments": [
+            [
+              0,
+              null,
+              500
+            ],
+            [
+              0,
+              null,
+              500
+            ]
+          ],
+          "pass": false,
+          "runs": [
+            {
+              "shape": "uniform",
+              "peak_people": 1500.0,
+              "clear_h": 2.0,
+              "residual_at_deadline_people": 500.0,
+              "max_wait_h": 1.5,
+              "waiting_people_h_to_deadline": 1375.0,
+              "total_waiting_people_h": 1500.0,
+              "arrived_people": 2000.0,
+              "served_people": 2000.0,
+              "unserved_people": 0,
+              "pass": false,
+              "failures": [
+                "peak_over_K",
+                "clear_after_D_plus_H"
+              ]
+            }
+          ]
+        },
+        {
+          "tier": "V2",
+          "supply_segments": [
+            [
+              0,
+              null,
+              500
+            ],
+            [
+              0,
+              null,
+              500
+            ],
+            [
+              0,
+              null,
+              1000
+            ]
+          ],
+          "pass": true,
+          "runs": [
+            {
+              "shape": "uniform",
+              "peak_people": 1000.0,
+              "clear_h": 1.0,
+              "residual_at_deadline_people": 0.0,
+              "max_wait_h": 0.5,
+              "waiting_people_h_to_deadline": 500.0,
+              "total_waiting_people_h": 500.0,
+              "arrived_people": 2000.0,
+              "served_people": 2000.0,
+              "unserved_people": 0,
+              "pass": true,
+              "failures": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SC-H07",
+      "title": "H01预测集合扩大",
+      "type": "synthetic",
+      "axis_or_boundary": "U/Ω",
+      "reference_version": "REF-SYN-01",
+      "goal_version": "GOAL-SYN-01",
+      "input": {
+        "q": 2000,
+        "d": 2,
+        "shapes": [
+          "uniform",
+          "front"
+        ]
+      },
+      "grade": "F2",
+      "blockers": [],
+      "goals": {
+        "K_people": 1000,
+        "H_hours": 1,
+        "deadline_h": 3
+      },
+      "tiers": [
+        {
+          "tier": "V0",
+          "supply_segments": [
+            [
+              0,
+              null,
+              500
+            ]
+          ],
+          "pass": false,
+          "runs": [
+            {
+              "shape": "uniform",
+              "peak_people": 1000.0,
+              "clear_h": 4.0,
+              "residual_at_deadline_people": 500.0,
+              "max_wait_h": 2.0,
+              "waiting_people_h_to_deadline": 1750.0,
+              "total_waiting_people_h": 2000.0,
+              "arrived_people": 2000.0,
+              "served_people": 2000.0,
+              "unserved_people": 0,
+              "pass": false,
+              "failures": [
+                "clear_after_D_plus_H"
+              ]
+            },
+            {
+              "shape": "front",
+              "peak_people": 1350.0,
+              "clear_h": 4.0,
+              "residual_at_deadline_people": 500.0,
+              "max_wait_h": 2.7,
+              "waiting_people_h_to_deadline": 2850.0,
+              "total_waiting_people_h": 3100.0,
+              "arrived_people": 2000.0,
+              "served_people": 2000.0,
+              "unserved_people": 0,
+              "pass": false,
+              "failures": [
+                "peak_over_K",
+                "clear_after_D_plus_H"
+              ]
+            }
+          ]
+        },
+        {
+          "tier": "V1",
+          "supply_segments": [
+            [
+              0,
+              null,
+              500
+            ],
+            [
+              0,
+              null,
+              500
+            ]
+          ],
+          "pass": false,
+          "runs": [
+            {
+              "shape": "uniform",
+              "peak_people": 0.0,
+              "clear_h": 2.0,
+              "residual_at_deadline_people": 0.0,
+              "max_wait_h": 0.0,
+              "waiting_people_h_to_deadline": 0.0,
+              "total_waiting_people_h": 0.0,
+              "arrived_people": 2000.0,
+              "served_people": 2000.0,
+              "unserved_people": 0,
+              "pass": true,
+              "failures": []
+            },
+            {
+              "shape": "front",
+              "peak_people": 1100.0,
+              "clear_h": 2.0,
+              "residual_at_deadline_people": 0.0,
+              "max_wait_h": 1.1000000000000005,
+              "waiting_people_h_to_deadline": 1100.0,
+              "total_waiting_people_h": 1100.0,
+              "arrived_people": 2000.0,
+              "served_people": 2000.0,
+              "unserved_people": 0,
+              "pass": false,
+              "failures": [
+                "peak_over_K"
+              ]
+            }
+          ]
+        },
+        {
+          "tier": "V2",
+          "supply_segments": [
+            [
+              0,
+              null,
+              500
+            ],
+            [
+              0,
+              null,
+              500
+            ],
+            [
+              0,
+              null,
+              1000
+            ]
+          ],
+          "pass": true,
+          "runs": [
+            {
+              "shape": "uniform",
+              "peak_people": 0.0,
+              "clear_h": 2.0,
+              "residual_at_deadline_people": 0.0,
+              "max_wait_h": 0.0,
+              "waiting_people_h_to_deadline": 0.0,
+              "total_waiting_people_h": 0.0,
+              "arrived_people": 2000.0,
+              "served_people": 2000.0,
+              "unserved_people": 0,
+              "pass": true,
+              "failures": []
+            },
+            {
+              "shape": "front",
+              "peak_people": 600.0,
+              "clear_h": 2.0,
+              "residual_at_deadline_people": 0.0,
+              "max_wait_h": 0.29999999999999993,
+              "waiting_people_h_to_deadline": 253.84615384615384,
+              "total_waiting_people_h": 253.84615384615384,
+              "arrived_people": 2000.0,
+              "served_people": 2000.0,
+              "unserved_people": 0,
+              "pass": true,
+              "failures": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SC-H08",
+      "title": "H01有效供给减半",
+      "type": "synthetic",
+      "axis_or_boundary": "R/有效供给",
+      "reference_version": "REF-SYN-01",
+      "goal_version": "GOAL-SYN-01",
+      "input": {
+        "q": 2000,
+        "d": 2,
+        "factor": 0.5
+      },
+      "grade": "F2",
+      "blockers": [],
+      "goals": {
+        "K_people": 1000,
+        "H_hours": 1,
+        "deadline_h": 3
+      },
+      "tiers": [
+        {
+          "tier": "V0",
+          "supply_segments": [
+            [
+              0,
+              null,
+              250.0
+            ]
+          ],
+          "pass": false,
+          "runs": [
+            {
+              "shape": "uniform",
+              "peak_people": 1500.0,
+              "clear_h": 8.0,
+              "residual_at_deadline_people": 1250.0,
+              "max_wait_h": 6.0,
+              "waiting_people_h_to_deadline": 2875.0,
+              "total_waiting_people_h": 6000.0,
+              "arrived_people": 2000.0,
+              "served_people": 2000.0,
+              "unserved_people": 0,
+              "pass": false,
+              "failures": [
+                "peak_over_K",
+                "clear_after_D_plus_H"
+              ]
+            }
+          ]
+        },
+        {
+          "tier": "V1",
+          "supply_segments": [
+            [
+              0,
+              null,
+              250.0
+            ],
+            [
+              0,
+              null,
+              250.0
+            ]
+          ],
+          "pass": false,
+          "runs": [
+            {
+              "shape": "uniform",
+              "peak_people": 1000.0,
+              "clear_h": 4.0,
+              "residual_at_deadline_people": 500.0,
+              "max_wait_h": 2.0,
+              "waiting_people_h_to_deadline": 1750.0,
+              "total_waiting_people_h": 2000.0,
+              "arrived_people": 2000.0,
+              "served_people": 2000.0,
+              "unserved_people": 0,
+              "pass": false,
+              "failures": [
+                "clear_after_D_plus_H"
+              ]
+            }
+          ]
+        },
+        {
+          "tier": "V2",
+          "supply_segments": [
+            [
+              0,
+              null,
+              250.0
+            ],
+            [
+              0,
+              null,
+              250.0
+            ],
+            [
+              0,
+              null,
+              500.0
+            ]
+          ],
+          "pass": true,
+          "runs": [
+            {
+              "shape": "uniform",
+              "peak_people": 0.0,
+              "clear_h": 2.0,
+              "residual_at_deadline_people": 0.0,
+              "max_wait_h": 0.0,
+              "waiting_people_h_to_deadline": 0.0,
+              "total_waiting_people_h": 0.0,
+              "arrived_people": 2000.0,
+              "served_people": 2000.0,
+              "unserved_people": 0,
+              "pass": true,
+              "failures": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SC-H09",
+      "title": "H01附带初始积压",
+      "type": "synthetic",
+      "axis_or_boundary": "B0",
+      "reference_version": "REF-SYN-01",
+      "goal_version": "GOAL-SYN-01",
+      "input": {
+        "q": 2000,
+        "d": 2,
+        "b0": 800
+      },
+      "grade": "F1",
+      "blockers": [],
+      "goals": {
+        "K_people": 1000,
+        "H_hours": 1,
+        "deadline_h": 3
+      },
+      "tiers": [
+        {
+          "tier": "V0",
+          "supply_segments": [
+            [
+              0,
+              null,
+              500
+            ]
+          ],
+          "pass": false,
+          "runs": [
+            {
+              "shape": "uniform",
+              "peak_people": 1800.0,
+              "clear_h": 5.6,
+              "residual_at_deadline_people": 1300.0,
+              "max_wait_h": 3.5999999999999996,
+              "waiting_people_h_to_deadline": 4150.0,
+              "total_waiting_people_h": 5840.0,
+              "arrived_people": 2800.0,
+              "served_people": 2800.0,
+              "unserved_people": 0,
+              "pass": false,
+              "failures": [
+                "peak_over_K",
+                "clear_after_D_plus_H"
+              ]
+            }
+          ]
+        },
+        {
+          "tier": "V1",
+          "supply_segments": [
+            [
+              0,
+              null,
+              500
+            ],
+            [
+              0,
+              null,
+              500
+            ]
+          ],
+          "pass": true,
+          "runs": [
+            {
+              "shape": "uniform",
+              "peak_people": 800.0,
+              "clear_h": 2.8,
+              "residual_at_deadline_people": 0.0,
+              "max_wait_h": 0.8,
+              "waiting_people_h_to_deadline": 1920.0,
+              "total_waiting_people_h": 1920.0,
+              "arrived_people": 2800.0,
+              "served_people": 2800.0,
+              "unserved_people": 0,
+              "pass": true,
+              "failures": []
+            }
+          ]
+        },
+        {
+          "tier": "V2",
+          "supply_segments": [
+            [
+              0,
+              null,
+              500
+            ],
+            [
+              0,
+              null,
+              500
+            ],
+            [
+              0,
+              null,
+              1000
+            ]
+          ],
+          "pass": true,
+          "runs": [
+            {
+              "shape": "uniform",
+              "peak_people": 800.0,
+              "clear_h": 2.0,
+              "residual_at_deadline_people": 0.0,
+              "max_wait_h": 0.4,
+              "waiting_people_h_to_deadline": 320.0,
+              "total_waiting_people_h": 320.0,
+              "arrived_people": 2800.0,
+              "served_people": 2800.0,
+              "unserved_people": 0,
+              "pass": true,
+              "failures": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SC-H10",
+      "title": "H01服务窗口缩短",
+      "type": "synthetic",
+      "axis_or_boundary": "服务日历",
+      "reference_version": "REF-SYN-01/window-variant",
+      "goal_version": "GOAL-SYN-01",
+      "input": {
+        "q": 2000,
+        "d": 2,
+        "ends": [
+          1,
+          2,
+          2
+        ]
+      },
+      "grade": "F2",
+      "blockers": [],
+      "goals": {
+        "K_people": 1000,
+        "H_hours": 1,
+        "deadline_h": 3
+      },
+      "tiers": [
+        {
+          "tier": "V0",
+          "supply_segments": [
+            [
+              0,
+              1,
+              500
+            ]
+          ],
+          "pass": false,
+          "runs": [
+            {
+              "shape": "uniform",
+              "peak_people": 1500.0,
+              "clear_h": null,
+              "residual_at_deadline_people": 1500.0,
+              "max_wait_h": null,
+              "waiting_people_h_to_deadline": 2750.0,
+              "total_waiting_people_h": null,
+              "arrived_people": 2000.0,
+              "served_people": 500.0,
+              "unserved_people": 1500.0,
+              "pass": false,
+              "failures": [
+                "peak_over_K",
+                "unfinished_after_service_ends_or_no_supply"
+              ]
+            }
+          ]
+        },
+        {
+          "tier": "V1",
+          "supply_segments": [
+            [
+              0,
+              1,
+              500
+            ],
+            [
+              0,
+              2,
+              500
+            ]
+          ],
+          "pass": false,
+          "runs": [
+            {
+              "shape": "uniform",
+              "peak_people": 500.0,
+              "clear_h": null,
+              "residual_at_deadline_people": 500.0,
+              "max_wait_h": null,
+              "waiting_people_h_to_deadline": 750.0,
+              "total_waiting_people_h": null,
+              "arrived_people": 2000.0,
+              "served_people": 1500.0,
+              "unserved_people": 500.0,
+              "pass": false,
+              "failures": [
+                "unfinished_after_service_ends_or_no_supply"
+              ]
+            }
+          ]
+        },
+        {
+          "tier": "V2",
+          "supply_segments": [
+            [
+              0,
+              1,
+              500
+            ],
+            [
+              0,
+              2,
+              500
+            ],
+            [
+              0,
+              2,
+              1000
+            ]
+          ],
+          "pass": true,
+          "runs": [
+            {
+              "shape": "uniform",
+              "peak_people": 0.0,
+              "clear_h": 2.0,
+              "residual_at_deadline_people": 0.0,
+              "max_wait_h": 0.0,
+              "waiting_people_h_to_deadline": 0.0,
+              "total_waiting_people_h": 0.0,
+              "arrived_people": 2000.0,
+              "served_people": 2000.0,
+              "unserved_people": 0,
+              "pass": true,
+              "failures": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SC-H11",
+      "title": "仅有既有积压",
+      "type": "synthetic",
+      "axis_or_boundary": "D=0/B0",
+      "reference_version": "REF-SYN-01",
+      "goal_version": "GOAL-SYN-01",
+      "input": {
+        "q": 0,
+        "d": 0,
+        "b0": 1000
+      },
+      "grade": "F1",
+      "blockers": [],
+      "goals": {
+        "K_people": 1000,
+        "H_hours": 1,
+        "deadline_h": 1
+      },
+      "tiers": [
+        {
+          "tier": "V0",
+          "supply_segments": [
+            [
+              0,
+              null,
+              500
+            ]
+          ],
+          "pass": false,
+          "runs": [
+            {
+              "shape": "uniform",
+              "peak_people": 1000.0,
+              "clear_h": 2.0,
+              "residual_at_deadline_people": 500.0,
+              "max_wait_h": 2.0,
+              "waiting_people_h_to_deadline": 750.0,
+              "total_waiting_people_h": 1000.0,
+              "arrived_people": 1000,
+              "served_people": 1000.0,
+              "unserved_people": 0,
+              "pass": false,
+              "failures": [
+                "clear_after_D_plus_H"
+              ]
+            }
+          ]
+        },
+        {
+          "tier": "V1",
+          "supply_segments": [
+            [
+              0,
+              null,
+              500
+            ],
+            [
+              0,
+              null,
+              500
+            ]
+          ],
+          "pass": true,
+          "runs": [
+            {
+              "shape": "uniform",
+              "peak_people": 1000.0,
+              "clear_h": 1.0,
+              "residual_at_deadline_people": 0.0,
+              "max_wait_h": 1.0,
+              "waiting_people_h_to_deadline": 500.0,
+              "total_waiting_people_h": 500.0,
+              "arrived_people": 1000,
+              "served_people": 1000.0,
+              "unserved_people": 0,
+              "pass": true,
+              "failures": []
+            }
+          ]
+        },
+        {
+          "tier": "V2",
+          "supply_segments": [
+            [
+              0,
+              null,
+              500
+            ],
+            [
+              0,
+              null,
+              500
+            ],
+            [
+              0,
+              null,
+              1000
+            ]
+          ],
+          "pass": true,
+          "runs": [
+            {
+              "shape": "uniform",
+              "peak_people": 1000.0,
+              "clear_h": 0.5,
+              "residual_at_deadline_people": 0.0,
+              "max_wait_h": 0.5,
+              "waiting_people_h_to_deadline": 250.0,
+              "total_waiting_people_h": 250.0,
+              "arrived_people": 1000,
+              "served_people": 1000.0,
+              "unserved_people": 0,
+              "pass": true,
+              "failures": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SC-H12",
+      "title": "有效供给为零",
+      "type": "synthetic",
+      "axis_or_boundary": "零能力",
+      "reference_version": "REF-SYN-01",
+      "goal_version": "GOAL-SYN-01",
+      "input": {
+        "q": 2000,
+        "d": 2,
+        "factor": 0
+      },
+      "grade": "F3",
+      "blockers": [],
+      "goals": {
+        "K_people": 1000,
+        "H_hours": 1,
+        "deadline_h": 3
+      },
+      "tiers": [
+        {
+          "tier": "V0",
+          "supply_segments": [
+            [
+              0,
+              null,
+              0
+            ]
+          ],
+          "pass": false,
+          "runs": [
+            {
+              "shape": "uniform",
+              "peak_people": 2000.0,
+              "clear_h": null,
+              "residual_at_deadline_people": 2000.0,
+              "max_wait_h": null,
+              "waiting_people_h_to_deadline": 4000.0,
+              "total_waiting_people_h": null,
+              "arrived_people": 2000.0,
+              "served_people": 0.0,
+              "unserved_people": 2000.0,
+              "pass": false,
+              "failures": [
+                "peak_over_K",
+                "unfinished_after_service_ends_or_no_supply"
+              ]
+            }
+          ]
+        },
+        {
+          "tier": "V1",
+          "supply_segments": [
+            [
+              0,
+              null,
+              0
+            ],
+            [
+              0,
+              null,
+              0
+            ]
+          ],
+          "pass": false,
+          "runs": [
+            {
+              "shape": "uniform",
+              "peak_people": 2000.0,
+              "clear_h": null,
+              "residual_at_deadline_people": 2000.0,
+              "max_wait_h": null,
+              "waiting_people_h_to_deadline": 4000.0,
+              "total_waiting_people_h": null,
+              "arrived_people": 2000.0,
+              "served_people": 0.0,
+              "unserved_people": 2000.0,
+              "pass": false,
+              "failures": [
+                "peak_over_K",
+                "unfinished_after_service_ends_or_no_supply"
+              ]
+            }
+          ]
+        },
+        {
+          "tier": "V2",
+          "supply_segments": [
+            [
+              0,
+              null,
+              0
+            ],
+            [
+              0,
+              null,
+              0
+            ],
+            [
+              0,
+              null,
+              0
+            ]
+          ],
+          "pass": false,
+          "runs": [
+            {
+              "shape": "uniform",
+              "peak_people": 2000.0,
+              "clear_h": null,
+              "residual_at_deadline_people": 2000.0,
+              "max_wait_h": null,
+              "waiting_people_h_to_deadline": 4000.0,
+              "total_waiting_people_h": null,
+              "arrived_people": 2000.0,
+              "served_people": 0.0,
+              "unserved_people": 2000.0,
+              "pass": false,
+              "failures": [
+                "peak_over_K",
+                "unfinished_after_service_ends_or_no_supply"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SC-H13",
+      "title": "继续运输前提不满足",
+      "type": "synthetic",
+      "axis_or_boundary": "安全边界",
+      "reference_version": "REF-SYN-01",
+      "goal_version": "GOAL-SYN-01",
+      "input": {
+        "q": 2000,
+        "d": 2,
+        "safe": false
+      },
+      "grade": "X-SAFE",
+      "blockers": [
+        "X-SAFE"
+      ],
+      "tiers": []
+    },
+    {
+      "id": "SC-H14",
+      "title": "关键输入未知",
+      "type": "synthetic",
+      "axis_or_boundary": "数据边界",
+      "reference_version": "REF-SYN-01",
+      "goal_version": "GOAL-SYN-01",
+      "input": {
+        "q": 2000,
+        "d": 2,
+        "known": false
+      },
+      "grade": "X-DATA",
+      "blockers": [
+        "X-DATA"
+      ],
+      "tiers": []
+    },
+    {
+      "id": "SC-H15",
+      "title": "多方向不可合池",
+      "type": "synthetic",
+      "axis_or_boundary": "方向边界",
+      "reference_version": "REF-SYN-01",
+      "goal_version": "GOAL-SYN-01",
+      "input": {
+        "q": 2000,
+        "d": 2,
+        "supported": false
+      },
+      "grade": "X-STRUCTURE",
+      "blockers": [
+        "X-STRUCTURE"
+      ],
+      "tiers": []
+    },
+    {
+      "id": "SC-H16",
+      "title": "多服务共享瓶颈",
+      "type": "synthetic",
+      "axis_or_boundary": "共享资源边界",
+      "reference_version": "REF-SYN-01",
+      "goal_version": "GOAL-SYN-01",
+      "input": {
+        "q": 2000,
+        "d": 2,
+        "supported": false
+      },
+      "grade": "X-STRUCTURE",
+      "blockers": [
+        "X-STRUCTURE"
+      ],
+      "tiers": []
+    },
+    {
+      "id": "SC-H17",
+      "title": "初始已超过研究上限",
+      "type": "synthetic",
+      "axis_or_boundary": "B0>K",
+      "reference_version": "REF-SYN-01",
+      "goal_version": "GOAL-SYN-01",
+      "input": {
+        "q": 500,
+        "d": 2,
+        "b0": 1200
+      },
+      "grade": "F3",
+      "blockers": [],
+      "goals": {
+        "K_people": 1000,
+        "H_hours": 1,
+        "deadline_h": 3
+      },
+      "tiers": [
+        {
+          "tier": "V0",
+          "supply_segments": [
+            [
+              0,
+              null,
+              500
+            ]
+          ],
+          "pass": false,
+          "runs": [
+            {
+              "shape": "uniform",
+              "peak_people": 1200.0,
+              "clear_h": 3.4,
+              "residual_at_deadline_people": 200.0,
+              "max_wait_h": 2.4,
+              "waiting_people_h_to_deadline": 2350.0,
+              "total_waiting_people_h": 2390.0,
+              "arrived_people": 1700.0,
+              "served_people": 1700.0,
+              "unserved_people": 0,
+              "pass": false,
+              "failures": [
+                "peak_over_K",
+                "clear_after_D_plus_H"
+              ]
+            }
+          ]
+        },
+        {
+          "tier": "V1",
+          "supply_segments": [
+            [
+              0,
+              null,
+              500
+            ],
+            [
+              0,
+              null,
+              500
+            ]
+          ],
+          "pass": false,
+          "runs": [
+            {
+              "shape": "uniform",
+              "peak_people": 1200.0,
+              "clear_h": 2.0,
+              "residual_at_deadline_people": 0.0,
+              "max_wait_h": 1.2,
+              "waiting_people_h_to_deadline": 960.0,
+              "total_waiting_people_h": 960.0,
+              "arrived_people": 1700.0,
+              "served_people": 1700.0,
+              "unserved_people": 0,
+              "pass": false,
+              "failures": [
+                "peak_over_K"
+              ]
+            }
+          ]
+        },
+        {
+          "tier": "V2",
+          "supply_segments": [
+            [
+              0,
+              null,
+              500
+            ],
+            [
+              0,
+              null,
+              500
+            ],
+            [
+              0,
+              null,
+              1000
+            ]
+          ],
+          "pass": false,
+          "runs": [
+            {
+              "shape": "uniform",
+              "peak_people": 1200.0,
+              "clear_h": 2.0,
+              "residual_at_deadline_people": 0.0,
+              "max_wait_h": 0.6000000000000005,
+              "waiting_people_h_to_deadline": 411.42857142857144,
+              "total_waiting_people_h": 411.42857142857144,
+              "arrived_people": 1700.0,
+              "served_people": 1700.0,
+              "unserved_people": 0,
+              "pass": false,
+              "failures": [
+                "peak_over_K"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SC-H18",
+      "title": "输入不合法",
+      "type": "synthetic",
+      "axis_or_boundary": "配置边界",
+      "reference_version": "REF-SYN-01",
+      "goal_version": "GOAL-SYN-01",
+      "input": {
+        "q": 2000,
+        "d": -1
+      },
+      "grade": "X-CONFIG",
+      "blockers": [
+        "X-CONFIG"
+      ],
+      "reason": "use initial backlog for an instantaneous batch",
+      "tiers": []
+    }
+  ],
+  "directional_synthetic": [
+    {
+      "id": "SC-N01",
+      "title": "总运力够但B方向不足",
+      "purpose": "方向不可互换",
+      "type": "synthetic_directional",
+      "input": {
+        "safe": true,
+        "known": true,
+        "supported": true,
+        "directions": {
+          "A": {
+            "q": 1000,
+            "d": 2,
+            "b0": 0,
+            "k": 400,
+            "h": 0.5
+          },
+          "B": {
+            "q": 1000,
+            "d": 2,
+            "b0": 0,
+            "k": 400,
+            "h": 0.5
+          }
+        },
+        "joint_profiles": [
+          {
+            "id": "omega_uniform",
+            "shapes": {
+              "A": "uniform",
+              "B": "uniform"
+            }
+          }
+        ],
+        "resources": [
+          {
+            "id": "A_base",
+            "pool_id": "A_base",
+            "mode": "synthetic_service",
+            "directions": [
+              "A"
+            ],
+            "capacity": [
+              [
+                0,
+                null,
+                1500
+              ]
+            ],
+            "layer": 0,
+            "evidence_type": "ASSUMPTION"
+          },
+          {
+            "id": "B_base",
+            "pool_id": "B_base",
+            "mode": "synthetic_service",
+            "directions": [
+              "B"
+            ],
+            "capacity": [
+              [
+                0,
+                null,
+                100
+              ]
+            ],
+            "layer": 0,
+            "evidence_type": "ASSUMPTION"
+          },
+          {
+            "id": "B_extra",
+            "pool_id": "B_extra",
+            "mode": "synthetic_service",
+            "directions": [
+              "B"
+            ],
+            "capacity": [
+              [
+                0,
+                null,
+                400
+              ]
+            ],
+            "layer": 1,
+            "evidence_type": "ASSUMPTION"
+          }
+        ],
+        "groups": [],
+        "plans": [
+          {
+            "id": "base",
+            "introduced_layer": 0,
+            "allocations": [
+              {
+                "resource_id": "A_base",
+                "direction": "A",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    1500
+                  ]
+                ]
+              },
+              {
+                "resource_id": "B_base",
+                "direction": "B",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    100
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "strengthened",
+            "introduced_layer": 1,
+            "allocations": [
+              {
+                "resource_id": "A_base",
+                "direction": "A",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    1500
+                  ]
+                ]
+              },
+              {
+                "resource_id": "B_base",
+                "direction": "B",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    100
+                  ]
+                ]
+              },
+              {
+                "resource_id": "B_extra",
+                "direction": "B",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    400
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "reference_version": "REF-DIR-SYN-01",
+        "goal_version": "GOAL-DIR-SYN-01"
+      },
+      "expected_grade": "F1",
+      "reference_fingerprint": "318cd40ae5f5d5657c9d43ebfb564a20bd27a8f47bcf6b33db8f3c38362acdc4",
+      "goal_fingerprint": "602224c55f672b2935953609cf251fcbeca43510613232e50dd4e16544ad4290",
+      "result": {
+        "grade": "F1",
+        "blockers": [],
+        "interpretation": "minimum layer among listed fixed plans; not all physically feasible policies",
+        "quantifier": "exists one listed plan, for all joint profiles and directions",
+        "tiers": [
+          {
+            "tier": "V0",
+            "candidate_plan_ids": [
+              "base"
+            ],
+            "pass": false,
+            "passing_plan_ids": []
+          },
+          {
+            "tier": "V1",
+            "candidate_plan_ids": [
+              "base",
+              "strengthened"
+            ],
+            "pass": true,
+            "passing_plan_ids": [
+              "strengthened"
+            ]
+          },
+          {
+            "tier": "V2",
+            "candidate_plan_ids": [
+              "base",
+              "strengthened"
+            ],
+            "pass": true,
+            "passing_plan_ids": [
+              "strengthened"
+            ]
+          }
+        ],
+        "plans": [
+          {
+            "id": "base",
+            "introduced_layer": 0,
+            "pass": false,
+            "runs": [
+              {
+                "joint_profile": "omega_uniform",
+                "directions": {
+                  "A": {
+                    "peak_people": 0.0,
+                    "clear_h": 2.0,
+                    "residual_at_deadline_people": 0.0,
+                    "max_wait_h": 0.0,
+                    "waiting_people_h_to_deadline": 0.0,
+                    "total_waiting_people_h": 0.0,
+                    "arrived_people": 1000.0,
+                    "served_people": 1000.0,
+                    "unserved_people": 0,
+                    "pass": true,
+                    "failures": []
+                  },
+                  "B": {
+                    "peak_people": 800.0,
+                    "clear_h": 10.0,
+                    "residual_at_deadline_people": 750.0,
+                    "max_wait_h": 8.0,
+                    "waiting_people_h_to_deadline": 1187.5,
+                    "total_waiting_people_h": 4000.0,
+                    "arrived_people": 1000.0,
+                    "served_people": 1000.0,
+                    "unserved_people": 0,
+                    "pass": false,
+                    "failures": [
+                      "peak_over_K",
+                      "clear_after_D_plus_H"
+                    ]
+                  }
+                },
+                "waiting_groups": [],
+                "pass": false
+              }
+            ]
+          },
+          {
+            "id": "strengthened",
+            "introduced_layer": 1,
+            "pass": true,
+            "runs": [
+              {
+                "joint_profile": "omega_uniform",
+                "directions": {
+                  "A": {
+                    "peak_people": 0.0,
+                    "clear_h": 2.0,
+                    "residual_at_deadline_people": 0.0,
+                    "max_wait_h": 0.0,
+                    "waiting_people_h_to_deadline": 0.0,
+                    "total_waiting_people_h": 0.0,
+                    "arrived_people": 1000.0,
+                    "served_people": 1000.0,
+                    "unserved_people": 0,
+                    "pass": true,
+                    "failures": []
+                  },
+                  "B": {
+                    "peak_people": 0.0,
+                    "clear_h": 2.0,
+                    "residual_at_deadline_people": 0.0,
+                    "max_wait_h": 0.0,
+                    "waiting_people_h_to_deadline": 0.0,
+                    "total_waiting_people_h": 0.0,
+                    "arrived_people": 1000.0,
+                    "served_people": 1000.0,
+                    "unserved_people": 0,
+                    "pass": true,
+                    "failures": []
+                  }
+                },
+                "waiting_groups": [],
+                "pass": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "SC-N02",
+      "title": "总人数不变而方向分布改变",
+      "purpose": "方向混合决定等级",
+      "type": "synthetic_directional",
+      "input": {
+        "safe": true,
+        "known": true,
+        "supported": true,
+        "directions": {
+          "A": {
+            "q": 1900,
+            "d": 2,
+            "b0": 0,
+            "k": 400,
+            "h": 0.5
+          },
+          "B": {
+            "q": 100,
+            "d": 2,
+            "b0": 0,
+            "k": 400,
+            "h": 0.5
+          }
+        },
+        "joint_profiles": [
+          {
+            "id": "omega_uniform",
+            "shapes": {
+              "A": "uniform",
+              "B": "uniform"
+            }
+          }
+        ],
+        "resources": [
+          {
+            "id": "A_base",
+            "pool_id": "A_base",
+            "mode": "synthetic_service",
+            "directions": [
+              "A"
+            ],
+            "capacity": [
+              [
+                0,
+                null,
+                1500
+              ]
+            ],
+            "layer": 0,
+            "evidence_type": "ASSUMPTION"
+          },
+          {
+            "id": "B_base",
+            "pool_id": "B_base",
+            "mode": "synthetic_service",
+            "directions": [
+              "B"
+            ],
+            "capacity": [
+              [
+                0,
+                null,
+                100
+              ]
+            ],
+            "layer": 0,
+            "evidence_type": "ASSUMPTION"
+          },
+          {
+            "id": "B_extra",
+            "pool_id": "B_extra",
+            "mode": "synthetic_service",
+            "directions": [
+              "B"
+            ],
+            "capacity": [
+              [
+                0,
+                null,
+                400
+              ]
+            ],
+            "layer": 1,
+            "evidence_type": "ASSUMPTION"
+          }
+        ],
+        "groups": [],
+        "plans": [
+          {
+            "id": "base",
+            "introduced_layer": 0,
+            "allocations": [
+              {
+                "resource_id": "A_base",
+                "direction": "A",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    1500
+                  ]
+                ]
+              },
+              {
+                "resource_id": "B_base",
+                "direction": "B",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    100
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "strengthened",
+            "introduced_layer": 1,
+            "allocations": [
+              {
+                "resource_id": "A_base",
+                "direction": "A",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    1500
+                  ]
+                ]
+              },
+              {
+                "resource_id": "B_base",
+                "direction": "B",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    100
+                  ]
+                ]
+              },
+              {
+                "resource_id": "B_extra",
+                "direction": "B",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    400
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "reference_version": "REF-DIR-SYN-01",
+        "goal_version": "GOAL-DIR-SYN-01"
+      },
+      "expected_grade": "F0",
+      "reference_fingerprint": "318cd40ae5f5d5657c9d43ebfb564a20bd27a8f47bcf6b33db8f3c38362acdc4",
+      "goal_fingerprint": "602224c55f672b2935953609cf251fcbeca43510613232e50dd4e16544ad4290",
+      "result": {
+        "grade": "F0",
+        "blockers": [],
+        "interpretation": "minimum layer among listed fixed plans; not all physically feasible policies",
+        "quantifier": "exists one listed plan, for all joint profiles and directions",
+        "tiers": [
+          {
+            "tier": "V0",
+            "candidate_plan_ids": [
+              "base"
+            ],
+            "pass": true,
+            "passing_plan_ids": [
+              "base"
+            ]
+          },
+          {
+            "tier": "V1",
+            "candidate_plan_ids": [
+              "base",
+              "strengthened"
+            ],
+            "pass": true,
+            "passing_plan_ids": [
+              "base",
+              "strengthened"
+            ]
+          },
+          {
+            "tier": "V2",
+            "candidate_plan_ids": [
+              "base",
+              "strengthened"
+            ],
+            "pass": true,
+            "passing_plan_ids": [
+              "base",
+              "strengthened"
+            ]
+          }
+        ],
+        "plans": [
+          {
+            "id": "base",
+            "introduced_layer": 0,
+            "pass": true,
+            "runs": [
+              {
+                "joint_profile": "omega_uniform",
+                "directions": {
+                  "A": {
+                    "peak_people": 0.0,
+                    "clear_h": 2.0,
+                    "residual_at_deadline_people": 0.0,
+                    "max_wait_h": 0.0,
+                    "waiting_people_h_to_deadline": 0.0,
+                    "total_waiting_people_h": 0.0,
+                    "arrived_people": 1900.0,
+                    "served_people": 1900.0,
+                    "unserved_people": 0,
+                    "pass": true,
+                    "failures": []
+                  },
+                  "B": {
+                    "peak_people": 0.0,
+                    "clear_h": 2.0,
+                    "residual_at_deadline_people": 0.0,
+                    "max_wait_h": 0.0,
+                    "waiting_people_h_to_deadline": 0.0,
+                    "total_waiting_people_h": 0.0,
+                    "arrived_people": 100.0,
+                    "served_people": 100.0,
+                    "unserved_people": 0,
+                    "pass": true,
+                    "failures": []
+                  }
+                },
+                "waiting_groups": [],
+                "pass": true
+              }
+            ]
+          },
+          {
+            "id": "strengthened",
+            "introduced_layer": 1,
+            "pass": true,
+            "runs": [
+              {
+                "joint_profile": "omega_uniform",
+                "directions": {
+                  "A": {
+                    "peak_people": 0.0,
+                    "clear_h": 2.0,
+                    "residual_at_deadline_people": 0.0,
+                    "max_wait_h": 0.0,
+                    "waiting_people_h_to_deadline": 0.0,
+                    "total_waiting_people_h": 0.0,
+                    "arrived_people": 1900.0,
+                    "served_people": 1900.0,
+                    "unserved_people": 0,
+                    "pass": true,
+                    "failures": []
+                  },
+                  "B": {
+                    "peak_people": 0.0,
+                    "clear_h": 2.0,
+                    "residual_at_deadline_people": 0.0,
+                    "max_wait_h": 0.0,
+                    "waiting_people_h_to_deadline": 0.0,
+                    "total_waiting_people_h": 0.0,
+                    "arrived_people": 100.0,
+                    "served_people": 100.0,
+                    "unserved_people": 0,
+                    "pass": true,
+                    "failures": []
+                  }
+                },
+                "waiting_groups": [],
+                "pass": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "SC-N03",
+      "title": "两项服务共用上客能力",
+      "purpose": "共享能力不可重复",
+      "type": "synthetic_directional",
+      "input": {
+        "safe": true,
+        "known": true,
+        "supported": true,
+        "directions": {
+          "A": {
+            "q": 1000,
+            "d": 2,
+            "b0": 0,
+            "k": 400,
+            "h": 0.5
+          },
+          "B": {
+            "q": 1000,
+            "d": 2,
+            "b0": 0,
+            "k": 400,
+            "h": 0.5
+          }
+        },
+        "joint_profiles": [
+          {
+            "id": "omega_uniform",
+            "shapes": {
+              "A": "uniform",
+              "B": "uniform"
+            }
+          }
+        ],
+        "resources": [
+          {
+            "id": "A_base",
+            "pool_id": "A_base",
+            "mode": "synthetic_service",
+            "directions": [
+              "A"
+            ],
+            "capacity": [
+              [
+                0,
+                null,
+                500
+              ]
+            ],
+            "layer": 0,
+            "evidence_type": "ASSUMPTION"
+          },
+          {
+            "id": "B_base",
+            "pool_id": "B_base",
+            "mode": "synthetic_service",
+            "directions": [
+              "B"
+            ],
+            "capacity": [
+              [
+                0,
+                null,
+                500
+              ]
+            ],
+            "layer": 0,
+            "evidence_type": "ASSUMPTION"
+          },
+          {
+            "id": "B_bypass",
+            "pool_id": "B_bypass",
+            "mode": "synthetic_service",
+            "directions": [
+              "B"
+            ],
+            "capacity": [
+              [
+                0,
+                null,
+                500
+              ]
+            ],
+            "layer": 1,
+            "evidence_type": "ASSUMPTION"
+          },
+          {
+            "id": "A_bypass",
+            "pool_id": "A_bypass",
+            "mode": "synthetic_service",
+            "directions": [
+              "A"
+            ],
+            "capacity": [
+              [
+                0,
+                null,
+                500
+              ]
+            ],
+            "layer": 2,
+            "evidence_type": "ASSUMPTION"
+          }
+        ],
+        "groups": [
+          {
+            "id": "G_boarding",
+            "resource_ids": [
+              "A_base",
+              "B_base"
+            ],
+            "capacity": [
+              [
+                0,
+                null,
+                600
+              ]
+            ],
+            "evidence_type": "ASSUMPTION"
+          }
+        ],
+        "plans": [
+          {
+            "id": "shared_base",
+            "introduced_layer": 0,
+            "allocations": [
+              {
+                "resource_id": "A_base",
+                "direction": "A",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    300
+                  ]
+                ]
+              },
+              {
+                "resource_id": "B_base",
+                "direction": "B",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    300
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "B_support",
+            "introduced_layer": 1,
+            "allocations": [
+              {
+                "resource_id": "A_base",
+                "direction": "A",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    300
+                  ]
+                ]
+              },
+              {
+                "resource_id": "B_base",
+                "direction": "B",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    300
+                  ]
+                ]
+              },
+              {
+                "resource_id": "B_bypass",
+                "direction": "B",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    500
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "AB_support",
+            "introduced_layer": 2,
+            "allocations": [
+              {
+                "resource_id": "A_base",
+                "direction": "A",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    300
+                  ]
+                ]
+              },
+              {
+                "resource_id": "B_base",
+                "direction": "B",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    300
+                  ]
+                ]
+              },
+              {
+                "resource_id": "B_bypass",
+                "direction": "B",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    500
+                  ]
+                ]
+              },
+              {
+                "resource_id": "A_bypass",
+                "direction": "A",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    500
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "reallocate_shared_at_V1",
+            "introduced_layer": 1,
+            "allocations": [
+              {
+                "resource_id": "A_base",
+                "direction": "A",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    400
+                  ]
+                ]
+              },
+              {
+                "resource_id": "B_base",
+                "direction": "B",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    200
+                  ]
+                ]
+              },
+              {
+                "resource_id": "B_bypass",
+                "direction": "B",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    500
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "reference_version": "REF-DIR-SYN-01",
+        "goal_version": "GOAL-DIR-SYN-01"
+      },
+      "expected_grade": "F1",
+      "reference_fingerprint": "748a4760e880b3e627a28c4ba39c77f0f3c56a9b5568bae06aae99bb609ef8c7",
+      "goal_fingerprint": "602224c55f672b2935953609cf251fcbeca43510613232e50dd4e16544ad4290",
+      "result": {
+        "grade": "F1",
+        "blockers": [],
+        "interpretation": "minimum layer among listed fixed plans; not all physically feasible policies",
+        "quantifier": "exists one listed plan, for all joint profiles and directions",
+        "tiers": [
+          {
+            "tier": "V0",
+            "candidate_plan_ids": [
+              "shared_base"
+            ],
+            "pass": false,
+            "passing_plan_ids": []
+          },
+          {
+            "tier": "V1",
+            "candidate_plan_ids": [
+              "shared_base",
+              "B_support",
+              "reallocate_shared_at_V1"
+            ],
+            "pass": true,
+            "passing_plan_ids": [
+              "reallocate_shared_at_V1"
+            ]
+          },
+          {
+            "tier": "V2",
+            "candidate_plan_ids": [
+              "shared_base",
+              "B_support",
+              "AB_support",
+              "reallocate_shared_at_V1"
+            ],
+            "pass": true,
+            "passing_plan_ids": [
+              "AB_support",
+              "reallocate_shared_at_V1"
+            ]
+          }
+        ],
+        "plans": [
+          {
+            "id": "shared_base",
+            "introduced_layer": 0,
+            "pass": false,
+            "runs": [
+              {
+                "joint_profile": "omega_uniform",
+                "directions": {
+                  "A": {
+                    "peak_people": 400.0,
+                    "clear_h": 3.3333333333333335,
+                    "residual_at_deadline_people": 250.0,
+                    "max_wait_h": 1.3333333333333335,
+                    "waiting_people_h_to_deadline": 562.5,
+                    "total_waiting_people_h": 666.6666666666667,
+                    "arrived_people": 1000.0,
+                    "served_people": 1000.0,
+                    "unserved_people": 0,
+                    "pass": false,
+                    "failures": [
+                      "clear_after_D_plus_H"
+                    ]
+                  },
+                  "B": {
+                    "peak_people": 400.0,
+                    "clear_h": 3.3333333333333335,
+                    "residual_at_deadline_people": 250.0,
+                    "max_wait_h": 1.3333333333333335,
+                    "waiting_people_h_to_deadline": 562.5,
+                    "total_waiting_people_h": 666.6666666666667,
+                    "arrived_people": 1000.0,
+                    "served_people": 1000.0,
+                    "unserved_people": 0,
+                    "pass": false,
+                    "failures": [
+                      "clear_after_D_plus_H"
+                    ]
+                  }
+                },
+                "waiting_groups": [],
+                "pass": false
+              }
+            ]
+          },
+          {
+            "id": "B_support",
+            "introduced_layer": 1,
+            "pass": false,
+            "runs": [
+              {
+                "joint_profile": "omega_uniform",
+                "directions": {
+                  "A": {
+                    "peak_people": 400.0,
+                    "clear_h": 3.3333333333333335,
+                    "residual_at_deadline_people": 250.0,
+                    "max_wait_h": 1.3333333333333335,
+                    "waiting_people_h_to_deadline": 562.5,
+                    "total_waiting_people_h": 666.6666666666667,
+                    "arrived_people": 1000.0,
+                    "served_people": 1000.0,
+                    "unserved_people": 0,
+                    "pass": false,
+                    "failures": [
+                      "clear_after_D_plus_H"
+                    ]
+                  },
+                  "B": {
+                    "peak_people": 0.0,
+                    "clear_h": 2.0,
+                    "residual_at_deadline_people": 0.0,
+                    "max_wait_h": 0.0,
+                    "waiting_people_h_to_deadline": 0.0,
+                    "total_waiting_people_h": 0.0,
+                    "arrived_people": 1000.0,
+                    "served_people": 1000.0,
+                    "unserved_people": 0,
+                    "pass": true,
+                    "failures": []
+                  }
+                },
+                "waiting_groups": [],
+                "pass": false
+              }
+            ]
+          },
+          {
+            "id": "AB_support",
+            "introduced_layer": 2,
+            "pass": true,
+            "runs": [
+              {
+                "joint_profile": "omega_uniform",
+                "directions": {
+                  "A": {
+                    "peak_people": 0.0,
+                    "clear_h": 2.0,
+                    "residual_at_deadline_people": 0.0,
+                    "max_wait_h": 0.0,
+                    "waiting_people_h_to_deadline": 0.0,
+                    "total_waiting_people_h": 0.0,
+                    "arrived_people": 1000.0,
+                    "served_people": 1000.0,
+                    "unserved_people": 0,
+                    "pass": true,
+                    "failures": []
+                  },
+                  "B": {
+                    "peak_people": 0.0,
+                    "clear_h": 2.0,
+                    "residual_at_deadline_people": 0.0,
+                    "max_wait_h": 0.0,
+                    "waiting_people_h_to_deadline": 0.0,
+                    "total_waiting_people_h": 0.0,
+                    "arrived_people": 1000.0,
+                    "served_people": 1000.0,
+                    "unserved_people": 0,
+                    "pass": true,
+                    "failures": []
+                  }
+                },
+                "waiting_groups": [],
+                "pass": true
+              }
+            ]
+          },
+          {
+            "id": "reallocate_shared_at_V1",
+            "introduced_layer": 1,
+            "pass": true,
+            "runs": [
+              {
+                "joint_profile": "omega_uniform",
+                "directions": {
+                  "A": {
+                    "peak_people": 200.0,
+                    "clear_h": 2.5,
+                    "residual_at_deadline_people": 0.0,
+                    "max_wait_h": 0.5,
+                    "waiting_people_h_to_deadline": 250.0,
+                    "total_waiting_people_h": 250.0,
+                    "arrived_people": 1000.0,
+                    "served_people": 1000.0,
+                    "unserved_people": 0,
+                    "pass": true,
+                    "failures": []
+                  },
+                  "B": {
+                    "peak_people": 0.0,
+                    "clear_h": 2.0,
+                    "residual_at_deadline_people": 0.0,
+                    "max_wait_h": 0.0,
+                    "waiting_people_h_to_deadline": 0.0,
+                    "total_waiting_people_h": 0.0,
+                    "arrived_people": 1000.0,
+                    "served_people": 1000.0,
+                    "unserved_people": 0,
+                    "pass": true,
+                    "failures": []
+                  }
+                },
+                "waiting_groups": [],
+                "pass": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "SC-N04",
+      "title": "每条轨迹有方案但没有共同通过方案",
+      "purpose": "不能事后分别选策略",
+      "type": "synthetic_directional",
+      "input": {
+        "safe": true,
+        "known": true,
+        "supported": true,
+        "directions": {
+          "A": {
+            "q": 1000,
+            "d": 2,
+            "b0": 0,
+            "k": 400,
+            "h": 0.5
+          },
+          "B": {
+            "q": 1000,
+            "d": 2,
+            "b0": 0,
+            "k": 400,
+            "h": 0.5
+          }
+        },
+        "joint_profiles": [
+          {
+            "id": "omega_A_early",
+            "shapes": {
+              "A": "front",
+              "B": "back"
+            }
+          },
+          {
+            "id": "omega_B_early",
+            "shapes": {
+              "A": "back",
+              "B": "front"
+            }
+          }
+        ],
+        "resources": [
+          {
+            "id": "flex",
+            "pool_id": "flex",
+            "mode": "synthetic_service",
+            "directions": [
+              "A",
+              "B"
+            ],
+            "capacity": [
+              [
+                0,
+                null,
+                2000
+              ]
+            ],
+            "layer": 0,
+            "evidence_type": "ASSUMPTION"
+          }
+        ],
+        "groups": [],
+        "plans": [
+          {
+            "id": "favor_A_first",
+            "introduced_layer": 0,
+            "allocations": [
+              {
+                "resource_id": "flex",
+                "direction": "A",
+                "segments": [
+                  [
+                    0,
+                    1,
+                    1500
+                  ]
+                ]
+              },
+              {
+                "resource_id": "flex",
+                "direction": "B",
+                "segments": [
+                  [
+                    0,
+                    1,
+                    500
+                  ]
+                ]
+              },
+              {
+                "resource_id": "flex",
+                "direction": "A",
+                "segments": [
+                  [
+                    1,
+                    null,
+                    500
+                  ]
+                ]
+              },
+              {
+                "resource_id": "flex",
+                "direction": "B",
+                "segments": [
+                  [
+                    1,
+                    null,
+                    1500
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "favor_B_first",
+            "introduced_layer": 0,
+            "allocations": [
+              {
+                "resource_id": "flex",
+                "direction": "A",
+                "segments": [
+                  [
+                    0,
+                    1,
+                    500
+                  ]
+                ]
+              },
+              {
+                "resource_id": "flex",
+                "direction": "B",
+                "segments": [
+                  [
+                    0,
+                    1,
+                    1500
+                  ]
+                ]
+              },
+              {
+                "resource_id": "flex",
+                "direction": "A",
+                "segments": [
+                  [
+                    1,
+                    null,
+                    1500
+                  ]
+                ]
+              },
+              {
+                "resource_id": "flex",
+                "direction": "B",
+                "segments": [
+                  [
+                    1,
+                    null,
+                    500
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "reference_version": "REF-DIR-SYN-01",
+        "goal_version": "GOAL-DIR-SYN-01"
+      },
+      "expected_grade": "F3",
+      "reference_fingerprint": "24b5a51cb81c0f839164dcb82ae408208ab42ddeec4e0fc7e4f0611557cbb0d7",
+      "goal_fingerprint": "602224c55f672b2935953609cf251fcbeca43510613232e50dd4e16544ad4290",
+      "result": {
+        "grade": "F3",
+        "blockers": [],
+        "interpretation": "minimum layer among listed fixed plans; not all physically feasible policies",
+        "quantifier": "exists one listed plan, for all joint profiles and directions",
+        "tiers": [
+          {
+            "tier": "V0",
+            "candidate_plan_ids": [
+              "favor_A_first",
+              "favor_B_first"
+            ],
+            "pass": false,
+            "passing_plan_ids": []
+          },
+          {
+            "tier": "V1",
+            "candidate_plan_ids": [
+              "favor_A_first",
+              "favor_B_first"
+            ],
+            "pass": false,
+            "passing_plan_ids": []
+          },
+          {
+            "tier": "V2",
+            "candidate_plan_ids": [
+              "favor_A_first",
+              "favor_B_first"
+            ],
+            "pass": false,
+            "passing_plan_ids": []
+          }
+        ],
+        "plans": [
+          {
+            "id": "favor_A_first",
+            "introduced_layer": 0,
+            "pass": false,
+            "runs": [
+              {
+                "joint_profile": "omega_A_early",
+                "directions": {
+                  "A": {
+                    "peak_people": 50.0,
+                    "clear_h": 2.0,
+                    "residual_at_deadline_people": 0.0,
+                    "max_wait_h": 0.03333333333333338,
+                    "waiting_people_h_to_deadline": 13.414634146341465,
+                    "total_waiting_people_h": 13.414634146341465,
+                    "arrived_people": 1000.0,
+                    "served_people": 1000.0,
+                    "unserved_people": 0,
+                    "pass": true,
+                    "failures": []
+                  },
+                  "B": {
+                    "peak_people": 50.0,
+                    "clear_h": 2.033333333333333,
+                    "residual_at_deadline_people": 0.0,
+                    "max_wait_h": 0.033333333333333305,
+                    "waiting_people_h_to_deadline": 13.333333333333375,
+                    "total_waiting_people_h": 13.333333333333375,
+                    "arrived_people": 1000.0,
+                    "served_people": 1000.0,
+                    "unserved_people": 0,
+                    "pass": true,
+                    "failures": []
+                  }
+                },
+                "waiting_groups": [],
+                "pass": true
+              },
+              {
+                "joint_profile": "omega_B_early",
+                "directions": {
+                  "A": {
+                    "peak_people": 550.0,
+                    "clear_h": 3.1,
+                    "residual_at_deadline_people": 300.0,
+                    "max_wait_h": 1.1,
+                    "waiting_people_h_to_deadline": 350.0,
+                    "total_waiting_people_h": 440.0,
+                    "arrived_people": 1000.0,
+                    "served_people": 1000.0,
+                    "unserved_people": 0,
+                    "pass": false,
+                    "failures": [
+                      "peak_over_K",
+                      "clear_after_D_plus_H"
+                    ]
+                  },
+                  "B": {
+                    "peak_people": 550.0,
+                    "clear_h": 2.0,
+                    "residual_at_deadline_people": 0.0,
+                    "max_wait_h": 0.7000000000000011,
+                    "waiting_people_h_to_deadline": 415.8536585365854,
+                    "total_waiting_people_h": 415.8536585365854,
+                    "arrived_people": 1000.0,
+                    "served_people": 1000.0,
+                    "unserved_people": 0,
+                    "pass": false,
+                    "failures": [
+                      "peak_over_K"
+                    ]
+                  }
+                },
+                "waiting_groups": [],
+                "pass": false
+              }
+            ]
+          },
+          {
+            "id": "favor_B_first",
+            "introduced_layer": 0,
+            "pass": false,
+            "runs": [
+              {
+                "joint_profile": "omega_A_early",
+                "directions": {
+                  "A": {
+                    "peak_people": 550.0,
+                    "clear_h": 2.0,
+                    "residual_at_deadline_people": 0.0,
+                    "max_wait_h": 0.7000000000000011,
+                    "waiting_people_h_to_deadline": 415.8536585365854,
+                    "total_waiting_people_h": 415.8536585365854,
+                    "arrived_people": 1000.0,
+                    "served_people": 1000.0,
+                    "unserved_people": 0,
+                    "pass": false,
+                    "failures": [
+                      "peak_over_K"
+                    ]
+                  },
+                  "B": {
+                    "peak_people": 550.0,
+                    "clear_h": 3.1,
+                    "residual_at_deadline_people": 300.0,
+                    "max_wait_h": 1.1,
+                    "waiting_people_h_to_deadline": 350.0,
+                    "total_waiting_people_h": 440.0,
+                    "arrived_people": 1000.0,
+                    "served_people": 1000.0,
+                    "unserved_people": 0,
+                    "pass": false,
+                    "failures": [
+                      "peak_over_K",
+                      "clear_after_D_plus_H"
+                    ]
+                  }
+                },
+                "waiting_groups": [],
+                "pass": false
+              },
+              {
+                "joint_profile": "omega_B_early",
+                "directions": {
+                  "A": {
+                    "peak_people": 50.0,
+                    "clear_h": 2.033333333333333,
+                    "residual_at_deadline_people": 0.0,
+                    "max_wait_h": 0.033333333333333305,
+                    "waiting_people_h_to_deadline": 13.333333333333375,
+                    "total_waiting_people_h": 13.333333333333375,
+                    "arrived_people": 1000.0,
+                    "served_people": 1000.0,
+                    "unserved_people": 0,
+                    "pass": true,
+                    "failures": []
+                  },
+                  "B": {
+                    "peak_people": 50.0,
+                    "clear_h": 2.0,
+                    "residual_at_deadline_people": 0.0,
+                    "max_wait_h": 0.03333333333333338,
+                    "waiting_people_h_to_deadline": 13.414634146341465,
+                    "total_waiting_people_h": 13.414634146341465,
+                    "arrived_people": 1000.0,
+                    "served_people": 1000.0,
+                    "unserved_people": 0,
+                    "pass": true,
+                    "failures": []
+                  }
+                },
+                "waiting_groups": [],
+                "pass": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "SC-N05",
+      "title": "补入同资源下的共同通过方案",
+      "purpose": "候选清单遗漏可能误升级",
+      "type": "synthetic_directional",
+      "input": {
+        "safe": true,
+        "known": true,
+        "supported": true,
+        "directions": {
+          "A": {
+            "q": 1000,
+            "d": 2,
+            "b0": 0,
+            "k": 400,
+            "h": 0.5
+          },
+          "B": {
+            "q": 1000,
+            "d": 2,
+            "b0": 0,
+            "k": 400,
+            "h": 0.5
+          }
+        },
+        "joint_profiles": [
+          {
+            "id": "omega_A_early",
+            "shapes": {
+              "A": "front",
+              "B": "back"
+            }
+          },
+          {
+            "id": "omega_B_early",
+            "shapes": {
+              "A": "back",
+              "B": "front"
+            }
+          }
+        ],
+        "resources": [
+          {
+            "id": "flex",
+            "pool_id": "flex",
+            "mode": "synthetic_service",
+            "directions": [
+              "A",
+              "B"
+            ],
+            "capacity": [
+              [
+                0,
+                null,
+                2000
+              ]
+            ],
+            "layer": 0,
+            "evidence_type": "ASSUMPTION"
+          }
+        ],
+        "groups": [],
+        "plans": [
+          {
+            "id": "favor_A_first",
+            "introduced_layer": 0,
+            "allocations": [
+              {
+                "resource_id": "flex",
+                "direction": "A",
+                "segments": [
+                  [
+                    0,
+                    1,
+                    1500
+                  ]
+                ]
+              },
+              {
+                "resource_id": "flex",
+                "direction": "B",
+                "segments": [
+                  [
+                    0,
+                    1,
+                    500
+                  ]
+                ]
+              },
+              {
+                "resource_id": "flex",
+                "direction": "A",
+                "segments": [
+                  [
+                    1,
+                    null,
+                    500
+                  ]
+                ]
+              },
+              {
+                "resource_id": "flex",
+                "direction": "B",
+                "segments": [
+                  [
+                    1,
+                    null,
+                    1500
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "favor_B_first",
+            "introduced_layer": 0,
+            "allocations": [
+              {
+                "resource_id": "flex",
+                "direction": "A",
+                "segments": [
+                  [
+                    0,
+                    1,
+                    500
+                  ]
+                ]
+              },
+              {
+                "resource_id": "flex",
+                "direction": "B",
+                "segments": [
+                  [
+                    0,
+                    1,
+                    1500
+                  ]
+                ]
+              },
+              {
+                "resource_id": "flex",
+                "direction": "A",
+                "segments": [
+                  [
+                    1,
+                    null,
+                    1500
+                  ]
+                ]
+              },
+              {
+                "resource_id": "flex",
+                "direction": "B",
+                "segments": [
+                  [
+                    1,
+                    null,
+                    500
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "balanced",
+            "introduced_layer": 0,
+            "allocations": [
+              {
+                "resource_id": "flex",
+                "direction": "A",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    1000
+                  ]
+                ]
+              },
+              {
+                "resource_id": "flex",
+                "direction": "B",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    1000
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "reference_version": "REF-DIR-SYN-01",
+        "goal_version": "GOAL-DIR-SYN-01"
+      },
+      "expected_grade": "F0",
+      "reference_fingerprint": "4cac415cfee3cc32d33e722d0031e3d12f3991c7b1b79ed21031d08c0525ef1d",
+      "goal_fingerprint": "602224c55f672b2935953609cf251fcbeca43510613232e50dd4e16544ad4290",
+      "result": {
+        "grade": "F0",
+        "blockers": [],
+        "interpretation": "minimum layer among listed fixed plans; not all physically feasible policies",
+        "quantifier": "exists one listed plan, for all joint profiles and directions",
+        "tiers": [
+          {
+            "tier": "V0",
+            "candidate_plan_ids": [
+              "favor_A_first",
+              "favor_B_first",
+              "balanced"
+            ],
+            "pass": true,
+            "passing_plan_ids": [
+              "balanced"
+            ]
+          },
+          {
+            "tier": "V1",
+            "candidate_plan_ids": [
+              "favor_A_first",
+              "favor_B_first",
+              "balanced"
+            ],
+            "pass": true,
+            "passing_plan_ids": [
+              "balanced"
+            ]
+          },
+          {
+            "tier": "V2",
+            "candidate_plan_ids": [
+              "favor_A_first",
+              "favor_B_first",
+              "balanced"
+            ],
+            "pass": true,
+            "passing_plan_ids": [
+              "balanced"
+            ]
+          }
+        ],
+        "plans": [
+          {
+            "id": "favor_A_first",
+            "introduced_layer": 0,
+            "pass": false,
+            "runs": [
+              {
+                "joint_profile": "omega_A_early",
+                "directions": {
+                  "A": {
+                    "peak_people": 50.0,
+                    "clear_h": 2.0,
+                    "residual_at_deadline_people": 0.0,
+                    "max_wait_h": 0.03333333333333338,
+                    "waiting_people_h_to_deadline": 13.414634146341465,
+                    "total_waiting_people_h": 13.414634146341465,
+                    "arrived_people": 1000.0,
+                    "served_people": 1000.0,
+                    "unserved_people": 0,
+                    "pass": true,
+                    "failures": []
+                  },
+                  "B": {
+                    "peak_people": 50.0,
+                    "clear_h": 2.033333333333333,
+                    "residual_at_deadline_people": 0.0,
+                    "max_wait_h": 0.033333333333333305,
+                    "waiting_people_h_to_deadline": 13.333333333333375,
+                    "total_waiting_people_h": 13.333333333333375,
+                    "arrived_people": 1000.0,
+                    "served_people": 1000.0,
+                    "unserved_people": 0,
+                    "pass": true,
+                    "failures": []
+                  }
+                },
+                "waiting_groups": [],
+                "pass": true
+              },
+              {
+                "joint_profile": "omega_B_early",
+                "directions": {
+                  "A": {
+                    "peak_people": 550.0,
+                    "clear_h": 3.1,
+                    "residual_at_deadline_people": 300.0,
+                    "max_wait_h": 1.1,
+                    "waiting_people_h_to_deadline": 350.0,
+                    "total_waiting_people_h": 440.0,
+                    "arrived_people": 1000.0,
+                    "served_people": 1000.0,
+                    "unserved_people": 0,
+                    "pass": false,
+                    "failures": [
+                      "peak_over_K",
+                      "clear_after_D_plus_H"
+                    ]
+                  },
+                  "B": {
+                    "peak_people": 550.0,
+                    "clear_h": 2.0,
+                    "residual_at_deadline_people": 0.0,
+                    "max_wait_h": 0.7000000000000011,
+                    "waiting_people_h_to_deadline": 415.8536585365854,
+                    "total_waiting_people_h": 415.8536585365854,
+                    "arrived_people": 1000.0,
+                    "served_people": 1000.0,
+                    "unserved_people": 0,
+                    "pass": false,
+                    "failures": [
+                      "peak_over_K"
+                    ]
+                  }
+                },
+                "waiting_groups": [],
+                "pass": false
+              }
+            ]
+          },
+          {
+            "id": "favor_B_first",
+            "introduced_layer": 0,
+            "pass": false,
+            "runs": [
+              {
+                "joint_profile": "omega_A_early",
+                "directions": {
+                  "A": {
+                    "peak_people": 550.0,
+                    "clear_h": 2.0,
+                    "residual_at_deadline_people": 0.0,
+                    "max_wait_h": 0.7000000000000011,
+                    "waiting_people_h_to_deadline": 415.8536585365854,
+                    "total_waiting_people_h": 415.8536585365854,
+                    "arrived_people": 1000.0,
+                    "served_people": 1000.0,
+                    "unserved_people": 0,
+                    "pass": false,
+                    "failures": [
+                      "peak_over_K"
+                    ]
+                  },
+                  "B": {
+                    "peak_people": 550.0,
+                    "clear_h": 3.1,
+                    "residual_at_deadline_people": 300.0,
+                    "max_wait_h": 1.1,
+                    "waiting_people_h_to_deadline": 350.0,
+                    "total_waiting_people_h": 440.0,
+                    "arrived_people": 1000.0,
+                    "served_people": 1000.0,
+                    "unserved_people": 0,
+                    "pass": false,
+                    "failures": [
+                      "peak_over_K",
+                      "clear_after_D_plus_H"
+                    ]
+                  }
+                },
+                "waiting_groups": [],
+                "pass": false
+              },
+              {
+                "joint_profile": "omega_B_early",
+                "directions": {
+                  "A": {
+                    "peak_people": 50.0,
+                    "clear_h": 2.033333333333333,
+                    "residual_at_deadline_people": 0.0,
+                    "max_wait_h": 0.033333333333333305,
+                    "waiting_people_h_to_deadline": 13.333333333333375,
+                    "total_waiting_people_h": 13.333333333333375,
+                    "arrived_people": 1000.0,
+                    "served_people": 1000.0,
+                    "unserved_people": 0,
+                    "pass": true,
+                    "failures": []
+                  },
+                  "B": {
+                    "peak_people": 50.0,
+                    "clear_h": 2.0,
+                    "residual_at_deadline_people": 0.0,
+                    "max_wait_h": 0.03333333333333338,
+                    "waiting_people_h_to_deadline": 13.414634146341465,
+                    "total_waiting_people_h": 13.414634146341465,
+                    "arrived_people": 1000.0,
+                    "served_people": 1000.0,
+                    "unserved_people": 0,
+                    "pass": true,
+                    "failures": []
+                  }
+                },
+                "waiting_groups": [],
+                "pass": true
+              }
+            ]
+          },
+          {
+            "id": "balanced",
+            "introduced_layer": 0,
+            "pass": true,
+            "runs": [
+              {
+                "joint_profile": "omega_A_early",
+                "directions": {
+                  "A": {
+                    "peak_people": 300.0,
+                    "clear_h": 2.0,
+                    "residual_at_deadline_people": 0.0,
+                    "max_wait_h": 0.29999999999999993,
+                    "waiting_people_h_to_deadline": 126.92307692307692,
+                    "total_waiting_people_h": 126.92307692307692,
+                    "arrived_people": 1000.0,
+                    "served_people": 1000.0,
+                    "unserved_people": 0,
+                    "pass": true,
+                    "failures": []
+                  },
+                  "B": {
+                    "peak_people": 300.0,
+                    "clear_h": 2.3,
+                    "residual_at_deadline_people": 0.0,
+                    "max_wait_h": 0.3,
+                    "waiting_people_h_to_deadline": 120.00000000000001,
+                    "total_waiting_people_h": 120.00000000000001,
+                    "arrived_people": 1000.0,
+                    "served_people": 1000.0,
+                    "unserved_people": 0,
+                    "pass": true,
+                    "failures": []
+                  }
+                },
+                "waiting_groups": [],
+                "pass": true
+              },
+              {
+                "joint_profile": "omega_B_early",
+                "directions": {
+                  "A": {
+                    "peak_people": 300.0,
+                    "clear_h": 2.3,
+                    "residual_at_deadline_people": 0.0,
+                    "max_wait_h": 0.3,
+                    "waiting_people_h_to_deadline": 120.00000000000001,
+                    "total_waiting_people_h": 120.00000000000001,
+                    "arrived_people": 1000.0,
+                    "served_people": 1000.0,
+                    "unserved_people": 0,
+                    "pass": true,
+                    "failures": []
+                  },
+                  "B": {
+                    "peak_people": 300.0,
+                    "clear_h": 2.0,
+                    "residual_at_deadline_people": 0.0,
+                    "max_wait_h": 0.29999999999999993,
+                    "waiting_people_h_to_deadline": 126.92307692307692,
+                    "total_waiting_people_h": 126.92307692307692,
+                    "arrived_people": 1000.0,
+                    "served_people": 1000.0,
+                    "unserved_people": 0,
+                    "pass": true,
+                    "failures": []
+                  }
+                },
+                "waiting_groups": [],
+                "pass": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "SC-N06",
+      "title": "B方向增援较晚生效",
+      "purpose": "异质生效时间",
+      "type": "synthetic_directional",
+      "input": {
+        "safe": true,
+        "known": true,
+        "supported": true,
+        "directions": {
+          "A": {
+            "q": 1000,
+            "d": 2,
+            "b0": 0,
+            "k": 400,
+            "h": 0.5
+          },
+          "B": {
+            "q": 1000,
+            "d": 2,
+            "b0": 0,
+            "k": 400,
+            "h": 0.5
+          }
+        },
+        "joint_profiles": [
+          {
+            "id": "omega_uniform",
+            "shapes": {
+              "A": "uniform",
+              "B": "uniform"
+            }
+          }
+        ],
+        "resources": [
+          {
+            "id": "A_base",
+            "pool_id": "A_base",
+            "mode": "synthetic_service",
+            "directions": [
+              "A"
+            ],
+            "capacity": [
+              [
+                0,
+                null,
+                1500
+              ]
+            ],
+            "layer": 0,
+            "evidence_type": "ASSUMPTION"
+          },
+          {
+            "id": "B_base",
+            "pool_id": "B_base",
+            "mode": "synthetic_service",
+            "directions": [
+              "B"
+            ],
+            "capacity": [
+              [
+                0,
+                null,
+                100
+              ]
+            ],
+            "layer": 0,
+            "evidence_type": "ASSUMPTION"
+          },
+          {
+            "id": "B_extra",
+            "pool_id": "B_extra",
+            "mode": "synthetic_service",
+            "directions": [
+              "B"
+            ],
+            "capacity": [
+              [
+                1,
+                null,
+                400
+              ]
+            ],
+            "layer": 1,
+            "evidence_type": "ASSUMPTION"
+          },
+          {
+            "id": "B_joint",
+            "pool_id": "B_joint",
+            "mode": "synthetic_service",
+            "directions": [
+              "B"
+            ],
+            "capacity": [
+              [
+                1,
+                null,
+                500
+              ]
+            ],
+            "layer": 2,
+            "evidence_type": "ASSUMPTION"
+          }
+        ],
+        "groups": [],
+        "plans": [
+          {
+            "id": "base",
+            "introduced_layer": 0,
+            "allocations": [
+              {
+                "resource_id": "A_base",
+                "direction": "A",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    1500
+                  ]
+                ]
+              },
+              {
+                "resource_id": "B_base",
+                "direction": "B",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    100
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "strengthened",
+            "introduced_layer": 1,
+            "allocations": [
+              {
+                "resource_id": "A_base",
+                "direction": "A",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    1500
+                  ]
+                ]
+              },
+              {
+                "resource_id": "B_base",
+                "direction": "B",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    100
+                  ]
+                ]
+              },
+              {
+                "resource_id": "B_extra",
+                "direction": "B",
+                "segments": [
+                  [
+                    1,
+                    null,
+                    400
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "joint",
+            "introduced_layer": 2,
+            "allocations": [
+              {
+                "resource_id": "A_base",
+                "direction": "A",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    1500
+                  ]
+                ]
+              },
+              {
+                "resource_id": "B_base",
+                "direction": "B",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    100
+                  ]
+                ]
+              },
+              {
+                "resource_id": "B_extra",
+                "direction": "B",
+                "segments": [
+                  [
+                    1,
+                    null,
+                    400
+                  ]
+                ]
+              },
+              {
+                "resource_id": "B_joint",
+                "direction": "B",
+                "segments": [
+                  [
+                    1,
+                    null,
+                    500
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "reference_version": "REF-DIR-SYN-01",
+        "goal_version": "GOAL-DIR-SYN-01"
+      },
+      "expected_grade": "F2",
+      "reference_fingerprint": "7d71b1e3e2a857a629b42f70ebb3d5f89bbfb570eb5cccc8e4a0d363ec8bb810",
+      "goal_fingerprint": "602224c55f672b2935953609cf251fcbeca43510613232e50dd4e16544ad4290",
+      "result": {
+        "grade": "F2",
+        "blockers": [],
+        "interpretation": "minimum layer among listed fixed plans; not all physically feasible policies",
+        "quantifier": "exists one listed plan, for all joint profiles and directions",
+        "tiers": [
+          {
+            "tier": "V0",
+            "candidate_plan_ids": [
+              "base"
+            ],
+            "pass": false,
+            "passing_plan_ids": []
+          },
+          {
+            "tier": "V1",
+            "candidate_plan_ids": [
+              "base",
+              "strengthened"
+            ],
+            "pass": false,
+            "passing_plan_ids": []
+          },
+          {
+            "tier": "V2",
+            "candidate_plan_ids": [
+              "base",
+              "strengthened",
+              "joint"
+            ],
+            "pass": true,
+            "passing_plan_ids": [
+              "joint"
+            ]
+          }
+        ],
+        "plans": [
+          {
+            "id": "base",
+            "introduced_layer": 0,
+            "pass": false,
+            "runs": [
+              {
+                "joint_profile": "omega_uniform",
+                "directions": {
+                  "A": {
+                    "peak_people": 0.0,
+                    "clear_h": 2.0,
+                    "residual_at_deadline_people": 0.0,
+                    "max_wait_h": 0.0,
+                    "waiting_people_h_to_deadline": 0.0,
+                    "total_waiting_people_h": 0.0,
+                    "arrived_people": 1000.0,
+                    "served_people": 1000.0,
+                    "unserved_people": 0,
+                    "pass": true,
+                    "failures": []
+                  },
+                  "B": {
+                    "peak_people": 800.0,
+                    "clear_h": 10.0,
+                    "residual_at_deadline_people": 750.0,
+                    "max_wait_h": 8.0,
+                    "waiting_people_h_to_deadline": 1187.5,
+                    "total_waiting_people_h": 4000.0,
+                    "arrived_people": 1000.0,
+                    "served_people": 1000.0,
+                    "unserved_people": 0,
+                    "pass": false,
+                    "failures": [
+                      "peak_over_K",
+                      "clear_after_D_plus_H"
+                    ]
+                  }
+                },
+                "waiting_groups": [],
+                "pass": false
+              }
+            ]
+          },
+          {
+            "id": "strengthened",
+            "introduced_layer": 1,
+            "pass": false,
+            "runs": [
+              {
+                "joint_profile": "omega_uniform",
+                "directions": {
+                  "A": {
+                    "peak_people": 0.0,
+                    "clear_h": 2.0,
+                    "residual_at_deadline_people": 0.0,
+                    "max_wait_h": 0.0,
+                    "waiting_people_h_to_deadline": 0.0,
+                    "total_waiting_people_h": 0.0,
+                    "arrived_people": 1000.0,
+                    "served_people": 1000.0,
+                    "unserved_people": 0,
+                    "pass": true,
+                    "failures": []
+                  },
+                  "B": {
+                    "peak_people": 400.0,
+                    "clear_h": 2.8,
+                    "residual_at_deadline_people": 150.0,
+                    "max_wait_h": 0.8,
+                    "waiting_people_h_to_deadline": 737.5,
+                    "total_waiting_people_h": 760.0000000000001,
+                    "arrived_people": 1000.0,
+                    "served_people": 1000.0,
+                    "unserved_people": 0,
+                    "pass": false,
+                    "failures": [
+                      "clear_after_D_plus_H"
+                    ]
+                  }
+                },
+                "waiting_groups": [],
+                "pass": false
+              }
+            ]
+          },
+          {
+            "id": "joint",
+            "introduced_layer": 2,
+            "pass": true,
+            "runs": [
+              {
+                "joint_profile": "omega_uniform",
+                "directions": {
+                  "A": {
+                    "peak_people": 0.0,
+                    "clear_h": 2.0,
+                    "residual_at_deadline_people": 0.0,
+                    "max_wait_h": 0.0,
+                    "waiting_people_h_to_deadline": 0.0,
+                    "total_waiting_people_h": 0.0,
+                    "arrived_people": 1000.0,
+                    "served_people": 1000.0,
+                    "unserved_people": 0,
+                    "pass": true,
+                    "failures": []
+                  },
+                  "B": {
+                    "peak_people": 400.0,
+                    "clear_h": 2.0,
+                    "residual_at_deadline_people": 0.0,
+                    "max_wait_h": 0.8,
+                    "waiting_people_h_to_deadline": 360.0,
+                    "total_waiting_people_h": 360.0,
+                    "arrived_people": 1000.0,
+                    "served_people": 1000.0,
+                    "unserved_people": 0,
+                    "pass": true,
+                    "failures": []
+                  }
+                },
+                "waiting_groups": [],
+                "pass": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "SC-N07",
+      "title": "B方向服务结束需接续",
+      "purpose": "方向服务日历",
+      "type": "synthetic_directional",
+      "input": {
+        "safe": true,
+        "known": true,
+        "supported": true,
+        "directions": {
+          "A": {
+            "q": 1000,
+            "d": 2,
+            "b0": 0,
+            "k": 400,
+            "h": 0.5
+          },
+          "B": {
+            "q": 1000,
+            "d": 2,
+            "b0": 0,
+            "k": 400,
+            "h": 0.5
+          }
+        },
+        "joint_profiles": [
+          {
+            "id": "omega_uniform",
+            "shapes": {
+              "A": "uniform",
+              "B": "uniform"
+            }
+          }
+        ],
+        "resources": [
+          {
+            "id": "A_base",
+            "pool_id": "A_base",
+            "mode": "synthetic_service",
+            "directions": [
+              "A"
+            ],
+            "capacity": [
+              [
+                0,
+                null,
+                1500
+              ]
+            ],
+            "layer": 0,
+            "evidence_type": "ASSUMPTION"
+          },
+          {
+            "id": "B_base",
+            "pool_id": "B_base",
+            "mode": "synthetic_service",
+            "directions": [
+              "B"
+            ],
+            "capacity": [
+              [
+                0,
+                1,
+                500
+              ]
+            ],
+            "layer": 0,
+            "evidence_type": "ASSUMPTION"
+          },
+          {
+            "id": "B_extension",
+            "pool_id": "B_extension",
+            "mode": "synthetic_service",
+            "directions": [
+              "B"
+            ],
+            "capacity": [
+              [
+                1,
+                null,
+                500
+              ]
+            ],
+            "layer": 1,
+            "evidence_type": "ASSUMPTION"
+          }
+        ],
+        "groups": [],
+        "plans": [
+          {
+            "id": "before_close",
+            "introduced_layer": 0,
+            "allocations": [
+              {
+                "resource_id": "A_base",
+                "direction": "A",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    1500
+                  ]
+                ]
+              },
+              {
+                "resource_id": "B_base",
+                "direction": "B",
+                "segments": [
+                  [
+                    0,
+                    1,
+                    500
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "extend_B",
+            "introduced_layer": 1,
+            "allocations": [
+              {
+                "resource_id": "A_base",
+                "direction": "A",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    1500
+                  ]
+                ]
+              },
+              {
+                "resource_id": "B_base",
+                "direction": "B",
+                "segments": [
+                  [
+                    0,
+                    1,
+                    500
+                  ]
+                ]
+              },
+              {
+                "resource_id": "B_extension",
+                "direction": "B",
+                "segments": [
+                  [
+                    1,
+                    null,
+                    500
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "reference_version": "REF-DIR-SYN-01",
+        "goal_version": "GOAL-DIR-SYN-01"
+      },
+      "expected_grade": "F1",
+      "reference_fingerprint": "6778ed2e3af56b22fe643c5596faa41151f2cb0a6b5d4bb6ac0f7d50b587bee8",
+      "goal_fingerprint": "602224c55f672b2935953609cf251fcbeca43510613232e50dd4e16544ad4290",
+      "result": {
+        "grade": "F1",
+        "blockers": [],
+        "interpretation": "minimum layer among listed fixed plans; not all physically feasible policies",
+        "quantifier": "exists one listed plan, for all joint profiles and directions",
+        "tiers": [
+          {
+            "tier": "V0",
+            "candidate_plan_ids": [
+              "before_close"
+            ],
+            "pass": false,
+            "passing_plan_ids": []
+          },
+          {
+            "tier": "V1",
+            "candidate_plan_ids": [
+              "before_close",
+              "extend_B"
+            ],
+            "pass": true,
+            "passing_plan_ids": [
+              "extend_B"
+            ]
+          },
+          {
+            "tier": "V2",
+            "candidate_plan_ids": [
+              "before_close",
+              "extend_B"
+            ],
+            "pass": true,
+            "passing_plan_ids": [
+              "extend_B"
+            ]
+          }
+        ],
+        "plans": [
+          {
+            "id": "before_close",
+            "introduced_layer": 0,
+            "pass": false,
+            "runs": [
+              {
+                "joint_profile": "omega_uniform",
+                "directions": {
+                  "A": {
+                    "peak_people": 0.0,
+                    "clear_h": 2.0,
+                    "residual_at_deadline_people": 0.0,
+                    "max_wait_h": 0.0,
+                    "waiting_people_h_to_deadline": 0.0,
+                    "total_waiting_people_h": 0.0,
+                    "arrived_people": 1000.0,
+                    "served_people": 1000.0,
+                    "unserved_people": 0,
+                    "pass": true,
+                    "failures": []
+                  },
+                  "B": {
+                    "peak_people": 500.0,
+                    "clear_h": null,
+                    "residual_at_deadline_people": 500.0,
+                    "max_wait_h": null,
+                    "waiting_people_h_to_deadline": 500.0,
+                    "total_waiting_people_h": null,
+                    "arrived_people": 1000.0,
+                    "served_people": 500.0,
+                    "unserved_people": 500.0,
+                    "pass": false,
+                    "failures": [
+                      "peak_over_K",
+                      "unfinished"
+                    ]
+                  }
+                },
+                "waiting_groups": [],
+                "pass": false
+              }
+            ]
+          },
+          {
+            "id": "extend_B",
+            "introduced_layer": 1,
+            "pass": true,
+            "runs": [
+              {
+                "joint_profile": "omega_uniform",
+                "directions": {
+                  "A": {
+                    "peak_people": 0.0,
+                    "clear_h": 2.0,
+                    "residual_at_deadline_people": 0.0,
+                    "max_wait_h": 0.0,
+                    "waiting_people_h_to_deadline": 0.0,
+                    "total_waiting_people_h": 0.0,
+                    "arrived_people": 1000.0,
+                    "served_people": 1000.0,
+                    "unserved_people": 0,
+                    "pass": true,
+                    "failures": []
+                  },
+                  "B": {
+                    "peak_people": 0.0,
+                    "clear_h": 2.0,
+                    "residual_at_deadline_people": 0.0,
+                    "max_wait_h": 0.0,
+                    "waiting_people_h_to_deadline": 0.0,
+                    "total_waiting_people_h": 0.0,
+                    "arrived_people": 1000.0,
+                    "served_people": 1000.0,
+                    "unserved_people": 0,
+                    "pass": true,
+                    "failures": []
+                  }
+                },
+                "waiting_groups": [],
+                "pass": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "SC-N08",
+      "title": "申报供给超出共用上客能力",
+      "purpose": "非法方案拒绝而非默默删去",
+      "type": "synthetic_directional",
+      "input": {
+        "safe": true,
+        "known": true,
+        "supported": true,
+        "directions": {
+          "A": {
+            "q": 1000,
+            "d": 2,
+            "b0": 0,
+            "k": 400,
+            "h": 0.5
+          },
+          "B": {
+            "q": 1000,
+            "d": 2,
+            "b0": 0,
+            "k": 400,
+            "h": 0.5
+          }
+        },
+        "joint_profiles": [
+          {
+            "id": "omega_uniform",
+            "shapes": {
+              "A": "uniform",
+              "B": "uniform"
+            }
+          }
+        ],
+        "resources": [
+          {
+            "id": "A_base",
+            "pool_id": "A_base",
+            "mode": "synthetic_service",
+            "directions": [
+              "A"
+            ],
+            "capacity": [
+              [
+                0,
+                null,
+                500
+              ]
+            ],
+            "layer": 0,
+            "evidence_type": "ASSUMPTION"
+          },
+          {
+            "id": "B_base",
+            "pool_id": "B_base",
+            "mode": "synthetic_service",
+            "directions": [
+              "B"
+            ],
+            "capacity": [
+              [
+                0,
+                null,
+                500
+              ]
+            ],
+            "layer": 0,
+            "evidence_type": "ASSUMPTION"
+          },
+          {
+            "id": "B_bypass",
+            "pool_id": "B_bypass",
+            "mode": "synthetic_service",
+            "directions": [
+              "B"
+            ],
+            "capacity": [
+              [
+                0,
+                null,
+                500
+              ]
+            ],
+            "layer": 1,
+            "evidence_type": "ASSUMPTION"
+          },
+          {
+            "id": "A_bypass",
+            "pool_id": "A_bypass",
+            "mode": "synthetic_service",
+            "directions": [
+              "A"
+            ],
+            "capacity": [
+              [
+                0,
+                null,
+                500
+              ]
+            ],
+            "layer": 2,
+            "evidence_type": "ASSUMPTION"
+          }
+        ],
+        "groups": [
+          {
+            "id": "G_boarding",
+            "resource_ids": [
+              "A_base",
+              "B_base"
+            ],
+            "capacity": [
+              [
+                0,
+                null,
+                600
+              ]
+            ],
+            "evidence_type": "ASSUMPTION"
+          }
+        ],
+        "plans": [
+          {
+            "id": "shared_base",
+            "introduced_layer": 0,
+            "allocations": [
+              {
+                "resource_id": "A_base",
+                "direction": "A",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    500
+                  ]
+                ]
+              },
+              {
+                "resource_id": "B_base",
+                "direction": "B",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    500
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "B_support",
+            "introduced_layer": 1,
+            "allocations": [
+              {
+                "resource_id": "A_base",
+                "direction": "A",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    300
+                  ]
+                ]
+              },
+              {
+                "resource_id": "B_base",
+                "direction": "B",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    300
+                  ]
+                ]
+              },
+              {
+                "resource_id": "B_bypass",
+                "direction": "B",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    500
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "AB_support",
+            "introduced_layer": 2,
+            "allocations": [
+              {
+                "resource_id": "A_base",
+                "direction": "A",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    300
+                  ]
+                ]
+              },
+              {
+                "resource_id": "B_base",
+                "direction": "B",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    300
+                  ]
+                ]
+              },
+              {
+                "resource_id": "B_bypass",
+                "direction": "B",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    500
+                  ]
+                ]
+              },
+              {
+                "resource_id": "A_bypass",
+                "direction": "A",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    500
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "reallocate_shared_at_V1",
+            "introduced_layer": 1,
+            "allocations": [
+              {
+                "resource_id": "A_base",
+                "direction": "A",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    400
+                  ]
+                ]
+              },
+              {
+                "resource_id": "B_base",
+                "direction": "B",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    200
+                  ]
+                ]
+              },
+              {
+                "resource_id": "B_bypass",
+                "direction": "B",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    500
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "reference_version": "REF-DIR-SYN-01",
+        "goal_version": "GOAL-DIR-SYN-01"
+      },
+      "expected_grade": "X-CONFIG",
+      "reference_fingerprint": "0db0ad351c2d69edb4a3cf64ba2c56b2a8f4e2699f1ac61998b9a4b7aa4756ce",
+      "goal_fingerprint": "602224c55f672b2935953609cf251fcbeca43510613232e50dd4e16544ad4290",
+      "result": {
+        "grade": "X-CONFIG",
+        "blockers": [
+          "X-CONFIG"
+        ],
+        "reason": "shared capacity exceeded: G_boarding",
+        "tiers": []
+      }
+    },
+    {
+      "id": "SC-N09",
+      "title": "同一资源池被换名重复计入",
+      "purpose": "资源身份去重",
+      "type": "synthetic_directional",
+      "input": {
+        "safe": true,
+        "known": true,
+        "supported": true,
+        "directions": {
+          "A": {
+            "q": 1000,
+            "d": 2,
+            "b0": 0,
+            "k": 400,
+            "h": 0.5
+          },
+          "B": {
+            "q": 1000,
+            "d": 2,
+            "b0": 0,
+            "k": 400,
+            "h": 0.5
+          }
+        },
+        "joint_profiles": [
+          {
+            "id": "omega_uniform",
+            "shapes": {
+              "A": "uniform",
+              "B": "uniform"
+            }
+          }
+        ],
+        "resources": [
+          {
+            "id": "A_base",
+            "pool_id": "A_base",
+            "mode": "synthetic_service",
+            "directions": [
+              "A"
+            ],
+            "capacity": [
+              [
+                0,
+                null,
+                1500
+              ]
+            ],
+            "layer": 0,
+            "evidence_type": "ASSUMPTION"
+          },
+          {
+            "id": "B_base",
+            "pool_id": "B_base",
+            "mode": "synthetic_service",
+            "directions": [
+              "B"
+            ],
+            "capacity": [
+              [
+                0,
+                null,
+                100
+              ]
+            ],
+            "layer": 0,
+            "evidence_type": "ASSUMPTION"
+          },
+          {
+            "id": "B_extra",
+            "pool_id": "B_extra",
+            "mode": "synthetic_service",
+            "directions": [
+              "B"
+            ],
+            "capacity": [
+              [
+                0,
+                null,
+                400
+              ]
+            ],
+            "layer": 1,
+            "evidence_type": "ASSUMPTION"
+          },
+          {
+            "id": "A_alias",
+            "pool_id": "A_base",
+            "mode": "synthetic_service",
+            "directions": [
+              "A"
+            ],
+            "capacity": [
+              [
+                0,
+                null,
+                1500
+              ]
+            ],
+            "layer": 0,
+            "evidence_type": "ASSUMPTION"
+          }
+        ],
+        "groups": [],
+        "plans": [
+          {
+            "id": "base",
+            "introduced_layer": 0,
+            "allocations": [
+              {
+                "resource_id": "A_base",
+                "direction": "A",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    1500
+                  ]
+                ]
+              },
+              {
+                "resource_id": "B_base",
+                "direction": "B",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    100
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "strengthened",
+            "introduced_layer": 1,
+            "allocations": [
+              {
+                "resource_id": "A_base",
+                "direction": "A",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    1500
+                  ]
+                ]
+              },
+              {
+                "resource_id": "B_base",
+                "direction": "B",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    100
+                  ]
+                ]
+              },
+              {
+                "resource_id": "B_extra",
+                "direction": "B",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    400
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "reference_version": "REF-DIR-SYN-01",
+        "goal_version": "GOAL-DIR-SYN-01"
+      },
+      "expected_grade": "X-CONFIG",
+      "reference_fingerprint": "3ab6eab1dde3d552b5d68811a0d338615d606719350c4c8e3e9391fddd420eba",
+      "goal_fingerprint": "602224c55f672b2935953609cf251fcbeca43510613232e50dd4e16544ad4290",
+      "result": {
+        "grade": "X-CONFIG",
+        "blockers": [
+          "X-CONFIG"
+        ],
+        "reason": "duplicate resource or physical pool",
+        "tiers": []
+      }
+    },
+    {
+      "id": "SC-N10",
+      "title": "分方向关键数据未知",
+      "purpose": "缺失不填0",
+      "type": "synthetic_directional",
+      "input": {
+        "safe": true,
+        "known": false,
+        "supported": true,
+        "directions": {
+          "A": {
+            "q": 1000,
+            "d": 2,
+            "b0": 0,
+            "k": 400,
+            "h": 0.5
+          },
+          "B": {
+            "q": 1000,
+            "d": 2,
+            "b0": 0,
+            "k": 400,
+            "h": 0.5
+          }
+        },
+        "joint_profiles": [
+          {
+            "id": "omega_uniform",
+            "shapes": {
+              "A": "uniform",
+              "B": "uniform"
+            }
+          }
+        ],
+        "resources": [
+          {
+            "id": "A_base",
+            "pool_id": "A_base",
+            "mode": "synthetic_service",
+            "directions": [
+              "A"
+            ],
+            "capacity": [
+              [
+                0,
+                null,
+                1500
+              ]
+            ],
+            "layer": 0,
+            "evidence_type": "ASSUMPTION"
+          },
+          {
+            "id": "B_base",
+            "pool_id": "B_base",
+            "mode": "synthetic_service",
+            "directions": [
+              "B"
+            ],
+            "capacity": [
+              [
+                0,
+                null,
+                100
+              ]
+            ],
+            "layer": 0,
+            "evidence_type": "ASSUMPTION"
+          },
+          {
+            "id": "B_extra",
+            "pool_id": "B_extra",
+            "mode": "synthetic_service",
+            "directions": [
+              "B"
+            ],
+            "capacity": [
+              [
+                0,
+                null,
+                400
+              ]
+            ],
+            "layer": 1,
+            "evidence_type": "ASSUMPTION"
+          }
+        ],
+        "groups": [],
+        "plans": [
+          {
+            "id": "base",
+            "introduced_layer": 0,
+            "allocations": [
+              {
+                "resource_id": "A_base",
+                "direction": "A",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    1500
+                  ]
+                ]
+              },
+              {
+                "resource_id": "B_base",
+                "direction": "B",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    100
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "strengthened",
+            "introduced_layer": 1,
+            "allocations": [
+              {
+                "resource_id": "A_base",
+                "direction": "A",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    1500
+                  ]
+                ]
+              },
+              {
+                "resource_id": "B_base",
+                "direction": "B",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    100
+                  ]
+                ]
+              },
+              {
+                "resource_id": "B_extra",
+                "direction": "B",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    400
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "reference_version": "REF-DIR-SYN-01",
+        "goal_version": "GOAL-DIR-SYN-01"
+      },
+      "expected_grade": "X-DATA",
+      "reference_fingerprint": "318cd40ae5f5d5657c9d43ebfb564a20bd27a8f47bcf6b33db8f3c38362acdc4",
+      "goal_fingerprint": "602224c55f672b2935953609cf251fcbeca43510613232e50dd4e16544ad4290",
+      "result": {
+        "grade": "X-DATA",
+        "blockers": [
+          "X-DATA"
+        ],
+        "tiers": []
+      }
+    },
+    {
+      "id": "SC-N11",
+      "title": "需模拟途中换乘与共线运行",
+      "purpose": "完整网络仍超出本工具",
+      "type": "synthetic_directional",
+      "input": {
+        "safe": true,
+        "known": true,
+        "supported": false,
+        "directions": {
+          "A": {
+            "q": 1000,
+            "d": 2,
+            "b0": 0,
+            "k": 400,
+            "h": 0.5
+          },
+          "B": {
+            "q": 1000,
+            "d": 2,
+            "b0": 0,
+            "k": 400,
+            "h": 0.5
+          }
+        },
+        "joint_profiles": [
+          {
+            "id": "omega_uniform",
+            "shapes": {
+              "A": "uniform",
+              "B": "uniform"
+            }
+          }
+        ],
+        "resources": [
+          {
+            "id": "A_base",
+            "pool_id": "A_base",
+            "mode": "synthetic_service",
+            "directions": [
+              "A"
+            ],
+            "capacity": [
+              [
+                0,
+                null,
+                1500
+              ]
+            ],
+            "layer": 0,
+            "evidence_type": "ASSUMPTION"
+          },
+          {
+            "id": "B_base",
+            "pool_id": "B_base",
+            "mode": "synthetic_service",
+            "directions": [
+              "B"
+            ],
+            "capacity": [
+              [
+                0,
+                null,
+                100
+              ]
+            ],
+            "layer": 0,
+            "evidence_type": "ASSUMPTION"
+          },
+          {
+            "id": "B_extra",
+            "pool_id": "B_extra",
+            "mode": "synthetic_service",
+            "directions": [
+              "B"
+            ],
+            "capacity": [
+              [
+                0,
+                null,
+                400
+              ]
+            ],
+            "layer": 1,
+            "evidence_type": "ASSUMPTION"
+          }
+        ],
+        "groups": [],
+        "plans": [
+          {
+            "id": "base",
+            "introduced_layer": 0,
+            "allocations": [
+              {
+                "resource_id": "A_base",
+                "direction": "A",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    1500
+                  ]
+                ]
+              },
+              {
+                "resource_id": "B_base",
+                "direction": "B",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    100
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "strengthened",
+            "introduced_layer": 1,
+            "allocations": [
+              {
+                "resource_id": "A_base",
+                "direction": "A",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    1500
+                  ]
+                ]
+              },
+              {
+                "resource_id": "B_base",
+                "direction": "B",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    100
+                  ]
+                ]
+              },
+              {
+                "resource_id": "B_extra",
+                "direction": "B",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    400
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "reference_version": "REF-DIR-SYN-01",
+        "goal_version": "GOAL-DIR-SYN-01"
+      },
+      "expected_grade": "X-STRUCTURE",
+      "reference_fingerprint": "318cd40ae5f5d5657c9d43ebfb564a20bd27a8f47bcf6b33db8f3c38362acdc4",
+      "goal_fingerprint": "602224c55f672b2935953609cf251fcbeca43510613232e50dd4e16544ad4290",
+      "result": {
+        "grade": "X-STRUCTURE",
+        "blockers": [
+          "X-STRUCTURE"
+        ],
+        "tiers": []
+      }
+    },
+    {
+      "id": "SC-N12",
+      "title": "将A专用服务错配到B",
+      "purpose": "方向约束检查",
+      "type": "synthetic_directional",
+      "input": {
+        "safe": true,
+        "known": true,
+        "supported": true,
+        "directions": {
+          "A": {
+            "q": 1000,
+            "d": 2,
+            "b0": 0,
+            "k": 400,
+            "h": 0.5
+          },
+          "B": {
+            "q": 1000,
+            "d": 2,
+            "b0": 0,
+            "k": 400,
+            "h": 0.5
+          }
+        },
+        "joint_profiles": [
+          {
+            "id": "omega_uniform",
+            "shapes": {
+              "A": "uniform",
+              "B": "uniform"
+            }
+          }
+        ],
+        "resources": [
+          {
+            "id": "A_base",
+            "pool_id": "A_base",
+            "mode": "synthetic_service",
+            "directions": [
+              "A"
+            ],
+            "capacity": [
+              [
+                0,
+                null,
+                1500
+              ]
+            ],
+            "layer": 0,
+            "evidence_type": "ASSUMPTION"
+          },
+          {
+            "id": "B_base",
+            "pool_id": "B_base",
+            "mode": "synthetic_service",
+            "directions": [
+              "B"
+            ],
+            "capacity": [
+              [
+                0,
+                null,
+                100
+              ]
+            ],
+            "layer": 0,
+            "evidence_type": "ASSUMPTION"
+          },
+          {
+            "id": "B_extra",
+            "pool_id": "B_extra",
+            "mode": "synthetic_service",
+            "directions": [
+              "B"
+            ],
+            "capacity": [
+              [
+                0,
+                null,
+                400
+              ]
+            ],
+            "layer": 1,
+            "evidence_type": "ASSUMPTION"
+          }
+        ],
+        "groups": [],
+        "plans": [
+          {
+            "id": "base",
+            "introduced_layer": 0,
+            "allocations": [
+              {
+                "resource_id": "A_base",
+                "direction": "B",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    1500
+                  ]
+                ]
+              },
+              {
+                "resource_id": "B_base",
+                "direction": "B",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    100
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "strengthened",
+            "introduced_layer": 1,
+            "allocations": [
+              {
+                "resource_id": "A_base",
+                "direction": "B",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    1500
+                  ]
+                ]
+              },
+              {
+                "resource_id": "B_base",
+                "direction": "B",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    100
+                  ]
+                ]
+              },
+              {
+                "resource_id": "B_extra",
+                "direction": "B",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    400
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "reference_version": "REF-DIR-SYN-01",
+        "goal_version": "GOAL-DIR-SYN-01"
+      },
+      "expected_grade": "X-CONFIG",
+      "reference_fingerprint": "27b98165953079caeb762f1e3d84f26be345e53b00b0f05f2095eebba609860d",
+      "goal_fingerprint": "602224c55f672b2935953609cf251fcbeca43510613232e50dd4e16544ad4290",
+      "result": {
+        "grade": "X-CONFIG",
+        "blockers": [
+          "X-CONFIG"
+        ],
+        "reason": "resource cannot serve assigned direction",
+        "tiers": []
+      }
+    },
+    {
+      "id": "SC-N13",
+      "title": "各方向不过线但共用候客区超线",
+      "purpose": "合计必须在同一时刻检查",
+      "type": "synthetic_directional",
+      "input": {
+        "safe": true,
+        "known": true,
+        "supported": true,
+        "directions": {
+          "A": {
+            "q": 1000,
+            "d": 2,
+            "b0": 0,
+            "k": 400,
+            "h": 0.5
+          },
+          "B": {
+            "q": 1000,
+            "d": 2,
+            "b0": 0,
+            "k": 400,
+            "h": 0.5
+          }
+        },
+        "joint_profiles": [
+          {
+            "id": "both_early",
+            "shapes": {
+              "A": "front",
+              "B": "front"
+            }
+          }
+        ],
+        "resources": [
+          {
+            "id": "flex",
+            "pool_id": "flex",
+            "mode": "synthetic_service",
+            "directions": [
+              "A",
+              "B"
+            ],
+            "capacity": [
+              [
+                0,
+                null,
+                2000
+              ]
+            ],
+            "layer": 0,
+            "evidence_type": "ASSUMPTION"
+          },
+          {
+            "id": "extra",
+            "pool_id": "extra",
+            "mode": "synthetic_service",
+            "directions": [
+              "A",
+              "B"
+            ],
+            "capacity": [
+              [
+                0,
+                null,
+                1000
+              ]
+            ],
+            "layer": 1,
+            "evidence_type": "ASSUMPTION"
+          }
+        ],
+        "groups": [],
+        "plans": [
+          {
+            "id": "balanced",
+            "introduced_layer": 0,
+            "allocations": [
+              {
+                "resource_id": "flex",
+                "direction": "A",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    1000
+                  ]
+                ]
+              },
+              {
+                "resource_id": "flex",
+                "direction": "B",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    1000
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "add_balanced",
+            "introduced_layer": 1,
+            "allocations": [
+              {
+                "resource_id": "flex",
+                "direction": "A",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    1000
+                  ]
+                ]
+              },
+              {
+                "resource_id": "flex",
+                "direction": "B",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    1000
+                  ]
+                ]
+              },
+              {
+                "resource_id": "extra",
+                "direction": "A",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    500
+                  ]
+                ]
+              },
+              {
+                "resource_id": "extra",
+                "direction": "B",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    500
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "reference_version": "REF-DIR-SYN-01",
+        "goal_version": "GOAL-DIR-SYN-01",
+        "waiting_groups": [
+          {
+            "id": "shared_waiting",
+            "directions": [
+              "A",
+              "B"
+            ],
+            "k": 500
+          }
+        ]
+      },
+      "expected_grade": "F1",
+      "reference_fingerprint": "0c6f9ba97e85ac4d136d371ffa75bd27d430af67a0eefd90b1ffc3bd38d3befe",
+      "goal_fingerprint": "7d728057cdc7811145db6d12213c1c7448fddaeb45ef7d3f9179ff88f6f3a537",
+      "result": {
+        "grade": "F1",
+        "blockers": [],
+        "interpretation": "minimum layer among listed fixed plans; not all physically feasible policies",
+        "quantifier": "exists one listed plan, for all joint profiles and directions",
+        "tiers": [
+          {
+            "tier": "V0",
+            "candidate_plan_ids": [
+              "balanced"
+            ],
+            "pass": false,
+            "passing_plan_ids": []
+          },
+          {
+            "tier": "V1",
+            "candidate_plan_ids": [
+              "balanced",
+              "add_balanced"
+            ],
+            "pass": true,
+            "passing_plan_ids": [
+              "add_balanced"
+            ]
+          },
+          {
+            "tier": "V2",
+            "candidate_plan_ids": [
+              "balanced",
+              "add_balanced"
+            ],
+            "pass": true,
+            "passing_plan_ids": [
+              "add_balanced"
+            ]
+          }
+        ],
+        "plans": [
+          {
+            "id": "balanced",
+            "introduced_layer": 0,
+            "pass": false,
+            "runs": [
+              {
+                "joint_profile": "both_early",
+                "directions": {
+                  "A": {
+                    "peak_people": 300.0,
+                    "clear_h": 2.0,
+                    "residual_at_deadline_people": 0.0,
+                    "max_wait_h": 0.29999999999999993,
+                    "waiting_people_h_to_deadline": 126.92307692307692,
+                    "total_waiting_people_h": 126.92307692307692,
+                    "arrived_people": 1000.0,
+                    "served_people": 1000.0,
+                    "unserved_people": 0,
+                    "pass": true,
+                    "failures": []
+                  },
+                  "B": {
+                    "peak_people": 300.0,
+                    "clear_h": 2.0,
+                    "residual_at_deadline_people": 0.0,
+                    "max_wait_h": 0.29999999999999993,
+                    "waiting_people_h_to_deadline": 126.92307692307692,
+                    "total_waiting_people_h": 126.92307692307692,
+                    "arrived_people": 1000.0,
+                    "served_people": 1000.0,
+                    "unserved_people": 0,
+                    "pass": true,
+                    "failures": []
+                  }
+                },
+                "waiting_groups": [
+                  {
+                    "id": "shared_waiting",
+                    "K_people": 500,
+                    "peak_people": 600.0,
+                    "pass": false
+                  }
+                ],
+                "pass": false
+              }
+            ]
+          },
+          {
+            "id": "add_balanced",
+            "introduced_layer": 1,
+            "pass": true,
+            "runs": [
+              {
+                "joint_profile": "both_early",
+                "directions": {
+                  "A": {
+                    "peak_people": 50.0,
+                    "clear_h": 2.0,
+                    "residual_at_deadline_people": 0.0,
+                    "max_wait_h": 0.03333333333333338,
+                    "waiting_people_h_to_deadline": 13.414634146341465,
+                    "total_waiting_people_h": 13.414634146341465,
+                    "arrived_people": 1000.0,
+                    "served_people": 1000.0,
+                    "unserved_people": 0,
+                    "pass": true,
+                    "failures": []
+                  },
+                  "B": {
+                    "peak_people": 50.0,
+                    "clear_h": 2.0,
+                    "residual_at_deadline_people": 0.0,
+                    "max_wait_h": 0.03333333333333338,
+                    "waiting_people_h_to_deadline": 13.414634146341465,
+                    "total_waiting_people_h": 13.414634146341465,
+                    "arrived_people": 1000.0,
+                    "served_people": 1000.0,
+                    "unserved_people": 0,
+                    "pass": true,
+                    "failures": []
+                  }
+                },
+                "waiting_groups": [
+                  {
+                    "id": "shared_waiting",
+                    "K_people": 500,
+                    "peak_people": 100.0,
+                    "pass": true
+                  }
+                ],
+                "pass": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "SC-N14",
+      "title": "两个方向峰值错开",
+      "purpose": "不能把各自峰值直接相加",
+      "type": "synthetic_directional",
+      "input": {
+        "safe": true,
+        "known": true,
+        "supported": true,
+        "directions": {
+          "A": {
+            "q": 1000,
+            "d": 2,
+            "b0": 0,
+            "k": 400,
+            "h": 0.5
+          },
+          "B": {
+            "q": 1000,
+            "d": 2,
+            "b0": 0,
+            "k": 400,
+            "h": 0.5
+          }
+        },
+        "joint_profiles": [
+          {
+            "id": "staggered",
+            "shapes": {
+              "A": "front",
+              "B": "back"
+            }
+          }
+        ],
+        "resources": [
+          {
+            "id": "flex",
+            "pool_id": "flex",
+            "mode": "synthetic_service",
+            "directions": [
+              "A",
+              "B"
+            ],
+            "capacity": [
+              [
+                0,
+                null,
+                2000
+              ]
+            ],
+            "layer": 0,
+            "evidence_type": "ASSUMPTION"
+          },
+          {
+            "id": "extra",
+            "pool_id": "extra",
+            "mode": "synthetic_service",
+            "directions": [
+              "A",
+              "B"
+            ],
+            "capacity": [
+              [
+                0,
+                null,
+                1000
+              ]
+            ],
+            "layer": 1,
+            "evidence_type": "ASSUMPTION"
+          }
+        ],
+        "groups": [],
+        "plans": [
+          {
+            "id": "balanced",
+            "introduced_layer": 0,
+            "allocations": [
+              {
+                "resource_id": "flex",
+                "direction": "A",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    1000
+                  ]
+                ]
+              },
+              {
+                "resource_id": "flex",
+                "direction": "B",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    1000
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "add_balanced",
+            "introduced_layer": 1,
+            "allocations": [
+              {
+                "resource_id": "flex",
+                "direction": "A",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    1000
+                  ]
+                ]
+              },
+              {
+                "resource_id": "flex",
+                "direction": "B",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    1000
+                  ]
+                ]
+              },
+              {
+                "resource_id": "extra",
+                "direction": "A",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    500
+                  ]
+                ]
+              },
+              {
+                "resource_id": "extra",
+                "direction": "B",
+                "segments": [
+                  [
+                    0,
+                    null,
+                    500
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "reference_version": "REF-DIR-SYN-01",
+        "goal_version": "GOAL-DIR-SYN-01",
+        "waiting_groups": [
+          {
+            "id": "shared_waiting",
+            "directions": [
+              "A",
+              "B"
+            ],
+            "k": 500
+          }
+        ]
+      },
+      "expected_grade": "F0",
+      "reference_fingerprint": "0c6f9ba97e85ac4d136d371ffa75bd27d430af67a0eefd90b1ffc3bd38d3befe",
+      "goal_fingerprint": "7d728057cdc7811145db6d12213c1c7448fddaeb45ef7d3f9179ff88f6f3a537",
+      "result": {
+        "grade": "F0",
+        "blockers": [],
+        "interpretation": "minimum layer among listed fixed plans; not all physically feasible policies",
+        "quantifier": "exists one listed plan, for all joint profiles and directions",
+        "tiers": [
+          {
+            "tier": "V0",
+            "candidate_plan_ids": [
+              "balanced"
+            ],
+            "pass": true,
+            "passing_plan_ids": [
+              "balanced"
+            ]
+          },
+          {
+            "tier": "V1",
+            "candidate_plan_ids": [
+              "balanced",
+              "add_balanced"
+            ],
+            "pass": true,
+            "passing_plan_ids": [
+              "balanced",
+              "add_balanced"
+            ]
+          },
+          {
+            "tier": "V2",
+            "candidate_plan_ids": [
+              "balanced",
+              "add_balanced"
+            ],
+            "pass": true,
+            "passing_plan_ids": [
+              "balanced",
+              "add_balanced"
+            ]
+          }
+        ],
+        "plans": [
+          {
+            "id": "balanced",
+            "introduced_layer": 0,
+            "pass": true,
+            "runs": [
+              {
+                "joint_profile": "staggered",
+                "directions": {
+                  "A": {
+                    "peak_people": 300.0,
+                    "clear_h": 2.0,
+                    "residual_at_deadline_people": 0.0,
+                    "max_wait_h": 0.29999999999999993,
+                    "waiting_people_h_to_deadline": 126.92307692307692,
+                    "total_waiting_people_h": 126.92307692307692,
+                    "arrived_people": 1000.0,
+                    "served_people": 1000.0,
+                    "unserved_people": 0,
+                    "pass": true,
+                    "failures": []
+                  },
+                  "B": {
+                    "peak_people": 300.0,
+                    "clear_h": 2.3,
+                    "residual_at_deadline_people": 0.0,
+                    "max_wait_h": 0.3,
+                    "waiting_people_h_to_deadline": 120.00000000000001,
+                    "total_waiting_people_h": 120.00000000000001,
+                    "arrived_people": 1000.0,
+                    "served_people": 1000.0,
+                    "unserved_people": 0,
+                    "pass": true,
+                    "failures": []
+                  }
+                },
+                "waiting_groups": [
+                  {
+                    "id": "shared_waiting",
+                    "K_people": 500,
+                    "peak_people": 300.0,
+                    "pass": true
+                  }
+                ],
+                "pass": true
+              }
+            ]
+          },
+          {
+            "id": "add_balanced",
+            "introduced_layer": 1,
+            "pass": true,
+            "runs": [
+              {
+                "joint_profile": "staggered",
+                "directions": {
+                  "A": {
+                    "peak_people": 50.0,
+                    "clear_h": 2.0,
+                    "residual_at_deadline_people": 0.0,
+                    "max_wait_h": 0.03333333333333338,
+                    "waiting_people_h_to_deadline": 13.414634146341465,
+                    "total_waiting_people_h": 13.414634146341465,
+                    "arrived_people": 1000.0,
+                    "served_people": 1000.0,
+                    "unserved_people": 0,
+                    "pass": true,
+                    "failures": []
+                  },
+                  "B": {
+                    "peak_people": 50.0,
+                    "clear_h": 2.033333333333333,
+                    "residual_at_deadline_people": 0.0,
+                    "max_wait_h": 0.033333333333333305,
+                    "waiting_people_h_to_deadline": 13.333333333333375,
+                    "total_waiting_people_h": 13.333333333333375,
+                    "arrived_people": 1000.0,
+                    "served_people": 1000.0,
+                    "unserved_people": 0,
+                    "pass": true,
+                    "failures": []
+                  }
+                },
+                "waiting_groups": [
+                  {
+                    "id": "shared_waiting",
+                    "K_people": 500,
+                    "peak_people": 50.0,
+                    "pass": true
+                  }
+                ],
+                "pass": true
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "observed_material": [
+    {
+      "id": "SC-E01",
+      "title": "2023年12月降雪晚点接续疏运",
+      "source_ids": [
+        "S01"
+      ],
+      "missing": [
+        "同口径Q_aff/B0/分时进入",
+        "各层剩余与增援有效能力",
+        "K/H",
+        "预测信息快照"
+      ],
+      "structural_issue": "各方式方向及服务起止不齐",
+      "type": "observed_material",
+      "grade": "X-DATA",
+      "numeric_input": null,
+      "supplemental_structure_review": true,
+      "independent_validation": false
+    },
+    {
+      "id": "SC-E02",
+      "title": "2023年8月地震晚点接续疏运",
+      "source_ids": [
+        "S02"
+      ],
+      "missing": [
+        "同口径Q_aff/B0/分时进入",
+        "有效能力及生效记录",
+        "K/H",
+        "预测信息快照"
+      ],
+      "structural_issue": "单车次与个别车次完成不可代替整个群体",
+      "type": "observed_material",
+      "grade": "X-DATA",
+      "numeric_input": null,
+      "supplemental_structure_review": true,
+      "independent_validation": false
+    },
+    {
+      "id": "SC-E03",
+      "title": "2024年贝碧嘉台风限制与安置边界",
+      "source_ids": [
+        "S03",
+        "AV02",
+        "AV03",
+        "AV04",
+        "AV05",
+        "AV06",
+        "OP05",
+        "OP06"
+      ],
+      "missing": [
+        "继续运输安全适用条件",
+        "现场需要接续疏运人群",
+        "分区和分方向供需",
+        "K/H"
+      ],
+      "structural_issue": "方式限制、可达性与安置不能合池",
+      "type": "observed_material",
+      "grade": "X-DATA",
+      "numeric_input": null,
+      "supplemental_structure_review": true,
+      "independent_validation": false
+    },
+    {
+      "id": "SC-E04",
+      "title": "2014年大雾航空备降及转送",
+      "source_ids": [
+        "AV01"
+      ],
+      "missing": [
+        "各目的方向人数和初始积压",
+        "分时供给与接令生效",
+        "K/H",
+        "预测信息快照"
+      ],
+      "structural_issue": "机场/酒店/住所不同目的方向；历史网络不可使用后开线路",
+      "type": "observed_material",
+      "grade": "X-DATA",
+      "numeric_input": null,
+      "supplemental_structure_review": true,
+      "independent_validation": false
+    }
+  ],
+  "limitations": [
+    "not all policies enumerated",
+    "effective curves not calibrated",
+    "no route travel/vehicle cycle/transfer simulation",
+    "real materials not independently graded"
+  ],
+  "goal_status": "user confirmed peak and cohort-clearance main; personal wait diagnostic"
+}
