@@ -1,0 +1,168 @@
+{
+  "date": "2026-10-11",
+  "checks": [
+    {
+      "name": "SC-H01_expected_behavior",
+      "comparisons": 1,
+      "pass": true
+    },
+    {
+      "name": "SC-H02_expected_behavior",
+      "comparisons": 1,
+      "pass": true
+    },
+    {
+      "name": "SC-H03_expected_behavior",
+      "comparisons": 1,
+      "pass": true
+    },
+    {
+      "name": "SC-H04_expected_behavior",
+      "comparisons": 1,
+      "pass": true
+    },
+    {
+      "name": "SC-H05_expected_behavior",
+      "comparisons": 1,
+      "pass": true
+    },
+    {
+      "name": "SC-H06_expected_behavior",
+      "comparisons": 1,
+      "pass": true
+    },
+    {
+      "name": "SC-H07_expected_behavior",
+      "comparisons": 1,
+      "pass": true
+    },
+    {
+      "name": "SC-H08_expected_behavior",
+      "comparisons": 1,
+      "pass": true
+    },
+    {
+      "name": "SC-H09_expected_behavior",
+      "comparisons": 1,
+      "pass": true
+    },
+    {
+      "name": "SC-H10_expected_behavior",
+      "comparisons": 1,
+      "pass": true
+    },
+    {
+      "name": "SC-H11_expected_behavior",
+      "comparisons": 1,
+      "pass": true
+    },
+    {
+      "name": "SC-H12_expected_behavior",
+      "comparisons": 1,
+      "pass": true
+    },
+    {
+      "name": "SC-H13_expected_behavior",
+      "comparisons": 1,
+      "pass": true
+    },
+    {
+      "name": "SC-H14_expected_behavior",
+      "comparisons": 1,
+      "pass": true
+    },
+    {
+      "name": "SC-H15_expected_behavior",
+      "comparisons": 1,
+      "pass": true
+    },
+    {
+      "name": "SC-H16_expected_behavior",
+      "comparisons": 1,
+      "pass": true
+    },
+    {
+      "name": "SC-H17_expected_behavior",
+      "comparisons": 1,
+      "pass": true
+    },
+    {
+      "name": "SC-H18_expected_behavior",
+      "comparisons": 1,
+      "pass": true
+    },
+    {
+      "name": "independent_constant_service_threshold",
+      "comparisons": 108,
+      "pass": true
+    },
+    {
+      "name": "batch_clear_and_FIFO_wait",
+      "comparisons": 1,
+      "pass": true
+    },
+    {
+      "name": "finite_window_interruption",
+      "comparisons": 1,
+      "pass": true
+    },
+    {
+      "name": "no_invented_service_after_end",
+      "comparisons": 1,
+      "pass": true
+    },
+    {
+      "name": "idle_capacity_not_stored",
+      "comparisons": 1,
+      "pass": true
+    },
+    {
+      "name": "zero_demand_no_division",
+      "comparisons": 1,
+      "pass": true
+    },
+    {
+      "name": "negative_advance_is_allowed",
+      "comparisons": 1,
+      "pass": true
+    },
+    {
+      "name": "invalid_inputs_rejected",
+      "comparisons": 4,
+      "pass": true
+    },
+    {
+      "name": "unknown_safety_not_safe_failure",
+      "comparisons": 1,
+      "pass": true
+    },
+    {
+      "name": "multiple_blockers_preserved",
+      "comparisons": 1,
+      "pass": true
+    },
+    {
+      "name": "monotonicity_and_nested_tiers",
+      "comparisons": 600,
+      "pass": true
+    },
+    {
+      "name": "enlarged_prediction_set_cannot_lower_tier",
+      "comparisons": 1,
+      "pass": true
+    },
+    {
+      "name": "time_and_people_unit_invariance",
+      "comparisons": 5,
+      "pass": true
+    },
+    {
+      "name": "mass_balance",
+      "comparisons": 42,
+      "pass": true
+    }
+  ],
+  "synthetic_count": 18,
+  "observed_material_count": 4,
+  "independent_empirical_accuracy": null
+}

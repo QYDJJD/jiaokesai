@@ -1,0 +1,719 @@
+{
+  "interpretation": "9 research configurations per computable scenario; not confidence intervals or calibrated thresholds",
+  "rows": [
+    {
+      "id": "SC-H01",
+      "base_grade": "F1",
+      "grades_in_test_range": [
+        "F0",
+        "F1"
+      ],
+      "configurations": [
+        {
+          "K": 750,
+          "H": 0.5,
+          "grade": "F1"
+        },
+        {
+          "K": 750,
+          "H": 1,
+          "grade": "F1"
+        },
+        {
+          "K": 750,
+          "H": 2,
+          "grade": "F1"
+        },
+        {
+          "K": 1000,
+          "H": 0.5,
+          "grade": "F1"
+        },
+        {
+          "K": 1000,
+          "H": 1,
+          "grade": "F1"
+        },
+        {
+          "K": 1000,
+          "H": 2,
+          "grade": "F0"
+        },
+        {
+          "K": 1250,
+          "H": 0.5,
+          "grade": "F1"
+        },
+        {
+          "K": 1250,
+          "H": 1,
+          "grade": "F1"
+        },
+        {
+          "K": 1250,
+          "H": 2,
+          "grade": "F0"
+        }
+      ]
+    },
+    {
+      "id": "SC-H02",
+      "base_grade": "F0",
+      "grades_in_test_range": [
+        "F0"
+      ],
+      "configurations": [
+        {
+          "K": 750,
+          "H": 0.5,
+          "grade": "F0"
+        },
+        {
+          "K": 750,
+          "H": 1,
+          "grade": "F0"
+        },
+        {
+          "K": 750,
+          "H": 2,
+          "grade": "F0"
+        },
+        {
+          "K": 1000,
+          "H": 0.5,
+          "grade": "F0"
+        },
+        {
+          "K": 1000,
+          "H": 1,
+          "grade": "F0"
+        },
+        {
+          "K": 1000,
+          "H": 2,
+          "grade": "F0"
+        },
+        {
+          "K": 1250,
+          "H": 0.5,
+          "grade": "F0"
+        },
+        {
+          "K": 1250,
+          "H": 1,
+          "grade": "F0"
+        },
+        {
+          "K": 1250,
+          "H": 2,
+          "grade": "F0"
+        }
+      ]
+    },
+    {
+      "id": "SC-H03",
+      "base_grade": "F2",
+      "grades_in_test_range": [
+        "F2"
+      ],
+      "configurations": [
+        {
+          "K": 750,
+          "H": 0.5,
+          "grade": "F2"
+        },
+        {
+          "K": 750,
+          "H": 1,
+          "grade": "F2"
+        },
+        {
+          "K": 750,
+          "H": 2,
+          "grade": "F2"
+        },
+        {
+          "K": 1000,
+          "H": 0.5,
+          "grade": "F2"
+        },
+        {
+          "K": 1000,
+          "H": 1,
+          "grade": "F2"
+        },
+        {
+          "K": 1000,
+          "H": 2,
+          "grade": "F2"
+        },
+        {
+          "K": 1250,
+          "H": 0.5,
+          "grade": "F2"
+        },
+        {
+          "K": 1250,
+          "H": 1,
+          "grade": "F2"
+        },
+        {
+          "K": 1250,
+          "H": 2,
+          "grade": "F2"
+        }
+      ]
+    },
+    {
+      "id": "SC-H04",
+      "base_grade": "F3",
+      "grades_in_test_range": [
+        "F3"
+      ],
+      "configurations": [
+        {
+          "K": 750,
+          "H": 0.5,
+          "grade": "F3"
+        },
+        {
+          "K": 750,
+          "H": 1,
+          "grade": "F3"
+        },
+        {
+          "K": 750,
+          "H": 2,
+          "grade": "F3"
+        },
+        {
+          "K": 1000,
+          "H": 0.5,
+          "grade": "F3"
+        },
+        {
+          "K": 1000,
+          "H": 1,
+          "grade": "F3"
+        },
+        {
+          "K": 1000,
+          "H": 2,
+          "grade": "F3"
+        },
+        {
+          "K": 1250,
+          "H": 0.5,
+          "grade": "F3"
+        },
+        {
+          "K": 1250,
+          "H": 1,
+          "grade": "F3"
+        },
+        {
+          "K": 1250,
+          "H": 2,
+          "grade": "F3"
+        }
+      ]
+    },
+    {
+      "id": "SC-H05",
+      "base_grade": "F3",
+      "grades_in_test_range": [
+        "F2",
+        "F3"
+      ],
+      "configurations": [
+        {
+          "K": 750,
+          "H": 0.5,
+          "grade": "F3"
+        },
+        {
+          "K": 750,
+          "H": 1,
+          "grade": "F3"
+        },
+        {
+          "K": 750,
+          "H": 2,
+          "grade": "F3"
+        },
+        {
+          "K": 1000,
+          "H": 0.5,
+          "grade": "F3"
+        },
+        {
+          "K": 1000,
+          "H": 1,
+          "grade": "F3"
+        },
+        {
+          "K": 1000,
+          "H": 2,
+          "grade": "F3"
+        },
+        {
+          "K": 1250,
+          "H": 0.5,
+          "grade": "F2"
+        },
+        {
+          "K": 1250,
+          "H": 1,
+          "grade": "F2"
+        },
+        {
+          "K": 1250,
+          "H": 2,
+          "grade": "F2"
+        }
+      ]
+    },
+    {
+      "id": "SC-H06",
+      "base_grade": "F2",
+      "grades_in_test_range": [
+        "F2",
+        "F3"
+      ],
+      "configurations": [
+        {
+          "K": 750,
+          "H": 0.5,
+          "grade": "F3"
+        },
+        {
+          "K": 750,
+          "H": 1,
+          "grade": "F3"
+        },
+        {
+          "K": 750,
+          "H": 2,
+          "grade": "F3"
+        },
+        {
+          "K": 1000,
+          "H": 0.5,
+          "grade": "F2"
+        },
+        {
+          "K": 1000,
+          "H": 1,
+          "grade": "F2"
+        },
+        {
+          "K": 1000,
+          "H": 2,
+          "grade": "F2"
+        },
+        {
+          "K": 1250,
+          "H": 0.5,
+          "grade": "F2"
+        },
+        {
+          "K": 1250,
+          "H": 1,
+          "grade": "F2"
+        },
+        {
+          "K": 1250,
+          "H": 2,
+          "grade": "F2"
+        }
+      ]
+    },
+    {
+      "id": "SC-H07",
+      "base_grade": "F2",
+      "grades_in_test_range": [
+        "F1",
+        "F2"
+      ],
+      "configurations": [
+        {
+          "K": 750,
+          "H": 0.5,
+          "grade": "F2"
+        },
+        {
+          "K": 750,
+          "H": 1,
+          "grade": "F2"
+        },
+        {
+          "K": 750,
+          "H": 2,
+          "grade": "F2"
+        },
+        {
+          "K": 1000,
+          "H": 0.5,
+          "grade": "F2"
+        },
+        {
+          "K": 1000,
+          "H": 1,
+          "grade": "F2"
+        },
+        {
+          "K": 1000,
+          "H": 2,
+          "grade": "F2"
+        },
+        {
+          "K": 1250,
+          "H": 0.5,
+          "grade": "F1"
+        },
+        {
+          "K": 1250,
+          "H": 1,
+          "grade": "F1"
+        },
+        {
+          "K": 1250,
+          "H": 2,
+          "grade": "F1"
+        }
+      ]
+    },
+    {
+      "id": "SC-H08",
+      "base_grade": "F2",
+      "grades_in_test_range": [
+        "F1",
+        "F2"
+      ],
+      "configurations": [
+        {
+          "K": 750,
+          "H": 0.5,
+          "grade": "F2"
+        },
+        {
+          "K": 750,
+          "H": 1,
+          "grade": "F2"
+        },
+        {
+          "K": 750,
+          "H": 2,
+          "grade": "F2"
+        },
+        {
+          "K": 1000,
+          "H": 0.5,
+          "grade": "F2"
+        },
+        {
+          "K": 1000,
+          "H": 1,
+          "grade": "F2"
+        },
+        {
+          "K": 1000,
+          "H": 2,
+          "grade": "F1"
+        },
+        {
+          "K": 1250,
+          "H": 0.5,
+          "grade": "F2"
+        },
+        {
+          "K": 1250,
+          "H": 1,
+          "grade": "F2"
+        },
+        {
+          "K": 1250,
+          "H": 2,
+          "grade": "F1"
+        }
+      ]
+    },
+    {
+      "id": "SC-H09",
+      "base_grade": "F1",
+      "grades_in_test_range": [
+        "F1",
+        "F2",
+        "F3"
+      ],
+      "configurations": [
+        {
+          "K": 750,
+          "H": 0.5,
+          "grade": "F3"
+        },
+        {
+          "K": 750,
+          "H": 1,
+          "grade": "F3"
+        },
+        {
+          "K": 750,
+          "H": 2,
+          "grade": "F3"
+        },
+        {
+          "K": 1000,
+          "H": 0.5,
+          "grade": "F2"
+        },
+        {
+          "K": 1000,
+          "H": 1,
+          "grade": "F1"
+        },
+        {
+          "K": 1000,
+          "H": 2,
+          "grade": "F1"
+        },
+        {
+          "K": 1250,
+          "H": 0.5,
+          "grade": "F2"
+        },
+        {
+          "K": 1250,
+          "H": 1,
+          "grade": "F1"
+        },
+        {
+          "K": 1250,
+          "H": 2,
+          "grade": "F1"
+        }
+      ]
+    },
+    {
+      "id": "SC-H10",
+      "base_grade": "F2",
+      "grades_in_test_range": [
+        "F2"
+      ],
+      "configurations": [
+        {
+          "K": 750,
+          "H": 0.5,
+          "grade": "F2"
+        },
+        {
+          "K": 750,
+          "H": 1,
+          "grade": "F2"
+        },
+        {
+          "K": 750,
+          "H": 2,
+          "grade": "F2"
+        },
+        {
+          "K": 1000,
+          "H": 0.5,
+          "grade": "F2"
+        },
+        {
+          "K": 1000,
+          "H": 1,
+          "grade": "F2"
+        },
+        {
+          "K": 1000,
+          "H": 2,
+          "grade": "F2"
+        },
+        {
+          "K": 1250,
+          "H": 0.5,
+          "grade": "F2"
+        },
+        {
+          "K": 1250,
+          "H": 1,
+          "grade": "F2"
+        },
+        {
+          "K": 1250,
+          "H": 2,
+          "grade": "F2"
+        }
+      ]
+    },
+    {
+      "id": "SC-H11",
+      "base_grade": "F1",
+      "grades_in_test_range": [
+        "F0",
+        "F1",
+        "F2",
+        "F3"
+      ],
+      "configurations": [
+        {
+          "K": 750,
+          "H": 0.5,
+          "grade": "F3"
+        },
+        {
+          "K": 750,
+          "H": 1,
+          "grade": "F3"
+        },
+        {
+          "K": 750,
+          "H": 2,
+          "grade": "F3"
+        },
+        {
+          "K": 1000,
+          "H": 0.5,
+          "grade": "F2"
+        },
+        {
+          "K": 1000,
+          "H": 1,
+          "grade": "F1"
+        },
+        {
+          "K": 1000,
+          "H": 2,
+          "grade": "F0"
+        },
+        {
+          "K": 1250,
+          "H": 0.5,
+          "grade": "F2"
+        },
+        {
+          "K": 1250,
+          "H": 1,
+          "grade": "F1"
+        },
+        {
+          "K": 1250,
+          "H": 2,
+          "grade": "F0"
+        }
+      ]
+    },
+    {
+      "id": "SC-H12",
+      "base_grade": "F3",
+      "grades_in_test_range": [
+        "F3"
+      ],
+      "configurations": [
+        {
+          "K": 750,
+          "H": 0.5,
+          "grade": "F3"
+        },
+        {
+          "K": 750,
+          "H": 1,
+          "grade": "F3"
+        },
+        {
+          "K": 750,
+          "H": 2,
+          "grade": "F3"
+        },
+        {
+          "K": 1000,
+          "H": 0.5,
+          "grade": "F3"
+        },
+        {
+          "K": 1000,
+          "H": 1,
+          "grade": "F3"
+        },
+        {
+          "K": 1000,
+          "H": 2,
+          "grade": "F3"
+        },
+        {
+          "K": 1250,
+          "H": 0.5,
+          "grade": "F3"
+        },
+        {
+          "K": 1250,
+          "H": 1,
+          "grade": "F3"
+        },
+        {
+          "K": 1250,
+          "H": 2,
+          "grade": "F3"
+        }
+      ]
+    },
+    {
+      "id": "SC-H17",
+      "base_grade": "F3",
+      "grades_in_test_range": [
+        "F0",
+        "F1",
+        "F3"
+      ],
+      "configurations": [
+        {
+          "K": 750,
+          "H": 0.5,
+          "grade": "F3"
+        },
+        {
+          "K": 750,
+          "H": 1,
+          "grade": "F3"
+        },
+        {
+          "K": 750,
+          "H": 2,
+          "grade": "F3"
+        },
+        {
+          "K": 1000,
+          "H": 0.5,
+          "grade": "F3"
+        },
+        {
+          "K": 1000,
+          "H": 1,
+          "grade": "F3"
+        },
+        {
+          "K": 1000,
+          "H": 2,
+          "grade": "F3"
+        },
+        {
+          "K": 1250,
+          "H": 0.5,
+          "grade": "F1"
+        },
+        {
+          "K": 1250,
+          "H": 1,
+          "grade": "F1"
+        },
+        {
+          "K": 1250,
+          "H": 2,
+          "grade": "F0"
+        }
+      ]
+    }
+  ]
+}
