@@ -1,0 +1,5295 @@
+{
+  "version": "FIVE-DIMENSIONS-01",
+  "evidence_type": "SYNTHETIC",
+  "scope": "Five descriptor families plus required supporting fields; no minimality or real-world accuracy claim.",
+  "grid_summary": [
+    {
+      "axis": "P1",
+      "pair_count": 36,
+      "grade_changes": 12,
+      "pairs": [
+        {
+          "left": "C-01",
+          "right": "C-37",
+          "left_level": 0,
+          "right_level": 1,
+          "left_grade": "F0",
+          "right_grade": "F0"
+        },
+        {
+          "left": "C-02",
+          "right": "C-38",
+          "left_level": 0,
+          "right_level": 1,
+          "left_grade": "F1",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-03",
+          "right": "C-39",
+          "left_level": 0,
+          "right_level": 1,
+          "left_grade": "F3",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-04",
+          "right": "C-40",
+          "left_level": 0,
+          "right_level": 1,
+          "left_grade": "F3",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-05",
+          "right": "C-41",
+          "left_level": 0,
+          "right_level": 1,
+          "left_grade": "F3",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-06",
+          "right": "C-42",
+          "left_level": 0,
+          "right_level": 1,
+          "left_grade": "F3",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-07",
+          "right": "C-43",
+          "left_level": 0,
+          "right_level": 1,
+          "left_grade": "F0",
+          "right_grade": "F0"
+        },
+        {
+          "left": "C-08",
+          "right": "C-44",
+          "left_level": 0,
+          "right_level": 1,
+          "left_grade": "F1",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-09",
+          "right": "C-45",
+          "left_level": 0,
+          "right_level": 1,
+          "left_grade": "F1",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-10",
+          "right": "C-46",
+          "left_level": 0,
+          "right_level": 1,
+          "left_grade": "F2",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-11",
+          "right": "C-47",
+          "left_level": 0,
+          "right_level": 1,
+          "left_grade": "F2",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-12",
+          "right": "C-48",
+          "left_level": 0,
+          "right_level": 1,
+          "left_grade": "F2",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-13",
+          "right": "C-49",
+          "left_level": 0,
+          "right_level": 1,
+          "left_grade": "F0",
+          "right_grade": "F0"
+        },
+        {
+          "left": "C-14",
+          "right": "C-50",
+          "left_level": 0,
+          "right_level": 1,
+          "left_grade": "F1",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-15",
+          "right": "C-51",
+          "left_level": 0,
+          "right_level": 1,
+          "left_grade": "F0",
+          "right_grade": "F0"
+        },
+        {
+          "left": "C-16",
+          "right": "C-52",
+          "left_level": 0,
+          "right_level": 1,
+          "left_grade": "F1",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-17",
+          "right": "C-53",
+          "left_level": 0,
+          "right_level": 1,
+          "left_grade": "F1",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-18",
+          "right": "C-54",
+          "left_level": 0,
+          "right_level": 1,
+          "left_grade": "F2",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-19",
+          "right": "C-55",
+          "left_level": 0,
+          "right_level": 1,
+          "left_grade": "F1",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-20",
+          "right": "C-56",
+          "left_level": 0,
+          "right_level": 1,
+          "left_grade": "F2",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-21",
+          "right": "C-57",
+          "left_level": 0,
+          "right_level": 1,
+          "left_grade": "F3",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-22",
+          "right": "C-58",
+          "left_level": 0,
+          "right_level": 1,
+          "left_grade": "F3",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-23",
+          "right": "C-59",
+          "left_level": 0,
+          "right_level": 1,
+          "left_grade": "F3",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-24",
+          "right": "C-60",
+          "left_level": 0,
+          "right_level": 1,
+          "left_grade": "F3",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-25",
+          "right": "C-61",
+          "left_level": 0,
+          "right_level": 1,
+          "left_grade": "F1",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-26",
+          "right": "C-62",
+          "left_level": 0,
+          "right_level": 1,
+          "left_grade": "F2",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-27",
+          "right": "C-63",
+          "left_level": 0,
+          "right_level": 1,
+          "left_grade": "F3",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-28",
+          "right": "C-64",
+          "left_level": 0,
+          "right_level": 1,
+          "left_grade": "F3",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-29",
+          "right": "C-65",
+          "left_level": 0,
+          "right_level": 1,
+          "left_grade": "F3",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-30",
+          "right": "C-66",
+          "left_level": 0,
+          "right_level": 1,
+          "left_grade": "F3",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-31",
+          "right": "C-67",
+          "left_level": 0,
+          "right_level": 1,
+          "left_grade": "F0",
+          "right_grade": "F0"
+        },
+        {
+          "left": "C-32",
+          "right": "C-68",
+          "left_level": 0,
+          "right_level": 1,
+          "left_grade": "F1",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-33",
+          "right": "C-69",
+          "left_level": 0,
+          "right_level": 1,
+          "left_grade": "F3",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-34",
+          "right": "C-70",
+          "left_level": 0,
+          "right_level": 1,
+          "left_grade": "F3",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-35",
+          "right": "C-71",
+          "left_level": 0,
+          "right_level": 1,
+          "left_grade": "F3",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-36",
+          "right": "C-72",
+          "left_level": 0,
+          "right_level": 1,
+          "left_grade": "F3",
+          "right_grade": "F2"
+        }
+      ]
+    },
+    {
+      "axis": "U",
+      "pair_count": 36,
+      "grade_changes": 27,
+      "pairs": [
+        {
+          "left": "C-01",
+          "right": "C-19",
+          "left_level": [
+            "uniform"
+          ],
+          "right_level": [
+            "uniform",
+            "front",
+            "back"
+          ],
+          "left_grade": "F0",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-02",
+          "right": "C-20",
+          "left_level": [
+            "uniform"
+          ],
+          "right_level": [
+            "uniform",
+            "front",
+            "back"
+          ],
+          "left_grade": "F1",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-03",
+          "right": "C-21",
+          "left_level": [
+            "uniform"
+          ],
+          "right_level": [
+            "uniform",
+            "front",
+            "back"
+          ],
+          "left_grade": "F3",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-04",
+          "right": "C-22",
+          "left_level": [
+            "uniform"
+          ],
+          "right_level": [
+            "uniform",
+            "front",
+            "back"
+          ],
+          "left_grade": "F3",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-05",
+          "right": "C-23",
+          "left_level": [
+            "uniform"
+          ],
+          "right_level": [
+            "uniform",
+            "front",
+            "back"
+          ],
+          "left_grade": "F3",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-06",
+          "right": "C-24",
+          "left_level": [
+            "uniform"
+          ],
+          "right_level": [
+            "uniform",
+            "front",
+            "back"
+          ],
+          "left_grade": "F3",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-07",
+          "right": "C-25",
+          "left_level": [
+            "uniform"
+          ],
+          "right_level": [
+            "uniform",
+            "front",
+            "back"
+          ],
+          "left_grade": "F0",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-08",
+          "right": "C-26",
+          "left_level": [
+            "uniform"
+          ],
+          "right_level": [
+            "uniform",
+            "front",
+            "back"
+          ],
+          "left_grade": "F1",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-09",
+          "right": "C-27",
+          "left_level": [
+            "uniform"
+          ],
+          "right_level": [
+            "uniform",
+            "front",
+            "back"
+          ],
+          "left_grade": "F1",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-10",
+          "right": "C-28",
+          "left_level": [
+            "uniform"
+          ],
+          "right_level": [
+            "uniform",
+            "front",
+            "back"
+          ],
+          "left_grade": "F2",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-11",
+          "right": "C-29",
+          "left_level": [
+            "uniform"
+          ],
+          "right_level": [
+            "uniform",
+            "front",
+            "back"
+          ],
+          "left_grade": "F2",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-12",
+          "right": "C-30",
+          "left_level": [
+            "uniform"
+          ],
+          "right_level": [
+            "uniform",
+            "front",
+            "back"
+          ],
+          "left_grade": "F2",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-13",
+          "right": "C-31",
+          "left_level": [
+            "uniform"
+          ],
+          "right_level": [
+            "uniform",
+            "front",
+            "back"
+          ],
+          "left_grade": "F0",
+          "right_grade": "F0"
+        },
+        {
+          "left": "C-14",
+          "right": "C-32",
+          "left_level": [
+            "uniform"
+          ],
+          "right_level": [
+            "uniform",
+            "front",
+            "back"
+          ],
+          "left_grade": "F1",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-15",
+          "right": "C-33",
+          "left_level": [
+            "uniform"
+          ],
+          "right_level": [
+            "uniform",
+            "front",
+            "back"
+          ],
+          "left_grade": "F0",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-16",
+          "right": "C-34",
+          "left_level": [
+            "uniform"
+          ],
+          "right_level": [
+            "uniform",
+            "front",
+            "back"
+          ],
+          "left_grade": "F1",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-17",
+          "right": "C-35",
+          "left_level": [
+            "uniform"
+          ],
+          "right_level": [
+            "uniform",
+            "front",
+            "back"
+          ],
+          "left_grade": "F1",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-18",
+          "right": "C-36",
+          "left_level": [
+            "uniform"
+          ],
+          "right_level": [
+            "uniform",
+            "front",
+            "back"
+          ],
+          "left_grade": "F2",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-37",
+          "right": "C-55",
+          "left_level": [
+            "uniform"
+          ],
+          "right_level": [
+            "uniform",
+            "front",
+            "back"
+          ],
+          "left_grade": "F0",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-38",
+          "right": "C-56",
+          "left_level": [
+            "uniform"
+          ],
+          "right_level": [
+            "uniform",
+            "front",
+            "back"
+          ],
+          "left_grade": "F1",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-39",
+          "right": "C-57",
+          "left_level": [
+            "uniform"
+          ],
+          "right_level": [
+            "uniform",
+            "front",
+            "back"
+          ],
+          "left_grade": "F1",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-40",
+          "right": "C-58",
+          "left_level": [
+            "uniform"
+          ],
+          "right_level": [
+            "uniform",
+            "front",
+            "back"
+          ],
+          "left_grade": "F2",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-41",
+          "right": "C-59",
+          "left_level": [
+            "uniform"
+          ],
+          "right_level": [
+            "uniform",
+            "front",
+            "back"
+          ],
+          "left_grade": "F2",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-42",
+          "right": "C-60",
+          "left_level": [
+            "uniform"
+          ],
+          "right_level": [
+            "uniform",
+            "front",
+            "back"
+          ],
+          "left_grade": "F2",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-43",
+          "right": "C-61",
+          "left_level": [
+            "uniform"
+          ],
+          "right_level": [
+            "uniform",
+            "front",
+            "back"
+          ],
+          "left_grade": "F0",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-44",
+          "right": "C-62",
+          "left_level": [
+            "uniform"
+          ],
+          "right_level": [
+            "uniform",
+            "front",
+            "back"
+          ],
+          "left_grade": "F1",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-45",
+          "right": "C-63",
+          "left_level": [
+            "uniform"
+          ],
+          "right_level": [
+            "uniform",
+            "front",
+            "back"
+          ],
+          "left_grade": "F1",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-46",
+          "right": "C-64",
+          "left_level": [
+            "uniform"
+          ],
+          "right_level": [
+            "uniform",
+            "front",
+            "back"
+          ],
+          "left_grade": "F1",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-47",
+          "right": "C-65",
+          "left_level": [
+            "uniform"
+          ],
+          "right_level": [
+            "uniform",
+            "front",
+            "back"
+          ],
+          "left_grade": "F1",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-48",
+          "right": "C-66",
+          "left_level": [
+            "uniform"
+          ],
+          "right_level": [
+            "uniform",
+            "front",
+            "back"
+          ],
+          "left_grade": "F2",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-49",
+          "right": "C-67",
+          "left_level": [
+            "uniform"
+          ],
+          "right_level": [
+            "uniform",
+            "front",
+            "back"
+          ],
+          "left_grade": "F0",
+          "right_grade": "F0"
+        },
+        {
+          "left": "C-50",
+          "right": "C-68",
+          "left_level": [
+            "uniform"
+          ],
+          "right_level": [
+            "uniform",
+            "front",
+            "back"
+          ],
+          "left_grade": "F1",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-51",
+          "right": "C-69",
+          "left_level": [
+            "uniform"
+          ],
+          "right_level": [
+            "uniform",
+            "front",
+            "back"
+          ],
+          "left_grade": "F0",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-52",
+          "right": "C-70",
+          "left_level": [
+            "uniform"
+          ],
+          "right_level": [
+            "uniform",
+            "front",
+            "back"
+          ],
+          "left_grade": "F1",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-53",
+          "right": "C-71",
+          "left_level": [
+            "uniform"
+          ],
+          "right_level": [
+            "uniform",
+            "front",
+            "back"
+          ],
+          "left_grade": "F1",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-54",
+          "right": "C-72",
+          "left_level": [
+            "uniform"
+          ],
+          "right_level": [
+            "uniform",
+            "front",
+            "back"
+          ],
+          "left_grade": "F2",
+          "right_grade": "F2"
+        }
+      ]
+    },
+    {
+      "axis": "D",
+      "pair_count": 72,
+      "grade_changes": 34,
+      "pairs": [
+        {
+          "left": "C-01",
+          "right": "C-07",
+          "left_level": 1,
+          "right_level": 2,
+          "left_grade": "F0",
+          "right_grade": "F0"
+        },
+        {
+          "left": "C-01",
+          "right": "C-13",
+          "left_level": 1,
+          "right_level": 4,
+          "left_grade": "F0",
+          "right_grade": "F0"
+        },
+        {
+          "left": "C-07",
+          "right": "C-13",
+          "left_level": 2,
+          "right_level": 4,
+          "left_grade": "F0",
+          "right_grade": "F0"
+        },
+        {
+          "left": "C-02",
+          "right": "C-08",
+          "left_level": 1,
+          "right_level": 2,
+          "left_grade": "F1",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-02",
+          "right": "C-14",
+          "left_level": 1,
+          "right_level": 4,
+          "left_grade": "F1",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-08",
+          "right": "C-14",
+          "left_level": 2,
+          "right_level": 4,
+          "left_grade": "F1",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-03",
+          "right": "C-09",
+          "left_level": 1,
+          "right_level": 2,
+          "left_grade": "F3",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-03",
+          "right": "C-15",
+          "left_level": 1,
+          "right_level": 4,
+          "left_grade": "F3",
+          "right_grade": "F0"
+        },
+        {
+          "left": "C-09",
+          "right": "C-15",
+          "left_level": 2,
+          "right_level": 4,
+          "left_grade": "F1",
+          "right_grade": "F0"
+        },
+        {
+          "left": "C-04",
+          "right": "C-10",
+          "left_level": 1,
+          "right_level": 2,
+          "left_grade": "F3",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-04",
+          "right": "C-16",
+          "left_level": 1,
+          "right_level": 4,
+          "left_grade": "F3",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-10",
+          "right": "C-16",
+          "left_level": 2,
+          "right_level": 4,
+          "left_grade": "F2",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-05",
+          "right": "C-11",
+          "left_level": 1,
+          "right_level": 2,
+          "left_grade": "F3",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-05",
+          "right": "C-17",
+          "left_level": 1,
+          "right_level": 4,
+          "left_grade": "F3",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-11",
+          "right": "C-17",
+          "left_level": 2,
+          "right_level": 4,
+          "left_grade": "F2",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-06",
+          "right": "C-12",
+          "left_level": 1,
+          "right_level": 2,
+          "left_grade": "F3",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-06",
+          "right": "C-18",
+          "left_level": 1,
+          "right_level": 4,
+          "left_grade": "F3",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-12",
+          "right": "C-18",
+          "left_level": 2,
+          "right_level": 4,
+          "left_grade": "F2",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-19",
+          "right": "C-25",
+          "left_level": 1,
+          "right_level": 2,
+          "left_grade": "F1",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-19",
+          "right": "C-31",
+          "left_level": 1,
+          "right_level": 4,
+          "left_grade": "F1",
+          "right_grade": "F0"
+        },
+        {
+          "left": "C-25",
+          "right": "C-31",
+          "left_level": 2,
+          "right_level": 4,
+          "left_grade": "F1",
+          "right_grade": "F0"
+        },
+        {
+          "left": "C-20",
+          "right": "C-26",
+          "left_level": 1,
+          "right_level": 2,
+          "left_grade": "F2",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-20",
+          "right": "C-32",
+          "left_level": 1,
+          "right_level": 4,
+          "left_grade": "F2",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-26",
+          "right": "C-32",
+          "left_level": 2,
+          "right_level": 4,
+          "left_grade": "F2",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-21",
+          "right": "C-27",
+          "left_level": 1,
+          "right_level": 2,
+          "left_grade": "F3",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-21",
+          "right": "C-33",
+          "left_level": 1,
+          "right_level": 4,
+          "left_grade": "F3",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-27",
+          "right": "C-33",
+          "left_level": 2,
+          "right_level": 4,
+          "left_grade": "F3",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-22",
+          "right": "C-28",
+          "left_level": 1,
+          "right_level": 2,
+          "left_grade": "F3",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-22",
+          "right": "C-34",
+          "left_level": 1,
+          "right_level": 4,
+          "left_grade": "F3",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-28",
+          "right": "C-34",
+          "left_level": 2,
+          "right_level": 4,
+          "left_grade": "F3",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-23",
+          "right": "C-29",
+          "left_level": 1,
+          "right_level": 2,
+          "left_grade": "F3",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-23",
+          "right": "C-35",
+          "left_level": 1,
+          "right_level": 4,
+          "left_grade": "F3",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-29",
+          "right": "C-35",
+          "left_level": 2,
+          "right_level": 4,
+          "left_grade": "F3",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-24",
+          "right": "C-30",
+          "left_level": 1,
+          "right_level": 2,
+          "left_grade": "F3",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-24",
+          "right": "C-36",
+          "left_level": 1,
+          "right_level": 4,
+          "left_grade": "F3",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-30",
+          "right": "C-36",
+          "left_level": 2,
+          "right_level": 4,
+          "left_grade": "F3",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-37",
+          "right": "C-43",
+          "left_level": 1,
+          "right_level": 2,
+          "left_grade": "F0",
+          "right_grade": "F0"
+        },
+        {
+          "left": "C-37",
+          "right": "C-49",
+          "left_level": 1,
+          "right_level": 4,
+          "left_grade": "F0",
+          "right_grade": "F0"
+        },
+        {
+          "left": "C-43",
+          "right": "C-49",
+          "left_level": 2,
+          "right_level": 4,
+          "left_grade": "F0",
+          "right_grade": "F0"
+        },
+        {
+          "left": "C-38",
+          "right": "C-44",
+          "left_level": 1,
+          "right_level": 2,
+          "left_grade": "F1",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-38",
+          "right": "C-50",
+          "left_level": 1,
+          "right_level": 4,
+          "left_grade": "F1",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-44",
+          "right": "C-50",
+          "left_level": 2,
+          "right_level": 4,
+          "left_grade": "F1",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-39",
+          "right": "C-45",
+          "left_level": 1,
+          "right_level": 2,
+          "left_grade": "F1",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-39",
+          "right": "C-51",
+          "left_level": 1,
+          "right_level": 4,
+          "left_grade": "F1",
+          "right_grade": "F0"
+        },
+        {
+          "left": "C-45",
+          "right": "C-51",
+          "left_level": 2,
+          "right_level": 4,
+          "left_grade": "F1",
+          "right_grade": "F0"
+        },
+        {
+          "left": "C-40",
+          "right": "C-46",
+          "left_level": 1,
+          "right_level": 2,
+          "left_grade": "F2",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-40",
+          "right": "C-52",
+          "left_level": 1,
+          "right_level": 4,
+          "left_grade": "F2",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-46",
+          "right": "C-52",
+          "left_level": 2,
+          "right_level": 4,
+          "left_grade": "F1",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-41",
+          "right": "C-47",
+          "left_level": 1,
+          "right_level": 2,
+          "left_grade": "F2",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-41",
+          "right": "C-53",
+          "left_level": 1,
+          "right_level": 4,
+          "left_grade": "F2",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-47",
+          "right": "C-53",
+          "left_level": 2,
+          "right_level": 4,
+          "left_grade": "F1",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-42",
+          "right": "C-48",
+          "left_level": 1,
+          "right_level": 2,
+          "left_grade": "F2",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-42",
+          "right": "C-54",
+          "left_level": 1,
+          "right_level": 4,
+          "left_grade": "F2",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-48",
+          "right": "C-54",
+          "left_level": 2,
+          "right_level": 4,
+          "left_grade": "F2",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-55",
+          "right": "C-61",
+          "left_level": 1,
+          "right_level": 2,
+          "left_grade": "F1",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-55",
+          "right": "C-67",
+          "left_level": 1,
+          "right_level": 4,
+          "left_grade": "F1",
+          "right_grade": "F0"
+        },
+        {
+          "left": "C-61",
+          "right": "C-67",
+          "left_level": 2,
+          "right_level": 4,
+          "left_grade": "F1",
+          "right_grade": "F0"
+        },
+        {
+          "left": "C-56",
+          "right": "C-62",
+          "left_level": 1,
+          "right_level": 2,
+          "left_grade": "F2",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-56",
+          "right": "C-68",
+          "left_level": 1,
+          "right_level": 4,
+          "left_grade": "F2",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-62",
+          "right": "C-68",
+          "left_level": 2,
+          "right_level": 4,
+          "left_grade": "F2",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-57",
+          "right": "C-63",
+          "left_level": 1,
+          "right_level": 2,
+          "left_grade": "F3",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-57",
+          "right": "C-69",
+          "left_level": 1,
+          "right_level": 4,
+          "left_grade": "F3",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-63",
+          "right": "C-69",
+          "left_level": 2,
+          "right_level": 4,
+          "left_grade": "F2",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-58",
+          "right": "C-64",
+          "left_level": 1,
+          "right_level": 2,
+          "left_grade": "F3",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-58",
+          "right": "C-70",
+          "left_level": 1,
+          "right_level": 4,
+          "left_grade": "F3",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-64",
+          "right": "C-70",
+          "left_level": 2,
+          "right_level": 4,
+          "left_grade": "F2",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-59",
+          "right": "C-65",
+          "left_level": 1,
+          "right_level": 2,
+          "left_grade": "F3",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-59",
+          "right": "C-71",
+          "left_level": 1,
+          "right_level": 4,
+          "left_grade": "F3",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-65",
+          "right": "C-71",
+          "left_level": 2,
+          "right_level": 4,
+          "left_grade": "F3",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-60",
+          "right": "C-66",
+          "left_level": 1,
+          "right_level": 2,
+          "left_grade": "F3",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-60",
+          "right": "C-72",
+          "left_level": 1,
+          "right_level": 4,
+          "left_grade": "F3",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-66",
+          "right": "C-72",
+          "left_level": 2,
+          "right_level": 4,
+          "left_grade": "F3",
+          "right_grade": "F2"
+        }
+      ]
+    },
+    {
+      "axis": "Q",
+      "pair_count": 72,
+      "grade_changes": 52,
+      "pairs": [
+        {
+          "left": "C-01",
+          "right": "C-03",
+          "left_level": 1000,
+          "right_level": 2000,
+          "left_grade": "F0",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-01",
+          "right": "C-05",
+          "left_level": 1000,
+          "right_level": 3000,
+          "left_grade": "F0",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-03",
+          "right": "C-05",
+          "left_level": 2000,
+          "right_level": 3000,
+          "left_grade": "F3",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-02",
+          "right": "C-04",
+          "left_level": 1000,
+          "right_level": 2000,
+          "left_grade": "F1",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-02",
+          "right": "C-06",
+          "left_level": 1000,
+          "right_level": 3000,
+          "left_grade": "F1",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-04",
+          "right": "C-06",
+          "left_level": 2000,
+          "right_level": 3000,
+          "left_grade": "F3",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-07",
+          "right": "C-09",
+          "left_level": 1000,
+          "right_level": 2000,
+          "left_grade": "F0",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-07",
+          "right": "C-11",
+          "left_level": 1000,
+          "right_level": 3000,
+          "left_grade": "F0",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-09",
+          "right": "C-11",
+          "left_level": 2000,
+          "right_level": 3000,
+          "left_grade": "F1",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-08",
+          "right": "C-10",
+          "left_level": 1000,
+          "right_level": 2000,
+          "left_grade": "F1",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-08",
+          "right": "C-12",
+          "left_level": 1000,
+          "right_level": 3000,
+          "left_grade": "F1",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-10",
+          "right": "C-12",
+          "left_level": 2000,
+          "right_level": 3000,
+          "left_grade": "F2",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-13",
+          "right": "C-15",
+          "left_level": 1000,
+          "right_level": 2000,
+          "left_grade": "F0",
+          "right_grade": "F0"
+        },
+        {
+          "left": "C-13",
+          "right": "C-17",
+          "left_level": 1000,
+          "right_level": 3000,
+          "left_grade": "F0",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-15",
+          "right": "C-17",
+          "left_level": 2000,
+          "right_level": 3000,
+          "left_grade": "F0",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-14",
+          "right": "C-16",
+          "left_level": 1000,
+          "right_level": 2000,
+          "left_grade": "F1",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-14",
+          "right": "C-18",
+          "left_level": 1000,
+          "right_level": 3000,
+          "left_grade": "F1",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-16",
+          "right": "C-18",
+          "left_level": 2000,
+          "right_level": 3000,
+          "left_grade": "F1",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-19",
+          "right": "C-21",
+          "left_level": 1000,
+          "right_level": 2000,
+          "left_grade": "F1",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-19",
+          "right": "C-23",
+          "left_level": 1000,
+          "right_level": 3000,
+          "left_grade": "F1",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-21",
+          "right": "C-23",
+          "left_level": 2000,
+          "right_level": 3000,
+          "left_grade": "F3",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-20",
+          "right": "C-22",
+          "left_level": 1000,
+          "right_level": 2000,
+          "left_grade": "F2",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-20",
+          "right": "C-24",
+          "left_level": 1000,
+          "right_level": 3000,
+          "left_grade": "F2",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-22",
+          "right": "C-24",
+          "left_level": 2000,
+          "right_level": 3000,
+          "left_grade": "F3",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-25",
+          "right": "C-27",
+          "left_level": 1000,
+          "right_level": 2000,
+          "left_grade": "F1",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-25",
+          "right": "C-29",
+          "left_level": 1000,
+          "right_level": 3000,
+          "left_grade": "F1",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-27",
+          "right": "C-29",
+          "left_level": 2000,
+          "right_level": 3000,
+          "left_grade": "F3",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-26",
+          "right": "C-28",
+          "left_level": 1000,
+          "right_level": 2000,
+          "left_grade": "F2",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-26",
+          "right": "C-30",
+          "left_level": 1000,
+          "right_level": 3000,
+          "left_grade": "F2",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-28",
+          "right": "C-30",
+          "left_level": 2000,
+          "right_level": 3000,
+          "left_grade": "F3",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-31",
+          "right": "C-33",
+          "left_level": 1000,
+          "right_level": 2000,
+          "left_grade": "F0",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-31",
+          "right": "C-35",
+          "left_level": 1000,
+          "right_level": 3000,
+          "left_grade": "F0",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-33",
+          "right": "C-35",
+          "left_level": 2000,
+          "right_level": 3000,
+          "left_grade": "F3",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-32",
+          "right": "C-34",
+          "left_level": 1000,
+          "right_level": 2000,
+          "left_grade": "F1",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-32",
+          "right": "C-36",
+          "left_level": 1000,
+          "right_level": 3000,
+          "left_grade": "F1",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-34",
+          "right": "C-36",
+          "left_level": 2000,
+          "right_level": 3000,
+          "left_grade": "F3",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-37",
+          "right": "C-39",
+          "left_level": 1000,
+          "right_level": 2000,
+          "left_grade": "F0",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-37",
+          "right": "C-41",
+          "left_level": 1000,
+          "right_level": 3000,
+          "left_grade": "F0",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-39",
+          "right": "C-41",
+          "left_level": 2000,
+          "right_level": 3000,
+          "left_grade": "F1",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-38",
+          "right": "C-40",
+          "left_level": 1000,
+          "right_level": 2000,
+          "left_grade": "F1",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-38",
+          "right": "C-42",
+          "left_level": 1000,
+          "right_level": 3000,
+          "left_grade": "F1",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-40",
+          "right": "C-42",
+          "left_level": 2000,
+          "right_level": 3000,
+          "left_grade": "F2",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-43",
+          "right": "C-45",
+          "left_level": 1000,
+          "right_level": 2000,
+          "left_grade": "F0",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-43",
+          "right": "C-47",
+          "left_level": 1000,
+          "right_level": 3000,
+          "left_grade": "F0",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-45",
+          "right": "C-47",
+          "left_level": 2000,
+          "right_level": 3000,
+          "left_grade": "F1",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-44",
+          "right": "C-46",
+          "left_level": 1000,
+          "right_level": 2000,
+          "left_grade": "F1",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-44",
+          "right": "C-48",
+          "left_level": 1000,
+          "right_level": 3000,
+          "left_grade": "F1",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-46",
+          "right": "C-48",
+          "left_level": 2000,
+          "right_level": 3000,
+          "left_grade": "F1",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-49",
+          "right": "C-51",
+          "left_level": 1000,
+          "right_level": 2000,
+          "left_grade": "F0",
+          "right_grade": "F0"
+        },
+        {
+          "left": "C-49",
+          "right": "C-53",
+          "left_level": 1000,
+          "right_level": 3000,
+          "left_grade": "F0",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-51",
+          "right": "C-53",
+          "left_level": 2000,
+          "right_level": 3000,
+          "left_grade": "F0",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-50",
+          "right": "C-52",
+          "left_level": 1000,
+          "right_level": 2000,
+          "left_grade": "F1",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-50",
+          "right": "C-54",
+          "left_level": 1000,
+          "right_level": 3000,
+          "left_grade": "F1",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-52",
+          "right": "C-54",
+          "left_level": 2000,
+          "right_level": 3000,
+          "left_grade": "F1",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-55",
+          "right": "C-57",
+          "left_level": 1000,
+          "right_level": 2000,
+          "left_grade": "F1",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-55",
+          "right": "C-59",
+          "left_level": 1000,
+          "right_level": 3000,
+          "left_grade": "F1",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-57",
+          "right": "C-59",
+          "left_level": 2000,
+          "right_level": 3000,
+          "left_grade": "F3",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-56",
+          "right": "C-58",
+          "left_level": 1000,
+          "right_level": 2000,
+          "left_grade": "F2",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-56",
+          "right": "C-60",
+          "left_level": 1000,
+          "right_level": 3000,
+          "left_grade": "F2",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-58",
+          "right": "C-60",
+          "left_level": 2000,
+          "right_level": 3000,
+          "left_grade": "F3",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-61",
+          "right": "C-63",
+          "left_level": 1000,
+          "right_level": 2000,
+          "left_grade": "F1",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-61",
+          "right": "C-65",
+          "left_level": 1000,
+          "right_level": 3000,
+          "left_grade": "F1",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-63",
+          "right": "C-65",
+          "left_level": 2000,
+          "right_level": 3000,
+          "left_grade": "F2",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-62",
+          "right": "C-64",
+          "left_level": 1000,
+          "right_level": 2000,
+          "left_grade": "F2",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-62",
+          "right": "C-66",
+          "left_level": 1000,
+          "right_level": 3000,
+          "left_grade": "F2",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-64",
+          "right": "C-66",
+          "left_level": 2000,
+          "right_level": 3000,
+          "left_grade": "F2",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-67",
+          "right": "C-69",
+          "left_level": 1000,
+          "right_level": 2000,
+          "left_grade": "F0",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-67",
+          "right": "C-71",
+          "left_level": 1000,
+          "right_level": 3000,
+          "left_grade": "F0",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-69",
+          "right": "C-71",
+          "left_level": 2000,
+          "right_level": 3000,
+          "left_grade": "F1",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-68",
+          "right": "C-70",
+          "left_level": 1000,
+          "right_level": 2000,
+          "left_grade": "F1",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-68",
+          "right": "C-72",
+          "left_level": 1000,
+          "right_level": 3000,
+          "left_grade": "F1",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-70",
+          "right": "C-72",
+          "left_level": 2000,
+          "right_level": 3000,
+          "left_grade": "F2",
+          "right_grade": "F2"
+        }
+      ]
+    },
+    {
+      "axis": "R",
+      "pair_count": 36,
+      "grade_changes": 20,
+      "pairs": [
+        {
+          "left": "C-01",
+          "right": "C-02",
+          "left_level": [
+            null,
+            null,
+            null
+          ],
+          "right_level": [
+            1,
+            null,
+            null
+          ],
+          "left_grade": "F0",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-03",
+          "right": "C-04",
+          "left_level": [
+            null,
+            null,
+            null
+          ],
+          "right_level": [
+            1,
+            null,
+            null
+          ],
+          "left_grade": "F3",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-05",
+          "right": "C-06",
+          "left_level": [
+            null,
+            null,
+            null
+          ],
+          "right_level": [
+            1,
+            null,
+            null
+          ],
+          "left_grade": "F3",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-07",
+          "right": "C-08",
+          "left_level": [
+            null,
+            null,
+            null
+          ],
+          "right_level": [
+            1,
+            null,
+            null
+          ],
+          "left_grade": "F0",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-09",
+          "right": "C-10",
+          "left_level": [
+            null,
+            null,
+            null
+          ],
+          "right_level": [
+            1,
+            null,
+            null
+          ],
+          "left_grade": "F1",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-11",
+          "right": "C-12",
+          "left_level": [
+            null,
+            null,
+            null
+          ],
+          "right_level": [
+            1,
+            null,
+            null
+          ],
+          "left_grade": "F2",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-13",
+          "right": "C-14",
+          "left_level": [
+            null,
+            null,
+            null
+          ],
+          "right_level": [
+            1,
+            null,
+            null
+          ],
+          "left_grade": "F0",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-15",
+          "right": "C-16",
+          "left_level": [
+            null,
+            null,
+            null
+          ],
+          "right_level": [
+            1,
+            null,
+            null
+          ],
+          "left_grade": "F0",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-17",
+          "right": "C-18",
+          "left_level": [
+            null,
+            null,
+            null
+          ],
+          "right_level": [
+            1,
+            null,
+            null
+          ],
+          "left_grade": "F1",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-19",
+          "right": "C-20",
+          "left_level": [
+            null,
+            null,
+            null
+          ],
+          "right_level": [
+            1,
+            null,
+            null
+          ],
+          "left_grade": "F1",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-21",
+          "right": "C-22",
+          "left_level": [
+            null,
+            null,
+            null
+          ],
+          "right_level": [
+            1,
+            null,
+            null
+          ],
+          "left_grade": "F3",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-23",
+          "right": "C-24",
+          "left_level": [
+            null,
+            null,
+            null
+          ],
+          "right_level": [
+            1,
+            null,
+            null
+          ],
+          "left_grade": "F3",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-25",
+          "right": "C-26",
+          "left_level": [
+            null,
+            null,
+            null
+          ],
+          "right_level": [
+            1,
+            null,
+            null
+          ],
+          "left_grade": "F1",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-27",
+          "right": "C-28",
+          "left_level": [
+            null,
+            null,
+            null
+          ],
+          "right_level": [
+            1,
+            null,
+            null
+          ],
+          "left_grade": "F3",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-29",
+          "right": "C-30",
+          "left_level": [
+            null,
+            null,
+            null
+          ],
+          "right_level": [
+            1,
+            null,
+            null
+          ],
+          "left_grade": "F3",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-31",
+          "right": "C-32",
+          "left_level": [
+            null,
+            null,
+            null
+          ],
+          "right_level": [
+            1,
+            null,
+            null
+          ],
+          "left_grade": "F0",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-33",
+          "right": "C-34",
+          "left_level": [
+            null,
+            null,
+            null
+          ],
+          "right_level": [
+            1,
+            null,
+            null
+          ],
+          "left_grade": "F3",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-35",
+          "right": "C-36",
+          "left_level": [
+            null,
+            null,
+            null
+          ],
+          "right_level": [
+            1,
+            null,
+            null
+          ],
+          "left_grade": "F3",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-37",
+          "right": "C-38",
+          "left_level": [
+            null,
+            null,
+            null
+          ],
+          "right_level": [
+            1,
+            null,
+            null
+          ],
+          "left_grade": "F0",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-39",
+          "right": "C-40",
+          "left_level": [
+            null,
+            null,
+            null
+          ],
+          "right_level": [
+            1,
+            null,
+            null
+          ],
+          "left_grade": "F1",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-41",
+          "right": "C-42",
+          "left_level": [
+            null,
+            null,
+            null
+          ],
+          "right_level": [
+            1,
+            null,
+            null
+          ],
+          "left_grade": "F2",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-43",
+          "right": "C-44",
+          "left_level": [
+            null,
+            null,
+            null
+          ],
+          "right_level": [
+            1,
+            null,
+            null
+          ],
+          "left_grade": "F0",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-45",
+          "right": "C-46",
+          "left_level": [
+            null,
+            null,
+            null
+          ],
+          "right_level": [
+            1,
+            null,
+            null
+          ],
+          "left_grade": "F1",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-47",
+          "right": "C-48",
+          "left_level": [
+            null,
+            null,
+            null
+          ],
+          "right_level": [
+            1,
+            null,
+            null
+          ],
+          "left_grade": "F1",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-49",
+          "right": "C-50",
+          "left_level": [
+            null,
+            null,
+            null
+          ],
+          "right_level": [
+            1,
+            null,
+            null
+          ],
+          "left_grade": "F0",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-51",
+          "right": "C-52",
+          "left_level": [
+            null,
+            null,
+            null
+          ],
+          "right_level": [
+            1,
+            null,
+            null
+          ],
+          "left_grade": "F0",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-53",
+          "right": "C-54",
+          "left_level": [
+            null,
+            null,
+            null
+          ],
+          "right_level": [
+            1,
+            null,
+            null
+          ],
+          "left_grade": "F1",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-55",
+          "right": "C-56",
+          "left_level": [
+            null,
+            null,
+            null
+          ],
+          "right_level": [
+            1,
+            null,
+            null
+          ],
+          "left_grade": "F1",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-57",
+          "right": "C-58",
+          "left_level": [
+            null,
+            null,
+            null
+          ],
+          "right_level": [
+            1,
+            null,
+            null
+          ],
+          "left_grade": "F3",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-59",
+          "right": "C-60",
+          "left_level": [
+            null,
+            null,
+            null
+          ],
+          "right_level": [
+            1,
+            null,
+            null
+          ],
+          "left_grade": "F3",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-61",
+          "right": "C-62",
+          "left_level": [
+            null,
+            null,
+            null
+          ],
+          "right_level": [
+            1,
+            null,
+            null
+          ],
+          "left_grade": "F1",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-63",
+          "right": "C-64",
+          "left_level": [
+            null,
+            null,
+            null
+          ],
+          "right_level": [
+            1,
+            null,
+            null
+          ],
+          "left_grade": "F2",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-65",
+          "right": "C-66",
+          "left_level": [
+            null,
+            null,
+            null
+          ],
+          "right_level": [
+            1,
+            null,
+            null
+          ],
+          "left_grade": "F3",
+          "right_grade": "F3"
+        },
+        {
+          "left": "C-67",
+          "right": "C-68",
+          "left_level": [
+            null,
+            null,
+            null
+          ],
+          "right_level": [
+            1,
+            null,
+            null
+          ],
+          "left_grade": "F0",
+          "right_grade": "F1"
+        },
+        {
+          "left": "C-69",
+          "right": "C-70",
+          "left_level": [
+            null,
+            null,
+            null
+          ],
+          "right_level": [
+            1,
+            null,
+            null
+          ],
+          "left_grade": "F1",
+          "right_grade": "F2"
+        },
+        {
+          "left": "C-71",
+          "right": "C-72",
+          "left_level": [
+            null,
+            null,
+            null
+          ],
+          "right_level": [
+            1,
+            null,
+            null
+          ],
+          "left_grade": "F2",
+          "right_grade": "F2"
+        }
+      ]
+    }
+  ],
+  "controlled_witnesses": [
+    {
+      "axis": "P1",
+      "left": {
+        "input": {
+          "p": 1,
+          "shapes": [
+            "uniform"
+          ],
+          "q": 3500,
+          "d": 2,
+          "ends": [
+            null,
+            null,
+            null
+          ],
+          "b0": 0
+        },
+        "H": 1,
+        "result": {
+          "grade": "F2",
+          "blockers": [],
+          "goals": {
+            "K_people": 1000,
+            "H_hours": 1,
+            "deadline_h": 3
+          },
+          "tiers": [
+            {
+              "tier": "V0",
+              "supply_segments": [
+                [
+                  0,
+                  null,
+                  500
+                ]
+              ],
+              "pass": false,
+              "runs": [
+                {
+                  "shape": "uniform",
+                  "peak_people": 2500.0,
+                  "clear_h": 7.0,
+                  "residual_at_deadline_people": 2000.0,
+                  "max_wait_h": 5.0,
+                  "waiting_people_h_to_deadline": 4750.0,
+                  "total_waiting_people_h": 8750.0,
+                  "arrived_people": 3500.0,
+                  "served_people": 3500.0,
+                  "unserved_people": 0,
+                  "pass": false,
+                  "failures": [
+                    "peak_over_K",
+                    "clear_after_D_plus_H"
+                  ]
+                }
+              ]
+            },
+            {
+              "tier": "V1",
+              "supply_segments": [
+                [
+                  0,
+                  null,
+                  500
+                ],
+                [
+                  0,
+                  null,
+                  500
+                ]
+              ],
+              "pass": false,
+              "runs": [
+                {
+                  "shape": "uniform",
+                  "peak_people": 1500.0,
+                  "clear_h": 3.5,
+                  "residual_at_deadline_people": 500.0,
+                  "max_wait_h": 1.5,
+                  "waiting_people_h_to_deadline": 2500.0,
+                  "total_waiting_people_h": 2625.0,
+                  "arrived_people": 3500.0,
+                  "served_people": 3500.0,
+                  "unserved_people": 0,
+                  "pass": false,
+                  "failures": [
+                    "peak_over_K",
+                    "clear_after_D_plus_H"
+                  ]
+                }
+              ]
+            },
+            {
+              "tier": "V2",
+              "supply_segments": [
+                [
+                  0,
+                  null,
+                  500
+                ],
+                [
+                  0,
+                  null,
+                  500
+                ],
+                [
+                  0,
+                  null,
+                  1000
+                ]
+              ],
+              "pass": true,
+              "runs": [
+                {
+                  "shape": "uniform",
+                  "peak_people": 0.0,
+                  "clear_h": 2.0,
+                  "residual_at_deadline_people": 0.0,
+                  "max_wait_h": 0.0,
+                  "waiting_people_h_to_deadline": 0.0,
+                  "total_waiting_people_h": 0.0,
+                  "arrived_people": 3500.0,
+                  "served_people": 3500.0,
+                  "unserved_people": 0,
+                  "pass": true,
+                  "failures": []
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "right": {
+        "input": {
+          "p": 0,
+          "shapes": [
+            "uniform"
+          ],
+          "q": 3500,
+          "d": 2,
+          "ends": [
+            null,
+            null,
+            null
+          ],
+          "b0": 0
+        },
+        "H": 1,
+        "result": {
+          "grade": "F3",
+          "blockers": [],
+          "goals": {
+            "K_people": 1000,
+            "H_hours": 1,
+            "deadline_h": 3
+          },
+          "tiers": [
+            {
+              "tier": "V0",
+              "supply_segments": [
+                [
+                  0,
+                  null,
+                  500
+                ]
+              ],
+              "pass": false,
+              "runs": [
+                {
+                  "shape": "uniform",
+                  "peak_people": 2500.0,
+                  "clear_h": 7.0,
+                  "residual_at_deadline_people": 2000.0,
+                  "max_wait_h": 5.0,
+                  "waiting_people_h_to_deadline": 4750.0,
+                  "total_waiting_people_h": 8750.0,
+                  "arrived_people": 3500.0,
+                  "served_people": 3500.0,
+                  "unserved_people": 0,
+                  "pass": false,
+                  "failures": [
+                    "peak_over_K",
+                    "clear_after_D_plus_H"
+                  ]
+                }
+              ]
+            },
+            {
+              "tier": "V1",
+              "supply_segments": [
+                [
+                  0,
+                  null,
+                  500
+                ],
+                [
+                  1,
+                  null,
+                  500
+                ]
+              ],
+              "pass": false,
+              "runs": [
+                {
+                  "shape": "uniform",
+                  "peak_people": 2000.0,
+                  "clear_h": 4.0,
+                  "residual_at_deadline_people": 1000.0,
+                  "max_wait_h": 2.0,
+                  "waiting_people_h_to_deadline": 3750.0,
+                  "total_waiting_people_h": 4250.0,
+                  "arrived_people": 3500.0,
+                  "served_people": 3500.0,
+                  "unserved_people": 0,
+                  "pass": false,
+                  "failures": [
+                    "peak_over_K",
+                    "clear_after_D_plus_H"
+                  ]
+                }
+              ]
+            },
+            {
+              "tier": "V2",
+              "supply_segments": [
+                [
+                  0,
+                  null,
+                  500
+                ],
+                [
+                  1,
+                  null,
+                  500
+                ],
+                [
+                  1,
+                  null,
+                  1000
+                ]
+              ],
+              "pass": false,
+              "runs": [
+                {
+                  "shape": "uniform",
+                  "peak_people": 1250.0,
+                  "clear_h": 2.5,
+                  "residual_at_deadline_people": 0.0,
+                  "max_wait_h": 0.7142857142857143,
+                  "waiting_people_h_to_deadline": 2000.0,
+                  "total_waiting_people_h": 2000.0,
+                  "arrived_people": 3500.0,
+                  "served_people": 3500.0,
+                  "unserved_people": 0,
+                  "pass": false,
+                  "failures": [
+                    "peak_over_K"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "axis": "U",
+      "left": {
+        "input": {
+          "p": 1,
+          "shapes": [
+            "uniform"
+          ],
+          "q": 2000,
+          "d": 2,
+          "ends": [
+            null,
+            null,
+            null
+          ],
+          "b0": 0
+        },
+        "H": 1,
+        "result": {
+          "grade": "F1",
+          "blockers": [],
+          "goals": {
+            "K_people": 1000,
+            "H_hours": 1,
+            "deadline_h": 3
+          },
+          "tiers": [
+            {
+              "tier": "V0",
+              "supply_segments": [
+                [
+                  0,
+                  null,
+                  500
+                ]
+              ],
+              "pass": false,
+              "runs": [
+                {
+                  "shape": "uniform",
+                  "peak_people": 1000.0,
+                  "clear_h": 4.0,
+                  "residual_at_deadline_people": 500.0,
+                  "max_wait_h": 2.0,
+                  "waiting_people_h_to_deadline": 1750.0,
+                  "total_waiting_people_h": 2000.0,
+                  "arrived_people": 2000.0,
+                  "served_people": 2000.0,
+                  "unserved_people": 0,
+                  "pass": false,
+                  "failures": [
+                    "clear_after_D_plus_H"
+                  ]
+                }
+              ]
+            },
+            {
+              "tier": "V1",
+              "supply_segments": [
+                [
+                  0,
+                  null,
+                  500
+                ],
+                [
+                  0,
+                  null,
+                  500
+                ]
+              ],
+              "pass": true,
+              "runs": [
+                {
+                  "shape": "uniform",
+                  "peak_people": 0.0,
+                  "clear_h": 2.0,
+                  "residual_at_deadline_people": 0.0,
+                  "max_wait_h": 0.0,
+                  "waiting_people_h_to_deadline": 0.0,
+                  "total_waiting_people_h": 0.0,
+                  "arrived_people": 2000.0,
+                  "served_people": 2000.0,
+                  "unserved_people": 0,
+                  "pass": true,
+                  "failures": []
+                }
+              ]
+            },
+            {
+              "tier": "V2",
+              "supply_segments": [
+                [
+                  0,
+                  null,
+                  500
+                ],
+                [
+                  0,
+                  null,
+                  500
+                ],
+                [
+                  0,
+                  null,
+                  1000
+                ]
+              ],
+              "pass": true,
+              "runs": [
+                {
+                  "shape": "uniform",
+                  "peak_people": 0.0,
+                  "clear_h": 2.0,
+                  "residual_at_deadline_people": 0.0,
+                  "max_wait_h": 0.0,
+                  "waiting_people_h_to_deadline": 0.0,
+                  "total_waiting_people_h": 0.0,
+                  "arrived_people": 2000.0,
+                  "served_people": 2000.0,
+                  "unserved_people": 0,
+                  "pass": true,
+                  "failures": []
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "right": {
+        "input": {
+          "p": 1,
+          "shapes": [
+            "uniform",
+            "front",
+            "back"
+          ],
+          "q": 2000,
+          "d": 2,
+          "ends": [
+            null,
+            null,
+            null
+          ],
+          "b0": 0
+        },
+        "H": 1,
+        "result": {
+          "grade": "F2",
+          "blockers": [],
+          "goals": {
+            "K_people": 1000,
+            "H_hours": 1,
+            "deadline_h": 3
+          },
+          "tiers": [
+            {
+              "tier": "V0",
+              "supply_segments": [
+                [
+                  0,
+                  null,
+                  500
+                ]
+              ],
+              "pass": false,
+              "runs": [
+                {
+                  "shape": "uniform",
+                  "peak_people": 1000.0,
+                  "clear_h": 4.0,
+                  "residual_at_deadline_people": 500.0,
+                  "max_wait_h": 2.0,
+                  "waiting_people_h_to_deadline": 1750.0,
+                  "total_waiting_people_h": 2000.0,
+                  "arrived_people": 2000.0,
+                  "served_people": 2000.0,
+                  "unserved_people": 0,
+                  "pass": false,
+                  "failures": [
+                    "clear_after_D_plus_H"
+                  ]
+                },
+                {
+                  "shape": "front",
+                  "peak_people": 1350.0,
+                  "clear_h": 4.0,
+                  "residual_at_deadline_people": 500.0,
+                  "max_wait_h": 2.7,
+                  "waiting_people_h_to_deadline": 2850.0,
+                  "total_waiting_people_h": 3100.0,
+                  "arrived_people": 2000.0,
+                  "served_people": 2000.0,
+                  "unserved_people": 0,
+                  "pass": false,
+                  "failures": [
+                    "peak_over_K",
+                    "clear_after_D_plus_H"
+                  ]
+                },
+                {
+                  "shape": "back",
+                  "peak_people": 1350.0,
+                  "clear_h": 4.7,
+                  "residual_at_deadline_people": 850.0,
+                  "max_wait_h": 2.6999999999999997,
+                  "waiting_people_h_to_deadline": 1437.5,
+                  "total_waiting_people_h": 2160.0,
+                  "arrived_people": 2000.0,
+                  "served_people": 2000.0,
+                  "unserved_people": 0,
+                  "pass": false,
+                  "failures": [
+                    "peak_over_K",
+                    "clear_after_D_plus_H"
+                  ]
+                }
+              ]
+            },
+            {
+              "tier": "V1",
+              "supply_segments": [
+                [
+                  0,
+                  null,
+                  500
+                ],
+                [
+                  0,
+                  null,
+                  500
+                ]
+              ],
+              "pass": false,
+              "runs": [
+                {
+                  "shape": "uniform",
+                  "peak_people": 0.0,
+                  "clear_h": 2.0,
+                  "residual_at_deadline_people": 0.0,
+                  "max_wait_h": 0.0,
+                  "waiting_people_h_to_deadline": 0.0,
+                  "total_waiting_people_h": 0.0,
+                  "arrived_people": 2000.0,
+                  "served_people": 2000.0,
+                  "unserved_people": 0,
+                  "pass": true,
+                  "failures": []
+                },
+                {
+                  "shape": "front",
+                  "peak_people": 1100.0,
+                  "clear_h": 2.0,
+                  "residual_at_deadline_people": 0.0,
+                  "max_wait_h": 1.1000000000000005,
+                  "waiting_people_h_to_deadline": 1100.0,
+                  "total_waiting_people_h": 1100.0,
+                  "arrived_people": 2000.0,
+                  "served_people": 2000.0,
+                  "unserved_people": 0,
+                  "pass": false,
+                  "failures": [
+                    "peak_over_K"
+                  ]
+                },
+                {
+                  "shape": "back",
+                  "peak_people": 1100.0,
+                  "clear_h": 3.1,
+                  "residual_at_deadline_people": 100.0,
+                  "max_wait_h": 1.0999999999999999,
+                  "waiting_people_h_to_deadline": 875.0,
+                  "total_waiting_people_h": 880.0,
+                  "arrived_people": 2000.0,
+                  "served_people": 2000.0,
+                  "unserved_people": 0,
+                  "pass": false,
+                  "failures": [
+                    "peak_over_K",
+                    "clear_after_D_plus_H"
+                  ]
+                }
+              ]
+            },
+            {
+              "tier": "V2",
+              "supply_segments": [
+                [
+                  0,
+                  null,
+                  500
+                ],
+                [
+                  0,
+                  null,
+                  500
+                ],
+                [
+                  0,
+                  null,
+                  1000
+                ]
+              ],
+              "pass": true,
+              "runs": [
+                {
+                  "shape": "uniform",
+                  "peak_people": 0.0,
+                  "clear_h": 2.0,
+                  "residual_at_deadline_people": 0.0,
+                  "max_wait_h": 0.0,
+                  "waiting_people_h_to_deadline": 0.0,
+                  "total_waiting_people_h": 0.0,
+                  "arrived_people": 2000.0,
+                  "served_people": 2000.0,
+                  "unserved_people": 0,
+                  "pass": true,
+                  "failures": []
+                },
+                {
+                  "shape": "front",
+                  "peak_people": 600.0,
+                  "clear_h": 2.0,
+                  "residual_at_deadline_people": 0.0,
+                  "max_wait_h": 0.29999999999999993,
+                  "waiting_people_h_to_deadline": 253.84615384615384,
+                  "total_waiting_people_h": 253.84615384615384,
+                  "arrived_people": 2000.0,
+                  "served_people": 2000.0,
+                  "unserved_people": 0,
+                  "pass": true,
+                  "failures": []
+                },
+                {
+                  "shape": "back",
+                  "peak_people": 600.0,
+                  "clear_h": 2.3,
+                  "residual_at_deadline_people": 0.0,
+                  "max_wait_h": 0.3,
+                  "waiting_people_h_to_deadline": 240.0000000000001,
+                  "total_waiting_people_h": 240.0000000000001,
+                  "arrived_people": 2000.0,
+                  "served_people": 2000.0,
+                  "unserved_people": 0,
+                  "pass": true,
+                  "failures": []
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "axis": "D",
+      "left": {
+        "input": {
+          "p": 1,
+          "shapes": [
+            "uniform"
+          ],
+          "q": 2000,
+          "d": 2,
+          "ends": [
+            null,
+            null,
+            null
+          ],
+          "b0": 0
+        },
+        "H": 1,
+        "result": {
+          "grade": "F1",
+          "blockers": [],
+          "goals": {
+            "K_people": 1000,
+            "H_hours": 1,
+            "deadline_h": 3
+          },
+          "tiers": [
+            {
+              "tier": "V0",
+              "supply_segments": [
+                [
+                  0,
+                  null,
+                  500
+                ]
+              ],
+              "pass": false,
+              "runs": [
+                {
+                  "shape": "uniform",
+                  "peak_people": 1000.0,
+                  "clear_h": 4.0,
+                  "residual_at_deadline_people": 500.0,
+                  "max_wait_h": 2.0,
+                  "waiting_people_h_to_deadline": 1750.0,
+                  "total_waiting_people_h": 2000.0,
+                  "arrived_people": 2000.0,
+                  "served_people": 2000.0,
+                  "unserved_people": 0,
+                  "pass": false,
+                  "failures": [
+                    "clear_after_D_plus_H"
+                  ]
+                }
+              ]
+            },
+            {
+              "tier": "V1",
+              "supply_segments": [
+                [
+                  0,
+                  null,
+                  500
+                ],
+                [
+                  0,
+                  null,
+                  500
+                ]
+              ],
+              "pass": true,
+              "runs": [
+                {
+                  "shape": "uniform",
+                  "peak_people": 0.0,
+                  "clear_h": 2.0,
+                  "residual_at_deadline_people": 0.0,
+                  "max_wait_h": 0.0,
+                  "waiting_people_h_to_deadline": 0.0,
+                  "total_waiting_people_h": 0.0,
+                  "arrived_people": 2000.0,
+                  "served_people": 2000.0,
+                  "unserved_people": 0,
+                  "pass": true,
+                  "failures": []
+                }
+              ]
+            },
+            {
+              "tier": "V2",
+              "supply_segments": [
+                [
+                  0,
+                  null,
+                  500
+                ],
+                [
+                  0,
+                  null,
+                  500
+                ],
+                [
+                  0,
+                  null,
+                  1000
+                ]
+              ],
+              "pass": true,
+              "runs": [
+                {
+                  "shape": "uniform",
+                  "peak_people": 0.0,
+                  "clear_h": 2.0,
+                  "residual_at_deadline_people": 0.0,
+                  "max_wait_h": 0.0,
+                  "waiting_people_h_to_deadline": 0.0,
+                  "total_waiting_people_h": 0.0,
+                  "arrived_people": 2000.0,
+                  "served_people": 2000.0,
+                  "unserved_people": 0,
+                  "pass": true,
+                  "failures": []
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "right": {
+        "input": {
+          "p": 1,
+          "shapes": [
+            "uniform"
+          ],
+          "q": 2000,
+          "d": 0.5,
+          "ends": [
+            null,
+            null,
+            null
+          ],
+          "b0": 0
+        },
+        "H": 2.5,
+        "result": {
+          "grade": "F2",
+          "blockers": [],
+          "goals": {
+            "K_people": 1000,
+            "H_hours": 2.5,
+            "deadline_h": 3.0
+          },
+          "tiers": [
+            {
+              "tier": "V0",
+              "supply_segments": [
+                [
+                  0,
+                  null,
+                  500
+                ]
+              ],
+              "pass": false,
+              "runs": [
+                {
+                  "shape": "uniform",
+                  "peak_people": 1750.0,
+                  "clear_h": 4.0,
+                  "residual_at_deadline_people": 500.0,
+                  "max_wait_h": 3.5,
+                  "waiting_people_h_to_deadline": 3250.0,
+                  "total_waiting_people_h": 3500.0,
+                  "arrived_people": 2000.0,
+                  "served_people": 2000.0,
+                  "unserved_people": 0,
+                  "pass": false,
+                  "failures": [
+                    "peak_over_K",
+                    "clear_after_D_plus_H"
+                  ]
+                }
+              ]
+            },
+            {
+              "tier": "V1",
+              "supply_segments": [
+                [
+                  0,
+                  null,
+                  500
+                ],
+                [
+                  0,
+                  null,
+                  500
+                ]
+              ],
+              "pass": false,
+              "runs": [
+                {
+                  "shape": "uniform",
+                  "peak_people": 1500.0,
+                  "clear_h": 2.0,
+                  "residual_at_deadline_people": 0.0,
+                  "max_wait_h": 1.5,
+                  "waiting_people_h_to_deadline": 1500.0,
+                  "total_waiting_people_h": 1500.0,
+                  "arrived_people": 2000.0,
+                  "served_people": 2000.0,
+                  "unserved_people": 0,
+                  "pass": false,
+                  "failures": [
+                    "peak_over_K"
+                  ]
+                }
+              ]
+            },
+            {
+              "tier": "V2",
+              "supply_segments": [
+                [
+                  0,
+                  null,
+                  500
+                ],
+                [
+                  0,
+                  null,
+                  500
+                ],
+                [
+                  0,
+                  null,
+                  1000
+                ]
+              ],
+              "pass": true,
+              "runs": [
+                {
+                  "shape": "uniform",
+                  "peak_people": 1000.0,
+                  "clear_h": 1.0,
+                  "residual_at_deadline_people": 0.0,
+                  "max_wait_h": 0.5,
+                  "waiting_people_h_to_deadline": 500.0,
+                  "total_waiting_people_h": 500.0,
+                  "arrived_people": 2000.0,
+                  "served_people": 2000.0,
+                  "unserved_people": 0,
+                  "pass": true,
+                  "failures": []
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "axis": "Q",
+      "left": {
+        "input": {
+          "p": 1,
+          "shapes": [
+            "uniform"
+          ],
+          "q": 500,
+          "d": 2,
+          "ends": [
+            null,
+            null,
+            null
+          ],
+          "b0": 0
+        },
+        "H": 1,
+        "result": {
+          "grade": "F0",
+          "blockers": [],
+          "goals": {
+            "K_people": 1000,
+            "H_hours": 1,
+            "deadline_h": 3
+          },
+          "tiers": [
+            {
+              "tier": "V0",
+              "supply_segments": [
+                [
+                  0,
+                  null,
+                  500
+                ]
+              ],
+              "pass": true,
+              "runs": [
+                {
+                  "shape": "uniform",
+                  "peak_people": 0.0,
+                  "clear_h": 2.0,
+                  "residual_at_deadline_people": 0.0,
+                  "max_wait_h": 0.0,
+                  "waiting_people_h_to_deadline": 0.0,
+                  "total_waiting_people_h": 0.0,
+                  "arrived_people": 500.0,
+                  "served_people": 500.0,
+                  "unserved_people": 0,
+                  "pass": true,
+                  "failures": []
+                }
+              ]
+            },
+            {
+              "tier": "V1",
+              "supply_segments": [
+                [
+                  0,
+                  null,
+                  500
+                ],
+                [
+                  0,
+                  null,
+                  500
+                ]
+              ],
+              "pass": true,
+              "runs": [
+                {
+                  "shape": "uniform",
+                  "peak_people": 0.0,
+                  "clear_h": 2.0,
+                  "residual_at_deadline_people": 0.0,
+                  "max_wait_h": 0.0,
+                  "waiting_people_h_to_deadline": 0.0,
+                  "total_waiting_people_h": 0.0,
+                  "arrived_people": 500.0,
+                  "served_people": 500.0,
+                  "unserved_people": 0,
+                  "pass": true,
+                  "failures": []
+                }
+              ]
+            },
+            {
+              "tier": "V2",
+              "supply_segments": [
+                [
+                  0,
+                  null,
+                  500
+                ],
+                [
+                  0,
+                  null,
+                  500
+                ],
+                [
+                  0,
+                  null,
+                  1000
+                ]
+              ],
+              "pass": true,
+              "runs": [
+                {
+                  "shape": "uniform",
+                  "peak_people": 0.0,
+                  "clear_h": 2.0,
+                  "residual_at_deadline_people": 0.0,
+                  "max_wait_h": 0.0,
+                  "waiting_people_h_to_deadline": 0.0,
+                  "total_waiting_people_h": 0.0,
+                  "arrived_people": 500.0,
+                  "served_people": 500.0,
+                  "unserved_people": 0,
+                  "pass": true,
+                  "failures": []
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "right": {
+        "input": {
+          "p": 1,
+          "shapes": [
+            "uniform"
+          ],
+          "q": 2000,
+          "d": 2,
+          "ends": [
+            null,
+            null,
+            null
+          ],
+          "b0": 0
+        },
+        "H": 1,
+        "result": {
+          "grade": "F1",
+          "blockers": [],
+          "goals": {
+            "K_people": 1000,
+            "H_hours": 1,
+            "deadline_h": 3
+          },
+          "tiers": [
+            {
+              "tier": "V0",
+              "supply_segments": [
+                [
+                  0,
+                  null,
+                  500
+                ]
+              ],
+              "pass": false,
+              "runs": [
+                {
+                  "shape": "uniform",
+                  "peak_people": 1000.0,
+                  "clear_h": 4.0,
+                  "residual_at_deadline_people": 500.0,
+                  "max_wait_h": 2.0,
+                  "waiting_people_h_to_deadline": 1750.0,
+                  "total_waiting_people_h": 2000.0,
+                  "arrived_people": 2000.0,
+                  "served_people": 2000.0,
+                  "unserved_people": 0,
+                  "pass": false,
+                  "failures": [
+                    "clear_after_D_plus_H"
+                  ]
+                }
+              ]
+            },
+            {
+              "tier": "V1",
+              "supply_segments": [
+                [
+                  0,
+                  null,
+                  500
+                ],
+                [
+                  0,
+                  null,
+                  500
+                ]
+              ],
+              "pass": true,
+              "runs": [
+                {
+                  "shape": "uniform",
+                  "peak_people": 0.0,
+                  "clear_h": 2.0,
+                  "residual_at_deadline_people": 0.0,
+                  "max_wait_h": 0.0,
+                  "waiting_people_h_to_deadline": 0.0,
+                  "total_waiting_people_h": 0.0,
+                  "arrived_people": 2000.0,
+                  "served_people": 2000.0,
+                  "unserved_people": 0,
+                  "pass": true,
+                  "failures": []
+                }
+              ]
+            },
+            {
+              "tier": "V2",
+              "supply_segments": [
+                [
+                  0,
+                  null,
+                  500
+                ],
+                [
+                  0,
+                  null,
+                  500
+                ],
+                [
+                  0,
+                  null,
+                  1000
+                ]
+              ],
+              "pass": true,
+              "runs": [
+                {
+                  "shape": "uniform",
+                  "peak_people": 0.0,
+                  "clear_h": 2.0,
+                  "residual_at_deadline_people": 0.0,
+                  "max_wait_h": 0.0,
+                  "waiting_people_h_to_deadline": 0.0,
+                  "total_waiting_people_h": 0.0,
+                  "arrived_people": 2000.0,
+                  "served_people": 2000.0,
+                  "unserved_people": 0,
+                  "pass": true,
+                  "failures": []
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "axis": "R",
+      "left": {
+        "input": {
+          "p": 0,
+          "shapes": [
+            "uniform"
+          ],
+          "q": 1000,
+          "d": 2,
+          "ends": [
+            null,
+            null,
+            null
+          ],
+          "b0": 0
+        },
+        "H": 1,
+        "result": {
+          "grade": "F0",
+          "blockers": [],
+          "goals": {
+            "K_people": 1000,
+            "H_hours": 1,
+            "deadline_h": 3
+          },
+          "tiers": [
+            {
+              "tier": "V0",
+              "supply_segments": [
+                [
+                  0,
+                  null,
+                  500
+                ]
+              ],
+              "pass": true,
+              "runs": [
+                {
+                  "shape": "uniform",
+                  "peak_people": 0.0,
+                  "clear_h": 2.0,
+                  "residual_at_deadline_people": 0.0,
+                  "max_wait_h": 0.0,
+                  "waiting_people_h_to_deadline": 0.0,
+                  "total_waiting_people_h": 0.0,
+                  "arrived_people": 1000.0,
+                  "served_people": 1000.0,
+                  "unserved_people": 0,
+                  "pass": true,
+                  "failures": []
+                }
+              ]
+            },
+            {
+              "tier": "V1",
+              "supply_segments": [
+                [
+                  0,
+                  null,
+                  500
+                ],
+                [
+                  1,
+                  null,
+                  500
+                ]
+              ],
+              "pass": true,
+              "runs": [
+                {
+                  "shape": "uniform",
+                  "peak_people": 0.0,
+                  "clear_h": 2.0,
+                  "residual_at_deadline_people": 0.0,
+                  "max_wait_h": 0.0,
+                  "waiting_people_h_to_deadline": 0.0,
+                  "total_waiting_people_h": 0.0,
+                  "arrived_people": 1000.0,
+                  "served_people": 1000.0,
+                  "unserved_people": 0,
+                  "pass": true,
+                  "failures": []
+                }
+              ]
+            },
+            {
+              "tier": "V2",
+              "supply_segments": [
+                [
+                  0,
+                  null,
+                  500
+                ],
+                [
+                  1,
+                  null,
+                  500
+                ],
+                [
+                  1,
+                  null,
+                  1000
+                ]
+              ],
+              "pass": true,
+              "runs": [
+                {
+                  "shape": "uniform",
+                  "peak_people": 0.0,
+                  "clear_h": 2.0,
+                  "residual_at_deadline_people": 0.0,
+                  "max_wait_h": 0.0,
+                  "waiting_people_h_to_deadline": 0.0,
+                  "total_waiting_people_h": 0.0,
+                  "arrived_people": 1000.0,
+                  "served_people": 1000.0,
+                  "unserved_people": 0,
+                  "pass": true,
+                  "failures": []
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "right": {
+        "input": {
+          "p": 0,
+          "shapes": [
+            "uniform"
+          ],
+          "q": 1000,
+          "d": 2,
+          "ends": [
+            1,
+            null,
+            null
+          ],
+          "b0": 0
+        },
+        "H": 1,
+        "result": {
+          "grade": "F1",
+          "blockers": [],
+          "goals": {
+            "K_people": 1000,
+            "H_hours": 1,
+            "deadline_h": 3
+          },
+          "tiers": [
+            {
+              "tier": "V0",
+              "supply_segments": [
+                [
+                  0,
+                  1,
+                  500
+                ]
+              ],
+              "pass": false,
+              "runs": [
+                {
+                  "shape": "uniform",
+                  "peak_people": 500.0,
+                  "clear_h": null,
+                  "residual_at_deadline_people": 500.0,
+                  "max_wait_h": null,
+                  "waiting_people_h_to_deadline": 750.0,
+                  "total_waiting_people_h": null,
+                  "arrived_people": 1000.0,
+                  "served_people": 500.0,
+                  "unserved_people": 500.0,
+                  "pass": false,
+                  "failures": [
+                    "unfinished_after_service_ends_or_no_supply"
+                  ]
+                }
+              ]
+            },
+            {
+              "tier": "V1",
+              "supply_segments": [
+                [
+                  0,
+                  1,
+                  500
+                ],
+                [
+                  1,
+                  null,
+                  500
+                ]
+              ],
+              "pass": true,
+              "runs": [
+                {
+                  "shape": "uniform",
+                  "peak_people": 0.0,
+                  "clear_h": 2.0,
+                  "residual_at_deadline_people": 0.0,
+                  "max_wait_h": 0.0,
+                  "waiting_people_h_to_deadline": 0.0,
+                  "total_waiting_people_h": 0.0,
+                  "arrived_people": 1000.0,
+                  "served_people": 1000.0,
+                  "unserved_people": 0,
+                  "pass": true,
+                  "failures": []
+                }
+              ]
+            },
+            {
+              "tier": "V2",
+              "supply_segments": [
+                [
+                  0,
+                  1,
+                  500
+                ],
+                [
+                  1,
+                  null,
+                  500
+                ],
+                [
+                  1,
+                  null,
+                  1000
+                ]
+              ],
+              "pass": true,
+              "runs": [
+                {
+                  "shape": "uniform",
+                  "peak_people": 0.0,
+                  "clear_h": 2.0,
+                  "residual_at_deadline_people": 0.0,
+                  "max_wait_h": 0.0,
+                  "waiting_people_h_to_deadline": 0.0,
+                  "total_waiting_people_h": 0.0,
+                  "arrived_people": 1000.0,
+                  "served_people": 1000.0,
+                  "unserved_people": 0,
+                  "pass": true,
+                  "failures": []
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "insufficiency_counterexample": {
+    "left": {
+      "input": {
+        "p": 1,
+        "shapes": [
+          "uniform"
+        ],
+        "q": 2000,
+        "d": 2,
+        "ends": [
+          null,
+          null,
+          null
+        ],
+        "b0": 0
+      },
+      "result": {
+        "grade": "F1",
+        "blockers": [],
+        "goals": {
+          "K_people": 1000,
+          "H_hours": 1,
+          "deadline_h": 3
+        },
+        "tiers": [
+          {
+            "tier": "V0",
+            "supply_segments": [
+              [
+                0,
+                null,
+                500
+              ]
+            ],
+            "pass": false,
+            "runs": [
+              {
+                "shape": "uniform",
+                "peak_people": 1000.0,
+                "clear_h": 4.0,
+                "residual_at_deadline_people": 500.0,
+                "max_wait_h": 2.0,
+                "waiting_people_h_to_deadline": 1750.0,
+                "total_waiting_people_h": 2000.0,
+                "arrived_people": 2000.0,
+                "served_people": 2000.0,
+                "unserved_people": 0,
+                "pass": false,
+                "failures": [
+                  "clear_after_D_plus_H"
+                ]
+              }
+            ]
+          },
+          {
+            "tier": "V1",
+            "supply_segments": [
+              [
+                0,
+                null,
+                500
+              ],
+              [
+                0,
+                null,
+                500
+              ]
+            ],
+            "pass": true,
+            "runs": [
+              {
+                "shape": "uniform",
+                "peak_people": 0.0,
+                "clear_h": 2.0,
+                "residual_at_deadline_people": 0.0,
+                "max_wait_h": 0.0,
+                "waiting_people_h_to_deadline": 0.0,
+                "total_waiting_people_h": 0.0,
+                "arrived_people": 2000.0,
+                "served_people": 2000.0,
+                "unserved_people": 0,
+                "pass": true,
+                "failures": []
+              }
+            ]
+          },
+          {
+            "tier": "V2",
+            "supply_segments": [
+              [
+                0,
+                null,
+                500
+              ],
+              [
+                0,
+                null,
+                500
+              ],
+              [
+                0,
+                null,
+                1000
+              ]
+            ],
+            "pass": true,
+            "runs": [
+              {
+                "shape": "uniform",
+                "peak_people": 0.0,
+                "clear_h": 2.0,
+                "residual_at_deadline_people": 0.0,
+                "max_wait_h": 0.0,
+                "waiting_people_h_to_deadline": 0.0,
+                "total_waiting_people_h": 0.0,
+                "arrived_people": 2000.0,
+                "served_people": 2000.0,
+                "unserved_people": 0,
+                "pass": true,
+                "failures": []
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "right": {
+      "input": {
+        "p": 1,
+        "shapes": [
+          "uniform"
+        ],
+        "q": 2000,
+        "d": 2,
+        "ends": [
+          null,
+          null,
+          null
+        ],
+        "b0": 1200
+      },
+      "result": {
+        "grade": "F3",
+        "blockers": [],
+        "goals": {
+          "K_people": 1000,
+          "H_hours": 1,
+          "deadline_h": 3
+        },
+        "tiers": [
+          {
+            "tier": "V0",
+            "supply_segments": [
+              [
+                0,
+                null,
+                500
+              ]
+            ],
+            "pass": false,
+            "runs": [
+              {
+                "shape": "uniform",
+                "peak_people": 2200.0,
+                "clear_h": 6.4,
+                "residual_at_deadline_people": 1700.0,
+                "max_wait_h": 4.4,
+                "waiting_people_h_to_deadline": 5350.0,
+                "total_waiting_people_h": 8240.0,
+                "arrived_people": 3200.0,
+                "served_people": 3200.0,
+                "unserved_people": 0,
+                "pass": false,
+                "failures": [
+                  "peak_over_K",
+                  "clear_after_D_plus_H"
+                ]
+              }
+            ]
+          },
+          {
+            "tier": "V1",
+            "supply_segments": [
+              [
+                0,
+                null,
+                500
+              ],
+              [
+                0,
+                null,
+                500
+              ]
+            ],
+            "pass": false,
+            "runs": [
+              {
+                "shape": "uniform",
+                "peak_people": 1200.0,
+                "clear_h": 3.2,
+                "residual_at_deadline_people": 200.0,
+                "max_wait_h": 1.2000000000000002,
+                "waiting_people_h_to_deadline": 3100.0,
+                "total_waiting_people_h": 3120.0,
+                "arrived_people": 3200.0,
+                "served_people": 3200.0,
+                "unserved_people": 0,
+                "pass": false,
+                "failures": [
+                  "peak_over_K",
+                  "clear_after_D_plus_H"
+                ]
+              }
+            ]
+          },
+          {
+            "tier": "V2",
+            "supply_segments": [
+              [
+                0,
+                null,
+                500
+              ],
+              [
+                0,
+                null,
+                500
+              ],
+              [
+                0,
+                null,
+                1000
+              ]
+            ],
+            "pass": false,
+            "runs": [
+              {
+                "shape": "uniform",
+                "peak_people": 1200.0,
+                "clear_h": 2.0,
+                "residual_at_deadline_people": 0.0,
+                "max_wait_h": 0.6,
+                "waiting_people_h_to_deadline": 720.0,
+                "total_waiting_people_h": 720.0,
+                "arrived_people": 3200.0,
+                "served_people": 3200.0,
+                "unserved_people": 0,
+                "pass": false,
+                "failures": [
+                  "peak_over_K"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "checks": [
+    {
+      "name": "all_72_grades_match_independent_reference",
+      "pass": true
+    },
+    {
+      "name": "P1_only_target_field_changes_C-01_C-37",
+      "pass": true
+    },
+    {
+      "name": "P1_only_target_field_changes_C-02_C-38",
+      "pass": true
+    },
+    {
+      "name": "P1_only_target_field_changes_C-03_C-39",
+      "pass": true
+    },
+    {
+      "name": "P1_only_target_field_changes_C-04_C-40",
+      "pass": true
+    },
+    {
+      "name": "P1_only_target_field_changes_C-05_C-41",
+      "pass": true
+    },
+    {
+      "name": "P1_only_target_field_changes_C-06_C-42",
+      "pass": true
+    },
+    {
+      "name": "P1_only_target_field_changes_C-07_C-43",
+      "pass": true
+    },
+    {
+      "name": "P1_only_target_field_changes_C-08_C-44",
+      "pass": true
+    },
+    {
+      "name": "P1_only_target_field_changes_C-09_C-45",
+      "pass": true
+    },
+    {
+      "name": "P1_only_target_field_changes_C-10_C-46",
+      "pass": true
+    },
+    {
+      "name": "P1_only_target_field_changes_C-11_C-47",
+      "pass": true
+    },
+    {
+      "name": "P1_only_target_field_changes_C-12_C-48",
+      "pass": true
+    },
+    {
+      "name": "P1_only_target_field_changes_C-13_C-49",
+      "pass": true
+    },
+    {
+      "name": "P1_only_target_field_changes_C-14_C-50",
+      "pass": true
+    },
+    {
+      "name": "P1_only_target_field_changes_C-15_C-51",
+      "pass": true
+    },
+    {
+      "name": "P1_only_target_field_changes_C-16_C-52",
+      "pass": true
+    },
+    {
+      "name": "P1_only_target_field_changes_C-17_C-53",
+      "pass": true
+    },
+    {
+      "name": "P1_only_target_field_changes_C-18_C-54",
+      "pass": true
+    },
+    {
+      "name": "P1_only_target_field_changes_C-19_C-55",
+      "pass": true
+    },
+    {
+      "name": "P1_only_target_field_changes_C-20_C-56",
+      "pass": true
+    },
+    {
+      "name": "P1_only_target_field_changes_C-21_C-57",
+      "pass": true
+    },
+    {
+      "name": "P1_only_target_field_changes_C-22_C-58",
+      "pass": true
+    },
+    {
+      "name": "P1_only_target_field_changes_C-23_C-59",
+      "pass": true
+    },
+    {
+      "name": "P1_only_target_field_changes_C-24_C-60",
+      "pass": true
+    },
+    {
+      "name": "P1_only_target_field_changes_C-25_C-61",
+      "pass": true
+    },
+    {
+      "name": "P1_only_target_field_changes_C-26_C-62",
+      "pass": true
+    },
+    {
+      "name": "P1_only_target_field_changes_C-27_C-63",
+      "pass": true
+    },
+    {
+      "name": "P1_only_target_field_changes_C-28_C-64",
+      "pass": true
+    },
+    {
+      "name": "P1_only_target_field_changes_C-29_C-65",
+      "pass": true
+    },
+    {
+      "name": "P1_only_target_field_changes_C-30_C-66",
+      "pass": true
+    },
+    {
+      "name": "P1_only_target_field_changes_C-31_C-67",
+      "pass": true
+    },
+    {
+      "name": "P1_only_target_field_changes_C-32_C-68",
+      "pass": true
+    },
+    {
+      "name": "P1_only_target_field_changes_C-33_C-69",
+      "pass": true
+    },
+    {
+      "name": "P1_only_target_field_changes_C-34_C-70",
+      "pass": true
+    },
+    {
+      "name": "P1_only_target_field_changes_C-35_C-71",
+      "pass": true
+    },
+    {
+      "name": "P1_only_target_field_changes_C-36_C-72",
+      "pass": true
+    },
+    {
+      "name": "P1_has_a_nonredundancy_witness",
+      "pass": true
+    },
+    {
+      "name": "U_only_target_field_changes_C-01_C-19",
+      "pass": true
+    },
+    {
+      "name": "U_only_target_field_changes_C-02_C-20",
+      "pass": true
+    },
+    {
+      "name": "U_only_target_field_changes_C-03_C-21",
+      "pass": true
+    },
+    {
+      "name": "U_only_target_field_changes_C-04_C-22",
+      "pass": true
+    },
+    {
+      "name": "U_only_target_field_changes_C-05_C-23",
+      "pass": true
+    },
+    {
+      "name": "U_only_target_field_changes_C-06_C-24",
+      "pass": true
+    },
+    {
+      "name": "U_only_target_field_changes_C-07_C-25",
+      "pass": true
+    },
+    {
+      "name": "U_only_target_field_changes_C-08_C-26",
+      "pass": true
+    },
+    {
+      "name": "U_only_target_field_changes_C-09_C-27",
+      "pass": true
+    },
+    {
+      "name": "U_only_target_field_changes_C-10_C-28",
+      "pass": true
+    },
+    {
+      "name": "U_only_target_field_changes_C-11_C-29",
+      "pass": true
+    },
+    {
+      "name": "U_only_target_field_changes_C-12_C-30",
+      "pass": true
+    },
+    {
+      "name": "U_only_target_field_changes_C-13_C-31",
+      "pass": true
+    },
+    {
+      "name": "U_only_target_field_changes_C-14_C-32",
+      "pass": true
+    },
+    {
+      "name": "U_only_target_field_changes_C-15_C-33",
+      "pass": true
+    },
+    {
+      "name": "U_only_target_field_changes_C-16_C-34",
+      "pass": true
+    },
+    {
+      "name": "U_only_target_field_changes_C-17_C-35",
+      "pass": true
+    },
+    {
+      "name": "U_only_target_field_changes_C-18_C-36",
+      "pass": true
+    },
+    {
+      "name": "U_only_target_field_changes_C-37_C-55",
+      "pass": true
+    },
+    {
+      "name": "U_only_target_field_changes_C-38_C-56",
+      "pass": true
+    },
+    {
+      "name": "U_only_target_field_changes_C-39_C-57",
+      "pass": true
+    },
+    {
+      "name": "U_only_target_field_changes_C-40_C-58",
+      "pass": true
+    },
+    {
+      "name": "U_only_target_field_changes_C-41_C-59",
+      "pass": true
+    },
+    {
+      "name": "U_only_target_field_changes_C-42_C-60",
+      "pass": true
+    },
+    {
+      "name": "U_only_target_field_changes_C-43_C-61",
+      "pass": true
+    },
+    {
+      "name": "U_only_target_field_changes_C-44_C-62",
+      "pass": true
+    },
+    {
+      "name": "U_only_target_field_changes_C-45_C-63",
+      "pass": true
+    },
+    {
+      "name": "U_only_target_field_changes_C-46_C-64",
+      "pass": true
+    },
+    {
+      "name": "U_only_target_field_changes_C-47_C-65",
+      "pass": true
+    },
+    {
+      "name": "U_only_target_field_changes_C-48_C-66",
+      "pass": true
+    },
+    {
+      "name": "U_only_target_field_changes_C-49_C-67",
+      "pass": true
+    },
+    {
+      "name": "U_only_target_field_changes_C-50_C-68",
+      "pass": true
+    },
+    {
+      "name": "U_only_target_field_changes_C-51_C-69",
+      "pass": true
+    },
+    {
+      "name": "U_only_target_field_changes_C-52_C-70",
+      "pass": true
+    },
+    {
+      "name": "U_only_target_field_changes_C-53_C-71",
+      "pass": true
+    },
+    {
+      "name": "U_only_target_field_changes_C-54_C-72",
+      "pass": true
+    },
+    {
+      "name": "U_has_a_nonredundancy_witness",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-01_C-07",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-01_C-13",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-07_C-13",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-02_C-08",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-02_C-14",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-08_C-14",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-03_C-09",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-03_C-15",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-09_C-15",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-04_C-10",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-04_C-16",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-10_C-16",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-05_C-11",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-05_C-17",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-11_C-17",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-06_C-12",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-06_C-18",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-12_C-18",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-19_C-25",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-19_C-31",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-25_C-31",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-20_C-26",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-20_C-32",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-26_C-32",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-21_C-27",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-21_C-33",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-27_C-33",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-22_C-28",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-22_C-34",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-28_C-34",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-23_C-29",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-23_C-35",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-29_C-35",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-24_C-30",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-24_C-36",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-30_C-36",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-37_C-43",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-37_C-49",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-43_C-49",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-38_C-44",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-38_C-50",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-44_C-50",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-39_C-45",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-39_C-51",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-45_C-51",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-40_C-46",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-40_C-52",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-46_C-52",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-41_C-47",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-41_C-53",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-47_C-53",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-42_C-48",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-42_C-54",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-48_C-54",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-55_C-61",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-55_C-67",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-61_C-67",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-56_C-62",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-56_C-68",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-62_C-68",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-57_C-63",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-57_C-69",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-63_C-69",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-58_C-64",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-58_C-70",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-64_C-70",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-59_C-65",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-59_C-71",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-65_C-71",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-60_C-66",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-60_C-72",
+      "pass": true
+    },
+    {
+      "name": "D_only_target_field_changes_C-66_C-72",
+      "pass": true
+    },
+    {
+      "name": "D_has_a_nonredundancy_witness",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-01_C-03",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-01_C-05",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-03_C-05",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-02_C-04",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-02_C-06",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-04_C-06",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-07_C-09",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-07_C-11",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-09_C-11",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-08_C-10",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-08_C-12",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-10_C-12",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-13_C-15",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-13_C-17",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-15_C-17",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-14_C-16",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-14_C-18",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-16_C-18",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-19_C-21",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-19_C-23",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-21_C-23",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-20_C-22",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-20_C-24",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-22_C-24",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-25_C-27",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-25_C-29",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-27_C-29",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-26_C-28",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-26_C-30",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-28_C-30",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-31_C-33",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-31_C-35",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-33_C-35",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-32_C-34",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-32_C-36",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-34_C-36",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-37_C-39",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-37_C-41",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-39_C-41",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-38_C-40",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-38_C-42",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-40_C-42",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-43_C-45",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-43_C-47",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-45_C-47",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-44_C-46",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-44_C-48",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-46_C-48",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-49_C-51",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-49_C-53",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-51_C-53",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-50_C-52",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-50_C-54",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-52_C-54",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-55_C-57",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-55_C-59",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-57_C-59",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-56_C-58",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-56_C-60",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-58_C-60",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-61_C-63",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-61_C-65",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-63_C-65",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-62_C-64",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-62_C-66",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-64_C-66",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-67_C-69",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-67_C-71",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-69_C-71",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-68_C-70",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-68_C-72",
+      "pass": true
+    },
+    {
+      "name": "Q_only_target_field_changes_C-70_C-72",
+      "pass": true
+    },
+    {
+      "name": "Q_has_a_nonredundancy_witness",
+      "pass": true
+    },
+    {
+      "name": "R_only_target_field_changes_C-01_C-02",
+      "pass": true
+    },
+    {
+      "name": "R_only_target_field_changes_C-03_C-04",
+      "pass": true
+    },
+    {
+      "name": "R_only_target_field_changes_C-05_C-06",
+      "pass": true
+    },
+    {
+      "name": "R_only_target_field_changes_C-07_C-08",
+      "pass": true
+    },
+    {
+      "name": "R_only_target_field_changes_C-09_C-10",
+      "pass": true
+    },
+    {
+      "name": "R_only_target_field_changes_C-11_C-12",
+      "pass": true
+    },
+    {
+      "name": "R_only_target_field_changes_C-13_C-14",
+      "pass": true
+    },
+    {
+      "name": "R_only_target_field_changes_C-15_C-16",
+      "pass": true
+    },
+    {
+      "name": "R_only_target_field_changes_C-17_C-18",
+      "pass": true
+    },
+    {
+      "name": "R_only_target_field_changes_C-19_C-20",
+      "pass": true
+    },
+    {
+      "name": "R_only_target_field_changes_C-21_C-22",
+      "pass": true
+    },
+    {
+      "name": "R_only_target_field_changes_C-23_C-24",
+      "pass": true
+    },
+    {
+      "name": "R_only_target_field_changes_C-25_C-26",
+      "pass": true
+    },
+    {
+      "name": "R_only_target_field_changes_C-27_C-28",
+      "pass": true
+    },
+    {
+      "name": "R_only_target_field_changes_C-29_C-30",
+      "pass": true
+    },
+    {
+      "name": "R_only_target_field_changes_C-31_C-32",
+      "pass": true
+    },
+    {
+      "name": "R_only_target_field_changes_C-33_C-34",
+      "pass": true
+    },
+    {
+      "name": "R_only_target_field_changes_C-35_C-36",
+      "pass": true
+    },
+    {
+      "name": "R_only_target_field_changes_C-37_C-38",
+      "pass": true
+    },
+    {
+      "name": "R_only_target_field_changes_C-39_C-40",
+      "pass": true
+    },
+    {
+      "name": "R_only_target_field_changes_C-41_C-42",
+      "pass": true
+    },
+    {
+      "name": "R_only_target_field_changes_C-43_C-44",
+      "pass": true
+    },
+    {
+      "name": "R_only_target_field_changes_C-45_C-46",
+      "pass": true
+    },
+    {
+      "name": "R_only_target_field_changes_C-47_C-48",
+      "pass": true
+    },
+    {
+      "name": "R_only_target_field_changes_C-49_C-50",
+      "pass": true
+    },
+    {
+      "name": "R_only_target_field_changes_C-51_C-52",
+      "pass": true
+    },
+    {
+      "name": "R_only_target_field_changes_C-53_C-54",
+      "pass": true
+    },
+    {
+      "name": "R_only_target_field_changes_C-55_C-56",
+      "pass": true
+    },
+    {
+      "name": "R_only_target_field_changes_C-57_C-58",
+      "pass": true
+    },
+    {
+      "name": "R_only_target_field_changes_C-59_C-60",
+      "pass": true
+    },
+    {
+      "name": "R_only_target_field_changes_C-61_C-62",
+      "pass": true
+    },
+    {
+      "name": "R_only_target_field_changes_C-63_C-64",
+      "pass": true
+    },
+    {
+      "name": "R_only_target_field_changes_C-65_C-66",
+      "pass": true
+    },
+    {
+      "name": "R_only_target_field_changes_C-67_C-68",
+      "pass": true
+    },
+    {
+      "name": "R_only_target_field_changes_C-69_C-70",
+      "pass": true
+    },
+    {
+      "name": "R_only_target_field_changes_C-71_C-72",
+      "pass": true
+    },
+    {
+      "name": "R_has_a_nonredundancy_witness",
+      "pass": true
+    },
+    {
+      "name": "P1_witness_expected_grades",
+      "pass": true
+    },
+    {
+      "name": "P1_witness_independent_reproduction",
+      "pass": true
+    },
+    {
+      "name": "U_witness_expected_grades",
+      "pass": true
+    },
+    {
+      "name": "U_witness_independent_reproduction",
+      "pass": true
+    },
+    {
+      "name": "D_witness_expected_grades",
+      "pass": true
+    },
+    {
+      "name": "D_witness_independent_reproduction",
+      "pass": true
+    },
+    {
+      "name": "D_witness_has_identical_absolute_deadline",
+      "pass": true
+    },
+    {
+      "name": "Q_witness_expected_grades",
+      "pass": true
+    },
+    {
+      "name": "Q_witness_independent_reproduction",
+      "pass": true
+    },
+    {
+      "name": "R_witness_expected_grades",
+      "pass": true
+    },
+    {
+      "name": "R_witness_independent_reproduction",
+      "pass": true
+    },
+    {
+      "name": "identical_five_descriptors_with_different_initial_queue_have_different_grades",
+      "pass": true
+    },
+    {
+      "name": "initial_queue_counterexample_matches_independent_reference",
+      "pass": true
+    }
+  ],
+  "interpretation": {
+    "U": "The grid varies allowed arrival sets around the same nominal uniform forecast, not observed spread.",
+    "D_grid": "H=1 is fixed; the resulting absolute deadlines vary with D.",
+    "D_witness": "Absolute deadline=3 is fixed; H is a derived quantity, not a relaxed completion target.",
+    "R_grid": "Only the base service window is varied; other mode, location and direction states are not exhaustively covered."
+  }
+}
