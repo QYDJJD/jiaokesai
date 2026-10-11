@@ -144,7 +144,7 @@ def grade_case(params, k=1000, h=1):
     if blockers:
         return {"grade":blockers[0],"blockers":blockers,"tiers":[]}
     try:
-        if not nonnegative(k) or k == 0 or not nonnegative(h):
+        if not nonnegative(k) or not nonnegative(h):
             raise ValueError("invalid service goal")
         q,d,b0 = params["q"],params["d"],params.get("b0",0)
         p,factor = params.get("p",1),params.get("factor",1)

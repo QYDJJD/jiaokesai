@@ -88,13 +88,13 @@ def grade_directional(case):
         if not demands:
             raise ValueError('no demand directions')
         for d,x in demands.items():
-            if not nonnegative(x['b0']) or not nonnegative(x['k']) or x['k']==0 or not nonnegative(x['h']):
+            if not nonnegative(x['b0']) or not nonnegative(x['k']) or not nonnegative(x['h']):
                 raise ValueError('invalid direction goal/backlog')
             profile(x['q'],x['d'],'uniform')
         waiting_groups=case.get('waiting_groups',[])
         wait_ids=set()
         for group in waiting_groups:
-            if group['id'] in wait_ids or not group['directions'] or len(set(group['directions'])) != len(group['directions']) or any(d not in demands for d in group['directions']) or not nonnegative(group['k']) or group['k']==0:
+            if group['id'] in wait_ids or not group['directions'] or len(set(group['directions'])) != len(group['directions']) or any(d not in demands for d in group['directions']) or not nonnegative(group['k']):
                 raise ValueError('invalid shared waiting-space goal')
             wait_ids.add(group['id'])
         members=case['joint_profiles']

@@ -1,5 +1,5 @@
 {
-  "version": "PUBLIC-AUDIT-01",
+  "version": "PUBLIC-AUDIT-03",
   "checked_date": "2026-10-11",
   "timezone": "Asia/Shanghai",
   "workflow": "public evidence only; no user/mentor data dependency",
@@ -139,6 +139,128 @@
       "url": "https://yjglj.beijing.gov.cn/art/2024/6/5/art_2522_676704.html",
       "location": "明确安全容量和预警等级；仅方法对照，不提供虹桥K",
       "checked_date": "2026-10-11"
+    },
+    {
+      "id": "R2-01",
+      "issuer": "虹桥商务区管委会综合处",
+      "body_date": "2016-02-16",
+      "role": "official_activation_report",
+      "url": "https://www.shhqcbd.gov.cn/yshj/csyx/sndt/7474.html",
+      "location": "正文事件2016-02-13/14/15；三日分别启动；2万人次聚合口径不明确",
+      "checked_date": "2026-10-11",
+      "verification_method": "readable_body_via_public_HTTP_after_browser_fetch_failed",
+      "http_status": 200,
+      "bytes": 36482,
+      "sha256": "9213089d60fde578c3c7377ce5c5d06878b777b36f203ee486d5a15339e58725",
+      "body_date_qualification": "body/page date; version separately noted"
+    },
+    {
+      "id": "R2-02",
+      "issuer": "虹桥商务区管委会综合处",
+      "body_date": "2015-02-26",
+      "role": "official_activation_report",
+      "url": "https://www.shhqcbd.gov.cn/ywdt/zwyw/7022.html",
+      "location": "正文2015-02-24/25；04:22末班列车与05:18报道疏散完毕；不是完整逐客时间链",
+      "checked_date": "2026-10-11",
+      "verification_method": "readable_body_via_public_HTTP_after_browser_fetch_failed",
+      "http_status": 200,
+      "bytes": 35764,
+      "sha256": "74cf4d88828a7c9f63d5fbc624d960ecd149fdaf897ca109d42cc92bbebf5345",
+      "body_date_qualification": "body/page date; version separately noted"
+    },
+    {
+      "id": "R2-03",
+      "issuer": "上海市政府预案栏目",
+      "body_date": "2025-12-25",
+      "role": "official_plan_text",
+      "url": "https://www.shanghai.gov.cn/yjya/20251225/457ccb6fe01a4f0a92ed111a88a13f54.html",
+      "location": "标题为2022版；4.2.1/5.1.2/5.2；网页发布年与文本版本分开",
+      "checked_date": "2026-10-11",
+      "verification_method": "readable_body_via_public_HTTP_after_browser_fetch_failed",
+      "http_status": 200,
+      "bytes": 31516,
+      "sha256": "16e24f87988454eb33b08bb0c6abbd6cab766b5f6ce1fbd494034ec4ced4375e",
+      "body_date_qualification": "body/page date; version separately noted"
+    },
+    {
+      "id": "R2-04",
+      "issuer": "今日闵行官方微信，上观号发布平台",
+      "body_date": "2024-09-16",
+      "role": "reported_shelter_reference",
+      "url": "https://sghexport.shobserver.com/html/toutiao/2024/09/16/1424484.html",
+      "location": "文末版权注明今日闵行；500/500/约500、3500总量；不可叠加子项",
+      "checked_date": "2026-10-11",
+      "verification_method": "readable_body_via_public_HTTP_after_browser_fetch_failed",
+      "http_status": 200,
+      "bytes": 20107,
+      "sha256": "acce8b50ba5d2dd74b2a1a265b0979eaf3ca959b27b5209de46b764ed2b8b14a",
+      "body_date_qualification": "body/page date; version separately noted"
+    },
+    {
+      "id": "R2-05",
+      "issuer": "新民晚报记者采访",
+      "body_date": "2018-02-06",
+      "role": "reported_shelter_reference",
+      "url": "https://newsxmwb.xinmin.cn/chengsh/2018/02/06/31358289.html",
+      "location": "枢纽内2000多名、外部3500人、准备20辆；非当前承诺",
+      "checked_date": "2026-10-11",
+      "verification_method": "readable_body_via_public_HTTP_after_browser_fetch_failed",
+      "http_status": 200,
+      "bytes": 34159,
+      "sha256": "55210e32d12b67d6d0404dc5c68ea3968254bc917a49e0285702ffe9505d54cf",
+      "body_date_qualification": "body/page date; version separately noted"
+    },
+    {
+      "id": "R2-06",
+      "issuer": "中宏网转载发布说明",
+      "body_date": "2026-09-03",
+      "role": "standard_release_summary",
+      "url": "https://www.zhonghongwang.com/show-258-471152-1.html",
+      "location": "与市场监管总局发布说明同源；不是独立标准正文",
+      "checked_date": "2026-10-11",
+      "verification_method": "readable_body_via_public_HTTP_after_browser_fetch_failed",
+      "http_status": 200,
+      "bytes": 20253,
+      "sha256": "4e83353c0edbf55950c9f8b5062a1f97bb42a114b228b0afc1d51ce8182403dd",
+      "body_date_qualification": "body/page date; version separately noted"
+    },
+    {
+      "id": "R2-08",
+      "issuer": "新京报记者引上铁集团",
+      "body_date": "2026-10-07",
+      "role": "forecast_plan_and_reported_statistic",
+      "url": "https://www.bjnews.com.cn/detail/1791351387129116.html",
+      "location": "预计虹桥站46.8万；44.3万枢纽口径未明；210列为长三角计划",
+      "checked_date": "2026-10-11",
+      "verification_method": "readable_body_via_public_HTTP_after_browser_fetch_failed",
+      "http_status": 200,
+      "bytes": 33617,
+      "sha256": "fa66fe73767d44934d7beb66d11159fbc24f0c87d5642ac33eb2d2238cece085",
+      "body_date_qualification": "body/page date; version separately noted"
+    },
+    {
+      "id": "R2-09",
+      "issuer": "环球网转载报道",
+      "body_date": "2018-02-28",
+      "role": "historical_heatmap_report",
+      "url": "https://china.huanqiu.com/article/9CaKrnK6N3d?re=nextnews",
+      "location": "全文核1250/1625与12区；日期由同题同期转载线索定位，不用网页动态推荐时间",
+      "checked_date": "2026-10-11",
+      "verification_method": "readable_body_via_public_HTTP_after_browser_fetch_failed",
+      "http_status": 200,
+      "bytes": 50922,
+      "sha256": "4a8f8b9768e8cc511cf8ea42c697e873e15a16d9b8a31d4035ec392e30649fc9",
+      "body_date_qualification": "date contextualized from same-title contemporaneous reporting"
+    },
+    {
+      "id": "R2-11",
+      "issuer": "市场监管总局",
+      "body_date": "2026-09-03",
+      "role": "official_standard_release_summary",
+      "url": "https://www.samr.gov.cn/xw/sj/art/2026/art_326736f27ec6453d926871e8279de24a.html",
+      "location": "换乘/安全保障等发布概要，非标准正文",
+      "checked_date": "2026-10-11",
+      "verification_method": "web readable body"
     }
   ],
   "planned_bus_services": [
@@ -880,5 +1002,193 @@
       "bytes": 1626286,
       "stored_as": "ignored_reading_copy; official URL retained"
     }
-  }
+  },
+  "revision_note": "Review of round 2: 24 readable source records; historical dates, forecast/plan scope, metadata coverage and excluded leads corrected.",
+  "source_count_policy": {
+    "first_round_records": 15,
+    "new_readable_records": 9,
+    "readable_total": 24,
+    "not_independent_events": true,
+    "R2_06_R2_11_same_origin": true,
+    "unreadable_leads_not_in_source_count": true
+  },
+  "round2_excluded_leads": [
+    {
+      "id": "R2-07",
+      "url": "https://www.toutiao.com/article/7693515486021173796/",
+      "state": "no_readable_body",
+      "reason": "HTTP200但可读正文为0；不能据此确认P9/P10四分区及71路借道等具体措施"
+    },
+    {
+      "id": "R2-10",
+      "url": "https://jtdh.rmjtxw.com/anli/8/1634.html",
+      "state": "connection_failed",
+      "reason": "未取得正文；1169/185/49模型和16份指令不保留为已核事实"
+    },
+    {
+      "id": "R2-X01",
+      "url": null,
+      "state": "no_exact_url",
+      "reason": "原补证仅称搜狐演练转载，未给精确来源；不据此证明与2022总体预案一致"
+    }
+  ],
+  "round2_claims": {
+    "activation_reports": [
+      {
+        "id": "R2-ACT-2015",
+        "source_id": "R2-02",
+        "event_dates": [
+          "2015-02-24",
+          "2015-02-25"
+        ],
+        "response": "I级大面积延误响应",
+        "last_train_time": "2015-02-25T04:22:00",
+        "reported_clear_time": "2015-02-25T05:18:00",
+        "timestamp_gap_minutes": 56,
+        "last_cohort_entry_known": false,
+        "normative_H": null
+      },
+      {
+        "id": "R2-ACT-2016",
+        "source_id": "R2-01",
+        "event_dates": [
+          "2016-02-13",
+          "2016-02-14",
+          "2016-02-15"
+        ],
+        "response": "一级大面积延误响应",
+        "separate_activation_each_day": true,
+        "reported_night_arrivals_approx": 20000,
+        "unit": "person_trips",
+        "aggregation": "per_night_or_three_nights_not_explicit",
+        "cohort_queue_Q": null
+      }
+    ],
+    "shelter_references": [
+      {
+        "id": "R2-SHELTER-2024",
+        "source_id": "R2-04",
+        "version": 2024,
+        "location": "虹桥火车站出发大厅与枢纽公共区域多处",
+        "reported_total_people": 3500,
+        "near_sites_people": [
+          500,
+          500
+        ],
+        "far_site_people_approx": 500,
+        "near_sites_subset_of_total": "not_fully_specified",
+        "allow_addition_to_total": false,
+        "K_assigned": null
+      },
+      {
+        "id": "R2-SHELTER-2018",
+        "source_id": "R2-05",
+        "version": 2018,
+        "inside_people_raw": "2000多名",
+        "outside_people": 3500,
+        "prepared_bus_vehicles": 20,
+        "current_committed_capacity": null,
+        "K_assigned": null
+      }
+    ],
+    "heatmap_reference": {
+      "id": "R2-HEATMAP",
+      "source_id": "R2-09",
+      "version": 2018,
+      "location": "铁路出发候车室",
+      "regions": 12,
+      "raw_thresholds_people": [
+        1250,
+        1625
+      ],
+      "update_minutes": 5,
+      "quantity": "reported_heatmap_color_thresholds",
+      "target_queue_peak_limit": null,
+      "endpoint_definition_not_extended": true
+    },
+    "holiday_reference": {
+      "id": "R2-HOLIDAY",
+      "source_id": "R2-08",
+      "body_date": "2026-10-07",
+      "forecast_hongqiao_station_daily_arrival_person_trips": 468000,
+      "reported_hub_daily_person_trips": 443000,
+      "hub_443000_cohort_and_date_confirmed": false,
+      "values_form_common_interval": false,
+      "planned_night_trains": 210,
+      "planned_train_scope": "长三角铁路",
+      "train_role": "铁路客运列车增开，非到站后的陆侧疏运",
+      "executed_night_trains": null,
+      "local_effective_service_people_per_hour": null
+    },
+    "standard_reference": {
+      "source_ids": [
+        "R2-06",
+        "R2-11"
+      ],
+      "preferred_source": "R2-11",
+      "formal_fulltext_obtained": false,
+      "release_summary_only": true,
+      "effective_from": "2026-12-01",
+      "actual_K_H_or_F_mapping": null
+    }
+  },
+  "parameter_candidate_review": [
+    {
+      "id": "CAND-K-SHELTER-2024",
+      "source_id": "R2-04",
+      "target": "K",
+      "metadata": {
+        "quantity": "shelter_accommodation_capacity",
+        "role": "reported_reference",
+        "unit": "people",
+        "location": "multiple_shelters",
+        "cohort": null,
+        "applicable_window": null
+      },
+      "decision": "REJECT_SCOPE"
+    },
+    {
+      "id": "CAND-K-SHELTER-2018",
+      "source_id": "R2-05",
+      "target": "K",
+      "metadata": {
+        "quantity": "shelter_accommodation_capacity",
+        "role": "reported_reference",
+        "unit": "people",
+        "location": "inside_and_outside_shelters",
+        "cohort": null,
+        "applicable_window": null
+      },
+      "decision": "REJECT_SCOPE"
+    },
+    {
+      "id": "CAND-K-HEATMAP",
+      "source_id": "R2-09",
+      "target": "K",
+      "metadata": {
+        "quantity": "heatmap_color_threshold",
+        "role": "historical_reporting",
+        "unit": "people",
+        "location": "rail_departure_waiting_room",
+        "cohort": null,
+        "applicable_window": null
+      },
+      "decision": "REJECT_SCOPE"
+    },
+    {
+      "id": "CAND-H-TIMEGAP",
+      "source_id": "R2-02",
+      "target": "H",
+      "metadata": {
+        "quantity": "reported_timestamp_gap",
+        "role": "reported_outcome",
+        "unit": "hours",
+        "location": "Hongqiao_hub",
+        "cohort": null,
+        "completion_boundary": null,
+        "applicable_window": "2015-02-25"
+      },
+      "decision": "REJECT_SCOPE"
+    }
+  ]
 }

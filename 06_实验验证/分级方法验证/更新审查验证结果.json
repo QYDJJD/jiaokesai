@@ -1,0 +1,283 @@
+{
+  "version": "CHECK-REVIEW-01",
+  "date": "2026-10-11",
+  "checks": 16,
+  "passed": 16,
+  "readable_source_records": 24,
+  "new_readable_source_records": 9,
+  "excluded_round2_leads": 3,
+  "actual_parameters_assigned": 0,
+  "validation_scope": "metadata scope and transcription checks plus concrete numerical/calendar regressions; not empirical accuracy",
+  "results": [
+    {
+      "name": "已核来源与未核线索分别计数",
+      "pass": true,
+      "details": {
+        "readable_records": 24,
+        "excluded_leads": 3,
+        "not_independent_events": true
+      }
+    },
+    {
+      "name": "返城报道按2016事件年登记",
+      "pass": true,
+      "details": {
+        "2016_dates": [
+          "2016-02-13",
+          "2016-02-14",
+          "2016-02-15"
+        ]
+      }
+    },
+    {
+      "name": "两篇报道不写成累计启用两次",
+      "pass": true,
+      "details": {
+        "activation_report_count": 2,
+        "global_activation_total_unknown": true
+      }
+    },
+    {
+      "name": "三晚约2万不擅自乘三或作Q",
+      "pass": true,
+      "details": {
+        "raw_scale": 20000,
+        "aggregation_not_resolved": true
+      }
+    },
+    {
+      "name": "两时刻56分钟不升级成H或逐客链",
+      "pass": true,
+      "details": {
+        "reported_gap_minutes": 56,
+        "normative_H": null
+      }
+    },
+    {
+      "name": "安置色标和时差不填实际K/H",
+      "pass": true,
+      "details": [
+        {
+          "id": "CAND-K-SHELTER-2024",
+          "status": "REJECT_SCOPE",
+          "mismatches": [
+            "quantity",
+            "role",
+            "location"
+          ],
+          "unknown": [
+            "cohort",
+            "applicable_window"
+          ],
+          "actual_parameter_assigned": false
+        },
+        {
+          "id": "CAND-K-SHELTER-2018",
+          "status": "REJECT_SCOPE",
+          "mismatches": [
+            "quantity",
+            "role",
+            "location"
+          ],
+          "unknown": [
+            "cohort",
+            "applicable_window"
+          ],
+          "actual_parameter_assigned": false
+        },
+        {
+          "id": "CAND-K-HEATMAP",
+          "status": "REJECT_SCOPE",
+          "mismatches": [
+            "quantity",
+            "role",
+            "location"
+          ],
+          "unknown": [
+            "cohort",
+            "applicable_window"
+          ],
+          "actual_parameter_assigned": false
+        },
+        {
+          "id": "CAND-H-TIMEGAP",
+          "status": "REJECT_SCOPE",
+          "mismatches": [
+            "quantity",
+            "role",
+            "location",
+            "applicable_window"
+          ],
+          "unknown": [
+            "cohort",
+            "completion_boundary"
+          ],
+          "actual_parameter_assigned": false
+        }
+      ]
+    },
+    {
+      "name": "同口径正对照仍不自动赋实际参数",
+      "pass": true,
+      "details": {
+        "hypothesis_only": true,
+        "scope_alignment_not_safety_certification": true
+      }
+    },
+    {
+      "name": "未知适用窗口不当作明确冲突",
+      "pass": true,
+      "details": {
+        "hypothesis_only": true,
+        "not_rejected_solely_due_to_missing_date": true
+      }
+    },
+    {
+      "name": "旧发布日期本身不证明规则失效",
+      "pass": true,
+      "details": {
+        "hypothesis_only": true,
+        "publication_date_distinct_from_applicable_window": true
+      }
+    },
+    {
+      "name": "210列是区域计划而非虹桥疏运实绩",
+      "pass": true,
+      "details": {
+        "planned_trains": 210,
+        "role": "铁路客运列车增开，非到站后的陆侧疏运"
+      }
+    },
+    {
+      "name": "46.8预测和44.3口径未明不合成区间",
+      "pass": true,
+      "details": {
+        "forecast_station": 468000,
+        "reported_hub": 443000,
+        "not_night_queue_Q": true
+      }
+    },
+    {
+      "name": "发布概要采用主管机关且不冒充正文",
+      "pass": true,
+      "details": {
+        "same_origin_summary_records": [
+          "R2-06",
+          "R2-11"
+        ],
+        "not_K_H_or_F_mapping": true
+      }
+    },
+    {
+      "name": "缺参状态由字段推导不只读取ready标记",
+      "pass": true,
+      "details": {
+        "real_event_statuses": [
+          {
+            "event": "HQ-E01",
+            "ready": false,
+            "unresolved_fields": [
+              "cohort_entry",
+              "decision_snapshot",
+              "initial_backlog_B0",
+              "direction_arrivals",
+              "joint_forecast",
+              "effective_service",
+              "activation_end",
+              "shared_service",
+              "holding_goal_K",
+              "completion_goal_H",
+              "same_cohort_departures",
+              "same_cohort_completion",
+              "network_and_safety"
+            ]
+          },
+          {
+            "event": "HQ-E02",
+            "ready": false,
+            "unresolved_fields": [
+              "cohort_entry",
+              "decision_snapshot",
+              "initial_backlog_B0",
+              "direction_arrivals",
+              "joint_forecast",
+              "effective_service",
+              "activation_end",
+              "shared_service",
+              "holding_goal_K",
+              "completion_goal_H",
+              "same_cohort_departures",
+              "same_cohort_completion",
+              "network_and_safety"
+            ]
+          },
+          {
+            "event": "HQ-E03",
+            "ready": false,
+            "unresolved_fields": [
+              "cohort_entry",
+              "decision_snapshot",
+              "initial_backlog_B0",
+              "direction_arrivals",
+              "joint_forecast",
+              "effective_service",
+              "activation_end",
+              "shared_service",
+              "holding_goal_K",
+              "completion_goal_H",
+              "same_cohort_departures",
+              "same_cohort_completion",
+              "network_and_safety"
+            ]
+          },
+          {
+            "event": "HQ-E04",
+            "ready": false,
+            "unresolved_fields": [
+              "cohort_entry",
+              "decision_snapshot",
+              "initial_backlog_B0",
+              "direction_arrivals",
+              "joint_forecast",
+              "effective_service",
+              "activation_end",
+              "shared_service",
+              "holding_goal_K",
+              "completion_goal_H",
+              "same_cohort_departures",
+              "same_cohort_completion",
+              "network_and_safety"
+            ]
+          }
+        ],
+        "complete_positive_control_hypothesis_only": true
+      }
+    },
+    {
+      "name": "未知结束规则与异日末班时刻报错",
+      "pass": true,
+      "details": {
+        "no_silent_rule_fallback": true,
+        "no_borrowing_from_other_night": true
+      }
+    },
+    {
+      "name": "K为0允许无积压但初始超限仍失败",
+      "pass": true,
+      "details": {
+        "hypothesis_only": true,
+        "no_backlog_grade": "F0",
+        "initial_backlog_grade": "F3"
+      }
+    },
+    {
+      "name": "方向与共享候客K为0边界一致",
+      "pass": true,
+      "details": {
+        "hypothesis_only": true,
+        "grade": "F0",
+        "shared_peak": 0
+      }
+    }
+  ]
+}

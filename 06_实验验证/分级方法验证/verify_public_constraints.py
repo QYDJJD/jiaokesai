@@ -4,7 +4,7 @@ The source inventory is an audited transcription. These checks catch misuse of
 its scope, units, calendar and network role; they do not audit source databases.
 """
 from pathlib import Path
-from datetime import datetime, timedelta
+from datetime import datetime
 import json
 from grading_engine import grade_case, evaluate, profile
 
@@ -14,22 +14,8 @@ ROUTES = {r['id']: r for r in AUDIT['planned_bus_services']}
 MEASURES = {m['id']: m for m in AUDIT['measurements']}
 
 
-def window(route, operating_date, last_train_arrival=None):
-    """Resolve the PLAN calendar only. A missing endpoint stays None."""
-    if operating_date not in route['operating_dates']:
-        return None
-    day = datetime.fromisoformat(operating_date)
-    start = None if route['start_clock'] is None else datetime.fromisoformat(operating_date + 'T' + route['start_clock'])
-    rule = route['end_rule']
-    if rule['kind'] == 'next_day_fixed':
-        end = datetime.fromisoformat((day + timedelta(days=1)).date().isoformat() + 'T' + rule['clock'])
-    elif rule['kind'] == 'same_day_fixed':
-        end = datetime.fromisoformat(operating_date + 'T' + rule['clock'])
-    else:
-        end = None if last_train_arrival is None else datetime.fromisoformat(last_train_arrival) + timedelta(minutes=rule['minutes'])
-    if start is not None and end is not None and end < start:
-        raise ValueError('last train timing inconsistent with operating window')
-    return start, end
+from service_calendar import window
+from evidence_screen import event_readiness
 
 
 checks = []
@@ -87,7 +73,10 @@ check('机场多目的转送和准备安置不补需求或K', MEASURES['M-E04-BU
 
 missing_runs = []
 for event in AUDIT['event_gap_audit']:
-    result = grade_case({'known':event['calculation_ready']})
+    readiness = event_readiness(event)
+    if readiness['ready'] != event['calculation_ready']:
+        raise AssertionError('declared readiness disagrees with field audit')
+    result = grade_case({'known':readiness['ready']})
     missing_runs.append({'event':event['event_id'],'grade':result['grade']})
 check('4个真实卡缺参时拒绝数值分级', all(r['grade']=='X-DATA' for r in missing_runs), missing_runs)
 
@@ -126,6 +115,6 @@ for c,expected in [(rate-1,False),(rate,True),(rate+1,True)]:
 check('不指定实际K/H也能检验参数化门槛', abs(gamma-.9)<1e-9,
       {'hypothesis_only':True,'beta':beta,'kappa':kappa,'eta':eta,'gamma_min':gamma,'people_per_hour':rate,'boundary_runs':boundary_runs,'prerequisites':'Q>0,D>0,B0<=K, uniform inflow, constant eligible continuous supply'})
 
-out={'version':'CHECK-PUBLIC-01','date':'2026-10-11','checks':len(checks),'passed':len(checks),'source_records':len(AUDIT['sources']),'source_records_are_not_independent_events':True,'real_event_gap_audits':4,'numeric_actual_grades':0,'independent_resource_completions':4,'normalized_boundary_comparisons':3,'validation_scope':'audited transcription, public constraints, missing-data gate and analytic identifiability; not real classification accuracy','results':checks}
+out={'version':'CHECK-PUBLIC-01','date':'2026-10-11','checks':len(checks),'passed':len(checks),'source_records':len(AUDIT['sources']),'checked_source_ids':[s['id'] for s in AUDIT['sources'] if s['id'].startswith('PUB-')],'new_round_covered_by_separate_checks':True,'source_records_are_not_independent_events':True,'real_event_gap_audits':4,'numeric_actual_grades':0,'independent_resource_completions':4,'normalized_boundary_comparisons':3,'validation_scope':'audited transcription, public constraints, missing-data gate and analytic identifiability; not real classification accuracy','results':checks}
 (ROOT/'06_实验验证/分级方法验证/公开证据约束验证结果.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 print(json.dumps({k:v for k,v in out.items() if k!='results'},ensure_ascii=False))
