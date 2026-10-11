@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="800" height="270" preserveAspectRatio="xMinYMin meet" viewBox="0 0 800 270" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="800" height="270"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-270)" style="clip-path: url(#clip)">
+		<g transform="">
+			<text x="15" y="254" style="font-family: Microsoft YaHei; font-size: 14px;fill: rgb(9%,24%,31%); stroke:none;" transform="translate(0,508) scale(1,-1)">图1：相同资源预约量下的候客变化</text>
+			<text x="50" y="229" style="font-family: Microsoft YaHei; font-size: 12px;fill: rgb(9%,24%,31%); stroke:none;" transform="translate(0,458) scale(1,-1)">前段集中</text>
+			<text x="15" y="211" style="font-family: Microsoft YaHei; font-size: 9px;fill: rgb(32%,38%,42%); stroke:none;" transform="translate(0,422) scale(1,-1)">人</text>
+			<path d="M 50,58 L 385,58 Z" style="stroke: rgb(85%,88%,90%); stroke-linecap: butt; stroke-width: 0.6;"/>
+			<text x="38.72216796875" y="55.0" style="font-family: Microsoft YaHei; font-size: 9px;fill: rgb(32%,38%,42%); stroke:none;" transform="translate(0,110) scale(1,-1)">0</text>
+			<path d="M 50,133 L 385,133 Z" style="stroke: rgb(85%,88%,90%); stroke-linecap: butt; stroke-width: 0.6;"/>
+			<text x="28.16650390625" y="130.0" style="font-family: Microsoft YaHei; font-size: 9px;fill: rgb(32%,38%,42%); stroke:none;" transform="translate(0,260) scale(1,-1)">500</text>
+			<path d="M 50,208 L 385,208 Z" style="stroke: rgb(85%,88%,90%); stroke-linecap: butt; stroke-width: 0.6;"/>
+			<text x="22.888671874999996" y="205.0" style="font-family: Microsoft YaHei; font-size: 9px;fill: rgb(32%,38%,42%); stroke:none;" transform="translate(0,410) scale(1,-1)">1000</text>
+			<text x="38.361083984375" y="41" style="font-family: Microsoft YaHei; font-size: 9px;fill: rgb(32%,38%,42%); stroke:none;" transform="translate(0,82) scale(1,-1)">23:00</text>
+			<text x="139.8762354995265" y="41" style="font-family: Microsoft YaHei; font-size: 9px;fill: rgb(32%,38%,42%); stroke:none;" transform="translate(0,82) scale(1,-1)">01:00</text>
+			<text x="241.39138701467803" y="41" style="font-family: Microsoft YaHei; font-size: 9px;fill: rgb(32%,38%,42%); stroke:none;" transform="translate(0,82) scale(1,-1)">03:00</text>
+			<text x="368.28532640861744" y="41" style="font-family: Microsoft YaHei; font-size: 9px;fill: rgb(32%,38%,42%); stroke:none;" transform="translate(0,82) scale(1,-1)">05:30</text>
+			<polyline points="50 58, 56.76768 67.33333, 65.22727 73, 71.99495 82.33333, 80.45455 88, 87.22222 97.33333, 95.68182 103, 102.4495 112.3333, 110.9091 118, 117.6768 127.3333, 126.1364 133, 132.904 142.3333, 141.3636 148, 148.1313 157.3333, 151.5152 159.6, 156.5909 140.5, 163.3586 119.8333, 171.8182 88, 178.5859 67.33333, 181.0662 58, 187.0455 58, 193.8131 58, 202.2727 58, 209.0404 58, 217.5 58, 224.2677 58, 232.7273 58, 239.4949 58, 247.9545 58, 254.7222 58, 263.1818 58, 269.9495 58, 278.4091 58, 285.1768 58, 293.6364 58, 300.404 58, 308.8636 58, 315.6313 58, 324.0909 58, 330.8586 58, 339.3182 58, 346.0859 58, 354.5455 58, 379.9242 58" style="stroke: rgb(66%,39%,21%); stroke-linecap: butt; stroke-width: 2; fill: None; fill-rule: evenodd;"/>
+			<polyline points="50 58, 51.69192 59.5, 60.15152 61, 61.84343 62.5, 70.30303 64, 71.99495 65.5, 80.45455 67, 82.14646 68.5, 90.60606 70, 92.29798 71.5, 100.7576 73, 102.4495 74.5, 110.9091 76, 112.601 77.5, 121.0606 79, 122.7525 80.5, 131.2121 82, 132.904 83.5, 141.3636 85, 143.0556 86.5, 151.5152 88, 166.0173 58, 253.0303 58, 254.7222 58, 263.1818 58, 264.8737 58, 273.3333 58, 275.0253 58, 283.4848 58, 285.1768 58, 293.6364 58, 295.3283 58, 303.7879 58, 305.4798 58, 313.9394 58, 315.6313 58, 324.0909 58, 325.7828 58, 334.2424 58, 335.9343 58, 344.3939 58, 346.0859 58, 354.5455 58, 379.9242 58" style="stroke: rgb(12%,42%,50%); stroke-linecap: butt; stroke-width: 2; fill: None; fill-rule: evenodd;"/>
+			<path d="M 379.924242,58 L 379.924242,208 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 0.8; stroke-dasharray: 3, 3;"/>
+			<text x="445" y="229" style="font-family: Microsoft YaHei; font-size: 12px;fill: rgb(9%,24%,31%); stroke:none;" transform="translate(0,458) scale(1,-1)">后段集中</text>
+			<text x="410" y="211" style="font-family: Microsoft YaHei; font-size: 9px;fill: rgb(32%,38%,42%); stroke:none;" transform="translate(0,422) scale(1,-1)">人</text>
+			<path d="M 445,58 L 780,58 Z" style="stroke: rgb(85%,88%,90%); stroke-linecap: butt; stroke-width: 0.6;"/>
+			<text x="433.72216796875" y="55.0" style="font-family: Microsoft YaHei; font-size: 9px;fill: rgb(32%,38%,42%); stroke:none;" transform="translate(0,110) scale(1,-1)">0</text>
+			<path d="M 445,133 L 780,133 Z" style="stroke: rgb(85%,88%,90%); stroke-linecap: butt; stroke-width: 0.6;"/>
+			<text x="423.16650390625" y="130.0" style="font-family: Microsoft YaHei; font-size: 9px;fill: rgb(32%,38%,42%); stroke:none;" transform="translate(0,260) scale(1,-1)">500</text>
+			<path d="M 445,208 L 780,208 Z" style="stroke: rgb(85%,88%,90%); stroke-linecap: butt; stroke-width: 0.6;"/>
+			<text x="417.888671875" y="205.0" style="font-family: Microsoft YaHei; font-size: 9px;fill: rgb(32%,38%,42%); stroke:none;" transform="translate(0,410) scale(1,-1)">1000</text>
+			<text x="433.361083984375" y="41" style="font-family: Microsoft YaHei; font-size: 9px;fill: rgb(32%,38%,42%); stroke:none;" transform="translate(0,82) scale(1,-1)">23:00</text>
+			<text x="534.8762354995265" y="41" style="font-family: Microsoft YaHei; font-size: 9px;fill: rgb(32%,38%,42%); stroke:none;" transform="translate(0,82) scale(1,-1)">01:00</text>
+			<text x="636.391387014678" y="41" style="font-family: Microsoft YaHei; font-size: 9px;fill: rgb(32%,38%,42%); stroke:none;" transform="translate(0,82) scale(1,-1)">03:00</text>
+			<text x="763.2853264086175" y="41" style="font-family: Microsoft YaHei; font-size: 9px;fill: rgb(32%,38%,42%); stroke:none;" transform="translate(0,82) scale(1,-1)">05:30</text>
+			<polyline points="445 58, 451.7677 58, 460.2273 58, 466.9949 58, 475.4545 58, 482.2222 58, 490.6818 58, 497.4495 58, 505.9091 58, 512.6768 58, 521.1364 58, 527.904 58, 536.3636 58, 543.1313 58, 551.5909 58, 558.3586 58, 566.8182 58, 573.5859 58, 582.0455 58, 588.8131 58, 597.2727 58, 604.0404 58, 612.5 58, 619.2677 58, 627.7273 58, 634.4949 58, 642.9545 58, 648.0303 58, 649.7222 60.33333, 658.1818 66, 664.9495 75.33333, 673.4091 81, 680.1768 90.33333, 688.6364 96, 695.404 105.3333, 703.8636 111, 710.6313 120.3333, 719.0909 126, 725.8586 135.3333, 734.3182 141, 741.0859 150.3333, 749.5455 156, 774.9242 66, 777.1801 58" style="stroke: rgb(66%,39%,21%); stroke-linecap: butt; stroke-width: 2; fill: None; fill-rule: evenodd;"/>
+			<polyline points="445 58, 446.6919 58, 455.1515 58, 456.8434 58, 465.303 58, 466.9949 58, 475.4545 58, 477.1465 58, 485.6061 58, 487.298 58, 495.7576 58, 497.4495 58, 505.9091 58, 507.601 58, 516.0606 58, 517.7525 58, 526.2121 58, 527.904 58, 536.3636 58, 538.0556 58, 546.5152 58, 648.0303 58, 649.7222 59.5, 658.1818 61, 659.8737 62.5, 668.3333 64, 670.0253 65.5, 678.4848 67, 680.1768 68.5, 688.6364 70, 690.3283 71.5, 698.7879 73, 700.4798 74.5, 708.9394 76, 710.6313 77.5, 719.0909 79, 720.7828 80.5, 729.2424 82, 730.9343 83.5, 739.3939 85, 741.0859 86.5, 749.5455 88, 758.0051 58, 774.9242 58" style="stroke: rgb(12%,42%,50%); stroke-linecap: butt; stroke-width: 2; fill: None; fill-rule: evenodd;"/>
+			<path d="M 774.924242,58 L 774.924242,208 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 0.8; stroke-dasharray: 3, 3;"/>
+			<text x="55" y="13" style="font-family: Microsoft YaHei; font-size: 10px;fill: rgb(66%,39%,21%); stroke:none;" transform="translate(0,26) scale(1,-1)">平均排班参照</text>
+			<text x="275" y="13" style="font-family: Microsoft YaHei; font-size: 10px;fill: rgb(12%,42%,50%); stroke:none;" transform="translate(0,26) scale(1,-1)">集中窗口方案</text>
+			<text x="505" y="13" style="font-family: Microsoft YaHei; font-size: 10px;fill: rgb(32%,38%,42%); stroke:none;" transform="translate(0,26) scale(1,-1)">虚线：05:30完成截止</text>
+		</g>
+	</g>
+</svg>
