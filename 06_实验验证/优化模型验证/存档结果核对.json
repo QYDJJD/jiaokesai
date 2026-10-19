@@ -1,0 +1,12 @@
+{
+  "case_count": 12,
+  "primary_status_counts": {
+    "0": 5,
+    "2": 6,
+    "1": 1
+  },
+  "independent_profiles_replayed": 29,
+  "source_and_input_hashes": "通过",
+  "conservation_fifo_resources_comfort_deadline_causality": "通过",
+  "scope": "存档数值一致性及声明模型内的独立复算；不代表真实事件实证精度"
+}
