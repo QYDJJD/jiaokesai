@@ -7,6 +7,7 @@ from network_schema import validate,totals,five_summary,calendar,SCHEMA,VERSION,
 from network_examples import templates,convert_legacy
 from network_model import solve,assign_units
 from network_audit import check_plan,replay,greedy_policy,audit_solution
+from preassessment import assess as assess_preliminary
 
 def now():return datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=8))).isoformat(timespec='seconds')
 def clock(card,minute):
@@ -64,11 +65,22 @@ def diagnostics(card):
 def evaluate(card,raw,manual=None,progress=lambda stage:None):
     conf=settings(raw);checked=check_input(card)
     if not checked['valid']:raise ValueError('；'.join(e['message'] for e in checked['errors']))
-    files=[MODEL/n for n in ('network_schema.py','network_examples.py','network_model.py','network_audit.py')]+[HERE/'network_adapter.py',HERE/'web/app.js']
+    files=[MODEL/n for n in ('network_schema.py','network_examples.py','network_model.py','network_audit.py')]+[HERE/'network_adapter.py',HERE/'web/app.js',HERE/'preassessment.py',ROOT/'06_实验验证/分级方法验证/grading_engine.py']
     result={'platform_version':'PLATFORM-02','model_family':'multimodal_network','created_at':now(),'card':copy.deepcopy(card),'settings':conf,
       'validation':checked,'input_sha256':hashlib.sha256(json.dumps(card,sort_keys=True,ensure_ascii=False).encode()).hexdigest(),
       'implementation_sha256':{p.relative_to(ROOT).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in files},
       'evidence_note':'网络与方式来自输入，不按事件名称选择公式。真实背景、研究假设、协调权限与实测能力分别记录。'}
+    preliminary=card.get('preassessment')
+    if isinstance(preliminary,dict) and isinstance(preliminary.get('input'),dict):
+        try:
+            screen=assess_preliminary(preliminary['input']);d=preliminary['input'];matched=None
+            if screen['status']=='provisional':
+                target=d['new_people']+d['initial_people'];p=card['parameters']
+                matched=all(abs(v-target)<1e-5 for v in totals(card).values()) and abs(p['entry_steps']*p['step_minutes']-d['entry_minutes'])<1e-5 and card['five_dimensions']['information_lead_minutes']==d['information_lead_minutes']
+            result['preassessment']={'screen':screen,'main_inputs_match':matched,'resource_mapping_verified':False,
+              'interpretation':'预判与细化分别核算；详细资源尚未逐档映射，不将本次通过解释为最低保障档位已确认。'}
+            result['card']['preassessment']['result']=copy.deepcopy(screen)
+        except ValueError as exc:result['preassessment']={'status':'invalid_preliminary','reason':str(exc),'interpretation':'预判参数未完成；本次仅计算详细网络，不强行赋等级。'}
     if conf['mode']=='manual':
         progress('正在核对通用资源与运行日历');plan=make_manual_plan(card,manual or {})
         policies=[greedy_policy(card,plan,s) for s in card['profiles']];progress('正在按旅客批次核对运行与换乘')
@@ -145,6 +157,9 @@ def report_html(result):
       '<h2>五维与输入范围</h2><pre>'+e(json.dumps(five_summary(c),ensure_ascii=False,indent=2))+'</pre>',
       '<p>事件说明：'+e(c.get('platform',{}).get('notes',''))+'</p><p>来源：'+e(c.get('platform',{}).get('sources','未填写'))+'</p>',
       '<h2>运行结果</h2><p>'+e({'passed':'所列过程通过','failed_targets':'资源安排合法但目标未全部通过','infeasible':'当前候选集合已证明不可行','unresolved':'限时内未取得可行方案，不能认定无解'}[result['status']])+'</p>']
+    if result.get('preassessment'):
+        pre=result['preassessment'];screen=pre.get('screen',{})
+        parts.append('<h2>参数预判与细化核对</h2><p>预判：'+e(screen.get('grade_label','尚未有效判级'))+'；主要人数、持续时间及提前量一致：'+e(pre.get('main_inputs_match'))+'。</p><p>'+e(pre['interpretation'])+'</p>')
     if result.get('solution'):
         r=result['solution'];name={'journey_time':'最坏累计全程人分钟','wait':'最坏累计等待人分钟','cost':'满足条件的新增预约费用'}[r['objective_kind']]
         parts.append('<p>主目标 '+e(name)+'；状态 '+e(r['phase_primary']['status'])+'；相对差距 '+e(r['phase_primary']['relative_gap'])+'。状态0表示达到所设差距，1为限时，2为不可行。</p>')

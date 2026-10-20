@@ -5,6 +5,7 @@ from urllib.parse import urlsplit, unquote
 import json, mimetypes, uuid, re, os, sys, subprocess, threading, time, argparse, shutil
 from core import ROOT, VERSION, LIMITS, NETWORK_LIMITS, templates, check_input, read_settings, make_manual_plan, human_error, now,convert_card
 from worker import atomic
+from preassessment import assess as assess_preliminary, example as preliminary_example
 
 HERE=Path(__file__).resolve().parent
 ID=re.compile(r'^[a-f0-9]{32}$')
@@ -149,6 +150,8 @@ class Handler(BaseHTTPRequestHandler):
                 self.send(200,{'ok':True});threading.Thread(target=self.server.shutdown,daemon=True).start();return
             if len(parts)==4 and parts[:2]==['api','runs'] and parts[3]=='cancel' and ID.fullmatch(parts[2]):return self.send(200,{'cancelled':store.cancel(parts[2])})
             body=self.body()
+            if path=='/api/preassessment':return self.send(200,assess_preliminary(body.get('input')))
+            if path=='/api/preassessment-example':return self.send(200,preliminary_example())
             if path=='/api/validate':
                 checked=check_input(body.get('card'))
                 if checked['valid']:

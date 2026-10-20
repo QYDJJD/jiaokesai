@@ -5,19 +5,28 @@
   "schema_version": "NETWORK-CARD-02",
   "scope": "本机平台输入、求解、独立核算与导出流程；不构成实际事件效果验证",
   "browser_checks": [
-    "中文五步流程与通用方式、节点、线路输入页面正常显示",
+    "中文六步流程正常显示，第一步为参数预判，不要求先填线路或排班",
     "通过页面运行四方式换乘示例，完成计算及独立复核",
     "打开既定地铁服务的分时日历并按原值保存",
     "结果展示四种实际使用方式、换乘网络、两种进入过程和两个完成口径",
     "页面提供逐时段客流分配、预约和逐节点核算",
     "分别展示优化条件分配与简单当前队列执行器；执行器失败过程未隐藏",
-    "检查浏览器控制台，未发现错误"
+    "检查浏览器控制台，未发现错误",
+    "运行2000人参数预判，显示联合保障及各档失败原因",
+    "将预判参数带入单群体细化，人数及持续时间匹配，页面提醒重填改变网格后的服务日历",
+    "恢复四方式示例，按120人、进入30分钟、提前量0完成预判并接续详细优化",
+    "详细结果显示前期预判与主要输入一致，同时声明未逐档映射资源，不能确认最终最低档位"
   ],
   "delivery_check": {
-    "run_id": "9eb893d670654c37a1a25fed8fff9e8a",
+    "run_id": "b14a166f3dab422887c9d7f829f08015",
     "status": "passed",
     "mode_count": 4,
-    "modes_used": ["地铁既定服务", "接驳巴士", "步行换乘", "网约车预约"],
+    "modes_used": [
+      "地铁既定服务",
+      "接驳巴士",
+      "步行换乘",
+      "网约车预约"
+    ],
     "files": 8,
     "time_assignment_rows": 13,
     "node_trace_rows": 27,
@@ -33,13 +42,36 @@
     ]
   },
   "separate_test_suites": {
-    "general_network": {"tests": 24, "failures": 0, "errors": 0},
-    "legacy_platform_compatibility": {"tests": 14, "failures": 0, "errors": 0}
+    "general_network": {
+      "tests": 24,
+      "failures": 0,
+      "errors": 0
+    },
+    "legacy_platform_compatibility": {
+      "tests": 14,
+      "failures": 0,
+      "errors": 0
+    },
+    "parameter_preassessment": {
+      "tests": 12,
+      "failures": 0,
+      "errors": 0,
+      "independent_profile_comparisons": 36
+    }
   },
   "limitations": [
     "本轮浏览器验收使用四方式示例；另三个示例由同一后端求解与独立核算",
     "程序检查次数不等于实际事件样本数",
     "本地运行记录及完整验证包不上传仓库；复现输入由示例生成器提供",
     "实际执行须遵守输入中声明的控制权限、供给日历和资源条件"
-  ]
+  ],
+  "flow": "参数预判在前，网络细化与调度核验在后；六步页面",
+  "preassessment_export": {
+    "grade_label": "现有保障",
+    "main_inputs_match": true,
+    "resource_mapping_verified": false,
+    "input_preserved": true,
+    "screen_recomputed": true,
+    "report_context_preserved": true
+  }
 }

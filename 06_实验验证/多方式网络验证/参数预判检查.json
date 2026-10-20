@@ -1,0 +1,162 @@
+{
+  "tests": 12,
+  "failures": 0,
+  "errors": 0,
+  "seconds": 0.687,
+  "independent_profile_comparisons": 36,
+  "scope": "聚合预判及与独立累计队列核对；独立于24项网络检查，不是实际分级准确率",
+  "implementation_sha256": {
+    "04_建模/交互验证平台/preassessment.py": "883a24ff91aa5cec3696d3d1b076b2418a33d4dae1315e1b17ab1ee628c58eb4",
+    "06_实验验证/分级方法验证/grading_engine.py": "6e5e3681bdcef1f7d41f420d978a1e830e2b7ed2c1291c898ecb7bfae6c09dcb"
+  },
+  "examples": [
+    {
+      "input": {
+        "title": "参数预判示例",
+        "evidence": "研究假设，非虹桥实测或行政分级标准",
+        "new_people": 500,
+        "initial_people": 0,
+        "entry_minutes": 120,
+        "information_lead_minutes": 60,
+        "arrival_set": "three",
+        "queue_limit_people": 1000,
+        "clearance_minutes": 60,
+        "eligibility": "eligible",
+        "compatible_pool": "yes",
+        "resources": [
+          {
+            "label": "现有有效服务",
+            "rate_people_hour": 500,
+            "prepare_minutes": 0,
+            "end_minutes": 180
+          },
+          {
+            "label": "第一批新增服务",
+            "rate_people_hour": 500,
+            "prepare_minutes": 60,
+            "end_minutes": 180
+          },
+          {
+            "label": "第二批新增服务",
+            "rate_people_hour": 1000,
+            "prepare_minutes": 60,
+            "end_minutes": 180
+          }
+        ]
+      },
+      "grade_label": "现有保障",
+      "grade_index": 0
+    },
+    {
+      "input": {
+        "title": "参数预判示例",
+        "evidence": "研究假设，非虹桥实测或行政分级标准",
+        "new_people": 1000,
+        "initial_people": 0,
+        "entry_minutes": 120,
+        "information_lead_minutes": 60,
+        "arrival_set": "three",
+        "queue_limit_people": 1000,
+        "clearance_minutes": 60,
+        "eligibility": "eligible",
+        "compatible_pool": "yes",
+        "resources": [
+          {
+            "label": "现有有效服务",
+            "rate_people_hour": 500,
+            "prepare_minutes": 0,
+            "end_minutes": 180
+          },
+          {
+            "label": "第一批新增服务",
+            "rate_people_hour": 500,
+            "prepare_minutes": 60,
+            "end_minutes": 180
+          },
+          {
+            "label": "第二批新增服务",
+            "rate_people_hour": 1000,
+            "prepare_minutes": 60,
+            "end_minutes": 180
+          }
+        ]
+      },
+      "grade_label": "加强保障",
+      "grade_index": 1
+    },
+    {
+      "input": {
+        "title": "参数预判示例",
+        "evidence": "研究假设，非虹桥实测或行政分级标准",
+        "new_people": 2000,
+        "initial_people": 0,
+        "entry_minutes": 120,
+        "information_lead_minutes": 60,
+        "arrival_set": "three",
+        "queue_limit_people": 1000,
+        "clearance_minutes": 60,
+        "eligibility": "eligible",
+        "compatible_pool": "yes",
+        "resources": [
+          {
+            "label": "现有有效服务",
+            "rate_people_hour": 500,
+            "prepare_minutes": 0,
+            "end_minutes": 180
+          },
+          {
+            "label": "第一批新增服务",
+            "rate_people_hour": 500,
+            "prepare_minutes": 60,
+            "end_minutes": 180
+          },
+          {
+            "label": "第二批新增服务",
+            "rate_people_hour": 1000,
+            "prepare_minutes": 60,
+            "end_minutes": 180
+          }
+        ]
+      },
+      "grade_label": "联合保障",
+      "grade_index": 2
+    },
+    {
+      "input": {
+        "title": "参数预判示例",
+        "evidence": "研究假设，非虹桥实测或行政分级标准",
+        "new_people": 3000,
+        "initial_people": 0,
+        "entry_minutes": 120,
+        "information_lead_minutes": 60,
+        "arrival_set": "three",
+        "queue_limit_people": 1000,
+        "clearance_minutes": 60,
+        "eligibility": "eligible",
+        "compatible_pool": "yes",
+        "resources": [
+          {
+            "label": "现有有效服务",
+            "rate_people_hour": 500,
+            "prepare_minutes": 0,
+            "end_minutes": 180
+          },
+          {
+            "label": "第一批新增服务",
+            "rate_people_hour": 500,
+            "prepare_minutes": 60,
+            "end_minutes": 180
+          },
+          {
+            "label": "第二批新增服务",
+            "rate_people_hour": 1000,
+            "prepare_minutes": 60,
+            "end_minutes": 180
+          }
+        ]
+      },
+      "grade_label": "参考资源仍不足",
+      "grade_index": 3
+    }
+  ]
+}
