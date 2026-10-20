@@ -65,7 +65,7 @@ def diagnostics(card):
 def evaluate(card,raw,manual=None,progress=lambda stage:None):
     conf=settings(raw);checked=check_input(card)
     if not checked['valid']:raise ValueError('；'.join(e['message'] for e in checked['errors']))
-    files=[MODEL/n for n in ('network_schema.py','network_examples.py','network_model.py','network_audit.py')]+[HERE/'network_adapter.py',HERE/'web/app.js',HERE/'preassessment.py',ROOT/'06_实验验证/分级方法验证/grading_engine.py']
+    files=[MODEL/n for n in ('network_schema.py','network_examples.py','network_model.py','network_audit.py')]+[HERE/'network_adapter.py',HERE/'web/app.js',HERE/'preassessment.py',HERE/'reference_rules.json',ROOT/'06_实验验证/分级方法验证/grading_engine.py']
     result={'platform_version':'PLATFORM-02','model_family':'multimodal_network','created_at':now(),'card':copy.deepcopy(card),'settings':conf,
       'validation':checked,'input_sha256':hashlib.sha256(json.dumps(card,sort_keys=True,ensure_ascii=False).encode()).hexdigest(),
       'implementation_sha256':{p.relative_to(ROOT).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in files},
@@ -74,11 +74,11 @@ def evaluate(card,raw,manual=None,progress=lambda stage:None):
     if isinstance(preliminary,dict) and isinstance(preliminary.get('input'),dict):
         try:
             screen=assess_preliminary(preliminary['input']);d=preliminary['input'];matched=None
-            if screen['status']=='provisional':
+            if screen['status'] in ('provisional','assessed'):
                 target=d['new_people']+d['initial_people'];p=card['parameters']
                 matched=all(abs(v-target)<1e-5 for v in totals(card).values()) and abs(p['entry_steps']*p['step_minutes']-d['entry_minutes'])<1e-5 and card['five_dimensions']['information_lead_minutes']==d['information_lead_minutes']
             result['preassessment']={'screen':screen,'main_inputs_match':matched,'resource_mapping_verified':False,
-              'interpretation':'预判与细化分别核算；详细资源尚未逐档映射，不将本次通过解释为最低保障档位已确认。'}
+              'interpretation':'事件评估与详细核算分别记录；既有预案或论文方法作为处置参照，未自动推导正式响应等级，当前调度程序用于验证情景输入。' if screen.get('assessment_kind')=='event_conditions' else '历史自拟资源包试验，保留原输入及结果；不作为当前研究的事件等级或主要创新成果。'}
             result['card']['preassessment']['result']=copy.deepcopy(screen)
         except ValueError as exc:result['preassessment']={'status':'invalid_preliminary','reason':str(exc),'interpretation':'预判参数未完成；本次仅计算详细网络，不强行赋等级。'}
     if conf['mode']=='manual':
@@ -159,7 +159,16 @@ def report_html(result):
       '<h2>运行结果</h2><p>'+e({'passed':'所列过程通过','failed_targets':'资源安排合法但目标未全部通过','infeasible':'当前候选集合已证明不可行','unresolved':'限时内未取得可行方案，不能认定无解'}[result['status']])+'</p>']
     if result.get('preassessment'):
         pre=result['preassessment'];screen=pre.get('screen',{})
-        parts.append('<h2>参数预判与细化核对</h2><p>预判：'+e(screen.get('grade_label','尚未有效判级'))+'；主要人数、持续时间及提前量一致：'+e(pre.get('main_inputs_match'))+'。</p><p>'+e(pre['interpretation'])+'</p>')
+        event_mode=screen.get('assessment_kind')=='event_conditions'
+        parts.append('<h2>'+('事件评估与处置参照' if event_mode else '参数预判与细化核对')+'</h2><p>'+e(screen.get('assessment_label',screen.get('grade_label','尚未完成评估')))+'；主要人数、持续时间及提前量一致：'+e(pre.get('main_inputs_match'))+'。</p><p>'+e(pre['interpretation'])+'</p>')
+        if event_mode:
+            parts.append('<table><tr><th>进入过程</th><th>候客峰值</th><th>占所设上限</th><th>全部离开分钟</th><th>完成余量分钟</th><th>截止剩余</th></tr>')
+            for row in screen.get('profiles',[]):
+                ratio=row['queue_limit_ratio'];values=[row['profile'],round(row['peak_people'],6),'上限为0，按人数核对' if ratio is None else str(round(ratio*100,3))+'%',row['clear_minutes'],row['completion_margin_minutes'],round(row['remaining_at_deadline'],6)]
+                parts.append('<tr>'+''.join('<td>'+e('未完成' if v is None else v)+'</td>' for v in values)+'</tr>')
+            parts.append('</table><p>'+e(screen.get('response_mapping',{}).get('reason',''))+'</p>')
+            source=screen.get('external_reference')
+            if source:parts.append('<p>既有参照：<a href="'+e(source['source_url'])+'">'+e(source['label'])+'</a></p><p>'+e(source['read_scope'])+'</p><p>'+e(source['limitation'])+'</p>')
     if result.get('solution'):
         r=result['solution'];name={'journey_time':'最坏累计全程人分钟','wait':'最坏累计等待人分钟','cost':'满足条件的新增预约费用'}[r['objective_kind']]
         parts.append('<p>主目标 '+e(name)+'；状态 '+e(r['phase_primary']['status'])+'；相对差距 '+e(r['phase_primary']['relative_gap'])+'。状态0表示达到所设差距，1为限时，2为不可行。</p>')

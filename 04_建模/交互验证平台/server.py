@@ -5,7 +5,7 @@ from urllib.parse import urlsplit, unquote
 import json, mimetypes, uuid, re, os, sys, subprocess, threading, time, argparse, shutil
 from core import ROOT, VERSION, LIMITS, NETWORK_LIMITS, templates, check_input, read_settings, make_manual_plan, human_error, now,convert_card
 from worker import atomic
-from preassessment import assess as assess_preliminary, example as preliminary_example
+from preassessment import assess as assess_preliminary, assessment_example as preliminary_example
 
 HERE=Path(__file__).resolve().parent
 ID=re.compile(r'^[a-f0-9]{32}$')

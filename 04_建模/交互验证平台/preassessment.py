@@ -6,7 +6,7 @@ ROOT=Path(__file__).resolve().parents[2]
 sys.path.insert(0,str(ROOT/'06_实验验证/分级方法验证'))
 from grading_engine import evaluate,profile
 
-VERSION='PREASSESS-01'
+VERSION='ASSESS-02'
 LABELS=['现有保障','加强保障','联合保障','参考资源仍不足']
 SHAPES={'uniform':'均匀进入','front':'前四分之一时段进入80%','back':'后四分之一时段进入80%'}
 
@@ -20,15 +20,29 @@ def example():
         {'label':'第一批新增服务','rate_people_hour':500,'prepare_minutes':60,'end_minutes':180},
         {'label':'第二批新增服务','rate_people_hour':1000,'prepare_minutes':60,'end_minutes':180}]}
 
+def references():
+    return json.loads((Path(__file__).parent/'reference_rules.json').read_text(encoding='utf-8'))['references']
+
+def assessment_example():
+    data=example()
+    data.update(title='事件条件评估示例',assessment_kind='event_conditions',reference_id='none',
+      reference_options=[{'id':r['id'],'label':r['label']} for r in references()])
+    data['resources']=data['resources'][:1]
+    data['resources'][0]['label']='基准有效服务'
+    return data
+
 def assess(data):
     if not isinstance(data,dict):raise ValueError('请提供参数预判输入')
+    if data.get('assessment_kind') not in (None,'event_conditions','historical_resource_comparison'):raise ValueError('事件评估模式无效')
+    event_mode=data.get('assessment_kind')=='event_conditions'
     def value(obj,key,label,negative=False):
         v=obj.get(key)
         if v is None:raise ValueError(label+'尚未填写；未知不能用0代替')
         if type(v) not in (int,float) or not math.isfinite(v) or (not negative and v<0):raise ValueError(label+'须为有效'+('数值' if negative else '非负数'))
         if abs(v)>1e9:raise ValueError(label+'超出预判规模，请检查单位')
         return float(v)
-    result={'version':VERSION,'scope':'相同目的服务的一组兼容候客人群；连续有效服务近似',
+    result={'version':VERSION,'assessment_kind':'event_conditions' if event_mode else 'historical_resource_comparison',
+      'scope':'相同目的服务的一组兼容候客人群；连续有效服务近似',
       'completion_boundary':'离开当前候客队列，不表示到达城市目的节点',
       'input_sha256':hashlib.sha256(json.dumps(data,sort_keys=True,ensure_ascii=False).encode()).hexdigest(),
       'implementation_sha256':{p.relative_to(ROOT).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in (Path(__file__),ROOT/'06_实验验证/分级方法验证/grading_engine.py')},
@@ -46,7 +60,8 @@ def assess(data):
     if data.get('arrival_set') not in ('uniform','three','unknown'):raise ValueError('请选择进入节奏的预判范围')
     if data['arrival_set']=='unknown':return {**result,'reason':'进入节奏未知。可明确选择三种研究过程进行条件预判，但不能自动当作均匀进入。'}
     resources=data.get('resources')
-    if not isinstance(resources,list) or len(resources)!=3:raise ValueError('须分别填写现有服务与两批增援；每批填写新增量，不重复填累计能力')
+    if not isinstance(resources,list) or (len(resources)<1 if event_mode else len(resources)!=3):raise ValueError('请填写基准有效服务' if event_mode else '须分别填写现有服务与两批增援；每批填写新增量，不重复填累计能力')
+    if event_mode:resources=resources[:1]
     caps=[];ready=[]
     for i,r in enumerate(resources):
         if not isinstance(r,dict):raise ValueError('服务参数不完整')
@@ -57,7 +72,7 @@ def assess(data):
         caps.append((start/60,end/60,rate) if end>start and rate>0 else None)
     shapes=['uniform'] if data['arrival_set']=='uniform' else list(SHAPES)
     tiers=[];deadline=(duration+slack)/60
-    for index,name in enumerate(LABELS[:3]):
+    for index,name in enumerate(['输入的基准有效服务'] if event_mode else LABELS[:3]):
         supply=[s for s in caps[:index+1] if s is not None];rows=[]
         for shape in shapes:
             r=evaluate(profile(q,duration/60,shape),supply,initial,deadline)
@@ -71,6 +86,24 @@ def assess(data):
           'worst_peak_people':max(r['peak_people'] for r in rows),
           'latest_clear_minutes':None if any(r['clear_minutes'] is None for r in rows) else max(r['clear_minutes'] for r in rows),
           'reasons':list(dict.fromkeys(v for r in rows for v in r['reasons']))})
+    if event_mode:
+        reference_id=data.get('reference_id','none');catalog=references()
+        selected=next((r for r in catalog if r['id']==reference_id),None)
+        if reference_id!='none' and selected is None:raise ValueError('所选既有规则或方法未登记')
+        row=tiers[0];label='所列过程均满足设定控制条件' if row['passed'] else '部分过程超出设定控制条件'
+        for item in row['profiles']:
+            item['queue_limit_ratio']=item['peak_people']/k if k>0 else None
+            item['completion_margin_minutes']=None if item['clear_minutes'] is None else duration+slack-item['clear_minutes']
+        return {**result,'status':'assessed','grade_index':None,'grade_label':label,'assessment_label':label,
+          'tiers':[],'profiles':row['profiles'],'all_controls_met':row['passed'],
+          'worst_peak_people':row['worst_peak_people'],'latest_clear_minutes':row['latest_clear_minutes'],
+          'deadline_minutes':duration+slack,'profiles_checked':[SHAPES[s] for s in shapes],
+          'external_reference':selected,
+          'reference_catalog_sha256':hashlib.sha256(json.dumps(catalog,sort_keys=True,ensure_ascii=False).encode()).hexdigest(),
+          'response_mapping':{'status':'not_automatically_mapped','label':'尚未自动映射正式响应级别',
+            'reason':'已登记资料的完整、适用触发条件不足以执行自动定级；结果提供指标与所设目标的核对，不以自拟保障档位替代。'},
+          'reason':'按基准有效服务评估候客压力和完成情况；控制目标属于输入条件，结果不直接等于法定响应级别。',
+          'next_step':'补充网络和时段细节，定位瓶颈；匹配适用的既有预案或研究方法，将其作为后续处置参照。'}
     grade=next((i for i,t in enumerate(tiers) if t['passed']),3)
     return {**result,'status':'provisional','grade_index':grade,'grade_label':LABELS[grade],'tiers':tiers,
       'resource_ready_minutes':ready,'profiles_checked':list(SHAPES[s] for s in shapes),

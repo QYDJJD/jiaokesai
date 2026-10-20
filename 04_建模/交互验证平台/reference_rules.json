@@ -1,0 +1,41 @@
+{
+  "checked_date": "2026-10-21",
+  "references": [
+    {
+      "id": "rail_delay_linkage_2023",
+      "label": "上海铁路大面积晚点路地联动预案",
+      "type": "官方处置机制",
+      "scope": "上海铁路车站大面积列车晚点及路地联动；不自动覆盖航空、轨交中断等其他情景",
+      "source_url": "https://jtw.sh.gov.cn/xydt/20240129/1191c8f1497c4facac19c12339187e76.html",
+      "source_title": "上海市交通委2024年1月24日演练记录",
+      "read_scope": "已核官方网页；网页确认2023年4月印发预案及演练中的信息发布、预警和联动处置，未取得专项完整触发条款",
+      "use": "为情景匹配信息研判、预警发布和路地联动处置机制",
+      "auto_grade_available": false,
+      "limitation": "演练中出现二级响应，不足以推导任意人数或时段的二级启动阈值；后续版本仍需核验"
+    },
+    {
+      "id": "rail_passenger_flow_2021",
+      "label": "姚倩、梁瑛婕：高铁车站突发大客流评估",
+      "type": "论文评估方法",
+      "scope": "高铁站内旅客发送、到达及关键设施服务环节",
+      "source_url": "https://pdf.hanspub.org/ojtt20210600000_13566097.pdf",
+      "doi": "10.12677/OJTT.2021.106057",
+      "read_scope": "本轮核到出版者检索收录的摘要及第2节节选；直接全文链接未成功打开；既有核查记录另存于文献模块",
+      "use": "借鉴需求与限制能力对照，以及先评估后用仿真核验的研究组织方式",
+      "auto_grade_available": false,
+      "limitation": "站内发送、验票等能力与城市接续运输不同；其观察窗口及阈值不能直接作为虹桥城市接续分级标准"
+    },
+    {
+      "id": "multimodal_scheduling_2025",
+      "label": "Tang等：多方式枢纽疏运与车辆调度",
+      "type": "论文调度方法参照",
+      "scope": "多方式枢纽的客流分配与车辆调度",
+      "source_url": "https://www.sciencedirect.com/science/article/pii/S0968090X25001214",
+      "doi": "10.1016/j.trc.2025.105117",
+      "read_scope": "本轮核到出版者检索收录的摘要与章节预览，未取得完整付费正文",
+      "use": "作为情景库输出接入既有优化方法的参照；当前程序仅为自行实现的验证工具，未复现该文全部模型与算法",
+      "auto_grade_available": false,
+      "limitation": "不是官方响应等级规则；未自动获得协调全部方式的权限，也不移植原文案例中的改善率"
+    }
+  ]
+}

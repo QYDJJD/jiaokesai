@@ -24,7 +24,7 @@
       "phase_primary": {
         "status": 0,
         "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
-        "seconds": 0.007772300043143332,
+        "seconds": 0.03265439998358488,
         "objective": 4840.0,
         "dual_bound": 4840.0,
         "relative_gap": 0.0
@@ -179,9 +179,10 @@
         "04_建模/多方式网络优化/network_examples.py": "84368050ee1f857fe5dc6e4b63bcbe148f98256e1c2113c4e10c103b9ffade01",
         "04_建模/多方式网络优化/network_model.py": "3d336153bfb72aaa68fca6cabce95df1551538112b04a7023335db49a12b6016",
         "04_建模/多方式网络优化/network_audit.py": "2fce73c7f4a479dc54468efe38aa360b7896fc3780d92f1d032e5d8c90679581",
-        "04_建模/交互验证平台/network_adapter.py": "d73a79c7c2f0b3ff065eef9e0a736f2b786d6824d80ca9651728ee6c5e75e9c5",
-        "04_建模/交互验证平台/web/app.js": "657c797e5d90d225ce23de49fe07d2d57df9e8ed4e6accf9e7b0f79e536d5a8f",
-        "04_建模/交互验证平台/preassessment.py": "883a24ff91aa5cec3696d3d1b076b2418a33d4dae1315e1b17ab1ee628c58eb4",
+        "04_建模/交互验证平台/network_adapter.py": "aaf46e4aa42fe18487f4da59426fdd84040a4de0be72f52876351c5c1bcfbfa5",
+        "04_建模/交互验证平台/web/app.js": "39fd92979474f1c30c760f5568729838fa94d4e2364055811a2a261353720697",
+        "04_建模/交互验证平台/preassessment.py": "ffca68882d7ce0496d3b0c469ffdbc46ca3f525169da1c71f793012aca18c034",
+        "04_建模/交互验证平台/reference_rules.json": "8fd309a2f6fd02af1dda52e318c010c5b2a87c2abf50fe5513ef472d661d2644",
         "06_实验验证/分级方法验证/grading_engine.py": "6e5e3681bdcef1f7d41f420d978a1e830e2b7ed2c1291c898ecb7bfae6c09dcb"
       }
     },
@@ -205,7 +206,7 @@
       "phase_primary": {
         "status": 0,
         "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
-        "seconds": 0.0012129000388085842,
+        "seconds": 0.0012363999849185348,
         "objective": 360.0,
         "dual_bound": 360.0,
         "relative_gap": 0.0
@@ -288,9 +289,10 @@
         "04_建模/多方式网络优化/network_examples.py": "84368050ee1f857fe5dc6e4b63bcbe148f98256e1c2113c4e10c103b9ffade01",
         "04_建模/多方式网络优化/network_model.py": "3d336153bfb72aaa68fca6cabce95df1551538112b04a7023335db49a12b6016",
         "04_建模/多方式网络优化/network_audit.py": "2fce73c7f4a479dc54468efe38aa360b7896fc3780d92f1d032e5d8c90679581",
-        "04_建模/交互验证平台/network_adapter.py": "d73a79c7c2f0b3ff065eef9e0a736f2b786d6824d80ca9651728ee6c5e75e9c5",
-        "04_建模/交互验证平台/web/app.js": "657c797e5d90d225ce23de49fe07d2d57df9e8ed4e6accf9e7b0f79e536d5a8f",
-        "04_建模/交互验证平台/preassessment.py": "883a24ff91aa5cec3696d3d1b076b2418a33d4dae1315e1b17ab1ee628c58eb4",
+        "04_建模/交互验证平台/network_adapter.py": "aaf46e4aa42fe18487f4da59426fdd84040a4de0be72f52876351c5c1bcfbfa5",
+        "04_建模/交互验证平台/web/app.js": "39fd92979474f1c30c760f5568729838fa94d4e2364055811a2a261353720697",
+        "04_建模/交互验证平台/preassessment.py": "ffca68882d7ce0496d3b0c469ffdbc46ca3f525169da1c71f793012aca18c034",
+        "04_建模/交互验证平台/reference_rules.json": "8fd309a2f6fd02af1dda52e318c010c5b2a87c2abf50fe5513ef472d661d2644",
         "06_实验验证/分级方法验证/grading_engine.py": "6e5e3681bdcef1f7d41f420d978a1e830e2b7ed2c1291c898ecb7bfae6c09dcb"
       }
     },
@@ -316,7 +318,7 @@
       "phase_primary": {
         "status": 0,
         "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
-        "seconds": 0.0018419999396428466,
+        "seconds": 0.0028762000147253275,
         "objective": 3600.0,
         "dual_bound": null,
         "relative_gap": null
@@ -401,9 +403,10 @@
         "04_建模/多方式网络优化/network_examples.py": "84368050ee1f857fe5dc6e4b63bcbe148f98256e1c2113c4e10c103b9ffade01",
         "04_建模/多方式网络优化/network_model.py": "3d336153bfb72aaa68fca6cabce95df1551538112b04a7023335db49a12b6016",
         "04_建模/多方式网络优化/network_audit.py": "2fce73c7f4a479dc54468efe38aa360b7896fc3780d92f1d032e5d8c90679581",
-        "04_建模/交互验证平台/network_adapter.py": "d73a79c7c2f0b3ff065eef9e0a736f2b786d6824d80ca9651728ee6c5e75e9c5",
-        "04_建模/交互验证平台/web/app.js": "657c797e5d90d225ce23de49fe07d2d57df9e8ed4e6accf9e7b0f79e536d5a8f",
-        "04_建模/交互验证平台/preassessment.py": "883a24ff91aa5cec3696d3d1b076b2418a33d4dae1315e1b17ab1ee628c58eb4",
+        "04_建模/交互验证平台/network_adapter.py": "aaf46e4aa42fe18487f4da59426fdd84040a4de0be72f52876351c5c1bcfbfa5",
+        "04_建模/交互验证平台/web/app.js": "39fd92979474f1c30c760f5568729838fa94d4e2364055811a2a261353720697",
+        "04_建模/交互验证平台/preassessment.py": "ffca68882d7ce0496d3b0c469ffdbc46ca3f525169da1c71f793012aca18c034",
+        "04_建模/交互验证平台/reference_rules.json": "8fd309a2f6fd02af1dda52e318c010c5b2a87c2abf50fe5513ef472d661d2644",
         "06_实验验证/分级方法验证/grading_engine.py": "6e5e3681bdcef1f7d41f420d978a1e830e2b7ed2c1291c898ecb7bfae6c09dcb"
       }
     },
@@ -429,7 +432,7 @@
       "phase_primary": {
         "status": 0,
         "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
-        "seconds": 3.6406812000786886,
+        "seconds": 3.940743300016038,
         "objective": 262433.3333333338,
         "dual_bound": 262215.89675565687,
         "relative_gap": 0.0008285402426403333
@@ -707,9 +710,10 @@
         "04_建模/多方式网络优化/network_examples.py": "84368050ee1f857fe5dc6e4b63bcbe148f98256e1c2113c4e10c103b9ffade01",
         "04_建模/多方式网络优化/network_model.py": "3d336153bfb72aaa68fca6cabce95df1551538112b04a7023335db49a12b6016",
         "04_建模/多方式网络优化/network_audit.py": "2fce73c7f4a479dc54468efe38aa360b7896fc3780d92f1d032e5d8c90679581",
-        "04_建模/交互验证平台/network_adapter.py": "d73a79c7c2f0b3ff065eef9e0a736f2b786d6824d80ca9651728ee6c5e75e9c5",
-        "04_建模/交互验证平台/web/app.js": "657c797e5d90d225ce23de49fe07d2d57df9e8ed4e6accf9e7b0f79e536d5a8f",
-        "04_建模/交互验证平台/preassessment.py": "883a24ff91aa5cec3696d3d1b076b2418a33d4dae1315e1b17ab1ee628c58eb4",
+        "04_建模/交互验证平台/network_adapter.py": "aaf46e4aa42fe18487f4da59426fdd84040a4de0be72f52876351c5c1bcfbfa5",
+        "04_建模/交互验证平台/web/app.js": "39fd92979474f1c30c760f5568729838fa94d4e2364055811a2a261353720697",
+        "04_建模/交互验证平台/preassessment.py": "ffca68882d7ce0496d3b0c469ffdbc46ca3f525169da1c71f793012aca18c034",
+        "04_建模/交互验证平台/reference_rules.json": "8fd309a2f6fd02af1dda52e318c010c5b2a87c2abf50fe5513ef472d661d2644",
         "06_实验验证/分级方法验证/grading_engine.py": "6e5e3681bdcef1f7d41f420d978a1e830e2b7ed2c1291c898ecb7bfae6c09dcb"
       }
     }

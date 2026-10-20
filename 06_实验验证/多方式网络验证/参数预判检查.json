@@ -1,12 +1,19 @@
 {
-  "tests": 12,
+  "tests": 20,
   "failures": 0,
   "errors": 0,
-  "seconds": 0.687,
-  "independent_profile_comparisons": 36,
-  "scope": "聚合预判及与独立累计队列核对；独立于24项网络检查，不是实际分级准确率",
+  "seconds": 0.739,
+  "test_groups": {
+    "historical_resource_comparison": 12,
+    "event_conditions": 8
+  },
+  "independent_profile_comparisons": {
+    "historical_resource_comparison": 36,
+    "current_event_conditions": 12
+  },
+  "scope": "旧资源包计算兼容性与当前事件指标评估；不把自拟档位当作当前创新点或真实分级准确率",
   "implementation_sha256": {
-    "04_建模/交互验证平台/preassessment.py": "883a24ff91aa5cec3696d3d1b076b2418a33d4dae1315e1b17ab1ee628c58eb4",
+    "04_建模/交互验证平台/preassessment.py": "ffca68882d7ce0496d3b0c469ffdbc46ca3f525169da1c71f793012aca18c034",
     "06_实验验证/分级方法验证/grading_engine.py": "6e5e3681bdcef1f7d41f420d978a1e830e2b7ed2c1291c898ecb7bfae6c09dcb"
   },
   "examples": [

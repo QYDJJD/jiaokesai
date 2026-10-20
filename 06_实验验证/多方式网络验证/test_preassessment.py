@@ -4,7 +4,7 @@ import sys,copy,json,time,unittest
 ROOT=Path(__file__).resolve().parents[2]
 sys.path.insert(0,str(ROOT/'04_建模/交互验证平台'))
 sys.path.insert(0,str(ROOT/'06_实验验证/分级方法验证'))
-from preassessment import assess,example
+from preassessment import assess,example,assessment_example
 from independent_reference import CumulativeQueue,arrival_curve
 
 class ParameterScreenChecks(unittest.TestCase):
@@ -88,6 +88,58 @@ class ParameterScreenChecks(unittest.TestCase):
         self.assertFalse(result['preassessment']['resource_mapping_verified'])
         self.assertIn('参数预判与细化核对',report_html(result).decode('utf-8'))
 
+class EventEvaluationChecks(unittest.TestCase):
+    def test_default_reports_indicators_without_own_resource_grade(self):
+        r=assess(assessment_example())
+        self.assertEqual(r['status'],'assessed');self.assertIsNone(r['grade_index'])
+        self.assertEqual(r['tiers'],[]);self.assertEqual(len(r['profiles']),3)
+        self.assertEqual(r['response_mapping']['status'],'not_automatically_mapped')
+
+    def test_baseline_indicators_match_independent_queue(self):
+        for rate in [250,500,1000,2000]:
+            c=assessment_example();c['initial_people']=50;c['resources'][0]['rate_people_hour']=rate;r=assess(c)
+            for shape,row in zip(['uniform','front','back'],r['profiles']):
+                oracle=CumulativeQueue(arrival_curve(2000,2,shape),[(0,3,rate)],50).result(3)
+                self.assertAlmostEqual(row['peak_people'],float(oracle['peak_people']))
+                self.assertAlmostEqual(row['remaining_at_deadline'],float(oracle['residual_at_deadline_people']))
+                if oracle['clear_h'] is None:self.assertIsNone(row['clear_minutes'])
+                else:self.assertAlmostEqual(row['clear_minutes'],float(oracle['clear_h'])*60)
+
+    def test_extra_historical_packages_do_not_change_primary_evaluation(self):
+        c=assessment_example();plain=assess(c)
+        c['resources']+=example()['resources'][1:]
+        for r in c['resources'][1:]:r['rate_people_hour']=1e6
+        self.assertEqual(plain['profiles'],assess(c)['profiles'])
+
+    def test_official_reference_does_not_invent_response_level(self):
+        c=assessment_example();c['reference_id']='rail_delay_linkage_2023';r=assess(c)
+        self.assertEqual(r['external_reference']['type'],'官方处置机制')
+        self.assertFalse(r['external_reference']['auto_grade_available']);self.assertIsNone(r['grade_index'])
+
+    def test_unknown_reference_is_rejected(self):
+        c=assessment_example();c['reference_id']='invented'
+        with self.assertRaises(ValueError):assess(c)
+        c=assessment_example();c['assessment_kind']='misspelled'
+        with self.assertRaises(ValueError):assess(c)
+
+    def test_zero_queue_target_has_no_infinite_ratio(self):
+        c=assessment_example();c['queue_limit_people']=0;r=assess(c)
+        self.assertTrue(all(row['queue_limit_ratio'] is None for row in r['profiles']))
+        self.assertFalse(r['all_controls_met']);json.dumps(r,allow_nan=False)
+
+    def test_unused_increment_can_be_unknown(self):
+        c=assessment_example();c['resources'].append({'rate_people_hour':None})
+        self.assertEqual(assess(c)['status'],'assessed')
+
+    def test_export_keeps_assessment_and_external_scope(self):
+        from network_adapter import templates,evaluate,report_html
+        c=templates()['tiny'];d=assessment_example();d['reference_id']='multimodal_scheduling_2025'
+        c['preassessment']={'input':d,'result':{'grade_index':2,'grade_label':'联合保障'}}
+        result=evaluate(c,{'mode':'manual'},{'reservations':[]});screen=result['preassessment']['screen']
+        self.assertIsNone(screen['grade_index']);self.assertEqual(result['card']['preassessment']['result']['tiers'],[])
+        report=report_html(result).decode('utf-8');self.assertIn('事件评估与处置参照',report)
+        self.assertIn('10.1016/j.trc.2025.105117',json.dumps(screen));self.assertNotIn('联合保障',report)
+
 if __name__=='__main__':
     start=time.perf_counter();out=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromModule(sys.modules[__name__]))
     samples=[]
@@ -95,7 +147,9 @@ if __name__=='__main__':
         c=example();c['new_people']=q;r=assess(c)
         samples.append({'input':c,'grade_label':r['grade_label'],'grade_index':r['grade_index']})
     report={'tests':out.testsRun,'failures':len(out.failures),'errors':len(out.errors),'seconds':round(time.perf_counter()-start,3),
-      'independent_profile_comparisons':36,'scope':'聚合预判及与独立累计队列核对；独立于24项网络检查，不是实际分级准确率',
+      'test_groups':{'historical_resource_comparison':12,'event_conditions':8},
+      'independent_profile_comparisons':{'historical_resource_comparison':36,'current_event_conditions':12},
+      'scope':'旧资源包计算兼容性与当前事件指标评估；不把自拟档位当作当前创新点或真实分级准确率',
       'implementation_sha256':assess(example())['implementation_sha256'],'examples':samples}
     (Path(__file__).parent/'参数预判检查.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
     sys.exit(0 if out.wasSuccessful() else 1)
