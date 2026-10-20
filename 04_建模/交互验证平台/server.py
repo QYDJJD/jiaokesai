@@ -3,12 +3,12 @@ from pathlib import Path
 from http.server import ThreadingHTTPServer, BaseHTTPRequestHandler
 from urllib.parse import urlsplit, unquote
 import json, mimetypes, uuid, re, os, sys, subprocess, threading, time, argparse, shutil
-from core import ROOT, VERSION, LIMITS, GROUPS, DIRECTION_FIELDS, templates, check_input, read_settings, make_manual_plan, human_error, now
+from core import ROOT, VERSION, LIMITS, NETWORK_LIMITS, templates, check_input, read_settings, make_manual_plan, human_error, now,convert_card
 from worker import atomic
 
 HERE=Path(__file__).resolve().parent
 ID=re.compile(r'^[a-f0-9]{32}$')
-ARTIFACTS={'输入情景卡.json','完整计算结果.json','验证报告.html','公交排班.csv','出租预约.csv','过程指标与对照.csv','分时核算明细.csv','复现说明.txt','完整验证包.zip'}
+ARTIFACTS={'输入情景卡.json','完整计算结果.json','验证报告.html','公交排班.csv','出租预约.csv','过程指标与对照.csv','分时核算明细.csv','复现说明.txt','完整验证包.zip','运力预约.csv','方式与线路使用.csv','逐节点核算.csv'}
 TERMINAL={'completed','error','cancelled','timeout','interrupted'}
 
 class Store:
@@ -110,7 +110,7 @@ class Handler(BaseHTTPRequestHandler):
         try:
             path=unquote(urlsplit(self.path).path);parts=path.strip('/').split('/');store=self.server.store
             if path=='/api/health':return self.send(200,{'product':'jiaokesai-platform','version':VERSION,'active_runs':list(store.active),'local_only':True})
-            if path=='/api/schema':return self.send(200,{'groups':GROUPS,'direction_fields':DIRECTION_FIELDS,'limits':LIMITS})
+            if path=='/api/schema':return self.send(200,{'schema_version':'NETWORK-CARD-02','limits':NETWORK_LIMITS,'entities':['nodes','modes','pools','links','groups','profiles','facilities','occupancy_facilities'],'legacy_card_supported':True})
             if path=='/api/templates':return self.send(200,templates())
             if path=='/api/cards':
                 values=[]
@@ -157,6 +157,7 @@ class Handler(BaseHTTPRequestHandler):
                         try:make_manual_plan(body['card'],body.get('manual',{}))
                         except ValueError as exc:checked['valid']=False;checked['errors'].append({'field':'manual','message':str(exc)})
                 return self.send(200,checked)
+            if path=='/api/convert':return self.send(200,{'card':convert_card(body.get('card',{})),'note':'已转换为通用网络；保留离开起点截止，另增目的节点截止，须重新计算。原记录未修改。'})
             if path=='/api/cards':
                 card=body.get('card')
                 if not isinstance(card,dict):raise ValueError('请提供情景卡')

@@ -9,7 +9,7 @@ from build_input import make_card
 from model import validate, tasks, solve
 from simulate import check_plan, audit_solution, replay, causal_greedy
 
-VERSION = 'PLATFORM-01'
+VERSION = 'PLATFORM-02'
 LIMITS = {'directions': 6, 'profiles': 8, 'entry_hours': 12, 'periods': 180,
           'seconds_per_phase': 60, 'body_bytes': 2_000_000}
 
@@ -349,3 +349,38 @@ def write_exports(folder,result):
     with zipfile.ZipFile(folder/'完整验证包.zip','w',zipfile.ZIP_DEFLATED) as archive:
         for name,data in contents.items():archive.writestr(name,data)
     return list(contents)+['完整验证包.zip']
+
+
+# Schema dispatch keeps existing inputs/results readable while the main platform
+# uses a mode-independent network. These functions do not convert old facts.
+_legacy_templates=templates
+_legacy_check_input=check_input
+_legacy_settings=read_settings
+_legacy_manual=make_manual_plan
+_legacy_evaluate=evaluate
+_legacy_exports=write_exports
+import network_adapter as _network
+
+def templates():return _network.templates()
+
+def check_input(card):
+    return _network.check_input(card) if isinstance(card,dict) and card.get('schema_version')=='NETWORK-CARD-02' else _legacy_check_input(card)
+
+def read_settings(raw):
+    if isinstance(raw,dict) and raw.get('objective')=='journey_time':return _network.settings(raw)
+    return _legacy_settings(raw)
+
+def make_manual_plan(card,manual):
+    return _network.make_manual_plan(card,manual) if card.get('schema_version')=='NETWORK-CARD-02' else _legacy_manual(card,manual)
+
+def evaluate(card,settings,manual=None,progress=lambda stage:None):
+    if card.get('schema_version')=='NETWORK-CARD-02':return _network.evaluate(card,settings,manual,progress)
+    if settings.get('objective')=='journey_time':raise ValueError('旧卡须先转换为网络卡，才可使用全程时间目标')
+    return _legacy_evaluate(card,settings,manual,progress)
+
+def write_exports(folder,result):
+    return _network.write_exports(folder,result) if result.get('model_family')=='multimodal_network' else _legacy_exports(folder,result)
+
+def convert_card(card):return _network.convert_legacy(card)
+
+NETWORK_LIMITS=_network.LIMITS

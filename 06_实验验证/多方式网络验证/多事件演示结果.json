@@ -1,0 +1,709 @@
+{
+  "scope": "同一网络模型的多结构示例；虹桥仅提供背景，其余为合成验证，不证明实际处置改善率",
+  "cases": [
+    {
+      "id": "network",
+      "title": "通用示例：地铁换乘与地面增援",
+      "schema_version": "NETWORK-CARD-02",
+      "input_sha256": "4191711c934a94ca9ad93e9729f3db07c957855d15c6ca61c98a52b54e337b4c",
+      "settings": {
+        "mode": "optimize",
+        "objective": "journey_time",
+        "seconds": 35.0,
+        "gap": 0.001
+      },
+      "modes": [
+        "步行换乘",
+        "地铁既定服务",
+        "接驳巴士",
+        "网约车预约"
+      ],
+      "nodes": 3,
+      "links": 4,
+      "status": "passed",
+      "phase_primary": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "seconds": 0.007098100031726062,
+        "objective": 4840.0,
+        "dual_bound": 4840.0,
+        "relative_gap": 0.0
+      },
+      "variables": 183,
+      "integer_variables": 16,
+      "plan": {
+        "cost_yuan": 190.0,
+        "reserved_units": 3,
+        "by_pool_units": {
+          "coaches": 2,
+          "cars": 1
+        },
+        "by_mode_units": {
+          "shuttle": 2,
+          "ride": 1
+        },
+        "used_reusable_units": 2,
+        "reservations": 2
+      },
+      "profiles": [
+        {
+          "profile_id": "front",
+          "label": "前两段集中",
+          "task_people": 120,
+          "delivered_people": 120.0,
+          "remaining_people": 0,
+          "deadline_remaining_people": 0,
+          "peak_queue_people": 120.0,
+          "node_peak_people": {
+            "H": 80.0,
+            "M": 40.0,
+            "D": 0.0
+          },
+          "completion_minutes": 50,
+          "origin_clear_minutes": 20,
+          "total_wait_person_minutes": 960.0000049999999,
+          "total_journey_person_minutes": 4520.00001,
+          "mean_wait_minutes": 8.000000041666665,
+          "max_wait_minutes": 20.0,
+          "mean_journey_minutes": 37.66666675,
+          "travel_person_minutes": 3560.000005,
+          "standing_person_minutes": 0.0,
+          "by_mode_boardings": {
+            "walk": 80.0,
+            "metro": 80.0,
+            "shuttle": 36.000000499999985,
+            "ride": 3.9999995000000155
+          },
+          "safe_queue": true,
+          "complete_by_deadline": true,
+          "all_targets_met": true
+        },
+        {
+          "profile_id": "late",
+          "label": "后两段集中",
+          "task_people": 120,
+          "delivered_people": 120.0,
+          "remaining_people": 0,
+          "deadline_remaining_people": 0,
+          "peak_queue_people": 76.0,
+          "node_peak_people": {
+            "H": 60,
+            "M": 40.0,
+            "D": 0.0
+          },
+          "completion_minutes": 70,
+          "origin_clear_minutes": 30,
+          "total_wait_person_minutes": 1280.0,
+          "total_journey_person_minutes": 4840.0,
+          "mean_wait_minutes": 10.666666666666666,
+          "max_wait_minutes": 20.0,
+          "mean_journey_minutes": 40.333333333333336,
+          "travel_person_minutes": 3560.0,
+          "standing_person_minutes": 0.0,
+          "by_mode_boardings": {
+            "walk": 76.0,
+            "shuttle": 40.0,
+            "ride": 4.0,
+            "metro": 76.0
+          },
+          "safe_queue": true,
+          "complete_by_deadline": true,
+          "all_targets_met": true
+        }
+      ],
+      "baseline_profiles": [
+        {
+          "profile_id": "front",
+          "label": "前两段集中",
+          "task_people": 120,
+          "delivered_people": 120.0,
+          "remaining_people": 0,
+          "deadline_remaining_people": 0,
+          "peak_queue_people": 120.0,
+          "node_peak_people": {
+            "H": 60,
+            "M": 80.0,
+            "D": 0.0
+          },
+          "completion_minutes": 70,
+          "origin_clear_minutes": 10,
+          "total_wait_person_minutes": 1800.0,
+          "total_journey_person_minutes": 5400.0,
+          "mean_wait_minutes": 15.0,
+          "max_wait_minutes": 30.0,
+          "mean_journey_minutes": 45.0,
+          "travel_person_minutes": 3600.0,
+          "standing_person_minutes": 0.0,
+          "by_mode_boardings": {
+            "walk": 120.0,
+            "metro": 120.0
+          },
+          "safe_queue": true,
+          "complete_by_deadline": true,
+          "all_targets_met": true
+        },
+        {
+          "profile_id": "late",
+          "label": "后两段集中",
+          "task_people": 120,
+          "delivered_people": 120.0,
+          "remaining_people": 0,
+          "deadline_remaining_people": 0,
+          "peak_queue_people": 120.0,
+          "node_peak_people": {
+            "H": 60,
+            "M": 120.0,
+            "D": 0.0
+          },
+          "completion_minutes": 90,
+          "origin_clear_minutes": 20,
+          "total_wait_person_minutes": 3000.0,
+          "total_journey_person_minutes": 6600.0,
+          "mean_wait_minutes": 25.0,
+          "max_wait_minutes": 40.0,
+          "mean_journey_minutes": 55.0,
+          "travel_person_minutes": 3600.0,
+          "standing_person_minutes": 0.0,
+          "by_mode_boardings": {
+            "walk": 120.0,
+            "metro": 120.0
+          },
+          "safe_queue": false,
+          "complete_by_deadline": true,
+          "all_targets_met": false
+        }
+      ],
+      "independent_checks": "通过",
+      "implementation_sha256": {
+        "04_建模/多方式网络优化/network_schema.py": "43c10a1cceb1974c8d8db7b80968485b20315ff34b5c93f7c85a5bb77f906b8d",
+        "04_建模/多方式网络优化/network_examples.py": "84368050ee1f857fe5dc6e4b63bcbe148f98256e1c2113c4e10c103b9ffade01",
+        "04_建模/多方式网络优化/network_model.py": "3d336153bfb72aaa68fca6cabce95df1551538112b04a7023335db49a12b6016",
+        "04_建模/多方式网络优化/network_audit.py": "2fce73c7f4a479dc54468efe38aa360b7896fc3780d92f1d032e5d8c90679581",
+        "04_建模/交互验证平台/network_adapter.py": "b4a4330ee02b604fa8bac635ff6dd3e6e772701ae65c9402e96a90ae8873ee6c",
+        "04_建模/交互验证平台/web/app.js": "12caaf2c842c8f4c43718ae782ccb506bf537ba7cdc67315380a65932b2b6568"
+      }
+    },
+    {
+      "id": "tiny",
+      "title": "12人网络手算示例",
+      "schema_version": "NETWORK-CARD-02",
+      "input_sha256": "9c76675bd91c75c506ae8e4f37c352f235886bd9e55af49b4b1729dc3522e075",
+      "settings": {
+        "mode": "optimize",
+        "objective": "journey_time",
+        "seconds": 35.0,
+        "gap": 0.001
+      },
+      "modes": [
+        "自定义校验运力"
+      ],
+      "nodes": 2,
+      "links": 1,
+      "status": "passed",
+      "phase_primary": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "seconds": 0.001055800006724894,
+        "objective": 360.0,
+        "dual_bound": 360.0,
+        "relative_gap": 0.0
+      },
+      "variables": 37,
+      "integer_variables": 6,
+      "plan": {
+        "cost_yuan": 200.0,
+        "reserved_units": 2,
+        "by_pool_units": {
+          "fleet": 2
+        },
+        "by_mode_units": {
+          "custom": 2
+        },
+        "used_reusable_units": 1,
+        "reservations": 2
+      },
+      "profiles": [
+        {
+          "profile_id": "uniform",
+          "label": "逐段均匀进入",
+          "task_people": 12,
+          "delivered_people": 12.0,
+          "remaining_people": 0,
+          "deadline_remaining_people": 0,
+          "peak_queue_people": 6,
+          "node_peak_people": {
+            "S": 6,
+            "D": 0.0
+          },
+          "completion_minutes": 70,
+          "origin_clear_minutes": 60,
+          "total_wait_person_minutes": 240.0,
+          "total_journey_person_minutes": 360.0,
+          "mean_wait_minutes": 20.0,
+          "max_wait_minutes": 30.0,
+          "mean_journey_minutes": 30.0,
+          "travel_person_minutes": 120.0,
+          "standing_person_minutes": 0.0,
+          "by_mode_boardings": {
+            "custom": 12.0
+          },
+          "safe_queue": true,
+          "complete_by_deadline": true,
+          "all_targets_met": true
+        }
+      ],
+      "baseline_profiles": [
+        {
+          "profile_id": "uniform",
+          "label": "逐段均匀进入",
+          "task_people": 12,
+          "delivered_people": 0.0,
+          "remaining_people": 12.0,
+          "deadline_remaining_people": 12.0,
+          "peak_queue_people": 12,
+          "node_peak_people": {
+            "S": 12,
+            "D": 0.0
+          },
+          "completion_minutes": null,
+          "origin_clear_minutes": null,
+          "total_wait_person_minutes": 660.0,
+          "total_journey_person_minutes": null,
+          "mean_wait_minutes": null,
+          "max_wait_minutes": null,
+          "mean_journey_minutes": null,
+          "travel_person_minutes": 0.0,
+          "standing_person_minutes": 0.0,
+          "by_mode_boardings": {},
+          "safe_queue": true,
+          "complete_by_deadline": false,
+          "all_targets_met": false
+        }
+      ],
+      "independent_checks": "通过",
+      "implementation_sha256": {
+        "04_建模/多方式网络优化/network_schema.py": "43c10a1cceb1974c8d8db7b80968485b20315ff34b5c93f7c85a5bb77f906b8d",
+        "04_建模/多方式网络优化/network_examples.py": "84368050ee1f857fe5dc6e4b63bcbe148f98256e1c2113c4e10c103b9ffade01",
+        "04_建模/多方式网络优化/network_model.py": "3d336153bfb72aaa68fca6cabce95df1551538112b04a7023335db49a12b6016",
+        "04_建模/多方式网络优化/network_audit.py": "2fce73c7f4a479dc54468efe38aa360b7896fc3780d92f1d032e5d8c90679581",
+        "04_建模/交互验证平台/network_adapter.py": "b4a4330ee02b604fa8bac635ff6dd3e6e772701ae65c9402e96a90ae8873ee6c",
+        "04_建模/交互验证平台/web/app.js": "12caaf2c842c8f4c43718ae782ccb506bf537ba7cdc67315380a65932b2b6568"
+      }
+    },
+    {
+      "id": "ferry",
+      "title": "通用示例：道路中断后的水路接续",
+      "schema_version": "NETWORK-CARD-02",
+      "input_sha256": "89c1111338d9f578893b2f9e7f84b779a83036cbe8176a0c5e58c96ad391d5f6",
+      "settings": {
+        "mode": "optimize",
+        "objective": "journey_time",
+        "seconds": 35.0,
+        "gap": 0.001
+      },
+      "modes": [
+        "步行通道",
+        "渡轮既定班次",
+        "道路接续服务"
+      ],
+      "nodes": 3,
+      "links": 3,
+      "status": "passed",
+      "phase_primary": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "seconds": 0.0024181000189855695,
+        "objective": 3600.0,
+        "dual_bound": null,
+        "relative_gap": null
+      },
+      "variables": 42,
+      "integer_variables": 0,
+      "plan": {
+        "cost_yuan": 0.0,
+        "reserved_units": 0,
+        "by_pool_units": {},
+        "by_mode_units": {},
+        "used_reusable_units": 0,
+        "reservations": 0
+      },
+      "profiles": [
+        {
+          "profile_id": "known",
+          "label": "两段进入",
+          "task_people": 80,
+          "delivered_people": 80.0,
+          "remaining_people": 0,
+          "deadline_remaining_people": 0,
+          "peak_queue_people": 80.0,
+          "node_peak_people": {
+            "A": 40,
+            "P": 40.0,
+            "B": 0.0
+          },
+          "completion_minutes": 60,
+          "origin_clear_minutes": 20,
+          "total_wait_person_minutes": 1200.0,
+          "total_journey_person_minutes": 3600.0,
+          "mean_wait_minutes": 15.0,
+          "max_wait_minutes": 20.0,
+          "mean_journey_minutes": 45.0,
+          "travel_person_minutes": 2400.0,
+          "standing_person_minutes": 0.0,
+          "by_mode_boardings": {
+            "walk": 80.0,
+            "water": 80.0
+          },
+          "safe_queue": true,
+          "complete_by_deadline": true,
+          "all_targets_met": true
+        }
+      ],
+      "baseline_profiles": [
+        {
+          "profile_id": "known",
+          "label": "两段进入",
+          "task_people": 80,
+          "delivered_people": 80.0,
+          "remaining_people": 0,
+          "deadline_remaining_people": 0,
+          "peak_queue_people": 80.0,
+          "node_peak_people": {
+            "A": 40,
+            "P": 40.0,
+            "B": 0.0
+          },
+          "completion_minutes": 60,
+          "origin_clear_minutes": 10,
+          "total_wait_person_minutes": 1200.0,
+          "total_journey_person_minutes": 3600.0,
+          "mean_wait_minutes": 15.0,
+          "max_wait_minutes": 20.0,
+          "mean_journey_minutes": 45.0,
+          "travel_person_minutes": 2400.0,
+          "standing_person_minutes": 0.0,
+          "by_mode_boardings": {
+            "walk": 80.0,
+            "water": 80.0
+          },
+          "safe_queue": true,
+          "complete_by_deadline": true,
+          "all_targets_met": true
+        }
+      ],
+      "independent_checks": "通过",
+      "implementation_sha256": {
+        "04_建模/多方式网络优化/network_schema.py": "43c10a1cceb1974c8d8db7b80968485b20315ff34b5c93f7c85a5bb77f906b8d",
+        "04_建模/多方式网络优化/network_examples.py": "84368050ee1f857fe5dc6e4b63bcbe148f98256e1c2113c4e10c103b9ffade01",
+        "04_建模/多方式网络优化/network_model.py": "3d336153bfb72aaa68fca6cabce95df1551538112b04a7023335db49a12b6016",
+        "04_建模/多方式网络优化/network_audit.py": "2fce73c7f4a479dc54468efe38aa360b7896fc3780d92f1d032e5d8c90679581",
+        "04_建模/交互验证平台/network_adapter.py": "b4a4330ee02b604fa8bac635ff6dd3e6e772701ae65c9402e96a90ae8873ee6c",
+        "04_建模/交互验证平台/web/app.js": "12caaf2c842c8f4c43718ae782ccb506bf537ba7cdc67315380a65932b2b6568"
+      }
+    },
+    {
+      "id": "hongqiao",
+      "title": "虹桥降雪真实背景示例 · 通用网络",
+      "schema_version": "NETWORK-CARD-02",
+      "input_sha256": "f78aa0908b7975a16a7d37b01e7b53febc1c806d3a55baca570b3aa216bb3717",
+      "settings": {
+        "mode": "optimize",
+        "objective": "journey_time",
+        "seconds": 35.0,
+        "gap": 0.001
+      },
+      "modes": [
+        "基础地面接续",
+        "备用公交",
+        "出租服务预约"
+      ],
+      "nodes": 4,
+      "links": 9,
+      "status": "passed",
+      "phase_primary": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "seconds": 3.6814255999634042,
+        "objective": 262433.3333333338,
+        "dual_bound": 262215.89675565687,
+        "relative_gap": 0.0008285402426403333
+      },
+      "variables": 5041,
+      "integer_variables": 216,
+      "plan": {
+        "cost_yuan": 23960.0,
+        "reserved_units": 182,
+        "by_pool_units": {
+          "vehicles": 18,
+          "bookings": 164
+        },
+        "by_mode_units": {
+          "reserve": 18,
+          "booking": 164
+        },
+        "used_reusable_units": 6,
+        "reservations": 78
+      },
+      "profiles": [
+        {
+          "profile_id": "uniform",
+          "label": "均匀进入",
+          "task_people": 6000.0,
+          "delivered_people": 5999.999999999995,
+          "remaining_people": 4.547473508864641e-12,
+          "deadline_remaining_people": 4.547473508864641e-12,
+          "peak_queue_people": 166.66666666666666,
+          "node_peak_people": {
+            "H": 166.66666666666666,
+            "D_A": 0.0,
+            "D_B": 0.0,
+            "D_C": 0.0
+          },
+          "completion_minutes": 400,
+          "origin_clear_minutes": 360,
+          "total_wait_person_minutes": 59999.99999999997,
+          "total_journey_person_minutes": 221999.99999999988,
+          "mean_wait_minutes": 10.000000000000009,
+          "max_wait_minutes": 10.0,
+          "mean_journey_minutes": 36.99999999999998,
+          "travel_person_minutes": 162000.0,
+          "standing_person_minutes": 0.0,
+          "by_mode_boardings": {
+            "given": 4466.666666666669,
+            "booking": 1533.3333333333333
+          },
+          "safe_queue": true,
+          "complete_by_deadline": true,
+          "all_targets_met": true
+        },
+        {
+          "profile_id": "front",
+          "label": "前段集中",
+          "task_people": 6000.0,
+          "delivered_people": 6000.000000000013,
+          "remaining_people": 0,
+          "deadline_remaining_people": 0,
+          "peak_queue_people": 970.0000001111215,
+          "node_peak_people": {
+            "H": 970.0000001111215,
+            "D_A": 0.0,
+            "D_B": 0.0,
+            "D_C": 0.0
+          },
+          "completion_minutes": 400,
+          "origin_clear_minutes": 360,
+          "total_wait_person_minutes": 95833.33334444539,
+          "total_journey_person_minutes": 262433.3333433345,
+          "mean_wait_minutes": 15.972222224074285,
+          "max_wait_minutes": 40.0,
+          "mean_journey_minutes": 43.73888889055575,
+          "travel_person_minutes": 166599.9999988888,
+          "standing_person_minutes": 2999.9999966663513,
+          "by_mode_boardings": {
+            "given": 4178.333333444451,
+            "reserve": 459.9999998888783,
+            "booking": 1361.6666666666667
+          },
+          "safe_queue": true,
+          "complete_by_deadline": true,
+          "all_targets_met": true
+        },
+        {
+          "profile_id": "middle",
+          "label": "中段集中",
+          "task_people": 6000.0,
+          "delivered_people": 6000.000000000006,
+          "remaining_people": 0,
+          "deadline_remaining_people": 0,
+          "peak_queue_people": 970.0000001010144,
+          "node_peak_people": {
+            "H": 970.0000001010144,
+            "D_A": 0.0,
+            "D_B": 0.0,
+            "D_C": 0.0
+          },
+          "completion_minutes": 400,
+          "origin_clear_minutes": 360,
+          "total_wait_person_minutes": 96233.33334434402,
+          "total_journey_person_minutes": 262433.333343334,
+          "mean_wait_minutes": 16.038888890724024,
+          "max_wait_minutes": 40.0,
+          "mean_journey_minutes": 43.738888890555664,
+          "travel_person_minutes": 166199.99999898984,
+          "standing_person_minutes": 2999.9999969695605,
+          "by_mode_boardings": {
+            "given": 4263.333333434348,
+            "booking": 1316.666666666667,
+            "reserve": 419.9999998989854
+          },
+          "safe_queue": true,
+          "complete_by_deadline": true,
+          "all_targets_met": true
+        },
+        {
+          "profile_id": "back",
+          "label": "后段集中",
+          "task_people": 6000.0,
+          "delivered_people": 5999.999999909071,
+          "remaining_people": 9.092855179915205e-08,
+          "deadline_remaining_people": 9.092855179915205e-08,
+          "peak_queue_people": 860.000000090927,
+          "node_peak_people": {
+            "H": 860.000000090927,
+            "D_A": 0.0,
+            "D_B": 0.0,
+            "D_C": 0.0
+          },
+          "completion_minutes": 430,
+          "origin_clear_minutes": 390,
+          "total_wait_person_minutes": 93033.33336243004,
+          "total_journey_person_minutes": 258433.33335060946,
+          "mean_wait_minutes": 15.50555555904109,
+          "max_wait_minutes": 40.0,
+          "mean_journey_minutes": 43.07222222510158,
+          "travel_person_minutes": 165399.9999963629,
+          "standing_person_minutes": 2999.9999999999955,
+          "by_mode_boardings": {
+            "given": 4355.0,
+            "booking": 1304.9999999090728,
+            "reserve": 339.9999999999998
+          },
+          "safe_queue": true,
+          "complete_by_deadline": true,
+          "all_targets_met": true
+        }
+      ],
+      "baseline_profiles": [
+        {
+          "profile_id": "uniform",
+          "label": "均匀进入",
+          "task_people": 6000.0,
+          "delivered_people": 5999.999999999995,
+          "remaining_people": 4.547473508864641e-12,
+          "deadline_remaining_people": 4.547473508864641e-12,
+          "peak_queue_people": 166.66666666666666,
+          "node_peak_people": {
+            "H": 166.66666666666666,
+            "D_A": 0.0,
+            "D_B": 0.0,
+            "D_C": 0.0
+          },
+          "completion_minutes": 400,
+          "origin_clear_minutes": 360,
+          "total_wait_person_minutes": 59999.99999999997,
+          "total_journey_person_minutes": 221999.99999999988,
+          "mean_wait_minutes": 10.000000000000009,
+          "max_wait_minutes": 10.0,
+          "mean_journey_minutes": 36.99999999999998,
+          "travel_person_minutes": 162000.0,
+          "standing_person_minutes": 0.0,
+          "by_mode_boardings": {
+            "given": 5999.999999999995
+          },
+          "safe_queue": true,
+          "complete_by_deadline": true,
+          "all_targets_met": true
+        },
+        {
+          "profile_id": "front",
+          "label": "前段集中",
+          "task_people": 6000.0,
+          "delivered_people": 6000.000000000009,
+          "remaining_people": 0,
+          "deadline_remaining_people": 0,
+          "peak_queue_people": 1800.0,
+          "node_peak_people": {
+            "H": 1800.0,
+            "D_A": 0.0,
+            "D_B": 0.0,
+            "D_C": 0.0
+          },
+          "completion_minutes": 400,
+          "origin_clear_minutes": 360,
+          "total_wait_person_minutes": 265833.3333333333,
+          "total_journey_person_minutes": 427833.3333333331,
+          "mean_wait_minutes": 44.30555555555557,
+          "max_wait_minutes": 90.0,
+          "mean_journey_minutes": 71.30555555555551,
+          "travel_person_minutes": 162000.0,
+          "standing_person_minutes": 0.0,
+          "by_mode_boardings": {
+            "given": 6000.000000000006
+          },
+          "safe_queue": false,
+          "complete_by_deadline": true,
+          "all_targets_met": false
+        },
+        {
+          "profile_id": "middle",
+          "label": "中段集中",
+          "task_people": 6000.0,
+          "delivered_people": 6000.000000000003,
+          "remaining_people": 0,
+          "deadline_remaining_people": 0,
+          "peak_queue_people": 1800.0,
+          "node_peak_people": {
+            "H": 1800.0,
+            "D_A": 0.0,
+            "D_B": 0.0,
+            "D_C": 0.0
+          },
+          "completion_minutes": 410,
+          "origin_clear_minutes": 370,
+          "total_wait_person_minutes": 265000.0,
+          "total_journey_person_minutes": 427000.0,
+          "mean_wait_minutes": 44.166666666666664,
+          "max_wait_minutes": 90.0,
+          "mean_journey_minutes": 71.16666666666667,
+          "travel_person_minutes": 162000.0,
+          "standing_person_minutes": 0.0,
+          "by_mode_boardings": {
+            "given": 5999.999999999999
+          },
+          "safe_queue": false,
+          "complete_by_deadline": true,
+          "all_targets_met": false
+        },
+        {
+          "profile_id": "back",
+          "label": "后段集中",
+          "task_people": 6000.0,
+          "delivered_people": 5000.000000000002,
+          "remaining_people": 999.9999999999982,
+          "deadline_remaining_people": 999.9999999999982,
+          "peak_queue_people": 1800.0,
+          "node_peak_people": {
+            "H": 1800.0,
+            "D_A": 0.0,
+            "D_B": 0.0,
+            "D_C": 0.0
+          },
+          "completion_minutes": null,
+          "origin_clear_minutes": null,
+          "total_wait_person_minutes": 240000.0,
+          "total_journey_person_minutes": null,
+          "mean_wait_minutes": null,
+          "max_wait_minutes": null,
+          "mean_journey_minutes": null,
+          "travel_person_minutes": 135000.0,
+          "standing_person_minutes": 0.0,
+          "by_mode_boardings": {
+            "given": 5000.000000000002
+          },
+          "safe_queue": false,
+          "complete_by_deadline": false,
+          "all_targets_met": false
+        }
+      ],
+      "independent_checks": "通过",
+      "implementation_sha256": {
+        "04_建模/多方式网络优化/network_schema.py": "43c10a1cceb1974c8d8db7b80968485b20315ff34b5c93f7c85a5bb77f906b8d",
+        "04_建模/多方式网络优化/network_examples.py": "84368050ee1f857fe5dc6e4b63bcbe148f98256e1c2113c4e10c103b9ffade01",
+        "04_建模/多方式网络优化/network_model.py": "3d336153bfb72aaa68fca6cabce95df1551538112b04a7023335db49a12b6016",
+        "04_建模/多方式网络优化/network_audit.py": "2fce73c7f4a479dc54468efe38aa360b7896fc3780d92f1d032e5d8c90679581",
+        "04_建模/交互验证平台/network_adapter.py": "b4a4330ee02b604fa8bac635ff6dd3e6e772701ae65c9402e96a90ae8873ee6c",
+        "04_建模/交互验证平台/web/app.js": "12caaf2c842c8f4c43718ae782ccb506bf537ba7cdc67315380a65932b2b6568"
+      }
+    }
+  ]
+}
