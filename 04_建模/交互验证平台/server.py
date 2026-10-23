@@ -134,7 +134,9 @@ class Handler(BaseHTTPRequestHandler):
                     if not file.exists() or store.progress(parts[2]).get('state')!='completed':return self.send(404,{'error':'文件尚未生成'})
                     kind=mimetypes.guess_type(file.name)[0] or 'application/octet-stream'
                     return self.send(200,file.read_bytes(),kind+(' ;charset=utf-8' if kind.startswith('text/') else ''),None if file.suffix=='.html' else file.name)
-            name='index.html' if path=='/' else path.lstrip('/')
+            if path in ('/','/demo','/demo.html'):
+                return self.send(200,(ROOT/'07_成果输出/情景库思路演示.html').read_bytes(),'text/html; charset=utf-8')
+            name='index.html' if path=='/research' else path.lstrip('/')
             if name not in {'index.html','app.js','style.css'}:return self.send(404,{'error':'页面不存在'})
             file=HERE/'web'/name;kind={'html':'text/html','js':'text/javascript','css':'text/css'}[file.suffix[1:]]
             return self.send(200,file.read_bytes(),kind+'; charset=utf-8')
