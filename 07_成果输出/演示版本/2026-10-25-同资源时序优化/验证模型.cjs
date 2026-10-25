@@ -74,6 +74,9 @@ for (const input of cases) {
   const result = m.solve(input);
   for (const run of Object.values(result.runs)) independentCheck(input, run);
   assert.ok(result.runs.opt.totalWait <= result.runs.fixed.totalWait + 1e-6, '固定方案必须保留为候选');
+  assert.ok(Math.abs(result.search.objective-result.runs.opt.totalWait)<1e-6, '导出目标须包含固定地铁等待');
+  assert.ok(Math.abs(result.search.objective-result.search.variableObjective-result.search.constantMetroWait)<1e-6);
+  assert.equal(result.search.objectiveUnit, '人·分钟');
   assert.equal(result.search.taxiCandidates, 60);
   assert.ok(result.search.busCandidates > 0);
   for (const mode of ['bus', 'taxi', 'metro']) {
