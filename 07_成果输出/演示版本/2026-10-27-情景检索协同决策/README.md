@@ -14,7 +14,10 @@
 
 ## 如何打开
 
-直接打开 `dist/index.html` 即可。页面没有第三方依赖，也不会向外部服务器上传数据。
+- 在线操作：[打开 GitHub 备用预览](https://htmlpreview.github.io/?https://github.com/QYDJJD/jiaokesai/blob/main/07_%E6%88%90%E6%9E%9C%E8%BE%93%E5%87%BA/%E6%BC%94%E7%A4%BA%E7%89%88%E6%9C%AC/2026-10-27-%E6%83%85%E6%99%AF%E6%A3%80%E7%B4%A2%E5%8D%8F%E5%90%8C%E5%86%B3%E7%AD%96/index.html)。
+- 离线操作：下载本目录的 `index.html` 后双击打开。
+
+演示页没有第三方代码依赖，填写和计算均在浏览器本地完成；在线预览入口只负责加载 GitHub 公共仓库中的页面文件。
 
 ## 演示场景
 
