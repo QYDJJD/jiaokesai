@@ -1,0 +1,583 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>虹桥情景推演台｜情景检索—决策链路 Demo</title>
+  <meta name="description" content="演示固定指标、历史情景检索、补充观测、预案匹配与针对性调整的完整链路。">
+  <style>
+    :root{
+      --ink:#17212b;--muted:#607080;--line:#dce4e8;--paper:#f4f6f4;--panel:#fff;
+      --navy:#123a52;--navy-2:#0b2b3d;--cyan:#148d92;--mint:#dff2ed;--amber:#d79022;
+      --amber-soft:#fff3da;--red:#b94a3c;--red-soft:#fbe7e3;--blue-soft:#e8f1f6;
+      --shadow:0 14px 45px rgba(18,58,82,.09);--radius:18px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:"Segoe UI","Microsoft YaHei",system-ui,sans-serif;line-height:1.55}
+    button,input,select{font:inherit}
+    button{cursor:pointer}
+    a{color:inherit}
+    .topbar{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:13px 28px;background:rgba(244,246,244,.94);backdrop-filter:blur(16px);border-bottom:1px solid rgba(18,58,82,.09)}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:760;letter-spacing:.02em;color:var(--navy)}
+    .brand-mark{display:grid;place-items:center;width:36px;height:36px;border-radius:12px;background:var(--navy);color:white;font-family:Georgia,serif;font-size:19px}
+    .top-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+    .status-chip,.tag{display:inline-flex;align-items:center;gap:6px;border-radius:99px;padding:5px 9px;font-size:12px;font-weight:650;border:1px solid transparent}
+    .status-chip::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+    .status-chip.demo{color:#8a5b14;background:var(--amber-soft);border-color:#efd298}
+    .status-chip.local{color:#286555;background:var(--mint);border-color:#b8ddd4}
+    .ghost,.primary,.secondary{border-radius:11px;padding:9px 14px;border:1px solid var(--line);background:white;color:var(--navy);font-weight:700;transition:.18s ease}
+    .ghost:hover,.secondary:hover{border-color:#9fb4be;transform:translateY(-1px)}
+    .primary{border-color:var(--navy);background:var(--navy);color:white;padding:11px 17px;box-shadow:0 7px 18px rgba(18,58,82,.17)}
+    .primary:hover{background:var(--navy-2);transform:translateY(-1px)}
+    .primary:disabled{opacity:.45;cursor:not-allowed;transform:none}
+    .secondary{background:var(--blue-soft);border-color:#c7d9e2}
+    .shell{max-width:1450px;margin:0 auto;padding:30px}
+    .hero{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(340px,.55fr);gap:24px;margin-bottom:22px}
+    .hero-main{position:relative;overflow:hidden;min-height:245px;padding:34px;border-radius:24px;background:linear-gradient(126deg,var(--navy-2),#154e67 66%,#18777b);color:white;box-shadow:var(--shadow)}
+    .hero-main::after{content:"";position:absolute;right:-80px;bottom:-140px;width:420px;height:420px;border:1px solid rgba(255,255,255,.19);border-radius:50%;box-shadow:0 0 0 45px rgba(255,255,255,.035),0 0 0 95px rgba(255,255,255,.025)}
+    .eyebrow{font-size:12px;font-weight:750;letter-spacing:.14em;text-transform:uppercase;color:#9fd8d4}
+    h1{position:relative;z-index:1;margin:9px 0 12px;max-width:790px;font-size:clamp(29px,3vw,47px);line-height:1.16;letter-spacing:-.025em}
+    .hero p{position:relative;z-index:1;max-width:790px;margin:0;color:#d6e8ed;font-size:16px}
+    .flowline{position:relative;z-index:1;display:flex;align-items:center;gap:9px;margin-top:25px;flex-wrap:wrap}
+    .flowline span{padding:6px 10px;border-radius:9px;background:rgba(255,255,255,.105);border:1px solid rgba(255,255,255,.14);font-size:12px;font-weight:650}
+    .flowline i{font-style:normal;color:#84d0cc}
+    .hero-side{display:flex;flex-direction:column;justify-content:space-between;padding:25px;border-radius:24px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow)}
+    .hero-side h2{margin:0 0 7px;font-size:19px;color:var(--navy)}
+    .hero-side p{color:var(--muted);font-size:13px}
+    .mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:18px}
+    .mini-stat{padding:12px 10px;border-radius:12px;background:var(--paper);border:1px solid #e6ebed}
+    .mini-stat b{display:block;color:var(--navy);font-size:20px}
+    .mini-stat span{font-size:11px;color:var(--muted)}
+    .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:20px}
+    .step{position:relative;text-align:left;padding:14px 15px;border:1px solid var(--line);border-radius:14px;background:#fff;color:var(--muted)}
+    .step strong{display:block;color:var(--ink);font-size:13px;margin-top:3px}
+    .step small{font-size:11px}
+    .step.active{border-color:var(--cyan);box-shadow:inset 0 0 0 1px var(--cyan);background:#f8fdfc}
+    .step.done::after{content:"✓";position:absolute;right:12px;top:12px;color:var(--cyan);font-weight:800}
+    .step-index{color:var(--cyan);font-weight:800}
+    .workspace{display:grid;grid-template-columns:minmax(0,1fr) 290px;gap:20px;align-items:start}
+    .stage{display:none}
+    .stage.active{display:block;animation:rise .28s ease}
+    @keyframes rise{from{opacity:.3;transform:translateY(8px)}to{opacity:1;transform:none}}
+    .panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 8px 28px rgba(18,58,82,.055);padding:24px;margin-bottom:16px}
+    .panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:18px}
+    .panel-head h2,.panel-head h3{margin:0;color:var(--navy)}
+    .panel-head h2{font-size:23px}.panel-head h3{font-size:18px}
+    .panel-head p{margin:5px 0 0;color:var(--muted);font-size:13px;max-width:720px}
+    .section-note{padding:12px 14px;border-radius:12px;background:var(--blue-soft);border-left:4px solid #6d9fb5;color:#385260;font-size:13px;margin-bottom:18px}
+    .field-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+    .field{display:flex;flex-direction:column;gap:6px}
+    .field.span2{grid-column:span 2}.field.span3{grid-column:span 3}
+    label{font-size:12px;font-weight:750;color:#3a4d58}
+    .required::after{content:" 固定";font-size:10px;font-weight:700;color:var(--cyan);background:var(--mint);padding:2px 5px;border-radius:5px;margin-left:4px}
+    input,select{width:100%;border:1px solid #cad5da;background:#fff;border-radius:10px;padding:10px 11px;color:var(--ink);outline:none}
+    input:focus,select:focus{border-color:var(--cyan);box-shadow:0 0 0 3px rgba(20,141,146,.11)}
+    .helper{font-size:11px;color:#7a8892}
+    .fixed-checks{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:17px}
+    .check-card{display:flex;gap:11px;padding:13px;border:1px solid var(--line);border-radius:12px;background:#fafcfb}
+    .check-card input{width:auto;margin-top:3px;accent-color:var(--cyan)}
+    .check-card b{display:block;font-size:13px}.check-card span{display:block;color:var(--muted);font-size:11px;margin-top:2px}
+    .panel-actions{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:22px;padding-top:18px;border-top:1px solid var(--line)}
+    .hint{font-size:12px;color:var(--muted)}
+    .logic-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0 20px}
+    .logic-item{padding:13px;border:1px solid var(--line);border-radius:12px;background:#fafcfc}
+    .logic-item b{font-size:13px;color:var(--navy)}.logic-item p{font-size:11px;color:var(--muted);margin:4px 0 0}
+    .retrieval-layout{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:16px}
+    .case-list{display:flex;flex-direction:column;gap:11px}
+    .case-card{padding:15px;border:1px solid var(--line);border-radius:14px;background:#fff}
+    .case-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+    .case-id{font-size:11px;font-weight:800;color:var(--cyan);letter-spacing:.06em}
+    .case-card h4{margin:2px 0 4px;font-size:15px;color:var(--navy)}
+    .score{font-size:23px;font-weight:800;color:var(--navy);white-space:nowrap}.score small{font-size:10px;color:var(--muted)}
+    .bar{height:6px;background:#e7ecee;border-radius:99px;overflow:hidden;margin:10px 0}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--cyan),#6ac0ad);border-radius:99px}
+    .reason-row{display:flex;gap:6px;flex-wrap:wrap}.reason{font-size:10px;padding:3px 6px;border-radius:6px;background:var(--mint);color:#286c60}.difference{background:var(--amber-soft);color:#8a5b14}
+    .case-meta{display:flex;justify-content:space-between;gap:12px;margin-top:10px;color:var(--muted);font-size:10px}
+    .recommend-box{position:sticky;top:78px;padding:17px;border-radius:15px;background:var(--navy-2);color:white}
+    .recommend-box h3{margin:0 0 4px;font-size:17px}.recommend-box>p{margin:0 0 13px;color:#b9d3dc;font-size:11px}
+    .rec-list{display:flex;flex-direction:column;gap:8px}
+    .rec-item{padding:10px;border-radius:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1)}
+    .rec-item b{display:block;font-size:12px}.rec-item span{display:block;margin-top:3px;color:#bcd3da;font-size:10px}
+    .rec-item em{display:inline-block;margin-top:6px;font-style:normal;font-size:9px;padding:2px 5px;border-radius:5px;background:#1c6d73;color:#d9f2ef}
+    .recommend-box .primary{width:100%;margin-top:15px;background:#dff2ed;color:#154f4d;border-color:#dff2ed;box-shadow:none}
+    .observation-list{display:flex;flex-direction:column;gap:10px}
+    .observation{display:grid;grid-template-columns:minmax(200px,1fr) minmax(220px,.75fr) 150px;gap:14px;align-items:center;padding:14px;border:1px solid var(--line);border-radius:13px}
+    .observation h4{margin:0;color:var(--navy);font-size:14px}.observation p{margin:3px 0 0;color:var(--muted);font-size:11px}
+    .origin{font-size:10px;color:#47717d;background:var(--blue-soft);padding:4px 7px;border-radius:6px;display:inline-block;margin-top:6px}
+    .quality{display:flex;align-items:center;gap:6px;font-size:10px;color:var(--muted);justify-content:flex-end}
+    .quality i{width:8px;height:8px;border-radius:50%;background:var(--amber)}
+    .quality.confirmed i{background:var(--cyan)}
+    .portrait-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:16px}
+    .portrait{padding:19px;border-radius:15px;background:linear-gradient(145deg,#f7fbfa,#edf5f3);border:1px solid #d4e5df}
+    .portrait h3{margin:0 0 12px;color:var(--navy);font-size:18px}
+    .portrait p{margin:0;font-size:14px;line-height:1.75}
+    .signal-stack{display:flex;flex-direction:column;gap:8px}
+    .signal{display:flex;justify-content:space-between;gap:12px;padding:12px;border:1px solid var(--line);border-radius:11px;background:#fff;font-size:12px}
+    .signal strong{color:var(--navy)}.signal span{color:var(--muted);text-align:right}
+    .decision-columns{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .decision-column{padding:18px;border:1px solid var(--line);border-radius:15px;background:#fff}
+    .decision-column.common{border-top:4px solid #6d9fb5}.decision-column.adaptive{border-top:4px solid var(--cyan)}
+    .decision-column h3{margin:0 0 4px;color:var(--navy);font-size:17px}.decision-column>p{margin:0 0 13px;font-size:11px;color:var(--muted)}
+    .action-card{padding:13px 0;border-top:1px solid var(--line)}.action-card:first-of-type{border-top:0}
+    .action-card h4{font-size:13px;margin:0 0 4px}.action-card p{font-size:11px;color:var(--muted);margin:0 0 7px}
+    .trace{font-size:10px;color:#33666b;background:var(--mint);padding:5px 7px;border-radius:7px;display:inline-block}
+    .caution{color:#8c531a;background:var(--amber-soft)}
+    .trace-table{width:100%;border-collapse:collapse;font-size:11px}.trace-table th{text-align:left;background:#f0f4f4;color:#51636d}.trace-table th,.trace-table td{padding:10px;border-bottom:1px solid var(--line);vertical-align:top}.trace-table td:first-child{font-weight:700;color:var(--navy)}
+    .confirm-list{display:flex;flex-direction:column;gap:10px}
+    .confirm-row{display:grid;grid-template-columns:36px minmax(230px,1.35fr) minmax(185px,.75fr) minmax(145px,.65fr) 105px;gap:11px;align-items:center;padding:14px;border:1px solid var(--line);border-radius:13px;background:#fff}
+    .confirm-row input[type="checkbox"]{width:18px;height:18px;accent-color:var(--cyan)}
+    .confirm-row h4{margin:0;color:var(--navy);font-size:13px}.confirm-row p{margin:3px 0 0;color:var(--muted);font-size:10px}
+    .confirm-field label{display:block;margin-bottom:4px;font-size:9px;letter-spacing:.04em;color:#71808a}.confirm-field input,.confirm-field select{padding:8px 9px;font-size:11px}
+    .decision-meta{display:grid;grid-template-columns:1fr 180px 150px;gap:12px;margin:16px 0}
+    .attest{display:flex;align-items:flex-start;gap:9px;padding:12px 13px;border:1px solid #ecd39d;border-radius:11px;background:var(--amber-soft);font-size:11px;color:#76501b}.attest input{width:17px;height:17px;margin-top:1px;accent-color:var(--amber)}
+    .resource-box{margin-bottom:18px;padding:18px;border:1px solid #c9dcd7;border-radius:15px;background:linear-gradient(145deg,#f8fcfb,#eef6f3)}
+    .resource-box-head{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;margin-bottom:14px}.resource-box-head h3{margin:0;color:var(--navy);font-size:17px}.resource-box-head p{margin:4px 0 0;color:var(--muted);font-size:11px}
+    .resource-grid{display:grid;grid-template-columns:repeat(5,minmax(115px,1fr));gap:10px}.resource-grid .field input{background:rgba(255,255,255,.92);padding:8px 9px}
+    .allocation-preview{margin-top:15px}.allocation-summary{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:9px;font-size:11px;color:var(--muted)}
+    .allocation-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.mode-card{padding:14px;border:1px solid var(--line);border-radius:12px;background:#fff}.mode-card .mode-name{display:flex;justify-content:space-between;gap:8px;color:var(--navy);font-size:12px;font-weight:750}.mode-card strong{display:block;margin:7px 0 2px;color:var(--navy);font-size:24px}.mode-card p{margin:0;color:var(--muted);font-size:10px}.mode-card small{display:block;margin-top:8px;padding-top:7px;border-top:1px solid var(--line);color:#456773;font-size:9px}
+    .allocation-result{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}.allocation-band{padding:12px 13px;border-radius:11px;background:var(--navy-2);color:white;font-size:11px}.allocation-band.alt{background:#fff4dc;color:#714b13;border:1px solid #efd39b}.allocation-band b{display:block;margin-bottom:3px;font-size:12px}.allocation-band span{color:#c8dce2}.allocation-band.alt span{color:#82622f}
+    .final-allocation{margin:20px 22px 0;padding:18px;border:1px solid #c9dcd7;border-radius:14px;background:#f5faf8}.final-allocation h4{margin:0 0 11px;color:var(--navy);font-size:15px}.final-mode-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.final-mode{padding:12px;border-radius:10px;background:white;border:1px solid var(--line)}.final-mode b{display:block;color:var(--navy);font-size:13px}.final-mode span{display:block;margin-top:3px;color:var(--muted);font-size:10px}.final-fallback{margin-top:10px;padding:10px;border-radius:9px;background:var(--amber-soft);color:#76501b;font-size:10px}
+    .final-sheet{display:none;margin-top:18px;border:1px solid #b8d6cf;border-radius:17px;background:#fff;overflow:hidden}.final-sheet.show{display:block;animation:rise .28s ease}
+    .final-sheet-head{position:relative;padding:23px 25px;background:linear-gradient(125deg,var(--navy-2),#16576a);color:white}.final-sheet-head::after{content:"演示";position:absolute;right:24px;top:15px;font-size:44px;font-weight:850;letter-spacing:.12em;color:rgba(255,255,255,.09)}
+    .final-sheet-head h3{position:relative;z-index:1;margin:0;font-size:22px}.final-sheet-head p{position:relative;z-index:1;margin:5px 0 0;color:#c7dee5;font-size:11px}
+    .final-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border-bottom:1px solid var(--line)}.final-stat{padding:13px 16px;background:#f9fbfa}.final-stat span{display:block;color:var(--muted);font-size:9px}.final-stat b{display:block;margin-top:3px;color:var(--navy);font-size:13px}
+    .final-body{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;padding:22px}.final-section h4{margin:0 0 9px;color:var(--navy);font-size:14px}.final-item{padding:10px 0;border-top:1px solid var(--line)}.final-item:first-of-type{border-top:0}.final-item b{display:block;font-size:12px}.final-item span{display:block;margin-top:2px;color:var(--muted);font-size:10px}.final-item.pending b{color:#8a5b14}
+    .guardrail{margin-top:13px;padding:12px;border-radius:10px;background:var(--red-soft);color:#7e433a;font-size:10px}
+    .rail{position:sticky;top:78px;display:flex;flex-direction:column;gap:13px}
+    .rail-card{background:white;border:1px solid var(--line);border-radius:15px;padding:16px;box-shadow:0 8px 28px rgba(18,58,82,.04)}
+    .rail-card h3{font-size:13px;margin:0 0 10px;color:var(--navy)}
+    .rail-row{display:flex;justify-content:space-between;gap:10px;font-size:11px;padding:6px 0;border-top:1px solid #edf0f1}.rail-row:first-of-type{border-top:0}.rail-row span{color:var(--muted)}.rail-row b{text-align:right}
+    .legend{display:flex;flex-direction:column;gap:7px}.legend div{display:flex;align-items:center;gap:8px;font-size:11px;color:var(--muted)}.dot{width:9px;height:9px;border-radius:50%}.dot.fact{background:var(--cyan)}.dot.demo{background:var(--amber)}.dot.unknown{background:#a6afb4}.dot.rule{background:#6d86a0}
+    .rail-flow{display:flex;flex-direction:column;gap:7px}.rail-flow div{position:relative;padding:8px 9px;border-radius:9px;background:#f3f6f6;font-size:11px}.rail-flow div:not(:last-child)::after{content:"↓";position:absolute;left:50%;bottom:-13px;color:#7fa0aa;z-index:2}
+    .drawer-backdrop{position:fixed;inset:0;background:rgba(9,30,42,.36);z-index:39;display:none}.drawer-backdrop.open{display:block}
+    .drawer{position:fixed;right:0;top:0;z-index:40;width:min(610px,95vw);height:100vh;background:#f6f8f7;border-left:1px solid var(--line);box-shadow:-20px 0 50px rgba(11,43,61,.18);transform:translateX(105%);transition:.25s ease;overflow:auto}
+    .drawer.open{transform:none}.drawer-head{position:sticky;top:0;z-index:2;display:flex;justify-content:space-between;align-items:center;padding:18px 22px;background:rgba(246,248,247,.95);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}.drawer-head h2{font-size:18px;margin:0;color:var(--navy)}
+    .close{border:0;background:white;border-radius:10px;width:35px;height:35px;font-size:18px;color:var(--navy)}
+    .tabs{display:flex;gap:6px;padding:15px 22px 0}.tab{border:1px solid var(--line);background:#fff;color:var(--muted);padding:8px 12px;border-radius:9px;font-weight:700}.tab.active{background:var(--navy);border-color:var(--navy);color:white}
+    .library-content{padding:16px 22px 30px}.library-item{background:#fff;border:1px solid var(--line);border-radius:13px;padding:15px;margin-bottom:10px}.library-item h3{font-size:14px;margin:0 0 6px;color:var(--navy)}.library-item p{font-size:11px;color:var(--muted);margin:5px 0}.library-item a{color:#146a78}.lib-line{display:grid;grid-template-columns:88px 1fr;gap:8px;font-size:11px;padding:5px 0;border-top:1px solid #edf0f1}.lib-line span:first-child{color:var(--muted)}
+    .footer{max-width:1450px;margin:0 auto;padding:10px 30px 30px;color:#71808a;font-size:11px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    .toast{position:fixed;left:50%;bottom:24px;z-index:60;transform:translate(-50%,20px);padding:10px 15px;border-radius:10px;background:var(--navy-2);color:white;opacity:0;pointer-events:none;transition:.2s ease;font-size:12px}.toast.show{opacity:1;transform:translate(-50%,0)}
+    @media(max-width:1050px){.workspace{grid-template-columns:1fr}.rail{position:static;display:grid;grid-template-columns:repeat(3,1fr)}.hero{grid-template-columns:1fr}.retrieval-layout{grid-template-columns:1fr}.recommend-box{position:static}.field-grid{grid-template-columns:repeat(2,1fr)}.field.span3{grid-column:span 2}.observation{grid-template-columns:1fr 220px}.quality{grid-column:2}.portrait-grid,.decision-columns,.final-body{grid-template-columns:1fr}.confirm-row{grid-template-columns:32px minmax(220px,1fr) minmax(180px,.7fr)}.confirm-row .confirm-field:nth-last-child(-n+2){grid-column:auto}.decision-meta{grid-template-columns:1fr 1fr}.decision-meta .field:first-child{grid-column:span 2}.resource-grid{grid-template-columns:repeat(3,1fr)}}
+    @media(max-width:700px){.topbar{padding:10px 14px}.status-chip.local{display:none}.shell{padding:16px}.hero-main,.hero-side{padding:22px}.steps{grid-template-columns:1fr 1fr}.step small{display:none}.field-grid{grid-template-columns:1fr}.field.span2,.field.span3{grid-column:span 1}.fixed-checks,.logic-strip{grid-template-columns:1fr}.observation{grid-template-columns:1fr}.quality{grid-column:auto;justify-content:flex-start}.rail{grid-template-columns:1fr}.mini-grid{grid-template-columns:1fr 1fr 1fr}.panel{padding:17px}.panel-actions{align-items:flex-start;flex-direction:column}.top-actions .ghost{padding:8px 9px}.brand span{display:none}.confirm-row{grid-template-columns:28px 1fr}.confirm-row .confirm-field{grid-column:2}.decision-meta{grid-template-columns:1fr}.decision-meta .field:first-child{grid-column:auto}.final-stats{grid-template-columns:1fr 1fr}.resource-grid,.allocation-cards,.allocation-result,.final-mode-grid{grid-template-columns:1fr}.resource-box-head{flex-direction:column}}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">H</span><span>虹桥情景推演台</span></div>
+    <div class="top-actions">
+      <span class="status-chip demo">方法验证 Demo</span>
+      <span class="status-chip local">公开证据＋演示填报</span>
+      <button class="ghost" id="libraryBtn">查看两个库</button>
+      <button class="ghost" id="exportBtn">导出推演数据</button>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section class="hero">
+      <div class="hero-main">
+        <div class="eyebrow">Shanghai Hongqiao · Scenario Intelligence</div>
+        <h1>先把事件描述清楚，再讨论怎么处置</h1>
+        <p>以夜间列车集中晚到为例：固定指标提供底座，历史检索补充“还应观察什么”，当前数据填写真实状态，预案与特殊条件共同形成候选措施。</p>
+        <div class="flowline" aria-label="演示流程">
+          <span>固定指标</span><i>→</i><span>相似案例</span><i>→</i><span>补充观测</span><i>→</i><span>候选决策</span><i>→</i><span>最终决策单</span>
+        </div>
+      </div>
+      <aside class="hero-side">
+        <div>
+          <h2>本次演示边界</h2>
+          <p>不是实时生产系统，也不自动替代指挥。案例事实、预案依据、研究规则和演示输入分别标注，缺失值不会用历史数据冒充。</p>
+        </div>
+        <div class="mini-grid">
+          <div class="mini-stat"><b>4</b><span>历史突发事件</span></div>
+          <div class="mini-stat"><b>3</b><span>制度/预案索引</span></div>
+          <div class="mini-stat"><b>1</b><span>完整演示链路</span></div>
+        </div>
+      </aside>
+    </section>
+
+    <nav class="steps" aria-label="推演步骤">
+      <button class="step active" data-step="1"><span class="step-index">01</span><strong>录入基础情况</strong><small>所有事件都要掌握</small></button>
+      <button class="step" data-step="2"><span class="step-index">02</span><strong>高级检索</strong><small>找相似点与差异</small></button>
+      <button class="step" data-step="3"><span class="step-index">03</span><strong>补充当前观测</strong><small>历史只告诉你查什么</small></button>
+      <button class="step" data-step="4"><span class="step-index">04</span><strong>形成候选决策</strong><small>通用要求＋针对性调整</small></button>
+      <button class="step" data-step="5"><span class="step-index">05</span><strong>确认最终方案</strong><small>授权、资源与责任落实</small></button>
+    </nav>
+
+    <div class="workspace">
+      <div class="stages">
+        <section class="stage active" data-stage="1">
+          <div class="panel">
+            <div class="panel-head"><div><h2>当前事件：基础信息</h2><p>以下是所有事件都应优先掌握的固定信息，不依赖历史案例是否检索成功。</p></div><span class="tag" style="background:var(--mint);color:#27695f">固定字段</span></div>
+            <div class="section-note">示例场景：北方降雪造成多趟列车夜间晚到虹桥。表中数字是为了跑通逻辑设置的“演示输入”，不是对真实事件的复原。</div>
+            <div class="field-grid">
+              <div class="field"><label class="required" for="eventType">事件类型</label><select id="eventType" disabled><option value="rail_delay">列车晚点集中到达</option></select><span class="helper">首版只跑通这一种场景，避免不同类型共用错误字段</span></div>
+              <div class="field"><label class="required" for="cause">主要诱因</label><select id="cause"><option value="snow">冰雪/降雪</option><option value="typhoon">台风</option><option value="fog">大雾</option><option value="earthquake">地震影响</option><option value="equipment">设施设备故障</option></select></div>
+              <div class="field"><label class="required" for="eventTime">预计集中到达起点</label><input id="eventTime" type="time" value="23:10"></div>
+              <div class="field"><label class="required" for="trainCount">预计晚点列车</label><input id="trainCount" type="number" min="0" value="12"><span class="helper">演示预测值，需随铁路信息更新</span></div>
+              <div class="field"><label class="required" for="passengers">预计受影响旅客</label><input id="passengers" type="number" min="0" value="1800"><span class="helper">不是当前滞留人数</span></div>
+              <div class="field"><label class="required" for="backlog">当前可识别滞留</label><input id="backlog" type="number" min="0" value="420"><span class="helper">演示现场快照</span></div>
+              <div class="field"><label class="required" for="leadTime">信息提前量（分钟）</label><input id="leadTime" type="number" min="0" value="65"></div>
+              <div class="field"><label class="required" for="duration">预计影响持续（分钟）</label><input id="duration" type="number" min="0" value="150"></div>
+              <div class="field"><label class="required" for="uncertainty">到达预测不确定性</label><select id="uncertainty"><option value="low">低：时刻基本稳定</option><option value="medium" selected>中：仍可能前后移动</option><option value="high">高：批次和时点均不稳定</option></select></div>
+              <div class="field"><label class="required" for="metroState">轨交当前状态</label><select id="metroState"><option value="normal">常规服务可覆盖</option><option value="ending" selected>临近常规运营结束</option><option value="closed">已结束运营</option><option value="restricted">线路或站点受限</option></select></div>
+              <div class="field"><label class="required" for="busState">公交当前状态</label><select id="busState"><option value="normal">常规服务可覆盖</option><option value="limited" selected>夜间线路有限</option><option value="reinforce">已确认增援</option><option value="restricted">道路/场站受限</option></select></div>
+              <div class="field"><label class="required" for="taxiState">出租车当前状态</label><select id="taxiState"><option value="normal">供应正常</option><option value="tight" selected>供应偏紧</option><option value="unknown">尚未确认</option><option value="restricted">蓄车区或道路受限</option></select></div>
+            </div>
+            <div class="fixed-checks">
+              <label class="check-card"><input id="safetyChecked" type="checkbox" checked><span><b>安全条件已完成首轮核查</b><span>固定必查，不应等历史案例推荐后再查。</span></span></label>
+              <label class="check-card"><input id="authorityChecked" type="checkbox"><span><b>关键措施授权主体已确认</b><span>当前未勾选，后续措施只能作为“待确认候选”。</span></span></label>
+            </div>
+            <div class="panel-actions"><span class="hint">修改字段后，检索结果和后续建议会重新计算。</span><button class="primary" id="searchBtn">开始高级检索 →</button></div>
+          </div>
+        </section>
+
+        <section class="stage" data-stage="2">
+          <div class="panel">
+            <div class="panel-head"><div><h2>高级检索：不是只搜标题</h2><p>先用事件类型、诱因、时段、主要受影响方式等进行结构化约束，再按相似性排序，同时保留“不同在哪里”。</p></div><span class="tag" style="background:var(--blue-soft);color:#386072">检索规则可解释</span></div>
+            <div class="logic-strip">
+              <div class="logic-item"><b>① 条件过滤</b><p>地点范围、材料性质、事件类型与时段。</p></div>
+              <div class="logic-item"><b>② 加权比较</b><p>类型30%、诱因15%、时段15%、方式15%、规模10%、联动15%。</p></div>
+              <div class="logic-item"><b>③ 证据检查</b><p>相似度与资料完整度分开，不能把高相似当成高可信。</p></div>
+            </div>
+            <div class="section-note">相似度是本 Demo 的透明演示规则，不是统计概率，也不表示可以照搬历史处置。</div>
+            <div class="retrieval-layout">
+              <div class="case-list" id="caseResults"></div>
+              <aside class="recommend-box">
+                <h3>系统建议再查什么？</h3>
+                <p>由相似案例中“曾经影响处置、但基础表尚未覆盖”的字段生成。</p>
+                <div class="rec-list" id="recommendations"></div>
+                <button class="primary" id="observeBtn">去填写当前观测 →</button>
+              </aside>
+            </div>
+          </div>
+        </section>
+
+        <section class="stage" data-stage="3">
+          <div class="panel">
+            <div class="panel-head"><div><h2>补充当前观测</h2><p>历史案例只负责提醒“还应查什么”。这里填写的是当前事件的数据；不能把历史数值复制过来。</p></div><span class="tag" style="background:var(--amber-soft);color:#855411">演示填报</span></div>
+            <div class="section-note">下列默认值均为演示设定。正式应用时，应由列车到达计划、客流监测、运营单位反馈或现场人员更新，并记录采集时点。</div>
+            <div class="observation-list">
+              <div class="observation"><div><h4>列车到达波形</h4><p>旅客是均匀到达，还是在某一时段集中涌入？</p><span class="origin">来自：E01／G02 的分时数据缺口</span></div><select id="arrivalWave"><option value="unknown">未知</option><option value="even">大致均匀</option><option value="front">前段集中</option><option value="back" selected>后段集中</option><option value="multi">多波次到达</option></select><div class="quality confirmed"><i></i><span>演示已填</span></div></div>
+              <div class="observation"><div><h4>旅客主要去向</h4><p>决定公交线路、轨交换乘和出租车是否真正匹配需求。</p><span class="origin">来自：E04／P01 的方向差异</span></div><select id="direction"><option value="unknown">未知</option><option value="downtown">中心城区集中</option><option value="suburban">郊区方向集中</option><option value="mixed" selected>方向分散</option><option value="cross_hub">跨机场/跨枢纽</option></select><div class="quality confirmed"><i></i><span>演示已填</span></div></div>
+              <div class="observation"><div><h4>轨交延时可行性</h4><p>常规末班结束不等于一定能延时；需确认检修、人员、路径和批准。</p><span class="origin">来自：E01／G02 的夜间衔接</span></div><select id="metroExtension"><option value="unknown">尚未询问</option><option value="pending" selected>已请求，待批准</option><option value="yes">已确认可延时</option><option value="no">确认不可延时</option></select><div class="quality"><i></i><span>待外部确认</span></div></div>
+              <div class="observation"><div><h4>出租车实际到达率</h4><p>记录现场每15分钟实际进入可上客区的车辆，而不是平台车辆总量。</p><span class="origin">来自：E02 的企业动员与口径限制</span></div><input id="taxiRate" type="number" min="0" value="18" aria-label="出租车每15分钟到达车辆"><div class="quality confirmed"><i></i><span>18辆／15分钟</span></div></div>
+              <div class="observation"><div><h4>增援公交单次周转</h4><p>车辆数相同，往返时间和上客点冲突也会改变真实服务能力。</p><span class="origin">来自：E01 的班次与有效能力缺口</span></div><input id="busCycle" type="number" min="0" value="44" aria-label="公交周转分钟"><div class="quality confirmed"><i></i><span>44分钟／次</span></div></div>
+              <div class="observation"><div><h4>安全候车余量</h4><p>用于判断是否需要提前分区、开放临时候车区或控制到达出口。</p><span class="origin">来自：E03 的安置准备与空间边界</span></div><input id="holdingCapacity" type="number" min="0" value="600" aria-label="安全候车余量人数"><div class="quality confirmed"><i></i><span>余量600人</span></div></div>
+              <div class="observation"><div><h4>需要重点帮助的人群</h4><p>老人、儿童、行动不便等人数，用于人员和无障碍安排。</p><span class="origin">固定安全补充：不依赖案例相似度</span></div><input id="specialGroups" type="number" min="0" value="35" aria-label="特殊人群人数"><div class="quality confirmed"><i></i><span>演示已填</span></div></div>
+            </div>
+            <div class="panel-actions"><button class="secondary" data-goto="2">← 返回检索</button><button class="primary" id="portraitBtn">生成完整事件画像 →</button></div>
+          </div>
+        </section>
+
+        <section class="stage" data-stage="4">
+          <div class="panel">
+            <div class="panel-head"><div><h2>当前事件画像</h2><p>固定字段与针对性观测合并后，形成可交给决策层的结构化描述。</p></div><span class="tag" id="completenessTag" style="background:var(--mint);color:#27695f">画像完整度 86%</span></div>
+            <div class="portrait-grid">
+              <div class="portrait"><h3>用一句话说清楚</h3><p id="portraitText"></p></div>
+              <div class="signal-stack" id="signalStack"></div>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="panel-head"><div><h2>候选决策：通用要求＋针对性调整</h2><p>左侧来自已有制度与预案的共性要求；右侧只针对当前特殊条件进行调整。两者不是简单拼接，而是逐项检查适用性。</p></div><span class="tag" style="background:var(--red-soft);color:#8e4136">需人工确认</span></div>
+            <div class="decision-columns">
+              <div class="decision-column common"><h3>预案提供的通用底座</h3><p>说明“必须做什么、由谁协调、需要守住什么边界”。</p><div id="commonActions"></div></div>
+              <div class="decision-column adaptive"><h3>当前事件的针对性调整</h3><p>由本次新增观测触发，说明“方案具体需要怎么改”。</p><div id="adaptiveActions"></div></div>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="panel-head"><div><h3>依据链：每条建议是怎么来的</h3><p>避免只展示“系统建议”，却无法解释为什么。</p></div></div>
+            <div style="overflow:auto"><table class="trace-table"><thead><tr><th>建议</th><th>当前触发条件</th><th>历史提示</th><th>预案/权限边界</th></tr></thead><tbody id="traceBody"></tbody></table></div>
+            <div class="panel-actions"><button class="secondary" data-goto="3">← 修改补充观测</button><button class="primary" id="confirmBtn">进入决策确认 →</button></div>
+          </div>
+        </section>
+
+        <section class="stage" data-stage="5">
+          <div class="panel">
+            <div class="panel-head"><div><h2>多方式协同决策与确认</h2><p>先把应急需求转化为地铁、公交、出租车的具体分工，再逐项确认保障动作。</p></div><span class="tag" style="background:var(--amber-soft);color:#855411">演示计算＋人工确认</span></div>
+            <div class="section-note">以下运力参数均为演示设定，不是虹桥真实资源承诺。正式使用时必须由对应运营单位确认“可用数量、有效载客量、到位时点和服务方向”。</div>
+            <div class="resource-box" id="resourceBox">
+              <div class="resource-box-head"><div><h3>① 确认需求与可兑现资源</h3><p>计算规则：轨交优先承担适配方向；出租车作为滚动补充且不超过需求的25%；公交承担剩余需求，并按方向计算所需车辆。</p></div><button class="secondary" id="calcAllocationBtn">重新计算</button></div>
+              <div class="resource-grid">
+                <div class="field"><label for="transportDemand">应急接续需求（人）</label><input id="transportDemand" type="number" min="0" value="1200"></div>
+                <div class="field"><label for="planHorizon">计划疏运窗口（分钟）</label><input id="planHorizon" type="number" min="15" value="90"></div>
+                <div class="field"><label for="metroTrips">轨交可加开班次</label><input id="metroTrips" type="number" min="0" value="3"></div>
+                <div class="field"><label for="metroCapacity">轨交每班有效载客</label><input id="metroCapacity" type="number" min="0" value="180"></div>
+                <div class="field"><label for="metroCompatiblePct">适合轨交方向占比（%）</label><input id="metroCompatiblePct" type="number" min="0" max="100" value="45"></div>
+                <div class="field"><label for="busAvailable">可调用公交车（辆）</label><input id="busAvailable" type="number" min="0" value="15"></div>
+                <div class="field"><label for="busSeats">公交每车有效载客</label><input id="busSeats" type="number" min="1" value="40"></div>
+                <div class="field"><label for="decisionBusCycle">公交单次周转（分钟）</label><input id="decisionBusCycle" type="number" min="1" value="44"></div>
+                <div class="field"><label for="decisionTaxiRate">出租车到达率（辆/15分钟）</label><input id="decisionTaxiRate" type="number" min="0" value="18"></div>
+                <div class="field"><label for="taxiOccupancy">出租车平均载客（人/辆）</label><input id="taxiOccupancy" type="number" min="1" value="2"></div>
+                <div class="field"><label for="centerShare">公交中心城区方向占比（%）</label><input id="centerShare" type="number" min="0" max="100" value="60"></div>
+              </div>
+              <div class="allocation-preview" id="allocationPreview"></div>
+            </div>
+            <div class="panel-head" style="margin-top:20px"><div><h3>② 确认配套保障动作</h3><p>只有标记为“已确认，可执行”的措施会进入执行清单，其余进入待决事项。</p></div></div>
+            <div class="confirm-list" id="confirmRows"></div>
+            <div class="decision-meta">
+              <div class="field"><label for="decisionOwner">决策确认席位</label><input id="decisionOwner" value="演示决策席（待正式替换）"></div>
+              <div class="field"><label for="decisionTime">决策时点</label><input id="decisionTime" type="time" value="23:00"></div>
+              <div class="field"><label for="reviewInterval">滚动复核周期</label><select id="reviewInterval"><option value="10">每10分钟</option><option value="15" selected>每15分钟</option><option value="30">每30分钟</option></select></div>
+            </div>
+            <label class="attest"><input id="decisionAttested" type="checkbox" checked><span>我确认：以下授权、资源和责任状态仅为本 Demo 的演示设定；真实应用必须由实际授权主体填写并签认。</span></label>
+            <div class="panel-actions"><button class="secondary" data-goto="4">← 返回候选决策</button><button class="primary" id="finalizeBtn">生成最终决策单 →</button></div>
+          </div>
+          <div class="final-sheet" id="finalSheet">
+            <div class="final-sheet-head"><h3>虹桥枢纽突发事件最终决策单</h3><p>方法验证版 · 仅用于展示从候选建议到可执行清单的确认过程</p></div>
+            <div class="final-stats" id="finalStats"></div>
+            <div class="final-allocation" id="finalAllocation"></div>
+            <div class="final-body">
+              <div class="final-section"><h4>配套保障执行清单</h4><div id="executionList"></div></div>
+              <div class="final-section"><h4>待决事项与升级问题</h4><div id="pendingList"></div><div class="guardrail" id="guardrailText"></div></div>
+            </div>
+            <div class="panel-actions" style="margin:0 22px 22px"><button class="secondary" id="rerunBtn">回到开头再推演</button><button class="primary" id="exportDecisionBtn">导出最终决策单</button></div>
+          </div>
+        </section>
+      </div>
+
+      <aside class="rail">
+        <div class="rail-card"><h3>当前事件快照</h3><div class="rail-row"><span>场景</span><b id="railScene">列车晚点集中到达</b></div><div class="rail-row"><span>预计旅客</span><b id="railPassengers">1,800人</b></div><div class="rail-row"><span>当前滞留</span><b id="railBacklog">420人</b></div><div class="rail-row"><span>关键时段</span><b id="railTime">23:10后</b></div></div>
+        <div class="rail-card"><h3>这条链路在做什么</h3><div class="rail-flow"><div>固定信息打底</div><div>历史案例提示盲区</div><div>获取当前真实值</div><div>检查预案适用性</div><div>确认并生成最终决策单</div></div></div>
+        <div class="rail-card"><h3>证据标记</h3><div class="legend"><div><i class="dot fact"></i>公开资料中的报道事实</div><div><i class="dot demo"></i>为跑通 Demo 设置的值</div><div><i class="dot rule"></i>研究团队设计的规则</div><div><i class="dot unknown"></i>缺失或仍待确认</div></div></div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer"><span>虹桥枢纽情景库方法验证 · 2026-10-27</span><span>本页面不产生调度指令，正式处置以适用预案、授权主体和实时信息为准。</span></footer>
+
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer-head"><h2>历史情景库与预案库</h2><button class="close" id="closeDrawer" aria-label="关闭">×</button></div>
+    <div class="tabs"><button class="tab active" data-tab="cases">历史情景库</button><button class="tab" data-tab="plans">预案库</button></div>
+    <div class="library-content" id="libraryContent"></div>
+  </aside>
+  <div class="toast" id="toast"></div>
+
+  <script>
+    const cases = [
+      {id:'HQ-E01',title:'2023年12月降雪导致列车夜间晚到',type:'rail_delay',cause:'snow',period:'night',mode:'rail',scale:'high',cross:true,evidence:'较高',role:'实际突发事件',facts:'28班列车、10008名受影响旅客；报道了工作指令、轨交延时、公交和现场保障等动作。',missing:'初始滞留、分时到达、旅客去向和各方式有效能力缺失。',observations:['到达波形','轨交延时可行性','公交有效周转','候车空间'],source:'https://jtw.sh.gov.cn/xydt/20231226/6f4ed792491949fb871c7237e4d636ff.html'},
+      {id:'HQ-E02',title:'2023年8月地震影响列车晚点抵沪',type:'rail_delay',cause:'earthquake',period:'night',mode:'rail',scale:'medium',cross:false,evidence:'中',role:'实际突发事件',facts:'报道强生出租从中午起组织保障，并给出企业全天火车站服务量。',missing:'受影响人数、实际增援量、其他方式能力和精确生效时点缺失。',observations:['出租车实际到达率','企业资源承诺','信息反馈时点'],source:'https://www.whb.cn/zhuzhan/cs/20230807/533824.html'},
+      {id:'HQ-E03',title:'2024年“贝碧嘉”台风期间枢纽保障',type:'mode_restriction',cause:'typhoon',period:'all',mode:'multi',scale:'high',cross:true,evidence:'中',role:'实际灾害保障',facts:'公开资料涉及设施检查、运行调整及候车/安置准备。',missing:'具体启动时点、场所容量、实际安置人数和方式能力缺失。',observations:['安全候车余量','方式可用性','临时区域启用授权'],source:'https://www.gzw.sh.gov.cn/shgzw_zxzx_gqdt/20240918/87a233dab9064ff684b354195059008d.html'},
+      {id:'HQ-E04',title:'2014年大雾造成航班备降与跨方式转运',type:'air_disruption',cause:'fog',period:'crossday',mode:'air',scale:'high',cross:true,evidence:'中',role:'实际突发事件',facts:'报道了航班备降虹桥、跨机场及酒店等不同方向的地面转送。',missing:'各方向人数、初始积压、车辆到位链和分时供给缺失。',observations:['旅客主要去向','跨枢纽需求','车辆到位时点'],source:'https://www.shairport.com/xwg/info_itemid_19250.html'},
+      {id:'HQ-G02',title:'2019年五一返程夜间集中到达',type:'rail_surge',cause:'scheduled',period:'night',mode:'rail',scale:'high',cross:true,evidence:'中',role:'常态对照事件',facts:'公开报道包含22时后列车与旅客规模、轨交延时和保障完成时点。',missing:'实际候客群体、逐时滞留和各方式分担缺失。',observations:['列车分时到达','末班衔接缺口','完成口径'],source:'https://news.cnr.cn/native/city/20190505/t20190505_524600976.shtml'}
+    ];
+
+    const plans = [
+      {id:'PL-01',title:'虹桥综合交通枢纽突发事件总体应急预案（2022）',status:'已取得扫描全文',scope:'职责体系、信息报送、联动响应和总体处置框架。',boundary:'具体业务措施仍需对应专项预案、运营条件和当次授权；当前适用版本需正式确认。',source:'https://www.shhqcbd.gov.cn/zwgk/zcgk/wjgk/11183.html'},
+      {id:'PL-02',title:'上海市轨道交通运营突发事件应急预案等制度材料',status:'已取得公开制度材料',scope:'轨交事件报告、应急组织和运输保障接口。',boundary:'不能把规定要求直接当成某次事件中已确认的延时服务或实际到位时间。',source:'https://www.shanghai.gov.cn/cmsres/0e/0e715dde26ed457ca1ef9b57c91649f2/1a46ee743be770f6405a5b299439523a.pdf'},
+      {id:'PL-03',title:'上海铁路车站大面积列车晚点路地联动应急处置工作预案',status:'已确认存在，未取得全文',scope:'2024年官方演练报道确认该预案于2023年印发。',boundary:'本 Demo 不虚构其条款、阈值和权限，只将其列为应继续取得的专项依据。',source:'https://jtw.sh.gov.cn/xydt/20240129/1191c8f1497c4facac19c12339187e76.html'}
+    ];
+
+    const labels = {
+      rail_delay:'列车晚点集中到达',air_disruption:'航班大面积调整/备降',mode_restriction:'交通方式受限',
+      snow:'冰雪/降雪',typhoon:'台风',fog:'大雾',earthquake:'地震影响',equipment:'设施设备故障',
+      low:'低',medium:'中',high:'高',even:'大致均匀',front:'前段集中',back:'后段集中',multi:'多波次到达',unknown:'未知',
+      downtown:'中心城区集中',suburban:'郊区方向集中',mixed:'方向分散',cross_hub:'跨机场/跨枢纽',pending:'已请求，待批准',yes:'已确认可延时',no:'确认不可延时'
+    };
+    const $ = id => document.getElementById(id);
+    const val = id => $(id).value;
+    const num = id => Math.max(0, Number($(id).value)||0);
+    let currentStep = 1;
+    let rankedCases = [];
+    let decisionCandidates = [];
+    let lastFinalDecision = null;
+    let lastAllocation = null;
+
+    function getPeriod(time){const h=Number((time||'00:00').split(':')[0]);return h>=22||h<6?'night':'day'}
+    function getScale(n){return n>=1500?'high':n>=500?'medium':'low'}
+    function weatherFamily(x){return ['snow','typhoon','fog'].includes(x)}
+    function current(){return {type:val('eventType'),cause:val('cause'),time:val('eventTime'),period:getPeriod(val('eventTime')),mode:val('eventType')==='air_disruption'?'air':val('eventType')==='rail_delay'?'rail':'multi',scale:getScale(num('passengers')),cross:true}}
+    function similarity(c,now){
+      let s=0,match=[],diff=[];
+      if(c.type===now.type){s+=30;match.push('事件类型一致')}else if((c.type==='rail_surge'&&now.type==='rail_delay')){s+=21;match.push('同为铁路集中到达')}else diff.push('事件类型不同');
+      if(c.cause===now.cause){s+=15;match.push('诱因一致')}else if(weatherFamily(c.cause)&&weatherFamily(now.cause)){s+=9;match.push('同属恶劣天气')}else diff.push('诱因不同');
+      if(c.period===now.period||c.period==='all'||c.period==='crossday'){s+=15;match.push('关键时段相近')}else diff.push('时段不同');
+      if(c.mode===now.mode){s+=15;match.push('主要受影响方式一致')}else if(c.mode==='multi'){s+=9;match.push('包含多方式影响')}else diff.push('主要方式不同');
+      if(c.scale===now.scale){s+=10;match.push('规模层级接近')}else if(c.scale==='high'&&now.scale==='medium'||c.scale==='medium'&&now.scale==='high'){s+=6;match.push('规模相邻')}else diff.push('规模差异较大');
+      if(c.cross===now.cross){s+=15;match.push('需要跨方式联动')}else diff.push('联动范围不同');
+      return {...c,score:Math.min(100,s),match,diff};
+    }
+    function syncRail(){
+      $('railScene').textContent=labels[val('eventType')];
+      $('railPassengers').textContent=num('passengers').toLocaleString('zh-CN')+'人';
+      $('railBacklog').textContent=num('backlog').toLocaleString('zh-CN')+'人';
+      $('railTime').textContent=val('eventTime')+'后';
+    }
+    function renderSearch(){
+      rankedCases=cases.map(c=>similarity(c,current())).sort((a,b)=>b.score-a.score);
+      $('caseResults').innerHTML=rankedCases.map((c,i)=>`<article class="case-card"><div class="case-top"><div><span class="case-id">${i===0?'最接近 · ':''}${c.id}</span><h4>${c.title}</h4></div><div class="score">${c.score}<small> /100</small></div></div><div class="bar"><i style="width:${c.score}%"></i></div><div class="reason-row">${c.match.slice(0,4).map(x=>`<span class="reason">${x}</span>`).join('')}${c.diff.slice(0,2).map(x=>`<span class="reason difference">${x}</span>`).join('')}</div><div class="case-meta"><span>${c.role} · 资料完整度：${c.evidence}</span><span>缺口：${c.missing.split('、')[0]}</span></div></article>`).join('');
+      const top=rankedCases.slice(0,3);
+      const recMap=[
+        ['列车分时到达波形','判断需求峰值是否会与末班服务错开','E01／G02'],
+        ['旅客去向结构','检验公交、轨交和出租车是否服务到正确方向','E04／P01'],
+        ['轨交延时可行性','把“可以请求”与“已经批准并可执行”分开','E01／G02'],
+        ['出租车实际到达率','避免用企业全天车辆数代替现场增量能力','E02'],
+        ['公交周转与上客点冲突','把车辆数量转成真实可兑现服务','E01'],
+        ['安全候车余量','判断是否需要分区、分流或临时候车安排','E03']
+      ];
+      $('recommendations').innerHTML=recMap.map(r=>`<div class="rec-item"><b>${r[0]}</b><span>${r[1]}</span><em>历史提示 ${r[2]}</em></div>`).join('');
+      showStep(2);
+    }
+    function showStep(n){
+      currentStep=n;
+      document.querySelectorAll('.stage').forEach(el=>el.classList.toggle('active',Number(el.dataset.stage)===n));
+      document.querySelectorAll('.step').forEach(el=>{const sn=Number(el.dataset.step);el.classList.toggle('active',sn===n);el.classList.toggle('done',sn<n)});
+      window.scrollTo({top:240,behavior:'smooth'});
+    }
+    function observationState(){return {arrivalWave:val('arrivalWave'),direction:val('direction'),metroExtension:val('metroExtension'),taxiRate:num('taxiRate'),busCycle:num('busCycle'),holdingCapacity:num('holdingCapacity'),specialGroups:num('specialGroups')}}
+    function buildDecision(){
+      const o=observationState(),p=num('passengers'),b=num('backlog'),authority=$('authorityChecked').checked;
+      const arrivals=labels[o.arrivalWave]||'未知',direction=labels[o.direction]||'未知',metro=labels[o.metroExtension]||'尚未确认';
+      const capacityRisk=(o.arrivalWave==='back'||o.arrivalWave==='multi')&&p>o.holdingCapacity;
+      const portrait=`本次事件预计从 ${val('eventTime')} 起进入集中到达阶段，共涉及约 ${p.toLocaleString('zh-CN')} 名旅客，当前已识别滞留约 ${b.toLocaleString('zh-CN')} 人。到达呈“${arrivals}”，旅客去向“${direction}”；轨交延时状态为“${metro}”，出租车现场到达率约 ${o.taxiRate} 辆／15分钟，增援公交单次周转约 ${o.busCycle} 分钟。安全候车余量约 ${o.holdingCapacity} 人，重点帮助人群约 ${o.specialGroups} 人。`;
+      $('portraitText').textContent=portrait;
+      const unknown=[o.arrivalWave,o.direction,o.metroExtension].filter(x=>x==='unknown').length+(o.taxiRate===0?1:0)+(o.busCycle===0?1:0)+(o.holdingCapacity===0?1:0)+(!$('authorityChecked').checked?1:0);
+      const complete=Math.max(45,100-unknown*8);
+      $('completenessTag').textContent='画像完整度 '+complete+'%';
+      $('signalStack').innerHTML=`<div class="signal"><strong>需求峰形</strong><span>${arrivals}</span></div><div class="signal"><strong>空间压力</strong><span>${capacityRisk?'存在提前分流风险':'当前余量可覆盖已识别滞留'}</span></div><div class="signal"><strong>关键不确定项</strong><span>${o.metroExtension==='pending'?'轨交延时尚未批准':o.metroExtension==='unknown'?'轨交延时未询问':'到达时点仍需滚动更新'}</span></div><div class="signal"><strong>授权状态</strong><span>${authority?'已完成首轮确认':'未确认，措施不得视为指令'}</span></div>`;
+      const common=[
+        ['滚动更新并统一事件信息','统一列车到达、现场滞留、各方式状态和信息时点，避免各单位使用不同口径。','PL-01 总体预案框架'],
+        ['保持现场秩序与安全边界','持续核查出站通道、上客区、临时候车区和重点帮助人群。','PL-01＋固定安全必查'],
+        ['向各运营单位确认资源承诺','请求量、承诺量、到位量和实际生效时间分开记录。','PL-01 职责接口；PL-03待取得全文']
+      ];
+      $('commonActions').innerHTML=common.map(a=>`<article class="action-card"><h4>${a[0]}</h4><p>${a[1]}</p><span class="trace">制度依据：${a[2]}</span></article>`).join('');
+      const adaptive=[];
+      if(o.arrivalWave==='back'||o.arrivalWave==='multi') adaptive.push(['把增援运力向后段到达波次移动','当前到达不是均匀分布；避免车辆过早到场后退出，或在真正高峰前消耗周转能力。',`到达波形=${arrivals}；公交周转=${o.busCycle}分钟`,'E01/G02提示分时到达缺口','需运营单位确认班次、驾驶员、上客点和生效时间']);
+      if(o.metroExtension==='pending'||o.metroExtension==='unknown') adaptive.push(['并行准备“轨交未获延时”的替代分支','轨交延时尚未形成可执行承诺，公交与出租车方案不能以其一定获批为前提。',`轨交状态=${metro}`,'E01/G02表明夜间衔接会改变方案','延时运营须由有权主体批准']);
+      if(o.direction==='mixed') adaptive.push(['先按方向分组，再确定公交线路与出租车分工','旅客方向分散时，单一目的地大巴可能装载率低且无法覆盖尾部需求。',`去向=${direction}`,'E04显示不同去向需要分列','需确认目的地、停靠条件和下游接续']);
+      if(o.taxiRate<30) adaptive.push(['将出租车作为滚动补充，不作为唯一兜底','现场到达率偏低且供给具有自主响应特征，应按15分钟反馈更新，不用平台车辆总量替代到位量。',`出租车=${o.taxiRate}辆/15分钟`,'E02提示企业动员与实际到位口径不同','需确认蓄车区、道路与企业承诺']);
+      if(capacityRisk) adaptive.push(['提前启用分区候车与出口分流核查','到达呈集中波次，预计受影响总量高于当前安全候车余量；暂不能确定下一波人数，因此应先核查备用区域，而不是宣称必然超限。',`总预计${p}人；到达=${arrivals}；余量${o.holdingCapacity}人`,'E03提示安置准备不等于实际启用','启用临时区域须安全核验和授权']);
+      if(o.specialGroups>0) adaptive.push(['单列重点帮助人群的人员与无障碍路径','不能只按总人数配置运力；需要同步安排人员、轮椅/电梯路径和优先上车。',`重点帮助人群=${o.specialGroups}人`,'固定安全补充','现场管理和承运单位共同确认']);
+      $('adaptiveActions').innerHTML=adaptive.map(a=>`<article class="action-card"><h4>${a[0]}</h4><p>${a[1]}</p><span class="trace ${authority?'':'caution'}">${authority?'候选可进入确认':'授权未确认 · 仅为候选'}</span></article>`).join('');
+      $('traceBody').innerHTML=adaptive.map(a=>`<tr><td>${a[0]}</td><td>${a[2]}</td><td>${a[3]}</td><td>${a[4]}</td></tr>`).join('');
+      const commonOwners=['枢纽运行协调席','现场安全保障组','综合交通协调席'];
+      const adaptiveDefaults={
+        '把增援运力向后段到达波次移动':['approved','公交保障协调席','23:20'],
+        '并行准备“轨交未获延时”的替代分支':['confirmed','综合交通协调席','立即'],
+        '先按方向分组，再确定公交线路与出租车分工':['confirmed','现场客流组织组','23:00'],
+        '将出租车作为滚动补充，不作为唯一兜底':['approved','出租车保障协调席','23:15'],
+        '提前启用分区候车与出口分流核查':['pending','现场安全保障组','待批'],
+        '单列重点帮助人群的人员与无障碍路径':['confirmed','旅客服务组','立即']
+      };
+      decisionCandidates=[
+        {id:'M-1',type:'协同联动方案',title:'执行多方式运力分配并按条件切换备用方案',desc:'根据需求与可兑现能力分配轨交、公交和出租车。',basis:'当前事件画像＋本轮资源确认值',boundary:'轨交未批准时立即切换公交—出租车替代方案',status:'confirmed',owner:'综合交通协调席',time:'23:00'},
+        ...common.map((a,i)=>({id:`C-${i+1}`,type:'通用要求',title:a[0],desc:a[1],basis:a[2],boundary:'按适用预案及当次授权执行',status:i<2?'confirmed':'approved',owner:commonOwners[i],time:i<2?'立即':'23:10'})),
+        ...adaptive.map((a,i)=>{const d=adaptiveDefaults[a[0]]||['pending','待确认责任席','待定'];return{id:`A-${i+1}`,type:'针对性调整',title:a[0],desc:a[1],basis:a[3],boundary:a[4],status:d[0],owner:d[1],time:d[2]}})
+      ];
+      $('confirmRows').innerHTML='';
+      $('finalSheet').classList.remove('show');
+      lastFinalDecision=null;
+      lastAllocation=null;
+      showStep(4);
+    }
+    function statusLabel(status){return {confirmed:'已确认，可执行',approved:'已批准，资源待确认',pending:'审批／核查中',excluded:'本轮不纳入'}[status]||status}
+    function addMinutes(time,minutes){
+      const parts=(time||'23:00').split(':').map(Number),total=(parts[0]*60+parts[1]+minutes)%(24*60);
+      return `${String(Math.floor(total/60)).padStart(2,'0')}:${String(total%60).padStart(2,'0')}`;
+    }
+    function calculateAllocation(render=true){
+      const affected=num('passengers'),requested=num('transportDemand'),demand=Math.min(requested,affected||requested);
+      const horizon=Math.max(15,num('planHorizon')),metroTrips=num('metroTrips'),metroPerTrip=num('metroCapacity'),metroPct=Math.min(100,num('metroCompatiblePct'));
+      const busAvailable=num('busAvailable'),busSeats=Math.max(1,num('busSeats')),cycle=Math.max(1,num('decisionBusCycle'));
+      const taxiRate=num('decisionTaxiRate'),taxiOccupancy=Math.max(1,num('taxiOccupancy')),centerPct=Math.min(100,num('centerShare'));
+      const start=val('decisionTime')||'23:00',metroCapacity=metroTrips*metroPerTrip,metroTarget=Math.round(demand*metroPct/100),metroPeople=Math.min(demand,metroTarget,metroCapacity);
+      const taxiVehicles=Math.floor(taxiRate*horizon/15),taxiCapacity=taxiVehicles*taxiOccupancy,taxiPeople=Math.min(Math.max(0,demand-metroPeople),taxiCapacity,Math.floor(demand*.25));
+      const tripsPerBus=Math.max(1,Math.floor(horizon/cycle));
+      const busPlan=people=>{
+        const perVehicle=busSeats*tripsPerBus,centerPeople=Math.round(people*centerPct/100),otherPeople=Math.max(0,people-centerPeople);
+        const centerRequired=centerPeople?Math.ceil(centerPeople/perVehicle):0,otherRequired=otherPeople?Math.ceil(otherPeople/perVehicle):0,required=centerRequired+otherRequired,used=Math.min(busAvailable,required);
+        let centerUsed=Math.min(centerRequired,Math.round(used*centerPct/100)),otherUsed=used-centerUsed;
+        if(otherUsed>otherRequired){centerUsed+=otherUsed-otherRequired;otherUsed=otherRequired}
+        if(centerUsed>centerRequired){otherUsed+=centerUsed-centerRequired;centerUsed=centerRequired}
+        const centerAllocated=Math.min(centerPeople,centerUsed*perVehicle),otherAllocated=Math.min(otherPeople,otherUsed*perVehicle),capacity=used*perVehicle,allocated=centerAllocated+otherAllocated;
+        return{people,allocated,unmet:Math.max(0,people-allocated),perVehicle,tripsPerBus,centerPeople,otherPeople,centerAllocated,otherAllocated,centerRequired,otherRequired,centerUsed,otherUsed,required,used,capacity};
+      };
+      const primaryBus=busPlan(Math.max(0,demand-metroPeople-taxiPeople));
+      const primaryAllocated=metroPeople+taxiPeople+primaryBus.allocated,primaryUnmet=Math.max(0,demand-primaryAllocated),primaryCapacity=metroPeople+taxiPeople+primaryBus.capacity;
+      const fallbackTaxiPeople=Math.min(demand,taxiCapacity,Math.floor(demand*.25)),fallbackBus=busPlan(Math.max(0,demand-fallbackTaxiPeople));
+      const fallbackAllocated=fallbackTaxiPeople+fallbackBus.allocated,fallbackUnmet=Math.max(0,demand-fallbackAllocated),fallbackCapacity=fallbackTaxiPeople+fallbackBus.capacity;
+      const metroTimes=Array.from({length:metroTrips},(_,i)=>addMinutes(start,15+i*20));
+      const busTimes=Array.from({length:tripsPerBus},(_,i)=>addMinutes(start,20+i*cycle));
+      lastAllocation={inputs:{affected,requestedDemand:requested,demand,horizon,metroTrips,metroPerTrip,metroPct,busAvailable,busSeats,cycle,taxiRate,taxiOccupancy,centerPct},primary:{metroPeople,metroTrips,metroTimes,taxiPeople,taxiVehicles,taxiCapacity,bus:primaryBus,totalAllocated:primaryAllocated,totalCapacity:primaryCapacity,buffer:Math.max(0,primaryCapacity-demand),unmet:primaryUnmet},fallback:{metroPeople:0,taxiPeople:fallbackTaxiPeople,taxiVehicles,bus:fallbackBus,totalAllocated:fallbackAllocated,totalCapacity:fallbackCapacity,buffer:Math.max(0,fallbackCapacity-demand),unmet:fallbackUnmet},schedule:{start,busTimes,taxiEnd:addMinutes(start,horizon)},metroStatus:val('metroExtension')};
+      if(render){
+        const a=lastAllocation,metroState=a.metroStatus==='yes'?'已确认':a.metroStatus==='no'?'不可用':'待批准（条件配置）';
+        const demandWarning=requested>affected&&affected>0?`输入需求高于受影响人数，已按 ${affected} 人计算。`:'';
+        $('allocationPreview').innerHTML=`<div class="allocation-summary"><span>计算需求：${demand.toLocaleString('zh-CN')}人｜计划窗口：${horizon}分钟</span><span>${demandWarning||(a.primary.unmet?`首选方案缺口：${a.primary.unmet}人`:`首选方案余量：${a.primary.buffer}人`)}</span></div><div class="allocation-cards"><div class="mode-card"><div class="mode-name"><span>轨道交通</span><span>${metroState}</span></div><strong>${metroPeople} 人</strong><p>${metroTrips}班 × 每班有效${metroPerTrip}人</p><small>计划发车：${metroTimes.join('、')||'不加开'}</small></div><div class="mode-card"><div class="mode-name"><span>增援公交</span><span>${primaryBus.used}/${busAvailable}辆</span></div><strong>${primaryBus.allocated} 人</strong><p>${primaryBus.used}辆 × ${tripsPerBus}次 × ${busSeats}人</p><small>中心方向${primaryBus.centerUsed}辆/承运${primaryBus.centerAllocated}人，其他方向${primaryBus.otherUsed}辆/承运${primaryBus.otherAllocated}人；发车${busTimes.join('、')}</small></div><div class="mode-card"><div class="mode-name"><span>出租车</span><span>${taxiRate}辆/15分钟</span></div><strong>${taxiPeople} 人</strong><p>预计${taxiVehicles}辆 × ${taxiOccupancy}人</p><small>滚动保障：${start}—${a.schedule.taxiEnd}，不超过总需求25%</small></div></div><div class="allocation-result"><div class="allocation-band"><b>首选协同方案</b><span>分配${primaryAllocated}/${demand}人；计划能力${primaryCapacity}人；${primaryUnmet?`受方向和车辆约束仍缺${primaryUnmet}人`:`余量${a.primary.buffer}人`}。</span></div><div class="allocation-band alt"><b>轨交未获批替代方案</b><span>公交改为${fallbackBus.used}辆、每车${tripsPerBus}次，承担${fallbackBus.allocated}人；出租车承担${fallbackTaxiPeople}人；${fallbackUnmet?`仍缺${fallbackUnmet}人`:`余量${a.fallback.buffer}人`}。</span></div></div>`;
+      }
+      return lastAllocation;
+    }
+    function renderDecisionConfirm(){
+      if(!decisionCandidates.length) buildDecision();
+      if(!$('resourceBox').dataset.initialized){
+        $('transportDemand').value=Math.min(num('passengers'),1200);
+        $('decisionBusCycle').value=num('busCycle')||44;
+        $('decisionTaxiRate').value=num('taxiRate')||18;
+        $('resourceBox').dataset.initialized='true';
+      }
+      calculateAllocation(true);
+      $('confirmRows').innerHTML=decisionCandidates.map((a,i)=>`<div class="confirm-row" data-index="${i}"><input class="decision-include" type="checkbox" checked aria-label="纳入 ${a.title}"><div><h4>${a.id} · ${a.title}</h4><p>${a.type}｜${a.boundary}</p></div><div class="confirm-field"><label>确认状态</label><select class="decision-status"><option value="confirmed" ${a.status==='confirmed'?'selected':''}>已确认，可执行</option><option value="approved" ${a.status==='approved'?'selected':''}>已批准，资源待确认</option><option value="pending" ${a.status==='pending'?'selected':''}>审批／核查中</option><option value="excluded">本轮不纳入</option></select></div><div class="confirm-field"><label>责任席位</label><input class="decision-row-owner" value="${a.owner}"></div><div class="confirm-field"><label>生效时间</label><input class="decision-row-time" value="${a.time}"></div></div>`).join('');
+      $('finalSheet').classList.remove('show');
+      lastFinalDecision=null;
+    }
+    function collectDecisionRows(){
+      return [...document.querySelectorAll('.confirm-row')].map(row=>{
+        const a=decisionCandidates[Number(row.dataset.index)];
+        return {...a,include:row.querySelector('.decision-include').checked,status:row.querySelector('.decision-status').value,owner:row.querySelector('.decision-row-owner').value.trim()||'待确认',time:row.querySelector('.decision-row-time').value.trim()||'待定'};
+      });
+    }
+    function openDecisionConfirmation(){
+      if(!decisionCandidates.length) buildDecision();
+      if(!$('confirmRows').children.length) renderDecisionConfirm();
+      showStep(5);
+    }
+    function generateFinalDecision(){
+      if(!$('decisionAttested').checked){toast('请先确认演示状态说明');return}
+      const allocation=calculateAllocation(true);
+      const rows=collectDecisionRows();
+      const executable=rows.filter(x=>x.include&&x.status==='confirmed');
+      const pending=rows.filter(x=>x.include&&x.status!=='confirmed'&&x.status!=='excluded');
+      const excluded=rows.filter(x=>!x.include||x.status==='excluded');
+      const now=new Date();
+      const id=`HQ-DEC-DEMO-${now.getFullYear()}${String(now.getMonth()+1).padStart(2,'0')}${String(now.getDate()).padStart(2,'0')}-${val('decisionTime').replace(':','')}`;
+      const owner=val('decisionOwner').trim()||'待确认决策席位';
+      const interval=val('reviewInterval');
+      $('finalStats').innerHTML=`<div class="final-stat"><span>决策编号</span><b>${id}</b></div><div class="final-stat"><span>确认席位</span><b>${owner}</b></div><div class="final-stat"><span>本轮时点</span><b>${val('decisionTime')}</b></div><div class="final-stat"><span>滚动复核</span><b>每${interval}分钟</b></div>`;
+      const a=allocation,metroCondition=a.metroStatus==='yes'?'已确认执行':a.metroStatus==='no'?'不可用，直接采用替代方案':'待批准，批准后执行';
+      $('finalAllocation').innerHTML=`<h4>一、多方式协同运力配置（需求 ${a.inputs.demand} 人）</h4><div class="final-mode-grid"><div class="final-mode"><b>轨交：${a.primary.metroPeople}人</b><span>${a.primary.metroTrips}班，每班有效${a.inputs.metroPerTrip}人</span><span>${metroCondition}｜${a.primary.metroTimes.join('、')||'无班次'}</span></div><div class="final-mode"><b>公交：${a.primary.bus.allocated}人</b><span>调用${a.primary.bus.used}辆，每车${a.primary.bus.tripsPerBus}次，共${a.primary.bus.used*a.primary.bus.tripsPerBus}车次</span><span>中心方向${a.primary.bus.centerUsed}辆/${a.primary.bus.centerAllocated}人，其他方向${a.primary.bus.otherUsed}辆/${a.primary.bus.otherAllocated}人｜${a.schedule.busTimes.join('、')}</span></div><div class="final-mode"><b>出租车：${a.primary.taxiPeople}人</b><span>预计${a.primary.taxiVehicles}辆，平均${a.inputs.taxiOccupancy}人/辆</span><span>${a.schedule.start}—${a.schedule.taxiEnd}滚动到达</span></div></div><div class="final-fallback"><b>备用切换：</b>若轨交未获批准，公交调整为${a.fallback.bus.used}辆、每车${a.fallback.bus.tripsPerBus}次，承担${a.fallback.bus.allocated}人；出租车承担${a.fallback.taxiPeople}人。${a.fallback.unmet?`现有资源仍缺口${a.fallback.unmet}人，必须追加车辆或延长窗口。`:`替代方案能力覆盖需求，余量${a.fallback.buffer}人。`}</div>`;
+      $('executionList').innerHTML=executable.length?executable.map((x,i)=>`<div class="final-item"><b>${i+1}. ${x.title}</b><span>责任：${x.owner}｜生效：${x.time}</span><span>依据：${x.basis}</span></div>`).join(''):'<div class="final-item"><b>本轮暂无可执行措施</b><span>所有候选项仍缺少授权、资源或责任确认。</span></div>';
+      $('pendingList').innerHTML=pending.length?pending.map(x=>`<div class="final-item pending"><b>${x.title}</b><span>${statusLabel(x.status)}｜责任：${x.owner}｜目标时点：${x.time}</span><span>未确认前不得进入执行清单。</span></div>`).join(''):'<div class="final-item"><b>本轮无待决事项</b><span>仍须按复核周期更新事件状态。</span></div>';
+      $('guardrailText').textContent=`控制要求：每${interval}分钟复核列车到达、现场滞留和运力到位；轨交延时、临时候车区等未获正式批准的事项不得视为已执行。若安全条件变化、预计到达显著偏移或资源未按时到位，应立即回到候选决策层重新评估。`;
+      lastFinalDecision={meta:{id,owner,decisionTime:val('decisionTime'),reviewIntervalMinutes:Number(interval),warning:'演示决策单，不具备真实调度效力'},event:{type:labels[val('eventType')],cause:labels[val('cause')],expectedPassengers:num('passengers'),backlog:num('backlog'),startTime:val('eventTime')},allocation,executable,pending,excluded,generatedAt:now.toISOString()};
+      $('finalSheet').classList.add('show');
+      $('finalSheet').scrollIntoView({behavior:'smooth',block:'start'});
+    }
+    function exportFinalDecision(){
+      if(!lastFinalDecision){generateFinalDecision();if(!lastFinalDecision)return}
+      const blob=new Blob([JSON.stringify(lastFinalDecision,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='虹桥最终决策单-演示-'+new Date().toISOString().slice(0,10)+'.json';a.click();URL.revokeObjectURL(url);toast('已导出最终决策单 JSON');
+    }
+    function renderLibrary(tab='cases'){
+      document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x.dataset.tab===tab));
+      const data=tab==='cases'?cases:plans;
+      $('libraryContent').innerHTML=data.map(x=>tab==='cases'?`<article class="library-item"><h3>${x.id} · ${x.title}</h3><p>${x.role}｜资料完整度：${x.evidence}</p><div class="lib-line"><span>已知事实</span><span>${x.facts}</span></div><div class="lib-line"><span>关键缺口</span><span>${x.missing}</span></div><div class="lib-line"><span>可提示观测</span><span>${x.observations.join('、')}</span></div><div class="lib-line"><span>公开来源</span><span><a href="${x.source}" target="_blank" rel="noreferrer">打开原始页面 ↗</a></span></div></article>`:`<article class="library-item"><h3>${x.id} · ${x.title}</h3><p>${x.status}</p><div class="lib-line"><span>可以支持</span><span>${x.scope}</span></div><div class="lib-line"><span>使用边界</span><span>${x.boundary}</span></div><div class="lib-line"><span>公开来源</span><span><a href="${x.source}" target="_blank" rel="noreferrer">打开依据页面 ↗</a></span></div></article>`).join('');
+    }
+    function openDrawer(){renderLibrary('cases');$('drawer').classList.add('open');$('drawerBackdrop').classList.add('open');$('drawer').setAttribute('aria-hidden','false')}
+    function closeDrawer(){ $('drawer').classList.remove('open');$('drawerBackdrop').classList.remove('open');$('drawer').setAttribute('aria-hidden','true')}
+    function toast(msg){const t=$('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1800)}
+    function exportRun(){
+      if(!rankedCases.length) rankedCases=cases.map(c=>similarity(c,current())).sort((a,b)=>b.score-a.score);
+      const payload={meta:{name:'虹桥情景检索—决策链路Demo',version:'2026-10-27',warning:'演示数据，不是调度指令'},fixed:{eventType:val('eventType'),cause:val('cause'),eventTime:val('eventTime'),trainCount:num('trainCount'),passengers:num('passengers'),backlog:num('backlog'),leadTime:num('leadTime'),duration:num('duration'),uncertainty:val('uncertainty'),metroState:val('metroState'),busState:val('busState'),taxiState:val('taxiState'),safetyChecked:$('safetyChecked').checked,authorityChecked:$('authorityChecked').checked},retrieval:rankedCases.map(x=>({id:x.id,score:x.score,match:x.match,differences:x.diff})),currentObservation:observationState(),generatedAt:new Date().toISOString()};
+      const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='虹桥情景推演-'+new Date().toISOString().slice(0,10)+'.json';a.click();URL.revokeObjectURL(url);toast('已导出本次推演 JSON');
+    }
+    document.querySelectorAll('input,select').forEach(el=>el.addEventListener('change',syncRail));
+    document.querySelectorAll('.step').forEach(el=>el.addEventListener('click',()=>{const n=Number(el.dataset.step);if(n===2)renderSearch();else if(n===4)buildDecision();else if(n===5)openDecisionConfirmation();else showStep(n)}));
+    document.querySelectorAll('[data-goto]').forEach(el=>el.addEventListener('click',()=>showStep(Number(el.dataset.goto))));
+    $('searchBtn').addEventListener('click',renderSearch);$('observeBtn').addEventListener('click',()=>showStep(3));$('portraitBtn').addEventListener('click',buildDecision);$('confirmBtn').addEventListener('click',openDecisionConfirmation);$('finalizeBtn').addEventListener('click',generateFinalDecision);$('exportDecisionBtn').addEventListener('click',exportFinalDecision);$('rerunBtn').addEventListener('click',()=>showStep(1));
+    $('calcAllocationBtn').addEventListener('click',()=>{calculateAllocation(true);$('finalSheet').classList.remove('show');lastFinalDecision=null});
+    ['transportDemand','planHorizon','metroTrips','metroCapacity','metroCompatiblePct','busAvailable','busSeats','decisionBusCycle','decisionTaxiRate','taxiOccupancy','centerShare'].forEach(id=>$(id).addEventListener('change',()=>{calculateAllocation(true);$('finalSheet').classList.remove('show');lastFinalDecision=null}));
+    $('confirmRows').addEventListener('change',()=>{$('finalSheet').classList.remove('show');lastFinalDecision=null});
+    $('libraryBtn').addEventListener('click',openDrawer);$('closeDrawer').addEventListener('click',closeDrawer);$('drawerBackdrop').addEventListener('click',closeDrawer);document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>renderLibrary(t.dataset.tab)));$('exportBtn').addEventListener('click',exportRun);
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDrawer()});
+    syncRail();renderLibrary();
+  </script>
+</body>
+</html>
