@@ -38,6 +38,17 @@ class PortraitChecks(unittest.TestCase):
         self.assertFalse(rows['onward_people']['has_value'])
         self.assertFalse(rows['resource_inventory']['has_value'])
 
+    def test_low_coverage_perfect_match_does_not_precede_better_supported_case(self):
+        query = copy.deepcopy(self.cases[0]); query['event_id'] = 'query'; query['event_family_id'] = 'query'
+        sparse = copy.deepcopy(query); sparse.update(event_id='sparse',event_family_id='sparse',title='低覆盖')
+        sparse['fields'] = {'event_type': query['fields']['event_type']}
+        fuller = copy.deepcopy(query); fuller.update(event_id='full',event_family_id='full',title='较高覆盖')
+        fuller['fields']['cause'] = {'value':'不同诱因','status':'observed','source':'测试','as_of':'2026-11-19T12:00:00+08:00'}
+        ranked = engine.retrieve(query, [sparse,fuller])
+        self.assertEqual(ranked[0]['case_id'],'full')
+        self.assertEqual(ranked[1]['similarity'],1.0)
+        self.assertLess(ranked[1]['coverage'],0.5)
+
 class BridgeChecks(unittest.TestCase):
     def setUp(self):
         self.p = json.loads((HERE/'demo-合成画像.json').read_text(encoding='utf-8'))

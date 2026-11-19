@@ -126,6 +126,8 @@
         "indicator_id": "metro_extension",
         "name": "轨交延时可行性",
         "reason": "来源文本出现相关线索，建议确认当前事件的对应条件；不迁移历史数值。",
+        "broader_field_present": false,
+        "detail_note": "相关字段尚未填写",
         "current_value": null,
         "confirmation": "pending",
         "evidence": [
@@ -149,6 +151,8 @@
         "indicator_id": "bus_service",
         "name": "公交可用运力与发车计划",
         "reason": "来源文本出现相关线索，建议确认当前事件的对应条件；不迁移历史数值。",
+        "broader_field_present": false,
+        "detail_note": "相关字段尚未填写",
         "current_value": null,
         "confirmation": "pending",
         "evidence": [
@@ -172,6 +176,8 @@
         "indicator_id": "taxi_service",
         "name": "出租车到达率与蓄车状态",
         "reason": "来源文本出现相关线索，建议确认当前事件的对应条件；不迁移历史数值。",
+        "broader_field_present": false,
+        "detail_note": "相关字段尚未填写",
         "current_value": null,
         "confirmation": "pending",
         "evidence": [
@@ -195,6 +201,8 @@
         "indicator_id": "arrival_profile",
         "name": "旅客分时到达过程",
         "reason": "来源文本出现相关线索，建议确认当前事件的对应条件；不迁移历史数值。",
+        "broader_field_present": false,
+        "detail_note": "相关字段尚未填写",
         "current_value": null,
         "confirmation": "pending",
         "evidence": [

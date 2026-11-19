@@ -50,8 +50,8 @@ def recommend(portrait, provider, fixed_indicators=()):
         for rule in RULES:
             positions=[(doc['text'].find(term),term) for term in rule['terms'] if term in doc['text']]
             if not positions: continue
-            if rule['id'] in fixed or any(engine.field(portrait,f)['status']!='unknown' for f in rule['fixed_fields']):
-                rejected.append({'indicator_id':rule['id'],'reason':'已有固定字段，需人工核对其是否足够细化'});continue
+            if rule['id'] in fixed:
+                rejected.append({'indicator_id':rule['id'],'reason':'该具体指标已在固定清单中'});continue
             start,term=min(positions); end=start+len(term)
             evidence={'source_url':doc['url'],'title':doc['title'],'publisher':doc['publisher'],
                       'publication_date':doc['publication_date'],'collected_at':doc['collected_at'],
@@ -59,8 +59,11 @@ def recommend(portrait, provider, fixed_indicators=()):
                       'text_sha256':hashlib.sha256(doc['text'].encode('utf-8')).hexdigest(),
                       'provider_kind':provider.kind,'source_status':'演示文本，未验证原页' if provider.kind=='mock' else '机器提取，待人工核原页',
                       'credibility':'未评定；须人工检查发布主体和原文'}
+            broader_known = any(engine.field(portrait,f)['status']!='unknown' for f in rule['fixed_fields'])
             c=candidates.setdefault(rule['id'],{'indicator_id':rule['id'],'name':rule['name'],
                 'reason':'来源文本出现相关线索，建议确认当前事件的对应条件；不迁移历史数值。',
+                'broader_field_present':broader_known,
+                'detail_note':'已有相关字段，请核实是否包含本项细节' if broader_known else '相关字段尚未填写',
                 'current_value':None,'confirmation':'pending','evidence':[]})
             if not any(e['source_url']==evidence['source_url'] and e['quote']==evidence['quote'] for e in c['evidence']): c['evidence'].append(evidence)
     return {'version':VERSION,'query_terms':terms,'provider':provider.kind,'recommendations':list(candidates.values()),

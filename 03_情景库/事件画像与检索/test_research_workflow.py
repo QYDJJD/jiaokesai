@@ -30,4 +30,11 @@ class WorkflowChecks(unittest.TestCase):
         doc=copy.deepcopy(self.doc);del doc['collected_at']
         with self.assertRaises(ValueError):w.recommend(self.p,w.MockProvider([doc]))
 
+    def test_general_resource_field_does_not_hide_specific_candidates(self):
+        self.p['fields']['resource_inventory']={'value':'已知有公交','status':'observed','source':'模拟','as_of':'2026-11-19T12:00:00+08:00'}
+        items={x['indicator_id']:x for x in w.recommend(self.p,w.MockProvider([self.doc]))['recommendations']}
+        self.assertTrue(items['bus_service']['broader_field_present'])
+        self.assertIn('taxi_service',items)
+        self.assertIsNone(items['bus_service']['current_value'])
+
 if __name__=='__main__':unittest.main()

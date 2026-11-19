@@ -91,7 +91,9 @@ def retrieve(portrait, catalog):
                         'coverage_note': '可比信息不足，需人工复核' if comparable / sum(MATCH.values()) < 0.5 else '覆盖率仅表示字段可比程度',
                         'same': same, 'different': different, 'missing': missing,
                         'source': case['source']})
-    return sorted(results, key=lambda r: (r['similarity'] is not None, r['similarity'] or 0, r['coverage']), reverse=True)
+    # 低覆盖高分不应排在信息较充分的结果前；阈值只是演示分组，不是可靠度标准。
+    return sorted(results, key=lambda r: (r['similarity'] is not None, r['coverage'] >= 0.5,
+                                          r['similarity'] or 0, r['coverage']), reverse=True)
 
 def readiness(portrait):
     validate(portrait)
