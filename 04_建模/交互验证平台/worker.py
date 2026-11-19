@@ -14,6 +14,16 @@ def run(folder):
     folder=Path(folder);request=json.loads((folder/'request.json').read_text(encoding='utf-8'))
     def progress(stage):atomic(folder/'progress.json',{'state':'running','stage':stage,'updated_at':now()})
     try:
+        if request.get('kind')=='sensitivity':
+            from core import ROOT
+            sys.path.insert(0,str(ROOT/'04_建模/多方式网络优化'))
+            from resource_sensitivity import compare
+            progress('正在逐一比较基准和资源情景；较大网络可能需要等待')
+            result=compare(request['card'],request['variants'],seconds=request['settings']['seconds'])
+            result['run_id']=folder.name
+            atomic(folder/'result.json',result)
+            atomic(folder/'progress.json',{'state':'completed','stage':'比较计算已完成','updated_at':now(),'artifacts':[]})
+            return
         from core import evaluate, write_exports
         result=evaluate(request['card'],request['settings'],request.get('manual'),progress)
         result['runtime']={n:importlib.metadata.version(n) for n in ('numpy','scipy')}

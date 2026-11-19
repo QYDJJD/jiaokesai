@@ -1,0 +1,58 @@
+{
+  "schema_version": "PORTRAIT-01",
+  "event_id": "DEMO-2023-HQ-01",
+  "title": "历史事件背景的画像演示",
+  "fields": {
+    "event_type": {
+      "value": "列车晚点集中到达",
+      "status": "observed",
+      "source": "2023年官方案例报道",
+      "as_of": "2023-12-19T00:00:00+08:00"
+    },
+    "cause": {
+      "value": "降雪",
+      "status": "observed",
+      "source": "2023年官方案例报道",
+      "as_of": "2023-12-19T00:00:00+08:00"
+    },
+    "time_period": {
+      "value": "夜间",
+      "status": "observed",
+      "source": "2023年官方案例报道",
+      "as_of": "2023-12-19T00:00:00+08:00"
+    },
+    "location": {
+      "value": "虹桥火车站",
+      "status": "observed",
+      "source": "2023年官方案例报道",
+      "as_of": "2023-12-19T00:00:00+08:00"
+    },
+    "affected_people": {
+      "value": 10008,
+      "status": "observed",
+      "source": "官方报道受影响人数，23时至次日5时",
+      "as_of": "2023-12-19T00:00:00+08:00"
+    },
+    "onward_people": {
+      "value": null,
+      "status": "unknown"
+    },
+    "arrival_profile": {
+      "value": null,
+      "status": "unknown"
+    },
+    "resource_inventory": {
+      "value": null,
+      "status": "unknown"
+    },
+    "safety_status": {
+      "value": null,
+      "status": "unknown"
+    },
+    "authorization": {
+      "value": null,
+      "status": "unknown"
+    }
+  },
+  "event_family_id": "HQ-E01"
+}

@@ -1,0 +1,219 @@
+{
+  "version": "PORTRAIT-01",
+  "portrait": {
+    "schema_version": "PORTRAIT-01",
+    "event_id": "DEMO-2023-HQ-01",
+    "title": "历史事件背景的画像演示",
+    "fields": {
+      "event_type": {
+        "value": "列车晚点集中到达",
+        "status": "observed",
+        "source": "2023年官方案例报道",
+        "as_of": "2023-12-19T00:00:00+08:00"
+      },
+      "cause": {
+        "value": "降雪",
+        "status": "observed",
+        "source": "2023年官方案例报道",
+        "as_of": "2023-12-19T00:00:00+08:00"
+      },
+      "time_period": {
+        "value": "夜间",
+        "status": "observed",
+        "source": "2023年官方案例报道",
+        "as_of": "2023-12-19T00:00:00+08:00"
+      },
+      "location": {
+        "value": "虹桥火车站",
+        "status": "observed",
+        "source": "2023年官方案例报道",
+        "as_of": "2023-12-19T00:00:00+08:00"
+      },
+      "affected_people": {
+        "value": 10008,
+        "status": "observed",
+        "source": "官方报道受影响人数，23时至次日5时",
+        "as_of": "2023-12-19T00:00:00+08:00"
+      },
+      "onward_people": {
+        "value": null,
+        "status": "unknown"
+      },
+      "arrival_profile": {
+        "value": null,
+        "status": "unknown"
+      },
+      "resource_inventory": {
+        "value": null,
+        "status": "unknown"
+      },
+      "safety_status": {
+        "value": null,
+        "status": "unknown"
+      },
+      "authorization": {
+        "value": null,
+        "status": "unknown"
+      }
+    },
+    "event_family_id": "HQ-E01"
+  },
+  "retrieval": [
+    {
+      "case_id": "HQ-E02",
+      "title": "2023年地震影响列车抵沪",
+      "similarity": 0.8,
+      "coverage": 0.833,
+      "coverage_note": "覆盖率仅表示字段可比程度",
+      "same": [
+        "event_type",
+        "time_period",
+        "location"
+      ],
+      "different": [
+        {
+          "field": "cause",
+          "current": "降雪",
+          "case": "地震"
+        }
+      ],
+      "missing": [
+        "road_status",
+        "metro_status"
+      ],
+      "source": "https://www.whb.cn/zhuzhan/cs/20230807/533824.html"
+    },
+    {
+      "case_id": "HQ-G01",
+      "title": "2026年五一虹桥返程保障",
+      "similarity": 0.333,
+      "coverage": 0.5,
+      "coverage_note": "覆盖率仅表示字段可比程度",
+      "same": [
+        "location"
+      ],
+      "different": [
+        {
+          "field": "event_type",
+          "current": "列车晚点集中到达",
+          "case": "节假日集中到达"
+        }
+      ],
+      "missing": [
+        "cause",
+        "time_period",
+        "road_status",
+        "metro_status"
+      ],
+      "source": "https://www.shanghai.gov.cn/nw31406/20260508/c349732ae3044a149ce33b51331d96f9.html"
+    },
+    {
+      "case_id": "HQ-E03",
+      "title": "2024年台风防护与安置准备",
+      "similarity": 0.0,
+      "coverage": 0.667,
+      "coverage_note": "覆盖率仅表示字段可比程度",
+      "same": [],
+      "different": [
+        {
+          "field": "event_type",
+          "current": "列车晚点集中到达",
+          "case": "台风保障"
+        },
+        {
+          "field": "cause",
+          "current": "降雪",
+          "case": "台风"
+        },
+        {
+          "field": "location",
+          "current": "虹桥火车站",
+          "case": "虹桥枢纽"
+        }
+      ],
+      "missing": [
+        "time_period",
+        "road_status",
+        "metro_status"
+      ],
+      "source": "https://www.gzw.sh.gov.cn/shgzw_zxzx_gqdt/20240918/87a233dab9064ff684b354195059008d.html"
+    },
+    {
+      "case_id": "HQ-E04",
+      "title": "2014年大雾航空备降与旅客转场",
+      "similarity": 0.0,
+      "coverage": 0.667,
+      "coverage_note": "覆盖率仅表示字段可比程度",
+      "same": [],
+      "different": [
+        {
+          "field": "event_type",
+          "current": "列车晚点集中到达",
+          "case": "航班备降与转场"
+        },
+        {
+          "field": "cause",
+          "current": "降雪",
+          "case": "大雾"
+        },
+        {
+          "field": "location",
+          "current": "虹桥火车站",
+          "case": "虹桥机场"
+        }
+      ],
+      "missing": [
+        "time_period",
+        "road_status",
+        "metro_status"
+      ],
+      "source": "https://www.shairport.com/xwg/info_itemid_19250.html"
+    }
+  ],
+  "mapping_check": [
+    {
+      "field": "onward_people",
+      "status": "unknown",
+      "target": "各群体 profiles[].arrivals：需总量、去向及逐时段过程",
+      "has_value": false,
+      "mapping_status": "待逐项核对单位、粒度和网络结构"
+    },
+    {
+      "field": "arrival_profile",
+      "status": "unknown",
+      "target": "profiles[].arrivals：逐群体、逐时间步",
+      "has_value": false,
+      "mapping_status": "待逐项核对单位、粒度和网络结构"
+    },
+    {
+      "field": "initial_queue",
+      "status": "unknown",
+      "target": "groups[].initial_people：逐群体初始人数",
+      "has_value": false,
+      "mapping_status": "待逐项核对单位、粒度和网络结构"
+    },
+    {
+      "field": "resource_inventory",
+      "status": "unknown",
+      "target": "modes/pools/links：资源、服务能力、准备和授权",
+      "has_value": false,
+      "mapping_status": "待逐项核对单位、粒度和网络结构"
+    },
+    {
+      "field": "safety_status",
+      "status": "unknown",
+      "target": "nodes/links/facilities：安全及空间约束",
+      "has_value": false,
+      "mapping_status": "待逐项核对单位、粒度和网络结构"
+    },
+    {
+      "field": "authorization",
+      "status": "unknown",
+      "target": "方式可协调条件及人工确认",
+      "has_value": false,
+      "mapping_status": "待逐项核对单位、粒度和网络结构"
+    }
+  ],
+  "model_input_status": "未生成网络模型卡：仍需网络、逐时段需求及参数确认",
+  "notice": "相似度为演示规则；历史数值不自动回填当前事件。"
+}

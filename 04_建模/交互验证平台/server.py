@@ -7,6 +7,10 @@ from core import ROOT, VERSION, LIMITS, NETWORK_LIMITS, templates, check_input, 
 from worker import atomic
 from preassessment import assess as assess_preliminary, assessment_example as preliminary_example
 
+sys.path.insert(0,str(ROOT/'03_情景库/事件画像与检索'))
+from network_bridge import make_card as bridge_portrait
+from engine import retrieve as retrieve_portrait
+
 HERE=Path(__file__).resolve().parent
 ID=re.compile(r'^[a-f0-9]{32}$')
 ARTIFACTS={'输入情景卡.json','完整计算结果.json','验证报告.html','公交排班.csv','出租预约.csv','过程指标与对照.csv','分时核算明细.csv','复现说明.txt','完整验证包.zip','运力预约.csv','方式与线路使用.csv','逐节点核算.csv'}
@@ -32,6 +36,7 @@ class Store:
             if not folder.is_dir() or not ID.fullmatch(folder.name):continue
             try:
                 request=json.loads((folder/'request.json').read_text(encoding='utf-8'))
+                if request.get('kind')=='sensitivity':continue
                 rows.append({'id':folder.name,'title':request['card'].get('platform',{}).get('title',request['card'].get('scenario_id','事件')),
                              'created_at':request['created_at'],'mode':request['settings']['mode'],**self.progress(folder.name)})
             except (OSError,ValueError,KeyError):continue
@@ -110,9 +115,13 @@ class Handler(BaseHTTPRequestHandler):
         if not self.allowed():return
         try:
             path=unquote(urlsplit(self.path).path);parts=path.strip('/').split('/');store=self.server.store
-            if path=='/api/health':return self.send(200,{'product':'jiaokesai-platform','version':VERSION,'active_runs':list(store.active),'local_only':True})
+            if path=='/api/health':
+                active=[key for key in list(store.active) if json.loads((store.runs/key/'request.json').read_text(encoding='utf-8')).get('kind')!='sensitivity']
+                return self.send(200,{'product':'jiaokesai-platform','version':VERSION,'active_runs':active,'local_only':True})
             if path=='/api/schema':return self.send(200,{'schema_version':'NETWORK-CARD-02','limits':NETWORK_LIMITS,'entities':['nodes','modes','pools','links','groups','profiles','facilities','occupancy_facilities'],'legacy_card_supported':True})
             if path=='/api/templates':return self.send(200,templates())
+            if path=='/scenario-demo':
+                return self.send(200,(ROOT/'07_成果输出/演示版本/2026-10-27-情景检索协同决策/index.html').read_bytes(),'text/html; charset=utf-8')
             if path=='/api/cards':
                 values=[]
                 for file in store.cards.glob('*.json'):
@@ -136,6 +145,10 @@ class Handler(BaseHTTPRequestHandler):
                     return self.send(200,file.read_bytes(),kind+(' ;charset=utf-8' if kind.startswith('text/') else ''),None if file.suffix=='.html' else file.name)
             if path in ('/','/demo','/demo.html'):
                 return self.send(200,(ROOT/'07_成果输出/情景库思路演示.html').read_bytes(),'text/html; charset=utf-8')
+            if path=='/portrait-bridge':
+                return self.send(200,(HERE/'web'/'portrait-bridge.html').read_bytes(),'text/html; charset=utf-8')
+            if path=='/sensitivity':
+                return self.send(200,(HERE/'web'/'sensitivity.html').read_bytes(),'text/html; charset=utf-8')
             name='index.html' if path=='/research' else path.lstrip('/')
             if name not in {'index.html','app.js','style.css'}:return self.send(404,{'error':'页面不存在'})
             file=HERE/'web'/name;kind={'html':'text/html','js':'text/javascript','css':'text/css'}[file.suffix[1:]]
@@ -154,6 +167,22 @@ class Handler(BaseHTTPRequestHandler):
             body=self.body()
             if path=='/api/preassessment':return self.send(200,assess_preliminary(body.get('input')))
             if path=='/api/preassessment-example':return self.send(200,preliminary_example())
+            if path=='/api/portrait-bridge':
+                card,provenance=bridge_portrait(body.get('portrait'),body.get('bundle'))
+                return self.send(200,{'card':card,'provenance':provenance,'notice':'仅供合成研究；未自动启动求解或确认实际授权'})
+            if path=='/api/portrait-retrieval':
+                catalog=json.loads((ROOT/'03_情景库/事件画像与检索/catalog.json').read_text(encoding='utf-8'))
+                return self.send(200,{'results':retrieve_portrait(body.get('portrait'),catalog),'notice':'结构化检索演示；高相似度不等于可靠度或行动授权'})
+            if path=='/api/sensitivity':
+                card=body.get('card');checked=check_input(card)
+                if not checked['valid']:return self.send(422,{'error':'基准输入未通过核对','validation':checked})
+                if card.get('schema_version')!='NETWORK-CARD-02':raise ValueError('请先转换为通用网络情景卡')
+                variants=body.get('variants');seconds=body.get('seconds',5)
+                if not isinstance(variants,list) or not 1<=len(variants)<=4:raise ValueError('请设置1至4个比较情景')
+                if type(seconds) is not int or not 1<=seconds<=10:raise ValueError('每个情景求解时间须为1至10秒')
+                if any(not isinstance(v,dict) or not isinstance(v.get('changes'),list) or not 1<=len(v['changes'])<=3 for v in variants):raise ValueError('每个比较情景须包含1至3项修改')
+                key=store.start({'kind':'sensitivity','card':card,'variants':variants,'settings':{'mode':'sensitivity','seconds':seconds}})
+                return self.send(202,{'id':key})
             if path=='/api/validate':
                 checked=check_input(body.get('card'))
                 if checked['valid']:

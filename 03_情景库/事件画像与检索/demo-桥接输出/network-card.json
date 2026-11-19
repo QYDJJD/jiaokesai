@@ -1,0 +1,121 @@
+{
+  "schema_version": "NETWORK-CARD-02",
+  "scenario_id": "BRIDGE-SYN-12",
+  "record_kind": "历史背景下的合成研究示例；非实际事件方案",
+  "platform": {
+    "title": "虹桥降雪背景的12人合成接口演示",
+    "evidence_kind": "纯模拟",
+    "notes": "模型参数为完整合成假设；不代表历史实测、实时资源或授权。",
+    "sources": ""
+  },
+  "five_dimensions": {
+    "information_lead_minutes": 0
+  },
+  "parameters": {
+    "start_time": "2023-12-14T23:00:00+08:00",
+    "step_minutes": 10,
+    "entry_steps": 6,
+    "deadline_minutes": 80,
+    "origin_departure_deadline_minutes": 60,
+    "budget_yuan": 200,
+    "queue_limit_people": 300,
+    "standing_person_minutes_limit": 0
+  },
+  "nodes": [
+    {
+      "id": "S",
+      "label": "候客起点",
+      "queue_limit_people": 20,
+      "waiting_area_m2": 100,
+      "waiting_density_limit": null,
+      "boarding_capacity": 1000,
+      "receiving_capacity": 1000
+    },
+    {
+      "id": "D",
+      "label": "接续目的节点",
+      "queue_limit_people": 200,
+      "waiting_area_m2": 100,
+      "waiting_density_limit": null,
+      "boarding_capacity": 1000,
+      "receiving_capacity": 1000
+    }
+  ],
+  "modes": [
+    {
+      "id": "custom",
+      "label": "自定义校验运力",
+      "control": "adjustable",
+      "comfort": "seats",
+      "enabled": true,
+      "standing_density_limit": 2,
+      "standing_person_minutes_limit": null
+    }
+  ],
+  "pools": [
+    {
+      "id": "fleet",
+      "label": "单车周转池",
+      "kind": "vehicle",
+      "home_node": "S",
+      "available_units": 1,
+      "total_units_limit": 2,
+      "seats": 6,
+      "legal_capacity": 6,
+      "standing_area_m2": 0,
+      "prepare_minutes": 0,
+      "close_minutes": 90,
+      "turnaround_minutes": 0
+    }
+  ],
+  "links": [
+    {
+      "id": "route",
+      "label": "起点至目的节点",
+      "from": "S",
+      "to": "D",
+      "mode_id": "custom",
+      "travel_minutes": 10,
+      "boarding_minutes": 10,
+      "fixed_capacity": 0,
+      "fixed_seats": 0,
+      "fixed_standing_area_m2": 0,
+      "pool_id": "fleet",
+      "max_units": 1,
+      "unit_cost_yuan": 100,
+      "return_minutes": 10,
+      "service_start_minutes": 0,
+      "service_end_minutes": 60
+    }
+  ],
+  "groups": [
+    {
+      "id": "G",
+      "label": "示例旅客",
+      "origin": "S",
+      "destination": "D",
+      "allowed_modes": [
+        "custom"
+      ],
+      "initial_people": 0,
+      "queue_limit_people": null
+    }
+  ],
+  "profiles": [
+    {
+      "id": "uniform",
+      "label": "逐段均匀进入",
+      "arrivals": {
+        "G": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    }
+  ],
+  "facilities": []
+}

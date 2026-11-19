@@ -1,0 +1,81 @@
+{
+  "schema_version": "PORTRAIT-01",
+  "event_id": "DEMO-SYNTH-12",
+  "title": "虹桥降雪背景下12人合成接口演示",
+  "fields": {
+    "event_type": {
+      "value": "列车晚点集中到达",
+      "status": "observed",
+      "source": "2023年官方案例报道",
+      "as_of": "2023-12-19T00:00:00+08:00"
+    },
+    "cause": {
+      "value": "降雪",
+      "status": "observed",
+      "source": "2023年官方案例报道",
+      "as_of": "2023-12-19T00:00:00+08:00"
+    },
+    "time_period": {
+      "value": "夜间",
+      "status": "observed",
+      "source": "2023年官方案例报道",
+      "as_of": "2023-12-19T00:00:00+08:00"
+    },
+    "location": {
+      "value": "虹桥火车站",
+      "status": "observed",
+      "source": "2023年官方案例报道",
+      "as_of": "2023-12-19T00:00:00+08:00"
+    },
+    "affected_people": {
+      "value": 10008,
+      "status": "observed",
+      "source": "官方报道受影响人数，23时至次日5时",
+      "as_of": "2023-12-19T00:00:00+08:00"
+    },
+    "onward_people": {
+      "value": 12,
+      "status": "assumption",
+      "source": "接口及手算演示的合成假设",
+      "as_of": "2026-10-28T00:00:00+08:00"
+    },
+    "arrival_profile": {
+      "value": {
+        "G": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      "status": "assumption",
+      "source": "研究算例假设；不是现场安全核验或实际调度授权",
+      "as_of": "2026-10-28T00:00:00+08:00"
+    },
+    "resource_inventory": {
+      "value": null,
+      "status": "unknown"
+    },
+    "safety_status": {
+      "value": "假设可继续运输",
+      "status": "assumption",
+      "source": "研究算例假设；不是现场安全核验或实际调度授权",
+      "as_of": "2026-10-28T00:00:00+08:00"
+    },
+    "authorization": {
+      "value": "仅允许合成研究计算",
+      "status": "assumption",
+      "source": "研究算例假设；不是现场安全核验或实际调度授权",
+      "as_of": "2026-10-28T00:00:00+08:00"
+    },
+    "initial_queue": {
+      "value": 0,
+      "status": "assumption",
+      "source": "接口及手算演示的合成假设",
+      "as_of": "2026-10-28T00:00:00+08:00"
+    }
+  },
+  "event_family_id": "HQ-E01"
+}

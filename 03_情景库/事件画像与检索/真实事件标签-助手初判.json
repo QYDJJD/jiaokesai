@@ -1,0 +1,231 @@
+{
+  "scope": "助手候选标签，用于人工复核；不能作为独立金标准或真实准确率",
+  "freeze": {
+    "catalog_sha256": "",
+    "engine_sha256": "",
+    "confirmed_by": "",
+    "date": ""
+  },
+  "labels": [
+    {
+      "query_id": "HQ-E01",
+      "candidate_id": "HQ-E02",
+      "relevance": "高",
+      "reuse_type": "信息提示",
+      "key_differences": "同为铁路到达及地面接续；诱因、事件性质、窗口和公开字段不同",
+      "safety_conflict": "未知",
+      "evidence": "https://jtw.sh.gov.cn/xydt/20231226/6f4ed792491949fb871c7237e4d636ff.html ; https://www.whb.cn/zhuzhan/cs/20230807/533824.html",
+      "annotator": "Codex（助手初判，非独立人工标注）",
+      "date": "2026-10-28"
+    },
+    {
+      "query_id": "HQ-E01",
+      "candidate_id": "HQ-E03",
+      "relevance": "中",
+      "reuse_type": "信息提示",
+      "key_differences": "可参考安全和现场组织信息；台风危害与方式、空间边界不同，不能直接沿用动作",
+      "safety_conflict": "未知",
+      "evidence": "https://jtw.sh.gov.cn/xydt/20231226/6f4ed792491949fb871c7237e4d636ff.html ; https://www.gzw.sh.gov.cn/shgzw_zxzx_gqdt/20240918/87a233dab9064ff684b354195059008d.html",
+      "annotator": "Codex（助手初判，非独立人工标注）",
+      "date": "2026-10-28"
+    },
+    {
+      "query_id": "HQ-E01",
+      "candidate_id": "HQ-E04",
+      "relevance": "中",
+      "reuse_type": "信息提示",
+      "key_differences": "可参考跨方式接续和信息协调；航空转场与铁路到达人群、位置和目标不同",
+      "safety_conflict": "未知",
+      "evidence": "https://jtw.sh.gov.cn/xydt/20231226/6f4ed792491949fb871c7237e4d636ff.html ; https://www.shairport.com/xwg/info_itemid_19250.html",
+      "annotator": "Codex（助手初判，非独立人工标注）",
+      "date": "2026-10-28"
+    },
+    {
+      "query_id": "HQ-E01",
+      "candidate_id": "HQ-G01",
+      "relevance": "高",
+      "reuse_type": "信息提示",
+      "key_differences": "同为铁路到达及地面接续；诱因、事件性质、窗口和公开字段不同",
+      "safety_conflict": "未知",
+      "evidence": "https://jtw.sh.gov.cn/xydt/20231226/6f4ed792491949fb871c7237e4d636ff.html ; https://www.shanghai.gov.cn/nw31406/20260508/c349732ae3044a149ce33b51331d96f9.html",
+      "annotator": "Codex（助手初判，非独立人工标注）",
+      "date": "2026-10-28"
+    },
+    {
+      "query_id": "HQ-E02",
+      "candidate_id": "HQ-E01",
+      "relevance": "高",
+      "reuse_type": "信息提示",
+      "key_differences": "同为铁路到达及地面接续；诱因、事件性质、窗口和公开字段不同",
+      "safety_conflict": "未知",
+      "evidence": "https://www.whb.cn/zhuzhan/cs/20230807/533824.html ; https://jtw.sh.gov.cn/xydt/20231226/6f4ed792491949fb871c7237e4d636ff.html",
+      "annotator": "Codex（助手初判，非独立人工标注）",
+      "date": "2026-10-28"
+    },
+    {
+      "query_id": "HQ-E02",
+      "candidate_id": "HQ-E03",
+      "relevance": "中",
+      "reuse_type": "信息提示",
+      "key_differences": "可参考安全和现场组织信息；台风危害与方式、空间边界不同，不能直接沿用动作",
+      "safety_conflict": "未知",
+      "evidence": "https://www.whb.cn/zhuzhan/cs/20230807/533824.html ; https://www.gzw.sh.gov.cn/shgzw_zxzx_gqdt/20240918/87a233dab9064ff684b354195059008d.html",
+      "annotator": "Codex（助手初判，非独立人工标注）",
+      "date": "2026-10-28"
+    },
+    {
+      "query_id": "HQ-E02",
+      "candidate_id": "HQ-E04",
+      "relevance": "中",
+      "reuse_type": "信息提示",
+      "key_differences": "可参考跨方式接续和信息协调；航空转场与铁路到达人群、位置和目标不同",
+      "safety_conflict": "未知",
+      "evidence": "https://www.whb.cn/zhuzhan/cs/20230807/533824.html ; https://www.shairport.com/xwg/info_itemid_19250.html",
+      "annotator": "Codex（助手初判，非独立人工标注）",
+      "date": "2026-10-28"
+    },
+    {
+      "query_id": "HQ-E02",
+      "candidate_id": "HQ-G01",
+      "relevance": "高",
+      "reuse_type": "信息提示",
+      "key_differences": "同为铁路到达及地面接续；诱因、事件性质、窗口和公开字段不同",
+      "safety_conflict": "未知",
+      "evidence": "https://www.whb.cn/zhuzhan/cs/20230807/533824.html ; https://www.shanghai.gov.cn/nw31406/20260508/c349732ae3044a149ce33b51331d96f9.html",
+      "annotator": "Codex（助手初判，非独立人工标注）",
+      "date": "2026-10-28"
+    },
+    {
+      "query_id": "HQ-E03",
+      "candidate_id": "HQ-E01",
+      "relevance": "中",
+      "reuse_type": "信息提示",
+      "key_differences": "可参考安全和现场组织信息；台风危害与方式、空间边界不同，不能直接沿用动作",
+      "safety_conflict": "未知",
+      "evidence": "https://www.gzw.sh.gov.cn/shgzw_zxzx_gqdt/20240918/87a233dab9064ff684b354195059008d.html ; https://jtw.sh.gov.cn/xydt/20231226/6f4ed792491949fb871c7237e4d636ff.html",
+      "annotator": "Codex（助手初判，非独立人工标注）",
+      "date": "2026-10-28"
+    },
+    {
+      "query_id": "HQ-E03",
+      "candidate_id": "HQ-E02",
+      "relevance": "中",
+      "reuse_type": "信息提示",
+      "key_differences": "可参考安全和现场组织信息；台风危害与方式、空间边界不同，不能直接沿用动作",
+      "safety_conflict": "未知",
+      "evidence": "https://www.gzw.sh.gov.cn/shgzw_zxzx_gqdt/20240918/87a233dab9064ff684b354195059008d.html ; https://www.whb.cn/zhuzhan/cs/20230807/533824.html",
+      "annotator": "Codex（助手初判，非独立人工标注）",
+      "date": "2026-10-28"
+    },
+    {
+      "query_id": "HQ-E03",
+      "candidate_id": "HQ-E04",
+      "relevance": "中",
+      "reuse_type": "信息提示",
+      "key_differences": "可参考安全和现场组织信息；台风危害与方式、空间边界不同，不能直接沿用动作",
+      "safety_conflict": "未知",
+      "evidence": "https://www.gzw.sh.gov.cn/shgzw_zxzx_gqdt/20240918/87a233dab9064ff684b354195059008d.html ; https://www.shairport.com/xwg/info_itemid_19250.html",
+      "annotator": "Codex（助手初判，非独立人工标注）",
+      "date": "2026-10-28"
+    },
+    {
+      "query_id": "HQ-E03",
+      "candidate_id": "HQ-G01",
+      "relevance": "中",
+      "reuse_type": "信息提示",
+      "key_differences": "可参考安全和现场组织信息；台风危害与方式、空间边界不同，不能直接沿用动作",
+      "safety_conflict": "未知",
+      "evidence": "https://www.gzw.sh.gov.cn/shgzw_zxzx_gqdt/20240918/87a233dab9064ff684b354195059008d.html ; https://www.shanghai.gov.cn/nw31406/20260508/c349732ae3044a149ce33b51331d96f9.html",
+      "annotator": "Codex（助手初判，非独立人工标注）",
+      "date": "2026-10-28"
+    },
+    {
+      "query_id": "HQ-E04",
+      "candidate_id": "HQ-E01",
+      "relevance": "中",
+      "reuse_type": "信息提示",
+      "key_differences": "可参考跨方式接续和信息协调；航空转场与铁路到达人群、位置和目标不同",
+      "safety_conflict": "未知",
+      "evidence": "https://www.shairport.com/xwg/info_itemid_19250.html ; https://jtw.sh.gov.cn/xydt/20231226/6f4ed792491949fb871c7237e4d636ff.html",
+      "annotator": "Codex（助手初判，非独立人工标注）",
+      "date": "2026-10-28"
+    },
+    {
+      "query_id": "HQ-E04",
+      "candidate_id": "HQ-E02",
+      "relevance": "中",
+      "reuse_type": "信息提示",
+      "key_differences": "可参考跨方式接续和信息协调；航空转场与铁路到达人群、位置和目标不同",
+      "safety_conflict": "未知",
+      "evidence": "https://www.shairport.com/xwg/info_itemid_19250.html ; https://www.whb.cn/zhuzhan/cs/20230807/533824.html",
+      "annotator": "Codex（助手初判，非独立人工标注）",
+      "date": "2026-10-28"
+    },
+    {
+      "query_id": "HQ-E04",
+      "candidate_id": "HQ-E03",
+      "relevance": "中",
+      "reuse_type": "信息提示",
+      "key_differences": "可参考安全和现场组织信息；台风危害与方式、空间边界不同，不能直接沿用动作",
+      "safety_conflict": "未知",
+      "evidence": "https://www.shairport.com/xwg/info_itemid_19250.html ; https://www.gzw.sh.gov.cn/shgzw_zxzx_gqdt/20240918/87a233dab9064ff684b354195059008d.html",
+      "annotator": "Codex（助手初判，非独立人工标注）",
+      "date": "2026-10-28"
+    },
+    {
+      "query_id": "HQ-E04",
+      "candidate_id": "HQ-G01",
+      "relevance": "中",
+      "reuse_type": "信息提示",
+      "key_differences": "可参考跨方式接续和信息协调；航空转场与铁路到达人群、位置和目标不同",
+      "safety_conflict": "未知",
+      "evidence": "https://www.shairport.com/xwg/info_itemid_19250.html ; https://www.shanghai.gov.cn/nw31406/20260508/c349732ae3044a149ce33b51331d96f9.html",
+      "annotator": "Codex（助手初判，非独立人工标注）",
+      "date": "2026-10-28"
+    },
+    {
+      "query_id": "HQ-G01",
+      "candidate_id": "HQ-E01",
+      "relevance": "高",
+      "reuse_type": "信息提示",
+      "key_differences": "同为铁路到达及地面接续；诱因、事件性质、窗口和公开字段不同",
+      "safety_conflict": "未知",
+      "evidence": "https://www.shanghai.gov.cn/nw31406/20260508/c349732ae3044a149ce33b51331d96f9.html ; https://jtw.sh.gov.cn/xydt/20231226/6f4ed792491949fb871c7237e4d636ff.html",
+      "annotator": "Codex（助手初判，非独立人工标注）",
+      "date": "2026-10-28"
+    },
+    {
+      "query_id": "HQ-G01",
+      "candidate_id": "HQ-E02",
+      "relevance": "高",
+      "reuse_type": "信息提示",
+      "key_differences": "同为铁路到达及地面接续；诱因、事件性质、窗口和公开字段不同",
+      "safety_conflict": "未知",
+      "evidence": "https://www.shanghai.gov.cn/nw31406/20260508/c349732ae3044a149ce33b51331d96f9.html ; https://www.whb.cn/zhuzhan/cs/20230807/533824.html",
+      "annotator": "Codex（助手初判，非独立人工标注）",
+      "date": "2026-10-28"
+    },
+    {
+      "query_id": "HQ-G01",
+      "candidate_id": "HQ-E03",
+      "relevance": "中",
+      "reuse_type": "信息提示",
+      "key_differences": "可参考安全和现场组织信息；台风危害与方式、空间边界不同，不能直接沿用动作",
+      "safety_conflict": "未知",
+      "evidence": "https://www.shanghai.gov.cn/nw31406/20260508/c349732ae3044a149ce33b51331d96f9.html ; https://www.gzw.sh.gov.cn/shgzw_zxzx_gqdt/20240918/87a233dab9064ff684b354195059008d.html",
+      "annotator": "Codex（助手初判，非独立人工标注）",
+      "date": "2026-10-28"
+    },
+    {
+      "query_id": "HQ-G01",
+      "candidate_id": "HQ-E04",
+      "relevance": "中",
+      "reuse_type": "信息提示",
+      "key_differences": "可参考跨方式接续和信息协调；航空转场与铁路到达人群、位置和目标不同",
+      "safety_conflict": "未知",
+      "evidence": "https://www.shanghai.gov.cn/nw31406/20260508/c349732ae3044a149ce33b51331d96f9.html ; https://www.shairport.com/xwg/info_itemid_19250.html",
+      "annotator": "Codex（助手初判，非独立人工标注）",
+      "date": "2026-10-28"
+    }
+  ]
+}

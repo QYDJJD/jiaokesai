@@ -240,6 +240,7 @@
               <div class="logic-item"><b>③ 证据检查</b><p>相似度与资料完整度分开，不能把高相似当成高可信。</p></div>
             </div>
             <div class="section-note">相似度是本 Demo 的透明演示规则，不是统计概率，也不表示可以照搬历史处置。</div>
+            <div class="section-note"><b>结构化案例库对照（本机平台）</b><p>使用事件类型、诱因、时段和地点查询新版案例库，结果与下方原演示算法分开；原演示的候选动作仍按原规则生成。</p><label for="familyId">同事件编号（选填；用于排除自身，如 HQ-E01）</label><input id="familyId" placeholder="新事件可留空"><button class="secondary" id="structuredSearch" type="button">运行结构化对照检索</button><pre id="structuredResult" style="white-space:pre-wrap;overflow-wrap:anywhere">从本机平台打开页面后，可运行对照检索。</pre></div>
             <div class="retrieval-layout">
               <div class="case-list" id="caseResults"></div>
               <aside class="recommend-box">
@@ -386,6 +387,18 @@
     function getPeriod(time){const h=Number((time||'00:00').split(':')[0]);return h>=22||h<6?'night':'day'}
     function getScale(n){return n>=1500?'high':n>=500?'medium':'low'}
     function weatherFamily(x){return ['snow','typhoon','fog'].includes(x)}
+    let structuredRevision=0;
+    $('structuredSearch').addEventListener('click',async()=>{
+      const revision=++structuredRevision;
+      const box=$('structuredResult');box.textContent='正在检索……';
+      if(!/^https?:$/.test(location.protocol)||!['127.0.0.1','localhost'].includes(location.hostname)){box.textContent='请启动本机研究平台，在 /research 左侧打开“情景检索—决策演示（本机）”。离线和在线页面继续使用下方原演示规则。';return;}
+      const c=current(),causeMap={snow:'降雪',typhoon:'台风',fog:'大雾',earthquake:'地震',equipment:'设备故障'},now=new Date().toISOString();
+      const item=value=>({value,status:'assumption',source:'页面当前演示输入',as_of:now});
+      const portrait={schema_version:'PORTRAIT-01',event_id:'DEMO-CURRENT',fields:{event_type:item('列车晚点集中到达'),cause:item(causeMap[c.cause]),time_period:item(c.period==='night'?'夜间':'白天'),location:item('虹桥火车站')}};
+      if($('familyId').value.trim())portrait.event_family_id=$('familyId').value.trim();
+      try{const response=await fetch('/api/portrait-retrieval',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({portrait})});const data=await response.json();if(revision!==structuredRevision)return;if(!response.ok)throw Error(data.error||'检索失败');box.textContent=data.notice+'\n'+data.results.map(r=>`${r.case_id} ${r.title}\n相似度 ${r.similarity===null?'无可比字段':r.similarity}；覆盖率 ${r.coverage}；${r.coverage_note}\n相同：${r.same.join('、')||'无'}；差异：${r.different.map(d=>`${d.field}（当前 ${d.current} / 案例 ${d.case}）`).join('、')||'无'}；缺失：${r.missing.join('、')||'无'}`).join('\n\n');}catch(e){if(revision===structuredRevision)box.textContent='对照检索失败：'+e.message;}
+    });
+    ['cause','eventTime','familyId'].forEach(id=>$(id).addEventListener('input',()=>{structuredRevision++;$('structuredResult').textContent='输入已变化，请重新运行结构化对照检索。';}));
     function current(){return {type:val('eventType'),cause:val('cause'),time:val('eventTime'),period:getPeriod(val('eventTime')),mode:val('eventType')==='air_disruption'?'air':val('eventType')==='rail_delay'?'rail':'multi',scale:getScale(num('passengers')),cross:true}}
     function similarity(c,now){
       let s=0,match=[],diff=[];

@@ -1,0 +1,571 @@
+{
+  "version": "BRIDGE-02",
+  "portrait_id": "DEMO-SYNTH-12",
+  "portrait_sha256": "4b5b1a1e64c305bcd37f5f31481e44591b528e5f4254257a9e03be30505435c9",
+  "bundle_sha256": "4e0111417f8bb868fa4487c23dd620166a106f24691ff885a5fde001e3763514",
+  "network_card_sha256": "703c38b73a2497d26eae67c5815f3c2b8ee4fa52dc5e4a9fc4ef0ddedcf6ed3e",
+  "section_evidence": {
+    "parameters": {
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放"
+    },
+    "five_dimensions": {
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放"
+    },
+    "nodes": {
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放"
+    },
+    "modes": {
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放"
+    },
+    "pools": {
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放"
+    },
+    "links": {
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放"
+    },
+    "groups": {
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放"
+    },
+    "profiles": {
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放"
+    },
+    "facilities": {
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放"
+    }
+  },
+  "portrait_unknown_fields": [
+    "road_status",
+    "metro_status",
+    "resource_inventory"
+  ],
+  "field_evidence": [
+    {
+      "path": "/parameters/start_time",
+      "value": "2023-12-14T23:00:00+08:00",
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/parameters/step_minutes",
+      "value": 10,
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/parameters/entry_steps",
+      "value": 6,
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/parameters/deadline_minutes",
+      "value": 80,
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/parameters/origin_departure_deadline_minutes",
+      "value": 60,
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/parameters/budget_yuan",
+      "value": 200,
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/parameters/queue_limit_people",
+      "value": 300,
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/parameters/standing_person_minutes_limit",
+      "value": 0,
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/five_dimensions/information_lead_minutes",
+      "value": 0,
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/nodes/0/id",
+      "value": "S",
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/nodes/0/label",
+      "value": "候客起点",
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/nodes/0/queue_limit_people",
+      "value": 20,
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/nodes/0/waiting_area_m2",
+      "value": 100,
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/nodes/0/waiting_density_limit",
+      "value": null,
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/nodes/0/boarding_capacity",
+      "value": 1000,
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/nodes/0/receiving_capacity",
+      "value": 1000,
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/nodes/1/id",
+      "value": "D",
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/nodes/1/label",
+      "value": "接续目的节点",
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/nodes/1/queue_limit_people",
+      "value": 200,
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/nodes/1/waiting_area_m2",
+      "value": 100,
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/nodes/1/waiting_density_limit",
+      "value": null,
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/nodes/1/boarding_capacity",
+      "value": 1000,
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/nodes/1/receiving_capacity",
+      "value": 1000,
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/modes/0/id",
+      "value": "custom",
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/modes/0/label",
+      "value": "自定义校验运力",
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/modes/0/control",
+      "value": "adjustable",
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/modes/0/comfort",
+      "value": "seats",
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/modes/0/enabled",
+      "value": true,
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/modes/0/standing_density_limit",
+      "value": 2,
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/modes/0/standing_person_minutes_limit",
+      "value": null,
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/pools/0/id",
+      "value": "fleet",
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/pools/0/label",
+      "value": "单车周转池",
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/pools/0/kind",
+      "value": "vehicle",
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/pools/0/home_node",
+      "value": "S",
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/pools/0/available_units",
+      "value": 1,
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/pools/0/total_units_limit",
+      "value": 2,
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/pools/0/seats",
+      "value": 6,
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/pools/0/legal_capacity",
+      "value": 6,
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/pools/0/standing_area_m2",
+      "value": 0,
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/pools/0/prepare_minutes",
+      "value": 0,
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/pools/0/close_minutes",
+      "value": 90,
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/pools/0/turnaround_minutes",
+      "value": 0,
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/links/0/id",
+      "value": "route",
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/links/0/label",
+      "value": "起点至目的节点",
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/links/0/from",
+      "value": "S",
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/links/0/to",
+      "value": "D",
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/links/0/mode_id",
+      "value": "custom",
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/links/0/travel_minutes",
+      "value": 10,
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/links/0/boarding_minutes",
+      "value": 10,
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/links/0/fixed_capacity",
+      "value": 0,
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/links/0/fixed_seats",
+      "value": 0,
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/links/0/fixed_standing_area_m2",
+      "value": 0,
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/links/0/pool_id",
+      "value": "fleet",
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/links/0/max_units",
+      "value": 1,
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/links/0/unit_cost_yuan",
+      "value": 100,
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/links/0/return_minutes",
+      "value": 10,
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/links/0/service_start_minutes",
+      "value": 0,
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/links/0/service_end_minutes",
+      "value": 60,
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/groups/0/id",
+      "value": "G",
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/groups/0/label",
+      "value": "示例旅客",
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/groups/0/origin",
+      "value": "S",
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/groups/0/destination",
+      "value": "D",
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/groups/0/allowed_modes/0",
+      "value": "custom",
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/groups/0/initial_people",
+      "value": 0,
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/groups/0/queue_limit_people",
+      "value": null,
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/profiles/0/id",
+      "value": "uniform",
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/profiles/0/label",
+      "value": "逐段均匀进入",
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/profiles/0/arrivals/G/0",
+      "value": 2,
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/profiles/0/arrivals/G/1",
+      "value": 2,
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/profiles/0/arrivals/G/2",
+      "value": 2,
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/profiles/0/arrivals/G/3",
+      "value": 2,
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/profiles/0/arrivals/G/4",
+      "value": 2,
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    },
+    {
+      "path": "/profiles/0/arrivals/G/5",
+      "value": 2,
+      "status": "assumption",
+      "source": "手算示例 tiny()；合成网络与资源，未用于历史回放",
+      "source_granularity": "继承参数组说明；待补逐字段实证"
+    }
+  ],
+  "cross_checks": {
+    "new_onward_people": "assumption",
+    "initial_queue": "assumption",
+    "arrival_profile": "逐群体逐时段完全一致",
+    "safety": "仅假设可继续运输",
+    "authorization": "仅允许合成研究计算"
+  },
+  "boundary": "研究示例；历史受影响人数不映射为需求；不构成已确认调度指令"
+}

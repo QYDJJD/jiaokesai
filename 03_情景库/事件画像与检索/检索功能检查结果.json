@@ -1,0 +1,508 @@
+{
+  "scope": "人工构造的功能样例；不是独立真实事件或检索准确率",
+  "weight_version": "MATCH规则固定",
+  "tests": 10,
+  "passed": 10,
+  "results": [
+    {
+      "id": "T01",
+      "description": "铁路降雪夜间，使用同义词；期望降雪案例优先",
+      "checks": {
+        "first": true
+      },
+      "passed": true,
+      "top_results": [
+        {
+          "case_id": "HQ-E01",
+          "similarity": 1.0,
+          "coverage": 0.833,
+          "coverage_note": "覆盖率仅表示字段可比程度",
+          "same": [
+            "event_type",
+            "cause",
+            "time_period",
+            "location"
+          ],
+          "different": [],
+          "missing": [
+            "road_status",
+            "metro_status"
+          ]
+        },
+        {
+          "case_id": "HQ-E02",
+          "similarity": 0.8,
+          "coverage": 0.833,
+          "coverage_note": "覆盖率仅表示字段可比程度",
+          "same": [
+            "event_type",
+            "time_period",
+            "location"
+          ],
+          "different": [
+            {
+              "field": "cause",
+              "current": "北方降雪",
+              "case": "地震"
+            }
+          ],
+          "missing": [
+            "road_status",
+            "metro_status"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "T02",
+      "description": "铁路地震夜间，期望地震案例优先",
+      "checks": {
+        "first": true
+      },
+      "passed": true,
+      "top_results": [
+        {
+          "case_id": "HQ-E02",
+          "similarity": 1.0,
+          "coverage": 0.833,
+          "coverage_note": "覆盖率仅表示字段可比程度",
+          "same": [
+            "event_type",
+            "cause",
+            "time_period",
+            "location"
+          ],
+          "different": [],
+          "missing": [
+            "road_status",
+            "metro_status"
+          ]
+        },
+        {
+          "case_id": "HQ-E01",
+          "similarity": 0.8,
+          "coverage": 0.833,
+          "coverage_note": "覆盖率仅表示字段可比程度",
+          "same": [
+            "event_type",
+            "time_period",
+            "location"
+          ],
+          "different": [
+            {
+              "field": "cause",
+              "current": "地震",
+              "case": "降雪"
+            }
+          ],
+          "missing": [
+            "road_status",
+            "metro_status"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "T03",
+      "description": "只知铁路夜间，两个晚点案例均可能；检查诱因不被补造",
+      "checks": {
+        "top2": true,
+        "missing": true
+      },
+      "passed": true,
+      "top_results": [
+        {
+          "case_id": "HQ-E01",
+          "similarity": 1.0,
+          "coverage": 0.5,
+          "coverage_note": "覆盖率仅表示字段可比程度",
+          "same": [
+            "event_type",
+            "time_period"
+          ],
+          "different": [],
+          "missing": [
+            "cause",
+            "location",
+            "road_status",
+            "metro_status"
+          ]
+        },
+        {
+          "case_id": "HQ-E02",
+          "similarity": 1.0,
+          "coverage": 0.5,
+          "coverage_note": "覆盖率仅表示字段可比程度",
+          "same": [
+            "event_type",
+            "time_period"
+          ],
+          "different": [],
+          "missing": [
+            "cause",
+            "location",
+            "road_status",
+            "metro_status"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "T04",
+      "description": "已知台风与虹桥枢纽，检查台风案例排序",
+      "checks": {
+        "first": true
+      },
+      "passed": true,
+      "top_results": [
+        {
+          "case_id": "HQ-E03",
+          "similarity": 1.0,
+          "coverage": 0.667,
+          "coverage_note": "覆盖率仅表示字段可比程度",
+          "same": [
+            "event_type",
+            "cause",
+            "location"
+          ],
+          "different": [],
+          "missing": [
+            "time_period",
+            "road_status",
+            "metro_status"
+          ]
+        },
+        {
+          "case_id": "HQ-E01",
+          "similarity": 0.0,
+          "coverage": 0.667,
+          "coverage_note": "覆盖率仅表示字段可比程度",
+          "same": [],
+          "different": [
+            {
+              "field": "event_type",
+              "current": "台风保障",
+              "case": "列车晚点集中到达"
+            },
+            {
+              "field": "cause",
+              "current": "台风",
+              "case": "降雪"
+            },
+            {
+              "field": "location",
+              "current": "虹桥枢纽",
+              "case": "虹桥火车站"
+            }
+          ],
+          "missing": [
+            "time_period",
+            "road_status",
+            "metro_status"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "T05",
+      "description": "铁路降雪事件检索地震案例时显式显示诱因不同",
+      "checks": {
+        "difference": true
+      },
+      "passed": true,
+      "top_results": [
+        {
+          "case_id": "HQ-E01",
+          "similarity": 1.0,
+          "coverage": 0.833,
+          "coverage_note": "覆盖率仅表示字段可比程度",
+          "same": [
+            "event_type",
+            "cause",
+            "time_period",
+            "location"
+          ],
+          "different": [],
+          "missing": [
+            "road_status",
+            "metro_status"
+          ]
+        },
+        {
+          "case_id": "HQ-E02",
+          "similarity": 0.8,
+          "coverage": 0.833,
+          "coverage_note": "覆盖率仅表示字段可比程度",
+          "same": [
+            "event_type",
+            "time_period",
+            "location"
+          ],
+          "different": [
+            {
+              "field": "cause",
+              "current": "降雪",
+              "case": "地震"
+            }
+          ],
+          "missing": [
+            "road_status",
+            "metro_status"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "T06",
+      "description": "只知诱因，覆盖率应低并提示复核",
+      "checks": {
+        "coverage": true
+      },
+      "passed": true,
+      "top_results": [
+        {
+          "case_id": "HQ-E01",
+          "similarity": 1.0,
+          "coverage": 0.167,
+          "coverage_note": "可比信息不足，需人工复核",
+          "same": [
+            "cause"
+          ],
+          "different": [],
+          "missing": [
+            "event_type",
+            "time_period",
+            "location",
+            "road_status",
+            "metro_status"
+          ]
+        },
+        {
+          "case_id": "HQ-E02",
+          "similarity": 0.0,
+          "coverage": 0.167,
+          "coverage_note": "可比信息不足，需人工复核",
+          "same": [],
+          "different": [
+            {
+              "field": "cause",
+              "current": "降雪",
+              "case": "地震"
+            }
+          ],
+          "missing": [
+            "event_type",
+            "time_period",
+            "location",
+            "road_status",
+            "metro_status"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "T07",
+      "description": "没有可比信息时，不给出数值得分",
+      "checks": {
+        "no_score": true
+      },
+      "passed": true,
+      "top_results": [
+        {
+          "case_id": "HQ-E01",
+          "similarity": null,
+          "coverage": 0.0,
+          "coverage_note": "可比信息不足，需人工复核",
+          "same": [],
+          "different": [],
+          "missing": [
+            "event_type",
+            "cause",
+            "time_period",
+            "location",
+            "road_status",
+            "metro_status"
+          ]
+        },
+        {
+          "case_id": "HQ-E02",
+          "similarity": null,
+          "coverage": 0.0,
+          "coverage_note": "可比信息不足，需人工复核",
+          "same": [],
+          "different": [],
+          "missing": [
+            "event_type",
+            "cause",
+            "time_period",
+            "location",
+            "road_status",
+            "metro_status"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "T08",
+      "description": "历史同一事件必须排除自身，即使查询编号不同",
+      "checks": {
+        "exclusion": true
+      },
+      "passed": true,
+      "top_results": [
+        {
+          "case_id": "HQ-E02",
+          "similarity": 0.667,
+          "coverage": 0.5,
+          "coverage_note": "覆盖率仅表示字段可比程度",
+          "same": [
+            "event_type"
+          ],
+          "different": [
+            {
+              "field": "cause",
+              "current": "降雪",
+              "case": "地震"
+            }
+          ],
+          "missing": [
+            "time_period",
+            "location",
+            "road_status",
+            "metro_status"
+          ]
+        },
+        {
+          "case_id": "HQ-E03",
+          "similarity": 0.0,
+          "coverage": 0.5,
+          "coverage_note": "覆盖率仅表示字段可比程度",
+          "same": [],
+          "different": [
+            {
+              "field": "event_type",
+              "current": "列车晚点集中到达",
+              "case": "台风保障"
+            },
+            {
+              "field": "cause",
+              "current": "降雪",
+              "case": "台风"
+            }
+          ],
+          "missing": [
+            "time_period",
+            "location",
+            "road_status",
+            "metro_status"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "T09",
+      "description": "大雾航班转场，期望航空案例优先",
+      "checks": {
+        "first": true
+      },
+      "passed": true,
+      "top_results": [
+        {
+          "case_id": "HQ-E04",
+          "similarity": 1.0,
+          "coverage": 0.667,
+          "coverage_note": "覆盖率仅表示字段可比程度",
+          "same": [
+            "event_type",
+            "cause",
+            "location"
+          ],
+          "different": [],
+          "missing": [
+            "time_period",
+            "road_status",
+            "metro_status"
+          ]
+        },
+        {
+          "case_id": "HQ-E01",
+          "similarity": 0.0,
+          "coverage": 0.667,
+          "coverage_note": "覆盖率仅表示字段可比程度",
+          "same": [],
+          "different": [
+            {
+              "field": "event_type",
+              "current": "航班备降与转场",
+              "case": "列车晚点集中到达"
+            },
+            {
+              "field": "cause",
+              "current": "大雾",
+              "case": "降雪"
+            },
+            {
+              "field": "location",
+              "current": "虹桥机场",
+              "case": "虹桥火车站"
+            }
+          ],
+          "missing": [
+            "time_period",
+            "road_status",
+            "metro_status"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "T10",
+      "description": "节假日集中到达，期望常态对照优先",
+      "checks": {
+        "first": true
+      },
+      "passed": true,
+      "top_results": [
+        {
+          "case_id": "HQ-G01",
+          "similarity": 1.0,
+          "coverage": 0.5,
+          "coverage_note": "覆盖率仅表示字段可比程度",
+          "same": [
+            "event_type",
+            "location"
+          ],
+          "different": [],
+          "missing": [
+            "cause",
+            "time_period",
+            "road_status",
+            "metro_status"
+          ]
+        },
+        {
+          "case_id": "HQ-E01",
+          "similarity": 0.333,
+          "coverage": 0.5,
+          "coverage_note": "覆盖率仅表示字段可比程度",
+          "same": [
+            "location"
+          ],
+          "different": [
+            {
+              "field": "event_type",
+              "current": "节假日集中到达",
+              "case": "列车晚点集中到达"
+            }
+          ],
+          "missing": [
+            "cause",
+            "time_period",
+            "road_status",
+            "metro_status"
+          ]
+        }
+      ]
+    }
+  ]
+}

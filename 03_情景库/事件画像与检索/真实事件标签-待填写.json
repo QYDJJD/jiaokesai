@@ -1,0 +1,231 @@
+{
+  "scope": "内部回顾性探索；当前案例已参与研发",
+  "freeze": {
+    "catalog_sha256": "",
+    "engine_sha256": "",
+    "confirmed_by": "",
+    "date": ""
+  },
+  "labels": [
+    {
+      "query_id": "HQ-E01",
+      "candidate_id": "HQ-E02",
+      "relevance": "",
+      "reuse_type": "",
+      "key_differences": "",
+      "safety_conflict": "",
+      "evidence": "",
+      "annotator": "",
+      "date": ""
+    },
+    {
+      "query_id": "HQ-E01",
+      "candidate_id": "HQ-E03",
+      "relevance": "",
+      "reuse_type": "",
+      "key_differences": "",
+      "safety_conflict": "",
+      "evidence": "",
+      "annotator": "",
+      "date": ""
+    },
+    {
+      "query_id": "HQ-E01",
+      "candidate_id": "HQ-E04",
+      "relevance": "",
+      "reuse_type": "",
+      "key_differences": "",
+      "safety_conflict": "",
+      "evidence": "",
+      "annotator": "",
+      "date": ""
+    },
+    {
+      "query_id": "HQ-E01",
+      "candidate_id": "HQ-G01",
+      "relevance": "",
+      "reuse_type": "",
+      "key_differences": "",
+      "safety_conflict": "",
+      "evidence": "",
+      "annotator": "",
+      "date": ""
+    },
+    {
+      "query_id": "HQ-E02",
+      "candidate_id": "HQ-E01",
+      "relevance": "",
+      "reuse_type": "",
+      "key_differences": "",
+      "safety_conflict": "",
+      "evidence": "",
+      "annotator": "",
+      "date": ""
+    },
+    {
+      "query_id": "HQ-E02",
+      "candidate_id": "HQ-E03",
+      "relevance": "",
+      "reuse_type": "",
+      "key_differences": "",
+      "safety_conflict": "",
+      "evidence": "",
+      "annotator": "",
+      "date": ""
+    },
+    {
+      "query_id": "HQ-E02",
+      "candidate_id": "HQ-E04",
+      "relevance": "",
+      "reuse_type": "",
+      "key_differences": "",
+      "safety_conflict": "",
+      "evidence": "",
+      "annotator": "",
+      "date": ""
+    },
+    {
+      "query_id": "HQ-E02",
+      "candidate_id": "HQ-G01",
+      "relevance": "",
+      "reuse_type": "",
+      "key_differences": "",
+      "safety_conflict": "",
+      "evidence": "",
+      "annotator": "",
+      "date": ""
+    },
+    {
+      "query_id": "HQ-E03",
+      "candidate_id": "HQ-E01",
+      "relevance": "",
+      "reuse_type": "",
+      "key_differences": "",
+      "safety_conflict": "",
+      "evidence": "",
+      "annotator": "",
+      "date": ""
+    },
+    {
+      "query_id": "HQ-E03",
+      "candidate_id": "HQ-E02",
+      "relevance": "",
+      "reuse_type": "",
+      "key_differences": "",
+      "safety_conflict": "",
+      "evidence": "",
+      "annotator": "",
+      "date": ""
+    },
+    {
+      "query_id": "HQ-E03",
+      "candidate_id": "HQ-E04",
+      "relevance": "",
+      "reuse_type": "",
+      "key_differences": "",
+      "safety_conflict": "",
+      "evidence": "",
+      "annotator": "",
+      "date": ""
+    },
+    {
+      "query_id": "HQ-E03",
+      "candidate_id": "HQ-G01",
+      "relevance": "",
+      "reuse_type": "",
+      "key_differences": "",
+      "safety_conflict": "",
+      "evidence": "",
+      "annotator": "",
+      "date": ""
+    },
+    {
+      "query_id": "HQ-E04",
+      "candidate_id": "HQ-E01",
+      "relevance": "",
+      "reuse_type": "",
+      "key_differences": "",
+      "safety_conflict": "",
+      "evidence": "",
+      "annotator": "",
+      "date": ""
+    },
+    {
+      "query_id": "HQ-E04",
+      "candidate_id": "HQ-E02",
+      "relevance": "",
+      "reuse_type": "",
+      "key_differences": "",
+      "safety_conflict": "",
+      "evidence": "",
+      "annotator": "",
+      "date": ""
+    },
+    {
+      "query_id": "HQ-E04",
+      "candidate_id": "HQ-E03",
+      "relevance": "",
+      "reuse_type": "",
+      "key_differences": "",
+      "safety_conflict": "",
+      "evidence": "",
+      "annotator": "",
+      "date": ""
+    },
+    {
+      "query_id": "HQ-E04",
+      "candidate_id": "HQ-G01",
+      "relevance": "",
+      "reuse_type": "",
+      "key_differences": "",
+      "safety_conflict": "",
+      "evidence": "",
+      "annotator": "",
+      "date": ""
+    },
+    {
+      "query_id": "HQ-G01",
+      "candidate_id": "HQ-E01",
+      "relevance": "",
+      "reuse_type": "",
+      "key_differences": "",
+      "safety_conflict": "",
+      "evidence": "",
+      "annotator": "",
+      "date": ""
+    },
+    {
+      "query_id": "HQ-G01",
+      "candidate_id": "HQ-E02",
+      "relevance": "",
+      "reuse_type": "",
+      "key_differences": "",
+      "safety_conflict": "",
+      "evidence": "",
+      "annotator": "",
+      "date": ""
+    },
+    {
+      "query_id": "HQ-G01",
+      "candidate_id": "HQ-E03",
+      "relevance": "",
+      "reuse_type": "",
+      "key_differences": "",
+      "safety_conflict": "",
+      "evidence": "",
+      "annotator": "",
+      "date": ""
+    },
+    {
+      "query_id": "HQ-G01",
+      "candidate_id": "HQ-E04",
+      "relevance": "",
+      "reuse_type": "",
+      "key_differences": "",
+      "safety_conflict": "",
+      "evidence": "",
+      "annotator": "",
+      "date": ""
+    }
+  ]
+}

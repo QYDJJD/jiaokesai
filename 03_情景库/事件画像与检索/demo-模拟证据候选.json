@@ -1,0 +1,221 @@
+{
+  "scope": "模拟来源；未联网，不是已核原文或真实事件新证据",
+  "local_results": [
+    {
+      "case_id": "HQ-E02",
+      "title": "2023年地震影响列车抵沪",
+      "similarity": 0.8,
+      "coverage": 0.833,
+      "coverage_note": "覆盖率仅表示字段可比程度",
+      "same": [
+        "event_type",
+        "time_period",
+        "location"
+      ],
+      "different": [
+        {
+          "field": "cause",
+          "current": "降雪",
+          "case": "地震"
+        }
+      ],
+      "missing": [
+        "road_status",
+        "metro_status"
+      ],
+      "source": "https://www.whb.cn/zhuzhan/cs/20230807/533824.html"
+    },
+    {
+      "case_id": "HQ-G01",
+      "title": "2026年五一虹桥返程保障",
+      "similarity": 0.333,
+      "coverage": 0.5,
+      "coverage_note": "覆盖率仅表示字段可比程度",
+      "same": [
+        "location"
+      ],
+      "different": [
+        {
+          "field": "event_type",
+          "current": "列车晚点集中到达",
+          "case": "节假日集中到达"
+        }
+      ],
+      "missing": [
+        "cause",
+        "time_period",
+        "road_status",
+        "metro_status"
+      ],
+      "source": "https://www.shanghai.gov.cn/nw31406/20260508/c349732ae3044a149ce33b51331d96f9.html"
+    },
+    {
+      "case_id": "HQ-E03",
+      "title": "2024年台风防护与安置准备",
+      "similarity": 0.0,
+      "coverage": 0.667,
+      "coverage_note": "覆盖率仅表示字段可比程度",
+      "same": [],
+      "different": [
+        {
+          "field": "event_type",
+          "current": "列车晚点集中到达",
+          "case": "台风保障"
+        },
+        {
+          "field": "cause",
+          "current": "降雪",
+          "case": "台风"
+        },
+        {
+          "field": "location",
+          "current": "虹桥火车站",
+          "case": "虹桥枢纽"
+        }
+      ],
+      "missing": [
+        "time_period",
+        "road_status",
+        "metro_status"
+      ],
+      "source": "https://www.gzw.sh.gov.cn/shgzw_zxzx_gqdt/20240918/87a233dab9064ff684b354195059008d.html"
+    },
+    {
+      "case_id": "HQ-E04",
+      "title": "2014年大雾航空备降与旅客转场",
+      "similarity": 0.0,
+      "coverage": 0.667,
+      "coverage_note": "覆盖率仅表示字段可比程度",
+      "same": [],
+      "different": [
+        {
+          "field": "event_type",
+          "current": "列车晚点集中到达",
+          "case": "航班备降与转场"
+        },
+        {
+          "field": "cause",
+          "current": "降雪",
+          "case": "大雾"
+        },
+        {
+          "field": "location",
+          "current": "虹桥火车站",
+          "case": "虹桥机场"
+        }
+      ],
+      "missing": [
+        "time_period",
+        "road_status",
+        "metro_status"
+      ],
+      "source": "https://www.shairport.com/xwg/info_itemid_19250.html"
+    }
+  ],
+  "candidate_result": {
+    "version": "EVIDENCE-WORKFLOW-01",
+    "query_terms": [
+      "列车晚点集中到达",
+      "降雪",
+      "虹桥火车站",
+      "夜间"
+    ],
+    "provider": "mock",
+    "recommendations": [
+      {
+        "indicator_id": "metro_extension",
+        "name": "轨交延时可行性",
+        "reason": "来源文本出现相关线索，建议确认当前事件的对应条件；不迁移历史数值。",
+        "current_value": null,
+        "confirmation": "pending",
+        "evidence": [
+          {
+            "source_url": "https://example.org/simulated-source",
+            "title": "模拟保障材料，非真实网页",
+            "publisher": "模拟提供器",
+            "publication_date": "2023-12-19",
+            "collected_at": "2026-10-28T12:00:00+08:00",
+            "quote": "延时运营",
+            "start": 14,
+            "end": 18,
+            "text_sha256": "17071e92a350d10144651859140bab502f0478724f641af6b6440e02674692ee",
+            "provider_kind": "mock",
+            "source_status": "演示文本，未验证原页",
+            "credibility": "未评定；须人工检查发布主体和原文"
+          }
+        ]
+      },
+      {
+        "indicator_id": "bus_service",
+        "name": "公交可用运力与发车计划",
+        "reason": "来源文本出现相关线索，建议确认当前事件的对应条件；不迁移历史数值。",
+        "current_value": null,
+        "confirmation": "pending",
+        "evidence": [
+          {
+            "source_url": "https://example.org/simulated-source",
+            "title": "模拟保障材料，非真实网页",
+            "publisher": "模拟提供器",
+            "publication_date": "2023-12-19",
+            "collected_at": "2026-10-28T12:00:00+08:00",
+            "quote": "公交",
+            "start": 19,
+            "end": 21,
+            "text_sha256": "17071e92a350d10144651859140bab502f0478724f641af6b6440e02674692ee",
+            "provider_kind": "mock",
+            "source_status": "演示文本，未验证原页",
+            "credibility": "未评定；须人工检查发布主体和原文"
+          }
+        ]
+      },
+      {
+        "indicator_id": "taxi_service",
+        "name": "出租车到达率与蓄车状态",
+        "reason": "来源文本出现相关线索，建议确认当前事件的对应条件；不迁移历史数值。",
+        "current_value": null,
+        "confirmation": "pending",
+        "evidence": [
+          {
+            "source_url": "https://example.org/simulated-source",
+            "title": "模拟保障材料，非真实网页",
+            "publisher": "模拟提供器",
+            "publication_date": "2023-12-19",
+            "collected_at": "2026-10-28T12:00:00+08:00",
+            "quote": "出租",
+            "start": 24,
+            "end": 26,
+            "text_sha256": "17071e92a350d10144651859140bab502f0478724f641af6b6440e02674692ee",
+            "provider_kind": "mock",
+            "source_status": "演示文本，未验证原页",
+            "credibility": "未评定；须人工检查发布主体和原文"
+          }
+        ]
+      },
+      {
+        "indicator_id": "arrival_profile",
+        "name": "旅客分时到达过程",
+        "reason": "来源文本出现相关线索，建议确认当前事件的对应条件；不迁移历史数值。",
+        "current_value": null,
+        "confirmation": "pending",
+        "evidence": [
+          {
+            "source_url": "https://example.org/simulated-source",
+            "title": "模拟保障材料，非真实网页",
+            "publisher": "模拟提供器",
+            "publication_date": "2023-12-19",
+            "collected_at": "2026-10-28T12:00:00+08:00",
+            "quote": "晚点到达",
+            "start": 7,
+            "end": 11,
+            "text_sha256": "17071e92a350d10144651859140bab502f0478724f641af6b6440e02674692ee",
+            "provider_kind": "mock",
+            "source_status": "演示文本，未验证原页",
+            "credibility": "未评定；须人工检查发布主体和原文"
+          }
+        ]
+      }
+    ],
+    "dedup_notes": [],
+    "notice": "指标与权重为规则演示，待人工核对来源及适用性。"
+  }
+}

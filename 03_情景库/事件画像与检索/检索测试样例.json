@@ -1,0 +1,12 @@
+[
+  {"id":"T01","description":"铁路降雪夜间，使用同义词；期望降雪案例优先","query":{"event_type":"高铁晚点集中到达","cause":"北方降雪","time_period":"夜晚","location":"上海虹桥站"},"expected_first":"HQ-E01","expected_difference":null},
+  {"id":"T02","description":"铁路地震夜间，期望地震案例优先","query":{"event_type":"列车晚点集中到达","cause":"地震","time_period":"夜间","location":"虹桥火车站"},"expected_first":"HQ-E02","expected_difference":null},
+  {"id":"T03","description":"只知铁路夜间，两个晚点案例均可能；检查诱因不被补造","query":{"event_type":"列车晚点集中到达","time_period":"夜间"},"expected_in_top2":["HQ-E01","HQ-E02"],"expected_missing":"cause"},
+  {"id":"T04","description":"已知台风与虹桥枢纽，检查台风案例排序","query":{"event_type":"台风保障","cause":"台风","location":"虹桥枢纽"},"expected_first":"HQ-E03","expected_difference":null},
+  {"id":"T05","description":"铁路降雪事件检索地震案例时显式显示诱因不同","query":{"event_type":"列车晚点集中到达","cause":"降雪","time_period":"夜间","location":"虹桥火车站"},"difference_case":"HQ-E02","expected_difference":"cause"},
+  {"id":"T06","description":"只知诱因，覆盖率应低并提示复核","query":{"cause":"降雪"},"coverage_case":"HQ-E01","max_coverage":0.5},
+  {"id":"T07","description":"没有可比信息时，不给出数值得分","query":{},"all_scores_null":true},
+  {"id":"T08","description":"历史同一事件必须排除自身，即使查询编号不同","query":{"event_type":"列车晚点集中到达","cause":"降雪"},"event_family_id":"HQ-E01","excluded_case":"HQ-E01"},
+  {"id":"T09","description":"大雾航班转场，期望航空案例优先","query":{"event_type":"航班备降与转场","cause":"大雾","location":"虹桥机场"},"expected_first":"HQ-E04"},
+  {"id":"T10","description":"节假日集中到达，期望常态对照优先","query":{"event_type":"节假日集中到达","location":"虹桥火车站"},"expected_first":"HQ-G01"}
+]

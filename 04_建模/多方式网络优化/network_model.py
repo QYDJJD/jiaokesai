@@ -34,7 +34,7 @@ def layout(card):
     caps={(a['id'],t):capacity(card,a,t) for a in card['links'] for t in range(T)}
     return rec,step,T,caps
 
-def build(card):
+def build(card, allow_unserved=False):
     rec,step,T,caps=layout(card);p=card['parameters'];m=Matrix();units={};cost={};flows={};hold={};stand={};outgoing=defaultdict(list);incoming=defaultdict(list)
     for a in card['links']:
         for t in range(T):
@@ -52,7 +52,7 @@ def build(card):
                 forward|={a['to'] for a in allowed if a['from'] in forward};reverse|={a['from'] for a in allowed if a['to'] in reverse}
             relevant=(forward&reverse)|{g['origin'],g['destination']}
             for n in card['nodes']:
-                for t in range(T+1):hold[sid,gid,n['id'],t]=m.var(('hold',sid,gid,n['id'],t),upper=0 if t==T or n['id']==g['destination'] or n['id'] not in relevant else np.inf)
+                for t in range(T+1):hold[sid,gid,n['id'],t]=m.var(('hold',sid,gid,n['id'],t),upper=0 if (t==T and not allow_unserved) or n['id']==g['destination'] or n['id'] not in relevant else np.inf)
             for a in allowed:
                 if a['from'] not in forward or a['to'] not in reverse or a['from']==g['destination']:continue
                 b,ride=lags(card,a)
@@ -73,7 +73,7 @@ def build(card):
                     terms += [(i,1) for i in outgoing[sid,gid,nid,t]]+[(i,-1) for i in incoming[sid,gid,nid,t]]
                     m.add(terms,lower=exo,upper=exo)
             target=[(i,1) for t in range(T+1) for i in incoming[sid,gid,g['destination'],t]]
-            total=g['initial_people']+sum(s['arrivals'][gid]);m.add(target,lower=total,upper=total)
+            total=g['initial_people']+sum(s['arrivals'][gid]);m.add(target,lower=0 if allow_unserved else total,upper=total)
     flow_at=defaultdict(list);boarding_at=defaultdict(list);flows_by_time=defaultdict(list)
     for (sid,gid,aid,t),i in flows.items():
         flow_at[sid,aid,t].append(i);flows_by_time[sid,t].append((gid,aid,i))

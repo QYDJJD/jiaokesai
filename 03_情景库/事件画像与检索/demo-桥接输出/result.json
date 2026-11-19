@@ -1,0 +1,40 @@
+{
+  "scope": "12人合成假设；仅验证接口与模型流程，不是历史回放或现场绩效",
+  "network_card_sha256": "703c38b73a2497d26eae67c5815f3c2b8ee4fa52dc5e4a9fc4ef0ddedcf6ed3e",
+  "phase_primary": {
+    "status": 0,
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "seconds": 0.0030149000012897886,
+    "objective": 360.0,
+    "dual_bound": 360.0,
+    "relative_gap": 0.0
+  },
+  "plan": {
+    "cost_yuan": 200.0,
+    "reserved_units": 2,
+    "by_pool_units": {
+      "fleet": 2
+    },
+    "by_mode_units": {
+      "custom": 2
+    },
+    "used_reusable_units": 1,
+    "reservations": 2
+  },
+  "profiles": [
+    {
+      "profile_id": "uniform",
+      "task_people": 12,
+      "delivered_people": 12.0,
+      "remaining_people": 0,
+      "peak_queue_people": 6,
+      "origin_clear_minutes": 60,
+      "completion_minutes": 70,
+      "total_wait_person_minutes": 240.0,
+      "total_journey_person_minutes": 360.0,
+      "safe_queue": true,
+      "complete_by_deadline": true
+    }
+  ],
+  "independent_checks": "通过"
+}
